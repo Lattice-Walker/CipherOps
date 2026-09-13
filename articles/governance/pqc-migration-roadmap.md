@@ -1,1 +1,0 @@
-Design a reusable, tiered migration roadmap (Inventory → Prioritize → Pilot → Migrate → Validate) for a mid-sized organization. Base it on NIST IR 8547, CNSA 2.0, and BSI recommendations. Blog post: *"A practitioner's PQC migration roadmap — steal this template.

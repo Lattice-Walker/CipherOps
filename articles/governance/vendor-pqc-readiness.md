@@ -1,1 +1,0 @@
-Assess 3–5 real vendors (cloud providers, VPN tools, email providers) on their public PQC posture. Does AWS support ML-KEM in KMS yet? Does Signal use PQXDH? Publish the results as a living scorecard on your blog. Drives traffic, establishes authority, and is genuinely useful to the community.
