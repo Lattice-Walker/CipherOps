@@ -1,15 +1,5 @@
 [
   {
-    "category": "Mathematics",
-    "articles": [
-      {
-        "title": "Reduction-based NP-completeness proofs",
-        "file": "articles/mathematics/np-completeness-graph.md",
-        "date": "to be published"
-      }
-    ]
-  },
-  {
     "category": "Post-Quantum Algorithms",
     "articles": [
       {
@@ -40,26 +30,6 @@
       {
         "title": "SPHINCS+",
         "file": "articles/post-quantum-algorithms/nist-2024/sphincs-plus.md",
-        "date": "to be published"
-      }
-    ]
-  },
-  {
-    "category": "Governance, risks, and compliance",
-    "articles": [
-      {
-        "title": "ISO 27001 mapping for PQC",
-        "file": "articles/governance/pqc-iso27k.md",
-        "date": "to be published5"
-      },
-      {
-        "title": "PQC migration roadmap",
-        "file": "articles/governance/pqc-migration-roadmap.md",
-        "date": "to be published"
-      },
-      {
-        "title": "Vendor PQC readiness assessment",
-        "file": "articles/governance/vendor-pqc-readiness.md",
         "date": "to be published"
       }
     ]
