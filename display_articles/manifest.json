@@ -1,40 +1,5 @@
 [
   {
-    "category": "Post-Quantum Algorithms",
-    "articles": [
-      {
-        "title": "BIKE KEM",
-        "file": "articles/post-quantum-algorithms/bike-kem.md",
-        "date": "to be published"
-      },
-      {
-        "title": "The NIST 2024 project",
-        "file": "articles/post-quantum-algorithms/nist-2024/nist-2024-overview.md",
-        "date": "to be published"
-      },
-      {
-        "title": "Kyber KEM",
-        "file": "articles/post-quantum-algorithms/nist-2024/kyber-kem.md",
-        "date": "to be published"
-      },
-      {
-        "title": "Dilithium",
-        "file": "articles/post-quantum-algorithms/nist-2024/dilithium.md",
-        "date": "to be published"
-      },
-      {
-        "title": "Falcon",
-        "file": "articles/post-quantum-algorithms/nist-2024/falcon.md",
-        "date": "to be published"
-      },
-      {
-        "title": "SPHINCS+",
-        "file": "articles/post-quantum-algorithms/nist-2024/sphincs-plus.md",
-        "date": "to be published"
-      }
-    ]
-  },
-  {
     "category": "Linguistics",
     "articles": [
       {
