@@ -3,7 +3,7 @@
     "category": "Cryptography",
     "articles": [
       {
-        "title": "Security, and post-quantum security assessment of TLS 1.0, 1.1, 1.2 and 1.3",
+        "title": "Security, and post-quantum security assessment of TLS",
         "file": "articles/post-quantum-algorithms/TLS.md",
         "date": "September 16, 2026"
       }
