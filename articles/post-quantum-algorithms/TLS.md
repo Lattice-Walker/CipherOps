@@ -2,6 +2,8 @@
 
 ## 1. Lucky Thirteen: breaking TLS 1.0, TLS 1.1, and TLS 1.2 in its CBC-mode special case
 
+{% include-markdown "Lattice-Walker/CipherOps/articles/post-quantum-algorithms/Lucky13.md" %}
+
 ## 2. Safety of TLS 1.2 with AEAD-only cipher suites 
 
 ## 3. Safety of TLS 1.3
