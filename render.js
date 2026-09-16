@@ -191,14 +191,14 @@ const renderMarkdown = (markdown, sourceFilePath = '') => {
   const mathExpressions = [];
   const mathPattern = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?<!\$)\$(?!\$)[\s\S]*?(?<!\$)\$(?!\$))/g;
   const protectedMarkdown = markdown.replace(mathPattern, (expression) => {
-    const token = `CIPHEROPS_MATH_${mathExpressions.length}_END`;
+    const token = `CIPHEROPSMATH${mathExpressions.length}END`;
     mathExpressions.push(expression);
     return token;
   });
 
   const html = marked.parse(protectedMarkdown);
   const htmlWithResolvedUrls = rewriteRelativeMediaUrls(html, sourceFilePath);
-  return htmlWithResolvedUrls.replace(/CIPHEROPS_MATH_(\d+)_END/g, (_, index) => mathExpressions[Number(index)] || '');
+  return htmlWithResolvedUrls.replace(/CIPHEROPSMATH(\d+)END/g, (_, index) => mathExpressions[Number(index)] || '');
 };
 
 const resolveMarkdownInclude = (includePath, sourceFilePath) => {
