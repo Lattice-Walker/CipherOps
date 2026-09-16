@@ -201,6 +201,48 @@ const renderMarkdown = (markdown, sourceFilePath = '') => {
   return htmlWithResolvedUrls.replace(/CIPHEROPS_MATH_(\d+)_END/g, (_, index) => mathExpressions[Number(index)] || '');
 };
 
+const resolveMarkdownInclude = (includePath, sourceFilePath) => {
+  const baseUrl = new URL('../', window.location.href);
+  const repositoryPath = includePath.match(/(?:^|\/)((?:articles|courses|practicalprojects)\/.*)$/);
+  const normalizedPath = repositoryPath ? repositoryPath[1] : includePath;
+  const sourceUrl = new URL(sourceFilePath || '.', baseUrl);
+  const url = new URL(normalizedPath, repositoryPath || !sourceFilePath ? baseUrl : sourceUrl);
+  const rootPath = new URL(baseUrl).pathname;
+  const path = decodeURIComponent(url.pathname).slice(rootPath.length);
+
+  return { path, url };
+};
+
+const expandMarkdownIncludes = async (markdown, sourceFilePath, includeStack = new Set()) => {
+  const includePattern = /{%\s*include-markdown\s+"([^"]+)"\s*%}/g;
+  const matches = [...markdown.matchAll(includePattern)];
+  if (!matches.length) return markdown;
+
+  let expanded = '';
+  let lastIndex = 0;
+
+  for (const match of matches) {
+    expanded += markdown.slice(lastIndex, match.index);
+
+    const include = resolveMarkdownInclude(match[1], sourceFilePath);
+    if (includeStack.has(include.path)) {
+      throw new Error(`Circular Markdown include: ${[...includeStack, include.path].join(' -> ')}`);
+    }
+
+    const response = await fetch(include.url, { cache: 'no-cache' });
+    if (!response.ok) {
+      throw new Error(`Unable to load included Markdown: ${response.statusText} (${include.url})`);
+    }
+
+    const nextStack = new Set(includeStack);
+    nextStack.add(include.path);
+    expanded += await expandMarkdownIncludes(await response.text(), include.path, nextStack);
+    lastIndex = match.index + match[0].length;
+  }
+
+  return expanded + markdown.slice(lastIndex);
+};
+
 // ─────────────────────────────────────────────────────────────────
 
 const loadArticle = async (filePath) => {
@@ -216,7 +258,7 @@ const loadArticle = async (filePath) => {
       throw new Error(`Unable to load article: ${response.statusText} (${articleUrl})`);
     }
 
-    const markdown = await response.text();
+    const markdown = await expandMarkdownIncludes(await response.text(), filePath, new Set([filePath]));
     const html     = renderMarkdown(markdown, filePath);
     const manifestEntry = await fetchManifestEntry(filePath);
 
