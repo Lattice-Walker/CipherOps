@@ -1,5 +1,3 @@
-## 1. Lucky Thirteen: Breaking the TLS and DTLS Record Protocols
-
 Nadhem J. AlFardan and Kenneth G. Paterson, Information Security Group, Royal Holloway, University of London. 27th February 2013. The attack of Section 4 is theirs; the presentation below reorganises it around a single claim and supplies the statistical and game-based accounting explicitly.
 
 
