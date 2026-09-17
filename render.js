@@ -189,12 +189,36 @@ const renderMarkdown = (markdown, sourceFilePath = '') => {
   if (typeof marked === 'undefined' || !marked.parse) return markdown;
 
   const mathExpressions = [];
-  const mathPattern = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?<!\$)\$(?!\$)[\s\S]*?(?<!\$)\$(?!\$))/g;
-  const protectedMarkdown = markdown.replace(mathPattern, (expression) => {
-    const token = `CIPHEROPSMATH${mathExpressions.length}END`;
-    mathExpressions.push(expression);
+  // Les corps mathematiques peuvent contenir des dollars echappes (\$, par ex.
+  // \xleftarrow{\$}) : on consomme toute sequence \x comme une unite, sinon un
+  // tel dollar desynchronise l'appariement pour tout le reste du document.
+  const mathBody = String.raw`(?:\\[\s\S]|[^\\])*?`;
+  const mathPattern = new RegExp(
+    `\\$\\$${mathBody}\\$\\$` +
+    `|\\\\\\[${mathBody}\\\\\\]` +
+    `|\\\\\\(${mathBody}\\\\\\)` +
+    `|(?<!\\$)\\$(?!\\$)(?:\\\\[\\s\\S]|[^\\\\$])+?\\$(?!\\$)`,
+    'g',
+  );
+
+  // Le code (blocs et spans) peut contenir des dollars qui ne sont pas des
+  // mathematiques : on le met de cote avant le scan, puis on le restitue tel
+  // quel pour que marked le traite normalement.
+  const codeSegments = [];
+  const codePattern = /(^|\n) {0,3}(`{3,}|~{3,})[\s\S]*?\n {0,3}\2[^\n]*|(`+)[\s\S]*?\3/g;
+  const withoutCode = markdown.replace(codePattern, (segment) => {
+    const token = `CIPHEROPSCODE${codeSegments.length}END`;
+    codeSegments.push(segment);
     return token;
   });
+
+  const protectedMarkdown = withoutCode
+    .replace(mathPattern, (expression) => {
+      const token = `CIPHEROPSMATH${mathExpressions.length}END`;
+      mathExpressions.push(expression);
+      return token;
+    })
+    .replace(/CIPHEROPSCODE(\d+)END/g, (_, index) => codeSegments[Number(index)] || '');
 
   const html = marked.parse(protectedMarkdown);
   const htmlWithResolvedUrls = rewriteRelativeMediaUrls(html, sourceFilePath);
