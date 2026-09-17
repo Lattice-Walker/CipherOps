@@ -1,6 +1,6 @@
 # Security, and post-quantum security assessment of TLS
 
-## 1. Lucky Thirteen: breaking TLS 1.0, TLS 1.1, and TLS 1.2 in its CBC-mode special case
+## 1. Lucky Thirteen: breaking TLS 1.0, TLS 1.1, and TLS 1.2 CBC-mode
 
 {% include-markdown "Lattice-Walker/CipherOps/articles/post-quantum-algorithms/Lucky13.md" %}
 
