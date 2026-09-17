@@ -1,5 +1,7 @@
 https://pure.tue.nl/ws/portalfiles/portal/3870148/17800025343027.pdf
 
+https://www.ieee-security.org/TC/SP2013/papers/4977a526.pdf
+
 
 The attack of Section 1.4 is from [Tag Size Does Matter: Attacks and Proofs for
 the TLS Record Protocol](https://www.iacr.org/archive/asiacrypt2011/70730368/70730368.pdf) ; the presentation below reorganises it around a single claim and supplies the statistical and game-based accounting explicitly.
