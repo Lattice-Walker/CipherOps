@@ -1,5 +1,4 @@
-[Nadhem J. AlFardan and Kenneth G. Paterson, Information Security Group, Royal Holloway, University of London. 27th February 2013.](https://pure.tue.nl/ws/portalfiles/portal/3870148/17800025343027.pdf) The attack of Section 1.4 is theirs; the presentation below reorganises it around a single claim and supplies the statistical and game-based accounting explicitly.
-
+The attack of Section 1.4 is from [Nadhem J. AlFardan and Kenneth G. Paterson, Information Security Group, Royal Holloway, University of London. 27th February 2013.](https://pure.tue.nl/ws/portalfiles/portal/3870148/17800025343027.pdf) ; the presentation below reorganises it around a single claim and supplies the statistical and game-based accounting explicitly.
 
 ### 1.1 The protocols
 
