@@ -102,7 +102,7 @@ where $\mathit{opad}$ and $\mathit{ipad}$ are fixed 64-byte values and $K_a$ is 
 
 Throughout this section we identify the tag size $t$ with the digest size of $H$, as holds for the untruncated HMAC-MD5, HMAC-SHA-1 and HMAC-SHA-256 of Sections 1.1.3 to 1.1.5. Truncated MACs, for which the two differ, are excluded from every statement below.
 
-**Lemma 1 (verification cost).** *For $t \le 55$, computing an HMAC tag over a message of $\ell$ bytes costs exactly*
+<span style="color:#87A878">**Lemma 1 (verification cost).**</span> *For $t \le 55$, computing an HMAC tag over a message of $\ell$ bytes costs exactly*
 
 $$N(\ell) = \left\lceil \frac{\ell - 55}{64} \right\rceil + 4$$
 
