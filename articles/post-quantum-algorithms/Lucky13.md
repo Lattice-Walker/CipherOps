@@ -178,7 +178,7 @@ For (a), on $\mathcal{E}$ a fast test has $\bar{T} < \mu + \gamma/8$ and a slow 
 Part (a) needs no knowledge of any constant. Part (b) needs only $\gamma$, which (H6) supplies. At no point does the adversary evaluate the threshold $\mu + \gamma/2$, whose position depends on constants it does not know: every decision below is a comparison between measured tests.
 
 
-### 1.3 Transfer from TLS 1.2 to TLS 1.1
+### Transfer from TLS 1.2 CBC-mode to TLS 1.1
 
 <span style="color:#87A878">**Lemma 4 (record-layer identity).**</span> *For every $t \in \{16, 20\}$ and every $b \in \{8,16\}$, the schemes $\Lambda_{1.2}[t,b]$ and $\Lambda_{1.1}[t,b]$ are identical: for every state and input their outputs are identically distributed, and their cost functions agree pointwise.*
 
@@ -193,7 +193,7 @@ Part (a) needs no knowledge of any constant. Part (b) needs only $\gamma$, which
 <span style="color:#87A878">**Remark 1 (scope).**</span> Theorem 6 transfers an attack on $\Lambda_{1.2}[t,b]$ to $\Lambda_{1.1}[t,b]$ with the *same* $(t,b)$. Section 1.4 supplies an attack for $(20,16)$ only, so what follows concerns that pair. The configurations $(16,16)$, $(20,8)$ and $(16,8)$ require the case analysis of Lemma 9 to be redone with different arithmetic and are not claimed here; for $t = 16$ in particular the analogue of Case 2 requires six or more padding bytes and the resulting search is far more expensive. It would be an overstatement to conclude from this document that *every* CBC configuration of TLS 1.1 is broken. The hypothesis $t \in \{16,20\}$ is also necessary: an attack requiring $t = 32$ could not transfer, since $\Lambda_{1.1}[32,b]$ is not a scheme TLS 1.1 defines.
 
 
-### 1.4 The special case of TLS 1.2 is broken
+### 1.4 TLS 1.2 CBC-mode is broken
 
 <span style="color:#87A878">**Theorem 7.**</span> *Assume (H1)–(H6). Let $\varepsilon \in (0,1)$ and set*
 
