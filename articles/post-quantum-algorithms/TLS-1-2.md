@@ -1,4 +1,5 @@
-The attack of Section 1.4 is from [??](google.com) ; the presentation below reorganises it around a single claim and supplies the statistical and game-based accounting explicitly.
+The attack of Section 1.4 is from [Tag Size Does Matter: Attacks and Proofs for
+the TLS Record Protocol](https://www.iacr.org/archive/asiacrypt2011/70730368/70730368.pdf) ; the presentation below reorganises it around a single claim and supplies the statistical and game-based accounting explicitly.
 
 ### 1.1 The protocols
 
