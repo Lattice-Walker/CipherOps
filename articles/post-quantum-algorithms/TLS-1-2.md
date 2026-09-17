@@ -14,6 +14,10 @@ $$\Phi_{1.2} = \Phi_{1.1}.$$
 
 What changes is the parameter set. TLS 1.2 adds HMAC-SHA-256, so $t \in \{16, 20, 32\}$, deprecates DES, and admits a second, disjoint record construction in which the record is protected by an authenticated encryption algorithm and neither $\Pi$ nor $\Phi$ is defined. That second construction is outside the scope of this document; *the special case of TLS 1.2* means throughout the scheme $\Lambda_{1.2}[20,16]$, that is, a CBC-mode ciphersuite with AES and HMAC-SHA-1.
 
+### 1.2 Hypotheses
+
+### 1.3 The attack
+
 
 
 
