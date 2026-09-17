@@ -8,4 +8,6 @@
 
 ## 3. Safety of TLS 1.3
 
+## 4. HNDL-safety of non post-quantum versions of TLS 1.2 and 1.3
+
 ## 4. ML-KEM and the HNDL-security of TLS 1.2 and 1.3
