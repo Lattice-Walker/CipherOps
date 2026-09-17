@@ -6,6 +6,8 @@
 
 ## 2. Breaking TLS 1.0 and TLS 1.1
 
+{% include-markdown "Lattice-Walker/CipherOps/articles/post-quantum-algorithms/TLS-1-0-1-1.md" %}
+
 
 ## 3. Safety of TLS 1.2 with AEAD-only cipher suites 
 
