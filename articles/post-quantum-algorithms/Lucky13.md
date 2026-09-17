@@ -1,9 +1,11 @@
 [Nadhem J. AlFardan and Kenneth G. Paterson, Information Security Group, Royal Holloway, University of London. 27th February 2013.](https://pure.tue.nl/ws/portalfiles/portal/3870148/17800025343027.pdf) The attack of Section 1.4 is theirs; the presentation below reorganises it around a single claim and supplies the statistical and game-based accounting explicitly.
 
 
-### 1.1 The Protocols
+### 1.1 The protocols
 
-#### 1.1.1 Notation and Common Objects
+The three versions share one record construction and differ only in how the IV is produced and in what the receiver does when the padding is malformed. This section fixes the notation, states each version precisely, and closes with the cost of MAC verification, on which every later argument rests.
+
+#### 1.1.1 Notation and common objects
 
 Write $x \mathbin\| y$ for concatenation, $|x|$ for byte length, $\oplus$ for bitwise XOR, and $[x]_n$ for the $n$-byte big-endian encoding of an integer $x$. For a byte string $X$ we write $X[i]$ for its $i$-th byte, indexed from zero, and $X[i \,..\, j]$ for the substring from $X[i]$ to $X[j]$ inclusive, with the convention that $X[i \,..\, i-1]$ is the empty string. The convention is needed rather than decorative: a record of length zero is admissible, and then $\mathrm{strip}$ below has upper index $-1$. Subscripts are reserved for blocks: $P_j$ is the $j$-th $b$-byte block of $P$. Thus $P_4[15]$ is the last byte of the fourth block, and no expression below uses a subscript to mean a byte.
 
@@ -11,7 +13,7 @@ Fix a block cipher $E : \{0,1\}^{8k} \times \{0,1\}^{8b} \to \{0,1\}^{8b}$ with 
 
 A version of the protocol is a tuple $\Lambda_V = (\mathrm{Encode}, \Pi_V, \Phi_V, \mathrm{IV}_V, \mathcal{A}_V)$, where $\Pi_V$ is a parsing predicate applied on decryption, $\Phi_V$ is a selector naming the data on which the MAC is verified, $\mathrm{IV}_V$ is the rule producing $C_0$, and $\mathcal{A}_V$ is the set of admissible parameters $(t,b)$. We write $\Lambda_V[t,b]$ for the scheme with those parameters fixed. Since $\mathrm{Send}$ samples an IV in two of the three versions, $\Lambda_V[t,b]$ is a randomised algorithm, and equality between two such schemes below means that their outputs are identically distributed for every input and state.
 
-#### 1.1.2 The MEE-TLS-CBC Scheme
+#### 1.1.2 The MEE-TLS-CBC scheme
 
 All three versions protect a record with the same MAC-Encode-Encrypt construction. The sender forms a 5-byte header $\mathit{HDR}$ consisting of a 2-byte version field, a 1-byte type field and a 2-byte length field, and for a record $R$ of length at least zero computes
 
@@ -27,7 +29,7 @@ $$
 
 where $P_1,\dots,P_{|P|/b}$ are the $b$-byte blocks of $P$ and $C_0$ is the IV. The padding string $[v]_1^{\,v+1}$ denotes $v+1$ copies of the byte whose value is $v$, for a sender-chosen $v \in \{0,\dots,255\}$, so at least one padding byte is always present and the padding may extend over several blocks; a conformant receiver must support removal of such extended padding. Exactly $h = 13$ bytes are prepended to $R$ before the MAC is computed, a quantity that Section 1.4 shows to be decisive. The data sent over the wire is $\mathit{HDR} \mathbin\| C$ with $C$ the concatenation of the ciphertext blocks; the sequence number is not transmitted, each party maintaining its own copy.
 
-Decryption recovers the plaintext blocks as $P_j = D_{K_e}(C_j) \oplus C_{j-1}$, removes the padding, and verifies the MAC. Before that, a receiver validates the header — the version and type fields, and the length field against the ciphertext actually received — and checks that the ciphertext length is a multiple of $b$ and large enough to hold a zero-length record, a $t$-byte tag and at least one padding byte. It then reads the final plaintext byte as a padding length $\mathit{pl} = P[\,|P|-1\,]$ and removes $\mathit{pl} + 1$ bytes, which requires care: removing them blindly can underflow, leaving too few bytes for a tag and a record. What the receiver does when the padding is *not* well formed is the point on which the versions differ, and it is where the attack of Section 1.4 lives, because in that case the position of the tag is undetermined and some convention must be adopted.
+Decryption recovers the plaintext blocks as $P_j = D_{K_e}(C_j) \oplus C_{j-1}$, removes the padding, and verifies the MAC. Before that, a receiver validates the header (the version and type fields, and the length field against the ciphertext actually received) and checks that the ciphertext length is a multiple of $b$ and large enough to hold a zero-length record, a $t$-byte tag and at least one padding byte. It then reads the final plaintext byte as a padding length $\mathit{pl} = P[\,|P|-1\,]$ and removes $\mathit{pl} + 1$ bytes, which requires care: removing them blindly can underflow, leaving too few bytes for a tag and a record. What the receiver does when the padding is *not* well formed is the point on which the versions differ, and it is where the attack of Section 1.4 lives, because in that case the position of the tag is undetermined and some convention must be adopted.
 
 Two padding predicates appear below. The length-only predicate checks that enough bytes are present,
 
@@ -71,7 +73,7 @@ $$
 
 with $\mathsf{R}_{\mathrm{len}}$ and $\mathsf{R}_{\mathrm{len}\text{-}\mathrm{mac}}$ obtained by substituting $\Pi_{\mathrm{len}}$ for $\Pi_{\mathrm{strict}}$. The symbol $\bot$ means that no MAC is computed and the record is rejected. Section 1.5 breaks the two families in the first row and shows why the argument does not reach the second row. The admissible parameters are $t \in \{16, 20\}$, for HMAC-MD5 and HMAC-SHA-1, with $b \in \{8, 16\}$.
 
-Exhaustiveness is claimed only for these two choices. A receiver that departs from the grid in some third way — verifying only part of the pattern, or selecting a third MAC input on failure — is governed by (H3) below and is outside every statement in this document.
+Exhaustiveness is claimed only for these two choices. A receiver may depart from the grid in some third way, verifying only part of the pattern, or selecting a third MAC input on failure. Such a receiver is governed by (H3) below and is outside every statement in this document.
 
 #### 1.1.4 TLS 1.1
 
@@ -95,7 +97,7 @@ $$\Phi_{1.2} = \Phi_{1.1}.$$
 
 What changes is the parameter set. TLS 1.2 adds HMAC-SHA-256, so $t \in \{16, 20, 32\}$, deprecates DES, and admits a second, disjoint record construction in which the record is protected by an authenticated encryption algorithm and neither $\Pi$ nor $\Phi$ is defined. That second construction is outside the scope of this document; *the special case of TLS 1.2* means throughout the scheme $\Lambda_{1.2}[20,16]$, that is, a CBC-mode ciphersuite with AES and HMAC-SHA-1.
 
-#### 1.1.6 The Cost of MAC Verification
+#### 1.1.6 The cost of MAC verification
 
 All three versions use HMAC. To compute the tag $T$ for a message $M$ under key $K_a$, HMAC applies the hash function $H$ twice:
 
@@ -126,15 +128,17 @@ $$
 which avoids the abuse of writing $N(\cdot) = 0$ for a function whose range is $\{4, 5, \dots\}$.
 
 
-### 1.2 Observable, Model, Game and Separation
+### 1.2 Observable, model, game and separation
 
-#### 1.2.1 The Observable and the Cost Model
+The attack sees one quantity: the time between injecting a record and the alert coming back. This section models that quantity, states the hypotheses that make it usable, says what breaking a scheme means, and proves the lemma that turns a gap between expected timings into a decision the adversary can actually make.
+
+#### 1.2.1 The observable and the cost model
 
 The adversary does not measure processing time directly. It measures the interval between injecting a record and observing, on the wire, the alert that the receiver emits in response. We model that interval, for an injected record decrypting to plaintext $P$, as
 
 $$\mathcal{T}(P) = c_0 + c_{\mathrm{pad}}(P) + c_H \cdot \mathrm{cost}(P) + \eta,$$
 
-where $c_0$ collects every contribution whose magnitude is independent of $P$ — block cipher decryption of a fixed number of blocks, header validation, generation and encryption of the alert, and its propagation — and $\eta$ carries all variation of those contributions. The term $c_{\mathrm{pad}}(P)$ is the total time spent on padding processing, checking and removal together, and is left as an arbitrary function of $P$: this is deliberate, since an implementation that stops comparing at the first mismatched byte spends a time depending on the plaintext in a way no simpler parameterisation captures. Finally $c_H$ is the cost of one compression function evaluation. Where the version matters we write $c_0^V$ and $\mathrm{cost}_V$.
+where $c_0$ collects every contribution whose magnitude is independent of $P$: block cipher decryption of a fixed number of blocks, header validation, generation and encryption of the alert, and its propagation. Here $\eta$ carries all variation of those contributions. The term $c_{\mathrm{pad}}(P)$ is the total time spent on padding processing, checking and removal together, and is left as an arbitrary function of $P$: this is deliberate, since an implementation that stops comparing at the first mismatched byte spends a time depending on the plaintext in a way no simpler parameterisation captures. Finally $c_H$ is the cost of one compression function evaluation. Where the version matters we write $c_0^V$ and $\mathrm{cost}_V$.
 
 Write $\Delta_{\mathrm{pad}} = \sup c_{\mathrm{pad}}(P) - \inf c_{\mathrm{pad}}(P)$, both extrema over the plaintexts reachable by the records the adversary injects. Set
 
@@ -150,7 +154,7 @@ $$\Delta_{\mathrm{pad}} + 5\rho\, c_H \;<\; \frac{c_H}{3}, \qquad\text{and set}\
 
 The first two terms of $g$ are the essential content: processing more padding costs more time while the longer padding it implies costs *less* MAC time, so the two effects oppose one another and the MAC effect must dominate for the sign of the gap to be determined. The third pays for records whose case is not the same in every session, and is small: for $\epsilon_{\mathrm{prp}} \le 2^{-8}$ it is at most $c_H/16$. The constant $1/3$ is what makes the hypothesis usable rather than merely true: it gives $\Delta_{\mathrm{pad}} < c_H/3 < g/2$, so the spread of running times *within* a class is less than half the gap *between* classes, which Lemma 3(b) needs.
 
-**(H3) Conformance.** The receiver's timing profile is as displayed, in particular its branch structure is exactly the selector attributed to it, header validation precedes decryption and costs the same on every branch, and the alert is generated identically on every branch. A receiver that deviates — for instance by skipping verification when too few bytes remain after depadding — is not covered by any statement below.
+**(H3) Conformance.** The receiver's timing profile is as displayed, in particular its branch structure is exactly the selector attributed to it, header validation precedes decryption and costs the same on every branch, and the alert is generated identically on every branch. A receiver that deviates, for instance by skipping verification when too few bytes remain after depadding, is not covered by any statement below.
 
 **(H4) MAC security.** $\mathrm{MAC}$ is a pseudorandom function: for a uniformly chosen key, no adversary running in the time available distinguishes it from a uniformly random function with advantage exceeding $\epsilon_{\mathrm{prf}}$.
 
@@ -158,13 +162,13 @@ The first two terms of $g$ are the essential content: processing more padding co
 
 **(H6) Calibration.** The adversary knows an upper bound on $s$ and a lower bound on $g$, which is all it needs to fix $L$. It is not assumed to know $c_0$, $c_H$, $c_{\mathrm{pad}}$ or any absolute threshold; every decision below is a comparison between measured tests.
 
-#### 1.2.2 The Security Game
+#### 1.2.2 The security game
 
 **Definition 2 (multi-session plaintext recovery).** Fix a scheme $\Lambda[t,b]$ and a target block $P^{*} \in \{0,1\}^{8b}$. The experiment $\mathbf{Exp}(\mathcal{A}, P^{*}, n)$ runs $n$ sessions. In session $i$ a fresh key $K^{(i)}$ is drawn uniformly and independently, and the application transmits a record stream in which $P^{*}$ occupies a fixed position known to $\mathcal{A}$. The adversary observes the traffic of session $i$ and may inject one record into it, learning the resulting alert symbol and the value of $\mathcal{T}$ for that injection; the injection terminates the session, errors being fatal. After the $n$ sessions $\mathcal{A}$ outputs $\hat{P}$, and succeeds if $\hat{P} = P^{*}$. The probability is over the keys, the sender's IVs, the noise, and $\mathcal{A}$'s coins. Write $n_s$ for the maximum number of records the sender transmits in any one session.
 
 $\mathcal{A}$ is a $(q, L, \delta)$-attack on $\Lambda[t,b]$ if it uses at most $q$ sessions, organises them into tests of at most $L$ sessions each in the sense of (H1), and satisfies $\Pr[\mathbf{Exp}(\mathcal{A}, P^{*}, q) \text{ succeeds}] \ge \delta$ *for every* $P^{*}$. A scheme admitting such an attack with $\delta \ge 1/2$ and $q$ feasible is called broken. Two points deserve emphasis. No distribution on $P^{*}$ is assumed anywhere, and none of the results below needs one. And $L$ counts sessions per *test*, not repetitions of a fixed ciphertext: the records injected within one test are different strings, since each session has its own key and its own $C', C^{*}$, and what they share is the induced final plaintext block.
 
-#### 1.2.3 The Separation Lemma
+#### 1.2.3 The separation lemma
 
 **Lemma 3 (sequential separation and decision rules).** *Assume (H1). Let $\mathfrak{F}$ be a family of tests and suppose constants $\mu, \gamma$ exist such that every member of $\mathfrak{F}$ is either* fast*, with $\mathbb{E}[\mathcal{T}] \le \mu$, or* slow*, with $\mathbb{E}[\mathcal{T}] \ge \mu + \gamma$. Let $\mathcal{A}$ perform at most $M$ tests drawn from $\mathfrak{F}$, the $j$-th chosen as an arbitrary function of the history $\mathcal{F}_{j-1}$ of all previous measurements, and let $\bar{T}_j$ be its sample mean over $L$ measurements. If*
 
@@ -193,12 +197,12 @@ Part (a) needs no knowledge of any constant. Part (b) needs only $\gamma$, which
 
 **Theorem 6 (TLS 1.2 $\Rightarrow$ TLS 1.1).** *Assume (H1)–(H6) and let $\mathcal{A}$ be a $(q, L, \delta)$-attack on $\Lambda_{1.2}[t,b]$ for some $t \in \{16,20\}$, $b \in \{8,16\}$, whose output depends on the observed legitimate traffic only through the positions of ciphertext blocks, and otherwise only on the alert symbols and timings it collects. Then $\mathcal{A}$, run without modification, is a $(q, L, \delta)$-attack on $\Lambda_{1.1}[t,b]$.*
 
-*Proof.* By Lemma 4 the two receivers agree as randomised functions of $(K, \mathit{SQN}, C)$ and their cost functions agree pointwise. Both carry out the same fixed processing outside the parse and emit the same alert, so $c_0^{1.1} = c_0^{1.2}$, and they share $c_{\mathrm{pad}}$ and $c_H$; by (H1) the law of the centred measurement is common. Hence for every injected record the alert symbol and the law of $\mathcal{T}$ coincide across the two experiments. The experiments are not identical in every respect — the two versions carry different bytes in the version field of $\mathit{HDR}$, which the adversary can see in the legitimate traffic — but by hypothesis $\mathcal{A}$ reads that traffic only for block positions, which are the same, so its output is a function of observables whose joint law coincides, and is therefore identically distributed in the two experiments. The adversary of Theorem 7 satisfies the hypothesis, since it uses the traffic only to locate $C'$ and $C^{*}$. The transformation is the identity map, so $q$, $L$ and $\delta$ are preserved exactly. $\square$
+*Proof.* By Lemma 4 the two receivers agree as randomised functions of $(K, \mathit{SQN}, C)$ and their cost functions agree pointwise. Both carry out the same fixed processing outside the parse and emit the same alert, so $c_0^{1.1} = c_0^{1.2}$, and they share $c_{\mathrm{pad}}$ and $c_H$; by (H1) the law of the centred measurement is common. Hence for every injected record the alert symbol and the law of $\mathcal{T}$ coincide across the two experiments. The experiments are not identical in every respect: the two versions carry different bytes in the version field of $\mathit{HDR}$, which the adversary can see in the legitimate traffic. But by hypothesis $\mathcal{A}$ reads that traffic only for block positions, which are the same, so its output is a function of observables whose joint law coincides, and is therefore identically distributed in the two experiments. The adversary of Theorem 7 satisfies the hypothesis, since it uses the traffic only to locate $C'$ and $C^{*}$. The transformation is the identity map, so $q$, $L$ and $\delta$ are preserved exactly. $\square$
 
 **Remark 1 (scope).** Theorem 6 transfers an attack on $\Lambda_{1.2}[t,b]$ to $\Lambda_{1.1}[t,b]$ with the *same* $(t,b)$. Section 1.4 supplies an attack for $(20,16)$ only, so what follows concerns that pair. The configurations $(16,16)$, $(20,8)$ and $(16,8)$ require the case analysis of Lemma 9 to be redone with different arithmetic and are not claimed here; for $t = 16$ in particular the analogue of Case 2 requires six or more padding bytes and the resulting search is far more expensive. It would be an overstatement to conclude from this document that *every* CBC configuration of TLS 1.1 is broken. The hypothesis $t \in \{16,20\}$ is also necessary: an attack requiring $t = 32$ could not transfer, since $\Lambda_{1.1}[32,b]$ is not a scheme TLS 1.1 defines.
 
 
-### 1.4 The Special Case of TLS 1.2 Is Broken
+### 1.4 The special case of TLS 1.2 is broken
 
 **Theorem 7.** *Assume (H1)–(H6). Let $\varepsilon \in (0,1)$ and set*
 
@@ -216,7 +220,7 @@ $$P^{*} = D_{K_e}(C^{*}) \oplus C'.$$
 
 The adversary is a man-in-the-middle: it observes the protected traffic and injects records of its own composition. It need not prevent messages from reaching their destination and needs no chosen-plaintext capability. The blocks $C'$ and $C^{*}$ are session-specific and the adversary locates them by position; nothing below depends on their taking different values in different sessions. What is constant across sessions is the plaintext $P^{*}$, which is what Definition 2 fixes.
 
-#### 1.4.2 The Injected Record and Its Cases
+#### 1.4.2 The injected record and its cases
 
 Let $\Delta$ be a block of 16 bytes and consider the decryption of
 
