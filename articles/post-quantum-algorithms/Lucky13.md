@@ -25,9 +25,9 @@ $$
 \end{aligned}
 $$
 
-where $P_1,\dots,P_{|P|/b}$ are the $b$-byte blocks of $P$ and $C_0$ is the IV. The padding string $[v]_1^{\,v+1}$ denotes $v+1$ copies of the byte whose value is $v$, for a sender-chosen $v \in \{0,\dots,255\}$, so at least one padding byte is always present and the padding may extend over several blocks; a conformant receiver must support removal of such extended padding. Exactly $h = 13$ bytes are prepended to $R$ before the MAC is computed, a quantity that Section 4 shows to be decisive. The data sent over the wire is $\mathit{HDR} \mathbin\| C$ with $C$ the concatenation of the ciphertext blocks; the sequence number is not transmitted, each party maintaining its own copy.
+where $P_1,\dots,P_{|P|/b}$ are the $b$-byte blocks of $P$ and $C_0$ is the IV. The padding string $[v]_1^{\,v+1}$ denotes $v+1$ copies of the byte whose value is $v$, for a sender-chosen $v \in \{0,\dots,255\}$, so at least one padding byte is always present and the padding may extend over several blocks; a conformant receiver must support removal of such extended padding. Exactly $h = 13$ bytes are prepended to $R$ before the MAC is computed, a quantity that Section 1.4 shows to be decisive. The data sent over the wire is $\mathit{HDR} \mathbin\| C$ with $C$ the concatenation of the ciphertext blocks; the sequence number is not transmitted, each party maintaining its own copy.
 
-Decryption recovers the plaintext blocks as $P_j = D_{K_e}(C_j) \oplus C_{j-1}$, removes the padding, and verifies the MAC. Before that, a receiver validates the header — the version and type fields, and the length field against the ciphertext actually received — and checks that the ciphertext length is a multiple of $b$ and large enough to hold a zero-length record, a $t$-byte tag and at least one padding byte. It then reads the final plaintext byte as a padding length $\mathit{pl} = P[\,|P|-1\,]$ and removes $\mathit{pl} + 1$ bytes, which requires care: removing them blindly can underflow, leaving too few bytes for a tag and a record. What the receiver does when the padding is *not* well formed is the point on which the versions differ, and it is where the attack of Section 4 lives, because in that case the position of the tag is undetermined and some convention must be adopted.
+Decryption recovers the plaintext blocks as $P_j = D_{K_e}(C_j) \oplus C_{j-1}$, removes the padding, and verifies the MAC. Before that, a receiver validates the header — the version and type fields, and the length field against the ciphertext actually received — and checks that the ciphertext length is a multiple of $b$ and large enough to hold a zero-length record, a $t$-byte tag and at least one padding byte. It then reads the final plaintext byte as a padding length $\mathit{pl} = P[\,|P|-1\,]$ and removes $\mathit{pl} + 1$ bytes, which requires care: removing them blindly can underflow, leaving too few bytes for a tag and a record. What the receiver does when the padding is *not* well formed is the point on which the versions differ, and it is where the attack of Section 1.4 lives, because in that case the position of the tag is undetermined and some convention must be adopted.
 
 Two padding predicates appear below. The length-only predicate checks that enough bytes are present,
 
@@ -59,7 +59,7 @@ $$
 \end{array}
 $$
 
-In each family the accepting branch is $\Phi(P) = \mathrm{strip}(P)$; the families differ only in the predicate guarding that branch and in the value taken when it fails. Thus $\mathsf{R}_{\mathrm{mac}}$ is exactly the selector $\Phi_{1.1}$ of Section 1.4, and $\mathsf{R}_{\mathrm{strict}}$ is
+In each family the accepting branch is $\Phi(P) = \mathrm{strip}(P)$; the families differ only in the predicate guarding that branch and in the value taken when it fails. Thus $\mathsf{R}_{\mathrm{mac}}$ is exactly the selector $\Phi_{1.1}$ of Section 1.1.4, and $\mathsf{R}_{\mathrm{strict}}$ is
 
 $$
 \Phi(P) =
@@ -69,7 +69,7 @@ $$
 \end{cases}
 $$
 
-with $\mathsf{R}_{\mathrm{len}}$ and $\mathsf{R}_{\mathrm{len}\text{-}\mathrm{mac}}$ obtained by substituting $\Pi_{\mathrm{len}}$ for $\Pi_{\mathrm{strict}}$. The symbol $\bot$ means that no MAC is computed and the record is rejected. Section 5 breaks the two families in the first row and shows why the argument does not reach the second row. The admissible parameters are $t \in \{16, 20\}$, for HMAC-MD5 and HMAC-SHA-1, with $b \in \{8, 16\}$.
+with $\mathsf{R}_{\mathrm{len}}$ and $\mathsf{R}_{\mathrm{len}\text{-}\mathrm{mac}}$ obtained by substituting $\Pi_{\mathrm{len}}$ for $\Pi_{\mathrm{strict}}$. The symbol $\bot$ means that no MAC is computed and the record is rejected. Section 1.5 breaks the two families in the first row and shows why the argument does not reach the second row. The admissible parameters are $t \in \{16, 20\}$, for HMAC-MD5 and HMAC-SHA-1, with $b \in \{8, 16\}$.
 
 Exhaustiveness is claimed only for these two choices. A receiver that departs from the grid in some third way — verifying only part of the pattern, or selecting a third MAC input on failure — is governed by (H3) below and is outside every statement in this document.
 
@@ -103,7 +103,7 @@ $$T = H\bigl((K_a \oplus \mathit{opad}) \mathbin\| H((K_a \oplus \mathit{ipad}) 
 
 where $\mathit{opad}$ and $\mathit{ipad}$ are fixed 64-byte values and $K_a$ is zero-padded to 64 bytes. Each $H$ used here applies Merkle-Damgård strengthening, appending an 8-byte length field and at least one further byte to align the input on a 64-byte boundary, and then processes the result in 64-byte chunks with a compression function.
 
-Throughout this section we identify the tag size $t$ with the digest size of $H$, as holds for the untruncated HMAC-MD5, HMAC-SHA-1 and HMAC-SHA-256 of Sections 1.3 to 1.5. Truncated MACs, for which the two differ, are excluded from every statement below.
+Throughout this section we identify the tag size $t$ with the digest size of $H$, as holds for the untruncated HMAC-MD5, HMAC-SHA-1 and HMAC-SHA-256 of Sections 1.1.3 to 1.1.5. Truncated MACs, for which the two differ, are excluded from every statement below.
 
 **Lemma 1 (verification cost).** *For $t \le 55$, computing an HMAC tag over a message of $\ell$ bytes costs exactly*
 
@@ -187,7 +187,7 @@ Part (a) needs no knowledge of any constant. Part (b) needs only $\gamma$, which
 
 **Lemma 4 (record-layer identity).** *For every $t \in \{16, 20\}$ and every $b \in \{8,16\}$, the schemes $\Lambda_{1.2}[t,b]$ and $\Lambda_{1.1}[t,b]$ are identical: for every state and input their outputs are identically distributed, and their cost functions agree pointwise.*
 
-*Proof.* Both use the $\mathrm{Encode}$ of Section 1.2, both sample $C_0$ uniformly and independently per record, both apply $\Pi_{\mathrm{strict}}$, and $\Phi_{1.2} = \Phi_{1.1}$ by definition, so $\mathrm{cost}_{1.2} = \mathrm{cost}_{1.1}$ pointwise. The parameter restriction is what makes the statement true: $\{16,20\}$ is exactly the set of tag sizes admitted by both, TLS 1.1 having no HMAC-SHA-256. $\square$
+*Proof.* Both use the $\mathrm{Encode}$ of Section 1.1.2, both sample $C_0$ uniformly and independently per record, both apply $\Pi_{\mathrm{strict}}$, and $\Phi_{1.2} = \Phi_{1.1}$ by definition, so $\mathrm{cost}_{1.2} = \mathrm{cost}_{1.1}$ pointwise. The parameter restriction is what makes the statement true: $\{16,20\}$ is exactly the set of tag sizes admitted by both, TLS 1.1 having no HMAC-SHA-256. $\square$
 
 **Definition 5 (IV-obliviousness).** An adversary is *IV-oblivious* if, for every value of $C_0$ that the receiver's state supplies, it can construct records inducing its intended plaintext blocks other than the first, with unchanged success probability. Such an adversary may be run against a chained-IV receiver, where $C_0$ is inherited from the preceding record and is not transmitted, at the cost of one fewer transmitted block; the records it puts on the wire are then different strings, but they induce the same plaintext blocks from the second onwards.
 
@@ -195,7 +195,7 @@ Part (a) needs no knowledge of any constant. Part (b) needs only $\gamma$, which
 
 *Proof.* By Lemma 4 the two receivers agree as randomised functions of $(K, \mathit{SQN}, C)$ and their cost functions agree pointwise. Both carry out the same fixed processing outside the parse and emit the same alert, so $c_0^{1.1} = c_0^{1.2}$, and they share $c_{\mathrm{pad}}$ and $c_H$; by (H1) the law of the centred measurement is common. Hence for every injected record the alert symbol and the law of $\mathcal{T}$ coincide across the two experiments. The experiments are not identical in every respect — the two versions carry different bytes in the version field of $\mathit{HDR}$, which the adversary can see in the legitimate traffic — but by hypothesis $\mathcal{A}$ reads that traffic only for block positions, which are the same, so its output is a function of observables whose joint law coincides, and is therefore identically distributed in the two experiments. The adversary of Theorem 7 satisfies the hypothesis, since it uses the traffic only to locate $C'$ and $C^{*}$. The transformation is the identity map, so $q$, $L$ and $\delta$ are preserved exactly. $\square$
 
-**Remark 1 (scope).** Theorem 6 transfers an attack on $\Lambda_{1.2}[t,b]$ to $\Lambda_{1.1}[t,b]$ with the *same* $(t,b)$. Section 4 supplies an attack for $(20,16)$ only, so what follows concerns that pair. The configurations $(16,16)$, $(20,8)$ and $(16,8)$ require the case analysis of Lemma 9 to be redone with different arithmetic and are not claimed here; for $t = 16$ in particular the analogue of Case 2 requires six or more padding bytes and the resulting search is far more expensive. It would be an overstatement to conclude from this document that *every* CBC configuration of TLS 1.1 is broken. The hypothesis $t \in \{16,20\}$ is also necessary: an attack requiring $t = 32$ could not transfer, since $\Lambda_{1.1}[32,b]$ is not a scheme TLS 1.1 defines.
+**Remark 1 (scope).** Theorem 6 transfers an attack on $\Lambda_{1.2}[t,b]$ to $\Lambda_{1.1}[t,b]$ with the *same* $(t,b)$. Section 1.4 supplies an attack for $(20,16)$ only, so what follows concerns that pair. The configurations $(16,16)$, $(20,8)$ and $(16,8)$ require the case analysis of Lemma 9 to be redone with different arithmetic and are not claimed here; for $t = 16$ in particular the analogue of Case 2 requires six or more padding bytes and the resulting search is far more expensive. It would be an overstatement to conclude from this document that *every* CBC configuration of TLS 1.1 is broken. The hypothesis $t \in \{16,20\}$ is also necessary: an attack requiring $t = 32$ could not transfer, since $\Lambda_{1.1}[32,b]$ is not a scheme TLS 1.1 defines.
 
 
 ### 1.4 The Special Case of TLS 1.2 Is Broken
@@ -306,7 +306,7 @@ that is $q \approx 2^{25.4}$ sessions at $r = 1$, $q \approx 2^{32}$ at $r = 10$
 
 ### 1.5 TLS 1.0
 
-TLS 1.0 fixes neither the padding predicate nor the behaviour on failure, so Section 1.3 distinguished four receiver families in a $2 \times 2$ grid. We treat them separately; there is no single dichotomy. The two families using $\Pi_{\mathrm{strict}}$ are broken below, by different arguments; the two using $\Pi_{\mathrm{len}}$ are not covered, for the reason given in Remark 3.
+TLS 1.0 fixes neither the padding predicate nor the behaviour on failure, so Section 1.1.3 distinguished four receiver families in a $2 \times 2$ grid. We treat them separately; there is no single dichotomy. The two families using $\Pi_{\mathrm{strict}}$ are broken below, by different arguments; the two using $\Pi_{\mathrm{len}}$ are not covered, for the reason given in Remark 3.
 
 **Theorem 14 ($\mathsf{R}_{\mathrm{mac}}$ receivers).** *Assume (H1)–(H6). A TLS 1.0 receiver of family $\mathsf{R}_{\mathrm{mac}}$ with $t = 20$, $b = 16$ is broken by the attack of Theorem 7, with the same $(q, L, \delta)$.*
 
@@ -324,7 +324,7 @@ It remains to check that $\gamma_0 = 4g$ is a legitimate working gap. Since $\De
 
 **Lemma 16 (recovery from the oracle).** *Under the hypotheses of Lemma 15 with $M = 16 \cdot 2^8 + 2$, the adversary recovers $P^{*}$ using at most $M$ tests.*
 
-*Proof.* Soundness is the predicate $\Pi_{\mathrm{strict}}$, which unlike Case 2 of Section 4 also admits $\mathit{pl} = 0$. Fix $\Delta[0\,..\,14]$ and run the $2^8$ tests indexed by $\Delta[15]$, so only $P_4[15]$ varies. The mask $M_0$ with $P_4[15] = \texttt{0x00}$ is sound, since then only that byte is inspected and $\Pi_{\mathrm{len}}$ holds; so the batch contains a sound test and by Lemma 3(a) the test $R$ of largest sample mean is sound. By Lemma 15 the sound class is tight, so Lemma 3(b) classifies every other test of the batch against $R$, determining the sound set exactly.
+*Proof.* Soundness is the predicate $\Pi_{\mathrm{strict}}$, which unlike Case 2 of Section 1.4 also admits $\mathit{pl} = 0$. Fix $\Delta[0\,..\,14]$ and run the $2^8$ tests indexed by $\Delta[15]$, so only $P_4[15]$ varies. The mask $M_0$ with $P_4[15] = \texttt{0x00}$ is sound, since then only that byte is inspected and $\Pi_{\mathrm{len}}$ holds; so the batch contains a sound test and by Lemma 3(a) the test $R$ of largest sample mean is sound. By Lemma 15 the sound class is tight, so Lemma 3(b) classifies every other test of the batch against $R$, determining the sound set exactly.
 
 Any sound mask other than $M_0$ has $\mathit{pl} \ge 1$, which forces $P_4[14] = \mathit{pl}$; since $P_4[14]$ is fixed in this enumeration, at most one such mask exists, so the sound set is $\{R\}$ or $\{R, X\}$. In the first case $R = M_0$, as $M_0$ is sound. In the second, run one further test on $R'$, obtained from $R$ by modifying $\Delta[14]$, and classify it against $R$: a mask with $\mathit{pl} = 0$ never inspects $P_4[14]$ and stays sound, while one with $\mathit{pl} \ge 1$ acquires $P_4[14] \ne \mathit{pl}$ and becomes unsound in every session, so $R = M_0$ if $R'$ is sound and $X = M_0$ otherwise. Either way $M_0$ is identified and $P^{*}[15] = \Delta[15]$, at a cost of $2^8 + 2$ tests.
 
@@ -332,7 +332,7 @@ The remaining fifteen bytes follow by fifteen applications of Lemma 12 with $k =
 
 **Theorem 17 ($\mathsf{R}_{\mathrm{strict}}$ receivers).** *Assume (H1)–(H6). Let $\varepsilon \in (0,1)$, put $M = 16 \cdot 2^8 + 2$ and let $L'$ be as in Lemma 15 for that $M$ and $\varepsilon$. Then a TLS 1.0 receiver of family $\mathsf{R}_{\mathrm{strict}}$ with $t = 20$, $b = 16$ is broken by an IV-oblivious attack using $q \le L' M$ sessions, with success probability at least $1 - \varepsilon - q(2^{-158} + \epsilon_{\mathrm{prf}} + \epsilon_{\mathrm{prp}})$.*
 
-*Proof.* Combine Lemmas 15 and 16 at this $M$, which matches the test count of Lemma 16. The records injected are those of Section 4.2, so the adversary is IV-oblivious and Definition 5 supplies the four-block form needed against a chained IV. The forgery accounting is that of Theorem 7, and applies only to the sound branch, where a MAC is computed at all; the bound there does not depend on the freshness of the injected MAC input, so it transfers unchanged. $\square$
+*Proof.* Combine Lemmas 15 and 16 at this $M$, which matches the test count of Lemma 16. The records injected are those of Section 1.4.2, so the adversary is IV-oblivious and Definition 5 supplies the four-block form needed against a chained IV. The forgery accounting is that of Theorem 7, and applies only to the sound branch, where a MAC is computed at all; the bound there does not depend on the freshness of the injected MAC input, so it transfers unchanged. $\square$
 
 **Remark 3 (the $\Pi_{\mathrm{len}}$ families are not covered).** Neither $\mathsf{R}_{\mathrm{len}}$ nor $\mathsf{R}_{\mathrm{len}\text{-}\mathrm{mac}}$ is reached by the arguments above, and for the same underlying reason: $\Pi_{\mathrm{len}}(P)$ depends only on whether $\mathit{pl} \le |P| - 1 - t$, a threshold on the single byte $P_4[15]$, so the branch taken conveys no information about any other byte.
 
