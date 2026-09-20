@@ -5,11 +5,9 @@ Source: N. J. AlFardan and K. G. Paterson, *Lucky Thirteen: Breaking the TLS and
 
 Fix throughout: block size $b = 16$ bytes (AES), tag length $t = 20$ bytes (HMAC-SHA-1), header length $h = 13$ bytes (8-byte `SQN` + 5-byte `HDR`), explicit IV (TLS 1.2). These are the values under which the efficient attack exists; §4.3 handles $t \in \{16, 32\}$ and the plan flags where the argument degrades. All lengths are in bytes. Write $x \,\|\, y$ for concatenation, $\langle p \rangle^{n}$ for the byte with value $p$ repeated $n$ times, and $B = [B_0 B_1 \cdots B_{b-1}]$ for the bytes of a block $B$.
 
-The central structural fact to state before anything else, and to return to in §3.6: Paterson, Ristenpart and Shrimpton (ASIACRYPT 2011, ref. [28]) **proved** that MEE-TLS-CBC achieves Length-Hiding Authenticated Encryption, in a model that already includes the full padding encoding, assuming decryption reveals nothing but the fact of failure. The paper under study says so explicitly on p. 4 and states that its attacks "do not contradict the result of [28], but instead relativize its applicability to practice." So the theorem you are aiming at is **false** in the standard model. The entire content of §1 below is the construction of the *one* model extension — a leakage-augmented decryption oracle — that makes it true, and §3.6 is the argument that this extension is not only sufficient but necessary.
+The central structural fact to state before anything else, and to return to in §3.6: Paterson, Ristenpart and Shrimpton (ASIACRYPT 2011, ref. [28]) **proved** that MEE-TLS-CBC achieves Length-Hiding Authenticated Encryption, in a model that already includes the full padding encoding, assuming decryption reveals nothing but the fact of failure. The paper under study says so explicitly on p. 4 and states that its attacks "do not contradict the result of [28], but instead relativize its applicability to practice." So the theorem you are aiming at is **false** in the standard model. The entire content of §1 below is the construction of the *one* model extension ; a leakage-augmented decryption oracle ; that makes it true, and §3.6 is the argument that this extension is not only sufficient but necessary.
 
-
-
-### Section 1 : Defining TLS 1.2 CBC mode cryptographically
+### 1. TLS 1.2 CBC mode
 
 #### 1.1 Syntax
 
@@ -75,7 +73,7 @@ $\mathbf{Exp}^{\mathrm{PR}}_{\Pi, \mathcal{A}}$: sample $q$ independent key pair
 
 
 
-### Section 2 : Building the cryptographic attacker
+### 2. The cryptographic attacker
 
 #### 2.1 Warm-up: the distinguishing adversary
 
@@ -127,7 +125,7 @@ Partially-known plaintext (p. 8): one known byte out of the last two collapses P
 
 
 
-### Section 3 : Proving the attacker recovers the plaintext
+### 3. The plaintext recovery
 
 #### 3.1 Lemma 1 (encoding length)
 
