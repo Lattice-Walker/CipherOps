@@ -1,7 +1,7 @@
 
 Source: N. J. AlFardan and K. G. Paterson, *Lucky Thirteen: Breaking the TLS and DTLS Record Protocols*, 27 February 2013 (`TLStiming.pdf`). Section references below are to that paper.
 
-### Standing conventions
+#### Standing conventions
 
 Fix throughout: block size $b = 16$ bytes (AES), tag length $t = 20$ bytes (HMAC-SHA-1), header length $h = 13$ bytes (8-byte `SQN` + 5-byte `HDR`), explicit IV (TLS 1.2). These are the values under which the efficient attack exists; §4.3 handles $t \in \{16, 32\}$ and the plan flags where the argument degrades. All lengths are in bytes. Write $x \,\|\, y$ for concatenation, $\langle p \rangle^{n}$ for the byte with value $p$ repeated $n$ times, and $B = [B_0 B_1 \cdots B_{b-1}]$ for the bytes of a block $B$.
 
@@ -9,19 +9,19 @@ The central structural fact to state before anything else, and to return to in �
 
 
 
-## Section 1 : Defining TLS 1.2 CBC mode cryptographically
+### Section 1 : Defining TLS 1.2 CBC mode cryptographically
 
-### 1.1 Syntax
+#### 1.1 Syntax
 
 Define a stateful length-hiding authenticated encryption scheme $\Pi = (\mathsf{Gen}, \mathsf{Enc}, \mathsf{Dec})$ with the state carried by the sequence number. Adopt the syntax of [28] verbatim so that the impossibility direction in §3.6 composes without translation.
 
 $\mathsf{Gen}(1^\kappa)$ returns $K = (K_e, K_a)$ with $K_e$ a block-cipher key and $K_a$ a MAC key. Sender and receiver each keep an 8-byte counter $\mathrm{SQN}$, initialised to $0$ and incremented per record. $\mathsf{Enc}$ takes a record $R \in \{0,1\}^{8 \cdot |R|}$ of arbitrary byte length $\ge 0$ and a 5-byte header $\mathrm{HDR}$; $\mathsf{Dec}$ takes $\mathrm{HDR} \,\|\, C$ and returns a record or the distinguished symbol $\bot$.
 
-### 1.2 Components
+#### 1.2 Components
 
 Let $E : \{0,1\}^{\kappa} \times \{0,1\}^{8b} \to \{0,1\}^{8b}$ be the block cipher with inverse $D$, modelled as a PRP. Let $\mathrm{HMAC}\text{-}H$ be the MAC with $\kappa$-byte key and $t$-byte tag, modelled as SUF-CMA. Both assumptions are the ones [28] uses, which matters for §3.6.
 
-### 1.3 The encoding step
+#### 1.3 The encoding step
 
 This is the part that no generic MAC-then-encrypt abstraction captures, and getting it exactly right is the whole reason the attack exists. Define
 
@@ -29,11 +29,11 @@ $$\mathsf{Encode}(R, T) = R \,\|\, T \,\|\, \langle p \rangle^{p+1}$$
 
 where the padding byte value $p$ satisfies $|R| + t + p + 1 \equiv 0 \pmod b$ and $0 \le p \le 255$. The minimal legal choice is $p_{\min} = b - 1 - \big((|R| + t) \bmod b\big)$, and every $p = p_{\min} + jb \le 255$ for integer $j \ge 0$ is also legal. Two properties to record as a numbered remark, because both are load-bearing later: **at least one** padding byte is always present (so zero-length padding is never produced by a legitimate sender, yet is what the RFC tells a receiver to assume on failure), and padding **may span several blocks** ; receivers are required to support removal of up to 256 padding bytes. The distinguishing attack of §2.1 lives entirely off this second property.
 
-### 1.4 Encryption
+#### 1.4 Encryption
 
 $\mathsf{Enc}_K(\mathrm{HDR}, R)$: compute $T \leftarrow \mathrm{HMAC}_{K_a}(\mathrm{SQN} \,\|\, \mathrm{HDR} \,\|\, R)$, set $P \leftarrow \mathsf{Encode}(R,T)$ and parse it into blocks $P_1 \cdots P_n$, draw $C_0 \leftarrow \{0,1\}^{8b}$ uniformly as the explicit IV, and output $\mathrm{HDR} \,\|\, C_0 \,\|\, C_1 \,\|\, \cdots \,\|\, C_n$ where $C_j = E_{K_e}(P_j \oplus C_{j-1})$. Increment $\mathrm{SQN}$. Note explicitly that $\mathrm{SQN}$ is authenticated but **not transmitted** : the receiver supplies its own copy : since the attacker's ability to submit forged records without touching $\mathrm{SQN}$ depends on it.
 
-### 1.5 Decryption : the RFC-compliant depad, stated as an algorithm
+#### 1.5 Decryption : the RFC-compliant depad, stated as an algorithm
 
 Write $\mathsf{Dec}$ out as numbered pseudocode rather than prose. This is §2 p. 5 of the paper made precise, and every branch is referenced later.
 
@@ -47,7 +47,7 @@ Write $\mathsf{Dec}$ out as numbered pseudocode rather than prose. This is §2 p
 
 Step 6 is the vulnerability. It exists to defeat the Canvel et al. attack [6] by forcing a MAC check on every path, and it succeeds at that ; the *outcome* is always $\bot$ and carries no information. What it cannot hide is that the MAC is computed over a string whose length depends on which branch was taken.
 
-### 1.6 The leakage function
+#### 1.6 The leakage function
 
 Define $\lambda(P)$, the byte-length of the string passed to HMAC:
 
@@ -59,25 +59,25 @@ $$\mathsf{cost}(\ell) = \left\lceil \frac{\ell - 55}{64} \right\rceil + 4 .$$
 
 Derive it rather than quoting it ; the derivation is two lines and makes the constant 55 non-mysterious. The inner hash consumes $64 + \ell$ bytes (the ipad-XORed key block plus the message) plus at least 9 bytes of Merkle–Damgård strengthening (one $\texttt{0x80}$ byte and an 8-byte length field), rounded up to a multiple of 64; the outer hash consumes $64 + t + 9 \le 128$ bytes, i.e. exactly 2 blocks for any $t \le 55$. Sanity-check the formula at $\ell = 55 \mapsto 4$, $\ell = 56 \mapsto 5$, $\ell = 119 \mapsto 5$, $\ell = 120 \mapsto 6$. The point to emphasise, and the reason this paper admits a *proof* rather than only measurements, is that $\mathsf{cost}$ is an exact closed form, not an empirical fit.
 
-### 1.7 Two leakage models
+#### 1.7 Two leakage models
 
 **Model A (noiseless).** The decryption oracle returns $\big(\bot, \mathsf{cost}(\lambda(P))\big)$. Everything in Section 3 except §3.5 is proved here, and the results are exact rather than asymptotic.
 
 **Model B (noisy).** The oracle returns $(\bot, \tau)$ with $\tau = c_0 \cdot \mathsf{cost}(\lambda(P)) + \eta$, where $c_0 > 0$ is the per-compression cost and $\eta$ is drawn from a fixed noise distribution, independently per query. Assume $\eta$ is sub-Gaussian with parameter $\sigma$. This is the honest abstraction of network jitter; the paper supplies experiments (§5) and the empirical value $L = 2^7$ but no bound, so §3.5 is yours to supply.
 
-### 1.8 The session model
+#### 1.8 The session model
 
 TLS treats every decryption error as fatal (§2 p. 5), so **one decryption query destroys the session**. Formalise the Canvel et al. multi-session setting [6] as the paper does on p. 8: the adversary interacts with $q$ independent sessions, each with fresh keys and fresh IVs, each encrypting the *same* record $R^\ast$ at the *same* record position, and is allowed exactly one decryption query per session. State this as an explicit hypothesis of Theorem 2, not as a footnote ; it is the one genuinely strong assumption in the whole development.
 
-### 1.9 The plaintext-recovery game
+#### 1.9 The plaintext-recovery game
 
 $\mathbf{Exp}^{\mathrm{PR}}_{\Pi, \mathcal{A}}$: sample $q$ independent key pairs; encrypt $R^\ast$ once per session and hand the adversary all $q$ ciphertexts; give the adversary the Model-A (or Model-B) decryption oracle subject to the one-query-per-session rule; the adversary outputs $\hat{P}$ and wins iff $\hat{P} = P^\ast$, where $P^\ast$ is the target plaintext block. Define $\mathbf{Adv}^{\mathrm{PR}}_{\Pi}(\mathcal{A}) = \Pr[\mathcal{A} \text{ wins}]$. Note that unlike an indistinguishability advantage this is not normalised against a $1/2$ baseline; the trivial bound is $2^{-8b}$.
 
 
 
-## Section 2 : Building the cryptographic attacker
+### Section 2 : Building the cryptographic attacker
 
-### 2.1 Warm-up: the distinguishing adversary
+#### 2.1 Warm-up: the distinguishing adversary
 
 Do this first. It is a single query, needs no session model, and it exercises the leakage machinery of §1.6 in isolation, so if the case analysis is wrong it shows up here where it is cheap to fix. This is §3 of the paper.
 
@@ -85,7 +85,7 @@ $\mathcal{A}_{\mathrm{dist}}$ submits $M_0 = (\text{32 arbitrary bytes}) \,\|\, 
 
 Verify the arithmetic in the writeup, since it is the template for §2.3. With $\ell_P = 288$: under $d = 0$ the trailing $\texttt{0xFF}$ bytes form well-formed padding with $\mathit{padlen} = 255$, so $\lambda = 13 + 288 - 20 - 1 - 255 = 25$ and $\mathsf{cost}(25) = 4$; under $d = 1$ the single $\texttt{0x00}$ is well-formed padding with $\mathit{padlen} = 0$, so $\lambda = 13 + 288 - 20 - 1 - 0 = 280$ and $\mathsf{cost}(280) = \lceil 225/64 \rceil + 4 = 8$. A gap of four compression functions, from one query.
 
-### 2.2 Attack geometry
+#### 2.2 Attack geometry
 
 Let $C^\ast$ be the target ciphertext block and $C'$ its predecessor (possibly the IV), so that $P^\ast = D_{K_e}(C^\ast) \oplus C'$. For a 16-byte mask $\Delta$ define the forged record
 
@@ -97,7 +97,7 @@ $$P_4 = D_{K_e}(C^\ast) \oplus (C' \oplus \Delta) = P^\ast \oplus \Delta,$$
 
 so the adversary steers the trailing plaintext bytes at will while the block cipher key stays out of reach. Record that $P_3 = D_{K_e}(C' \oplus \Delta) \oplus C_2$ is *not* controlled and behaves pseudorandomly as $\Delta$ varies ; §3.3 needs this.
 
-### 2.3 The three cases
+#### 2.3 The three cases
 
 With $\ell_P = 64$, $t = 20$, $h = 13$, exactly one of the following holds.
 
@@ -107,7 +107,7 @@ With $\ell_P = 64$, $t = 20$, $h = 13$, exactly one of the following holds.
 
 The upper limit $p \le 43$ is forced by the underflow check in step 4 ($\mathit{padlen} + 1 + t \le 64$); values $p \ge 44$ fall into Case 3, not Case 2. State this, because a reader will otherwise expect $p \le 255$.
 
-### 2.4 The adversary $\mathcal{A}_{\mathrm{PR}}$
+#### 2.4 The adversary $\mathcal{A}_{\mathrm{PR}}$
 
 Define a subroutine $\mathsf{Probe}(\Delta)$: open a fresh session, submit $C^{\mathrm{att}}(\Delta)$, return $\mathsf{true}$ iff the observed cost is 4. By §3.2 this is exactly a test for Case 2.
 
@@ -121,25 +121,25 @@ Define a subroutine $\mathsf{Probe}(\Delta)$: open a fresh session, submit $C^{\
 
 Worst-case query count $2^{16} + 14 \cdot 2^8 + 14 < 2^{16.1}$, hence the same number of sessions; expected count roughly $2^{15} + 14 \cdot 2^7$.
 
-### 2.5 Variants worth a remark each
+#### 2.5 Variants worth a remark each
 
 Partially-known plaintext (p. 8): one known byte out of the last two collapses Phase 1 from $2^{16}$ to $2^8$, giving $15 \cdot L \cdot 2^8$ sessions overall. Restricted alphabets: Base64-encoded cookie or credential bytes take Phase 2 to $2^6$. Lucky 13 + BEAST (p. 8): browser-resident malware opens the sessions itself and pads the request so that each target block holds exactly one unknown cookie byte, reaching $\approx 2^{13}$ sessions per byte at $L = 2^7$. These do not need separate theorems ; one corollary with a table of query counts is enough.
 
 
 
-## Section 3 : Proving the attacker recovers the plaintext
+### Section 3 : Proving the attacker recovers the plaintext
 
-### 3.1 Lemma 1 (encoding length)
+#### 3.1 Lemma 1 (encoding length)
 
 For every $\Delta$ and every key, the length of the string submitted to HMAC during decryption of $C^{\mathrm{att}}(\Delta)$ is $56$ in Case 1, at most $55$ in Case 2, and $57$ in Case 3. Immediate from §1.5 and §1.6 by substituting $\ell_P = 64$, $t = 20$, $h = 13$; the proof is three lines of arithmetic and should be written out, because Lemma 2 is entirely a corollary of these three numbers.
 
-### 3.2 Lemma 2 (leakage separation) : the crux
+#### 3.2 Lemma 2 (leakage separation) : the crux
 
 $\mathsf{cost}(\lambda) = 4$ in Case 2 and $\mathsf{cost}(\lambda) = 5$ in Cases 1 and 3. Proof: $\mathsf{cost}$ is constant on $[\,\cdot\,, 55]$ and steps at 56, and Lemma 1 places Case 2 at or below 55 and Cases 1 and 3 strictly above it.
 
 Follow it with the sensitivity remark, which is the paper's own punchline (p. 9) and the cleanest way to show a reader that the result is arithmetic rather than accidental. Had the header been $h = 12$, Case 1 would give $\lambda = 55$ and hence cost 4, so the oracle would detect well-formed padding of *any* length, a single $\texttt{0x00}$ would suffice, and the whole attack would cost $2^8$ instead of $2^{16}$. Thirteen is lucky; twelve would have been luckier. Conversely the attack needs $t = 20$: for $t = 16$ or $t = 32$ the same computation puts the threshold at padding length $\ge 6$, Phase 1 becomes $2^{48}$, and only the partially-known-plaintext variants stay attractive (§4.3, p. 9).
 
-### 3.3 Lemma 3 (reduction to a padding oracle)
+#### 3.3 Lemma 3 (reduction to a padding oracle)
 
 This is the pivot of the whole proof: it converts a timing attack into a classical padding-oracle attack, after which nothing about timing appears again.
 
@@ -153,7 +153,7 @@ $$\Pr[\mathsf{Bad}] \le \mathbf{Adv}^{\mathrm{prp}}_{E}(\mathcal{B}) + \mathbf{A
 
 Phase 1b resolves this completely, which is why $\nu$ ends up tiny rather than merely small. Flipping byte 13 of the mask leaves a length-2 pattern intact ; byte 13 is not part of it ; and destroys every pattern of length $\ge 3$, since byte 13 *is* part of those and the last byte still reads $k \ne 0$, so the result is Case 3 rather than a different Case 2. Hence Phase 1b identifies $k = 1$ with certainty among in-block hits, at most 15 hits arise, and $\nu \le 2^{-8}$ from the $P_3$-dependent case alone. Write the length-2-versus-length-3 boundary out explicitly; it is the only step where the disambiguation rule could plausibly fail and it is worth showing that it does not.
 
-### 3.4 Lemmas 4 and 5 (phase correctness) and Theorem 2
+#### 3.4 Lemmas 4 and 5 (phase correctness) and Theorem 2
 
 **Lemma 4.** Conditioned on $\neg\mathsf{Bad}$, Phase 1 followed by Phase 1b outputs $(P^\ast_{14}, P^\ast_{15})$ after at most $2^{16} + 14$ probes. Existence: the intended mask is in the enumerated set. Uniqueness up to Phase 1b: argue over the at most 15 competing in-block patterns.
 
@@ -167,7 +167,7 @@ Proof: Lemma 3 to replace the timing oracle by $\mathcal{O}_{\mathrm{pad}}$, the
 
 **Theorem 1 (distinguishing).** State and prove the §2.1 adversary in the same framework: one query, advantage $\ge 1 - \Pr[\mathsf{Bad}]$. It is a corollary of Lemma 2 and makes the paper readable.
 
-### 3.5 Theorem 3 (the noisy model) : optional but the honest version
+#### 3.5 Theorem 3 (the noisy model) : optional but the honest version
 
 The paper gives only experiments here (§5), so this section is entirely yours. In Model B, run $\mathsf{Probe}$ $L$ times per candidate $\Delta$ and threshold the sample median (the paper reports that medians and percentiles beat means on its skewed, long-tailed data, §5.2). With $\eta$ sub-Gaussian of parameter $\sigma$, Hoeffding bounds the per-candidate error by $\exp(-L c_0^2 / 8\sigma^2)$, and a union bound over the $2^{16} + 14 \cdot 2^8$ candidates gives
 
@@ -175,17 +175,17 @@ $$L = O\!\left( \frac{\sigma^2}{c_0^2} \log \frac{2^{16}}{\epsilon} \right)$$
 
 for overall failure probability $\epsilon$, at a total cost of $L \cdot (2^{16} + 14\cdot 2^8)$ sessions. Compare the resulting number against the paper's measured $L = 2^7$ at $c_0 \approx$ one SHA-1 compression on a 1.87 GHz core (§5.4) : a plan-level cross-check that the bound is not vacuous. Flag the modelling gap honestly: independence of $\eta$ across queries is an idealisation, and real jitter is correlated.
 
-### 3.6 Proposition (the leakage model is necessary, not convenient)
+#### 3.6 Proposition (the leakage model is necessary, not convenient)
 
 Close the argument by showing the extension in §1.7 is forced. Cite [28]: in the model where decryption returns only $\bot$, MEE-TLS-CBC is LH-AE secure under the same PRP and SUF-CMA assumptions used above, so no adversary whatsoever achieves non-negligible PR advantage there. Hence Theorem 2 is tight in the precise sense that removing the cost component of the oracle's output destroys it. This is also what makes the result a statement about *implementations* of TLS 1.2 CBC rather than about the abstract construction : and it is the sentence a reviewer will look for.
 
-### 3.7 Scope, stated as limitations
+#### 3.7 Scope, stated as limitations
 
 Three claims the theorem does **not** make, all to be stated plainly. It covers CBC ciphersuites only ; the AEAD ciphersuites of TLS 1.2 (GCM, CCM) are untouched. It is proved for $t = 20$; at $t \in \{16, 32\}$ Phase 1 costs $2^{48}$ and only the partially-known-plaintext corollaries remain practical. And it assumes the RFC 4346/5246 depad branch of step 6 ; GnuTLS removes $\mathit{padlen}+1$ bytes instead (§6.1), which needs a different case analysis and yields a different, in fact larger, timing signal.
 
 
 
-## Appendix: a suggested ordering, and what to cite
+### Appendix: a suggested ordering, and what to cite
 
 Write and verify §2.1/Theorem 1 before anything else; it is one query and it will catch arithmetic errors in Lemma 1 immediately. Then Lemmas 1–3, then Theorem 2, then Theorem 3 last since it is the only part not underwritten by the source. §3.6 should be drafted early even though it appears late, because it determines how §1.7 must be phrased.
 
