@@ -1,6 +1,6 @@
 # CipherOps
 
-[CipherOps](https://lattice-walker.github.io/CipherOps/) is a lightweight static GitHub Pages blog for cybersecurity and math articles.
+[CipherOps](https://lattice-walker.github.io/CipherOps/) is a GitHub Pages blog for cybersecurity and math articles.
 
 ## Add a new article
 
