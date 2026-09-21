@@ -15,5 +15,4 @@
 ```
 
 ## Main colours
-Sage: #87A878;
-Lavender: #B8A9C9;
+Sage (#87A878) and lavender (#B8A9C9).
