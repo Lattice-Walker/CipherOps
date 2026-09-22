@@ -20,8 +20,7 @@ Three parameters are fixed throughout: the block size $b$, the MAC tag length $t
 
 ### 1.1. TLS 1.2 CBC mode
 
-<span style="color:#87A878">Definition ii (Encryption Schemes)</span>
-- A stateful authenticated encryption scheme with associated data is a triple $\Pi = (\mathsf{Gen}, \mathsf{Enc}, \mathsf{Dec})$ of algorithms over a header space $\mathcal{H} = \mathbb{B}^5$ and a record space $\mathcal{R} = \mathbb{B}^*$.
+<span style="color:#87A878">Definition ii (Encryption Schemes)</span> A stateful authenticated encryption scheme with associated data is a triple $\Pi = (\mathsf{Gen}, \mathsf{Enc}, \mathsf{Dec})$ of algorithms over a header space $\mathcal{H} = \mathbb{B}^5$ and a record space $\mathcal{R} = \mathbb{B}^*$.
     - $\mathsf{Gen}(1^\kappa)$, where $\kappa$ is the security parameter governing the key lengths, is randomised and outputs a key pair $K = (K_e, K_a)$ together with an initial state $\sigma_0$. A state is a pair $\sigma = (\mathit{sqn}_s, \mathit{sqn}_r)$ of integers in $[0, 2^{64})$, the sending and receiving sequence numbers, with $\sigma_0 = (0,0)$.
     - $\mathsf{Enc}_K(\mathrm{HDR}, R; \sigma)$ is randomised and outputs a ciphertext $C \in \mathbb{B}^*$ and an updated state. $\mathsf{Dec}_K(\mathrm{HDR}, C; \sigma)$ is deterministic and outputs either a record $R \in \mathcal{R}$ or the distinguished failure symbol $\bot$, together with an updated state. Correctness requires that for every key, every header and every record, encrypting and then decrypting under matched states returns the record.
 
