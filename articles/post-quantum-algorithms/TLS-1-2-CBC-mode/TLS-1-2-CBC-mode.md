@@ -80,18 +80,11 @@ The sequence number is authenticated but not transmitted: the receiver supplies 
 6. $R \leftarrow P[0 \mathinner{.\,.} r-1]$ and $T \leftarrow P[r \mathinner{.\,.} r+t-1]$.
 7. Let $v \leftarrow \big[\mathrm{MAC}_{K_a}\big(\langle \mathit{sqn}_r \rangle_8 \,\|\, \mathrm{HDR} \,\|\, R\big) = T\big]$; then set $\mathit{sqn}_r \leftarrow \mathit{sqn}_r + 1$ and return $R$ if $v$, else $\bot$.
 
-The ordering in step 7 matters: the tag is verified against the *current* receive counter and the increment follows, matching the sender's use of $\mathit{sqn}_s$ in step 1 of Definition 3. Incrementing first would make correctness fail on every honest record.
-
-The sanity test in step 1 reserves room for a zero-length record, a full tag and one padding byte, and rejects before any cryptographic work is done; it agrees with the normative procedure of [[LT, §7, p. 16]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf). This matters because a record rejected at step 1 produces no MAC computation, so no value of $\mathsf{cost}$ is defined for it. 
-
 Step 5 is the vulnerability, its purpose is to defeat the padding oracle of [[CHVV03]](https://www.scilit.com/publications/7a4b73573841857d9102de26df89dbd3) by having a MAC verified on every path, and in that it succeeds completely: the return value is $\bot$ in both branches and distinguishes nothing. What it cannot conceal is that the two branches hand HMAC strings of different lengths. 
-
-The else-branch of step 5 is the one prescribed by RFC 4346 and RFC 5246. Implementations that instead strip $\mathit{padlen}+1$ bytes and then read the tag (GnuTLS-style) induce a different case analysis and, per [[LT, §6.1]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf), a larger timing signal; that variant is not covered here.
-
 
 <span style="color:#87A878">Hypothesis 5 (compliant underflow handling).</span> We assume the receiver implements step 4's length test and, when it fails, proceeds to the else-branch of step 5. 
 
-This is what [[LT, §7, p. 16–17]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) prescribes, so the hypothesis is one of RFC-compliance rather than a fresh assumption; but it is a genuine restriction, because [[LT, §6, p. 15]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) documents a real implementation that instead skips MAC verification entirely on underflow, and builds a distinguisher on that behaviour in which the branch is reached with probability 1. Against such a receiver the results of §1.3 do not apply. Against a receiver satisfying the hypothesis the branch is unreachable by construction. For a receiver that skips, reaching the branch through the attack ciphertext of Section 2 requires $\mathit{wf}$'s byte test to pass while its length test fails, which at $\ell_P = 64$ and $t = 20$ forces $p \in [44, 63]$ and hence a constant self-describing pattern of at least 45 bytes, at least 29 of which lie outside the block the adversary controls; summing $2^{-8(p-15)}$ over that range gives less than $2^{-231}$ per query. Both the bound and its derivation are specific to $\ell_P = 64$: at $\ell_P = 32$ the skip branch is instead reachable near-deterministically (for $p \in [12,31]$ the matching pattern fits inside the single controlled block, so the adversary forces it), which is a further reason the analysis fixes the four-block geometry $\ell_P = 64$. The hypothesis constrains the plaintext-recovery game of Definition 12, not the distinguishing game of Definition 13.
+This is what [[LT, §7, p. 16–17]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) prescribes, so the hypothesis is one of RFC-compliance rather than a fresh assumption; but it is a genuine restriction, because [[LT, §6, p. 15]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) documents a real implementation that instead skips MAC verification entirely on underflow, and builds a distinguisher on that behaviour in which the branch is reached with probability 1. Against such a receiver the results of §1.3 do not apply.
 
 <span style="color:#87A878">Hypothesis 6 (constant-time padding comparison).</span> We assume the receiver's padding-format check in step 4 runs in time independent of the plaintext. 
 
@@ -99,7 +92,7 @@ This isolates the MAC as the only plaintext-dependent contribution to decryption
 
 #### 1.1.4 The leakage function
 
-![HMAC input length](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/hmac-lenght.svg)
+![HMAC input length](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/hmac-length.svg)
 
 <span style="color:#87A878">Definition 7 (HMAC input length).</span> For a decrypted plaintext $P$, let $\lambda(P) = h + r$ with $r$ as computed in step 5 of Definition 4. Explicitly,
 
