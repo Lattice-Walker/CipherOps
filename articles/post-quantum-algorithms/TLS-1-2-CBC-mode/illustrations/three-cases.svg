@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 576" width="900" height="576" role="img" aria-label="The three cases: the trailing bytes of P4 parse as one-byte padding, longer well-formed padding, or no valid padding, giving HMAC costs 5, 4 and 5">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="24" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">The decrypted plaintext: ℓP = 64, four blocks, and only P4 is chosen</text>
+<rect x="150" y="44" width="144" height="28" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="222" y="63" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">1</tspan></text>
+<rect x="294" y="44" width="144" height="28" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="366" y="63" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">2</tspan></text>
+<rect x="438" y="44" width="144" height="28" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="510" y="63" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">3</tspan></text>
+<rect x="582" y="44" width="144" height="28" fill="#87A878" fill-opacity="0.35" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="654" y="63" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">4</tspan></text>
+<text x="654" y="90" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">P4 = P* ⊕ Δ</text>
+<polyline points="860,58 732,58" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="860" y="48" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="normal">the check starts here</text>
+<text x="20" y="136" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">The three ways the trailing bytes can parse</text>
+<text x="136" y="183" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">Case 1</text>
+<rect x="150" y="162" width="387" height="32" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="343.5" y="183" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">R</tspan><tspan dx="0.0" dy="0" font-size="13.0">: 43 bytes</tspan></text>
+<rect x="537" y="162" width="180" height="32" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="627.0" y="183" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">T</tspan></text>
+<rect x="717" y="162" width="9" height="32" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<line x1="294" y1="158" x2="294" y2="198" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="438" y1="158" x2="438" y2="198" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="582" y1="158" x2="582" y2="198" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<path d="M537,160 v-10" stroke="#87A878" stroke-width="1.5"/>
+<text x="537" y="146" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">r</tspan></text>
+<text x="150" y="212" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">well-formed, but only one byte stripped</text>
+<text x="734" y="174" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">p = 0: one byte 0x00</text>
+<text x="734" y="194" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">λ</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 56</tspan></text>
+<text x="734" y="214" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="16.0">cost =</tspan><tspan dx="4.8" dy="0" font-size="16.0">5</tspan></text>
+<text x="136" y="271" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">Case 2</text>
+<rect x="150" y="250" width="333" height="32" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="316.5" y="271" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">R</tspan><tspan dx="0.0" dy="0" font-size="13.0">: 43 − p bytes</tspan></text>
+<rect x="483" y="250" width="180" height="32" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="573.0" y="271" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">T</tspan></text>
+<rect x="663" y="250" width="63" height="32" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="694.5" y="271" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="12.0">⟨</tspan><tspan dx="0.0" dy="0" font-size="12.0">p</tspan><tspan dx="0.0" dy="0" font-size="12.0">⟩</tspan><tspan dx="0.0" dy="-7" font-size="8.4">7</tspan></text>
+<line x1="294" y1="246" x2="294" y2="286" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="438" y1="246" x2="438" y2="286" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="582" y1="246" x2="582" y2="286" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<path d="M483,248 v-10" stroke="#87A878" stroke-width="1.5"/>
+<text x="483" y="234" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">r</tspan></text>
+<text x="150" y="300" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">well-formed, at least two bytes stripped</text>
+<text x="734" y="262" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">p ∈ [1, 43], here p = 6</text>
+<text x="734" y="282" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">λ</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 56 −</tspan><tspan dx="3.9" dy="0" font-size="13.0">p</tspan><tspan dx="3.9" dy="0" font-size="13.0">≤ 55</tspan></text>
+<text x="734" y="302" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="16.0">cost =</tspan><tspan dx="4.8" dy="0" font-size="16.0">4</tspan></text>
+<text x="136" y="359" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">Case 3</text>
+<rect x="150" y="338" width="396" height="32" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="348.0" y="359" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">R</tspan><tspan dx="0.0" dy="0" font-size="13.0">: 44 bytes</tspan></text>
+<rect x="546" y="338" width="180" height="32" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="636.0" y="359" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">T</tspan></text>
+<line x1="294" y1="334" x2="294" y2="374" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="438" y1="334" x2="438" y2="374" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="582" y1="334" x2="582" y2="374" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<path d="M546,336 v-10" stroke="#87A878" stroke-width="1.5"/>
+<text x="546" y="322" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">r</tspan></text>
+<text x="150" y="388" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">not well-formed: nothing is stripped</text>
+<text x="734" y="370" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">λ</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 57</tspan></text>
+<text x="734" y="390" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="16.0">cost =</tspan><tspan dx="4.8" dy="0" font-size="16.0">5</tspan></text>
+<text x="480" y="300" fill="#B8A9C9" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">at p = 43: R is empty, λ = 13 = h</text>
+<text x="20" y="430" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">What the count tells the adversary</text>
+<rect x="150" y="448" width="300" height="56" rx="10" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="300" y="474" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">cost = 4</tspan></text>
+<text x="300" y="494" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">Case 2 only</text>
+<rect x="490" y="448" width="300" height="56" rx="10" fill="none" stroke="#87A878" stroke-width="2"/>
+<text x="640" y="474" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">cost = 5</tspan></text>
+<text x="640" y="494" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">Case 1 or Case 3</text>
+<text x="150" y="530" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">So one query answers exactly one question: does P4 end in well-formed padding of length at least two?</text>
+<text x="150" y="552" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">A run with p ≥ 16 spills out of P4 into the uncontrolled P3; Lemma 4 shows the disambiguation breaks every such run.</text>
+</svg>

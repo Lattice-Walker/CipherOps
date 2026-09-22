@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" width="900" height="680" role="img" aria-label="Model A: the decryption oracle returns its verdict and the HMAC compression count; at equal ciphertext length the MAC is the only plaintext-dependent cost">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="30" y="24" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">What the Model A decryption oracle returns</text>
+<rect x="30" y="82" width="100" height="66" rx="10" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="80" y="122" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="22.0">𝒜</tspan></text>
+<rect x="200" y="44" width="670" height="196" rx="14" fill="none" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="858" y="230" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="normal">oracle, holding K and σ</text>
+<polyline points="130,115 216,115" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="168" y="106" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">(HDR,</tspan><tspan dx="3.9" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="0" font-size="13.0">)</tspan></text>
+<rect x="220" y="95" width="110" height="40" rx="10" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="275" y="112" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">step 1</text>
+<text x="275" y="127" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">length check</text>
+<polyline points="330,115 356,115" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="360" y="95" width="110" height="40" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="415" y="120" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">D</tspan><tspan dx="0.0" dy="5" font-size="10.5">K</tspan><tspan dx="0.0" dy="3" font-size="8.2">e</tspan><tspan dx="4.5" dy="-8" font-size="15.0">×</tspan><tspan dx="4.5" dy="0" font-size="15.0">n</tspan></text>
+<polyline points="470,115 496,115" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="500" y="95" width="110" height="40" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="555" y="112" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">steps 3–6</text>
+<text x="555" y="127" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">padding scan</text>
+<polyline points="610,115 636,115" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="640" y="95" width="110" height="40" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="695" y="120" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">MAC</tspan><tspan dx="0.0" dy="5" font-size="10.5">K</tspan><tspan dx="0.0" dy="3" font-size="8.2">a</tspan></text>
+<text x="695" y="153" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="12.0">λ</tspan><tspan dx="0.0" dy="0" font-size="12.0">(</tspan><tspan dx="0.0" dy="0" font-size="12.0">P</tspan><tspan dx="0.0" dy="0" font-size="12.0">) bytes in</tspan></text>
+<polyline points="750,115 786,115" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<circle cx="815" cy="115" r="27" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="815" y="111" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">count</text>
+<text x="815" y="125" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">calls</text>
+<polyline points="275,95 275,62 100,62 100,79" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arr-s)"/>
+<text x="290" y="58" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">rejected at step 1:</text>
+<text x="410" y="58" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="14.0">(⊥, ∅)</tspan></text>
+<polyline points="695,170 695,186 80,186 80,151" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="420" y="176" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">Dec</tspan><tspan dx="0.0" dy="5" font-size="9.8">K</tspan><tspan dx="0.0" dy="-5" font-size="14.0">(HDR,</tspan><tspan dx="4.2" dy="0" font-size="14.0">C</tspan><tspan dx="0.0" dy="0" font-size="14.0">; σ)</tspan><tspan dx="4.2" dy="0" font-size="14.0">:</tspan><tspan dx="4.2" dy="0" font-size="14.0">R</tspan><tspan dx="4.2" dy="0" font-size="14.0">or ⊥</tspan></text>
+<polyline points="815,142 815,214 60,214 60,151" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="420" y="206" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">cost</tspan><tspan dx="0.0" dy="0" font-size="14.0">(</tspan><tspan dx="0.0" dy="0" font-size="14.0">λ</tspan><tspan dx="0.0" dy="0" font-size="14.0">(</tspan><tspan dx="0.0" dy="0" font-size="14.0">P</tspan><tspan dx="0.0" dy="0" font-size="14.0">))</tspan></text>
+<text x="508" y="206" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">a count, not a time</text>
+<text x="30" y="290" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Work per query, for two queries of the same ciphertext length</text>
+<text x="186" y="330" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">query 1</text>
+<rect x="200" y="310" width="240" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="320" y="330" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">n</tspan><tspan dx="4.2" dy="0" font-size="14.0">×</tspan><tspan dx="4.2" dy="0" font-size="14.0">D</tspan><tspan dx="0.0" dy="5" font-size="9.8">K</tspan><tspan dx="0.0" dy="3" font-size="7.7">e</tspan></text>
+<rect x="440" y="310" width="120" height="30" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="500" y="329" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">padding scan</text>
+<rect x="560" y="310" width="45" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="605" y="310" width="45" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="650" y="310" width="45" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="695" y="310" width="45" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="750" y="329" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">4 MAC calls</text>
+<text x="186" y="374" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">query 2</text>
+<rect x="200" y="354" width="240" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="320" y="374" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">n</tspan><tspan dx="4.2" dy="0" font-size="14.0">×</tspan><tspan dx="4.2" dy="0" font-size="14.0">D</tspan><tspan dx="0.0" dy="5" font-size="9.8">K</tspan><tspan dx="0.0" dy="3" font-size="7.7">e</tspan></text>
+<rect x="440" y="354" width="120" height="30" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="500" y="373" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">padding scan</text>
+<rect x="560" y="354" width="45" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="605" y="354" width="45" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="650" y="354" width="45" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="695" y="354" width="45" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="740" y="354" width="45" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="795" y="373" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">5 MAC calls</text>
+<path d="M200,390 v6 H440 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="320" y="412" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">equal: same length, same n</text>
+<path d="M440,390 v6 H560 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="500" y="412" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">equal by Hypothesis 6</text>
+<path d="M560,390 v6 H785 v-6" fill="none" stroke="#B8A9C9" stroke-width="1.2"/>
+<text x="672.5" y="412" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">differs: the only plaintext-dependent cost</text>
+<text x="30" y="470" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">The attack's queries: n = 4 blocks, so ℓP = 64, with t = 20 and h = 13</text>
+<text x="200" y="500" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">padding</text>
+<text x="430" y="500" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">λ(P)</text>
+<text x="640" y="500" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">cost</text>
+<line x1="200" y1="508" x2="700" y2="508" stroke="#87A878" stroke-width="1"/>
+<text x="200" y="526" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">malformed</text>
+<text x="430" y="526" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">13 + 64 − 20 = 57</text>
+<text x="640" y="526" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">5</text>
+<text x="200" y="552" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">well-formed, p = 0</text>
+<text x="430" y="552" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">13 + 64 − 20 − 1 − 0 = 56</text>
+<text x="640" y="552" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">5</text>
+<text x="200" y="578" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">well-formed, p ≥ 1</text>
+<text x="430" y="578" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">56 − p ≤ 55</text>
+<text x="640" y="578" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">4</text>
+<text x="200" y="620" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Two values only: the count reveals whether the padding is well-formed with p ≥ 1.</text>
+<text x="30" y="660" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Model B turns the count into a time:  τ = c₀ · cost(λ(P)) + η.</text>
+</svg>

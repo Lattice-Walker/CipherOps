@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 452" width="830" height="452" role="img" aria-label="lambda(P) = h + r: the HMAC input length on the well-formed and malformed padding branches, differing by p + 1 bytes">
+<path d="M260,40 v-6 H780 v6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="520.0" y="28" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">ℓ</tspan><tspan dx="0.0" dy="5" font-size="9.8">P</tspan><tspan dx="4.2" dy="-5" font-size="14.0">=</tspan><tspan dx="4.2" dy="0" font-size="14.0">nb</tspan></text>
+<path d="M130,92 v-6 H590 v6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="360.0" y="80" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">λ</tspan><tspan dx="0.0" dy="0" font-size="16.0">(</tspan><tspan dx="0.0" dy="0" font-size="16.0">P</tspan><tspan dx="0.0" dy="0" font-size="16.0">) =</tspan><tspan dx="4.8" dy="0" font-size="16.0">h</tspan><tspan dx="4.8" dy="0" font-size="16.0">+</tspan><tspan dx="4.8" dy="0" font-size="16.0">ℓ</tspan><tspan dx="0.0" dy="5" font-size="11.2">P</tspan><tspan dx="4.8" dy="-5" font-size="16.0">−</tspan><tspan dx="4.8" dy="0" font-size="16.0">t</tspan><tspan dx="4.8" dy="0" font-size="16.0">− 1 −</tspan><tspan dx="4.8" dy="0" font-size="16.0">p</tspan></text>
+<text x="118" y="122" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">wf true</text>
+<rect x="130" y="100" width="80" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="170" y="123" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">⟨</tspan><tspan dx="0.0" dy="0" font-size="14.0">sqn</tspan><tspan dx="0.0" dy="5" font-size="9.8">r</tspan><tspan dx="0.0" dy="-5" font-size="14.0">⟩</tspan><tspan dx="0.0" dy="5" font-size="9.8">8</tspan></text>
+<rect x="210" y="100" width="50" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="235" y="123" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">HDR</tspan></text>
+<rect x="260" y="100" width="330" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="425.0" y="123" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">R</tspan></text>
+<rect x="590" y="100" width="130" height="34" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="655.0" y="123" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">T</tspan></text>
+<rect x="720" y="100" width="60" height="34" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="750.0" y="123" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">⟨</tspan><tspan dx="0.0" dy="0" font-size="14.0">p</tspan><tspan dx="0.0" dy="0" font-size="14.0">⟩</tspan><tspan dx="0.0" dy="-7" font-size="9.8">p+1</tspan></text>
+<path d="M130,140 v6 H260 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="195.0" y="164" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">h</tspan><tspan dx="4.2" dy="0" font-size="14.0">= 13</tspan></text>
+<path d="M260,140 v6 H590 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="425.0" y="164" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">r</tspan></text>
+<path d="M130,228 v-6 H650 v6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="390.0" y="216" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">λ</tspan><tspan dx="0.0" dy="0" font-size="16.0">(</tspan><tspan dx="0.0" dy="0" font-size="16.0">P</tspan><tspan dx="0.0" dy="0" font-size="16.0">) =</tspan><tspan dx="4.8" dy="0" font-size="16.0">h</tspan><tspan dx="4.8" dy="0" font-size="16.0">+</tspan><tspan dx="4.8" dy="0" font-size="16.0">ℓ</tspan><tspan dx="0.0" dy="5" font-size="11.2">P</tspan><tspan dx="4.8" dy="-5" font-size="16.0">−</tspan><tspan dx="4.8" dy="0" font-size="16.0">t</tspan></text>
+<text x="118" y="258" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">wf false</text>
+<rect x="130" y="236" width="80" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="170" y="259" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">⟨</tspan><tspan dx="0.0" dy="0" font-size="14.0">sqn</tspan><tspan dx="0.0" dy="5" font-size="9.8">r</tspan><tspan dx="0.0" dy="-5" font-size="14.0">⟩</tspan><tspan dx="0.0" dy="5" font-size="9.8">8</tspan></text>
+<rect x="210" y="236" width="50" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="235" y="259" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">HDR</tspan></text>
+<rect x="260" y="236" width="390" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="455.0" y="259" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">R</tspan></text>
+<rect x="650" y="236" width="130" height="34" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="715.0" y="259" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">T</tspan></text>
+<path d="M130,276 v6 H260 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="195.0" y="300" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">h</tspan><tspan dx="4.2" dy="0" font-size="14.0">= 13</tspan></text>
+<path d="M260,276 v6 H650 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="455.0" y="300" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">r</tspan></text>
+<line x1="590" y1="134" x2="590" y2="332" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="650" y1="270" x2="650" y2="332" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<path d="M590,332 v6 H650 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="620.0" y="358" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">p</tspan><tspan dx="4.5" dy="0" font-size="15.0">+ 1</tspan></text>
+<text x="576" y="346" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="normal">extra bytes hashed when the padding check fails</text>
+<text x="130" y="396" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Both branches have r ≥ 0, so λ(P) ≥ h = 13 for every P that reaches step 5.</text>
+<rect x="130" y="420" width="18" height="18" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="156" y="434" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">MAC input (hashed)</text>
+<rect x="320" y="420" width="18" height="18" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="346" y="434" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">tag, not hashed</text>
+<rect x="480" y="420" width="18" height="18" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="506" y="434" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">padding, not hashed</text>
+</svg>

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540" role="img" aria-label="Plaintext-recovery experiment: the adversary sees q ciphertexts of R*, queries a model-X oracle, and wins by outputting the target block P*, which lies wholly within R*">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="22" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Plaintext-recovery experiment</text>
+<rect x="40" y="56" width="140" height="40" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="110" y="82" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">R</tspan><tspan dx="0.0" dy="-7" font-size="10.5">∗</tspan><tspan dx="4.5" dy="7" font-size="15.0">←</tspan><tspan dx="4.5" dy="0" font-size="15.0">𝓜</tspan></text>
+<circle cx="110" cy="40" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="110" y="44.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">1</text>
+<polyline points="180,76 216,76" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="220" y="54" width="140" height="44" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="290" y="74" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">q</tspan><tspan dx="4.2" dy="0" font-size="14.0">sessions</tspan></text>
+<text x="290" y="91" fill="#B8A9C9" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Definition 11</text>
+<circle cx="290" cy="40" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="290" y="44.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">2</text>
+<polyline points="360,76 436,76" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="398" y="68" fill="#B8A9C9" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">q ciphertexts</text>
+<rect x="440" y="54" width="170" height="44" rx="12" fill="none" stroke="#87A878" stroke-width="2"/>
+<text x="470" y="83" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="20.0">𝒜</tspan></text>
+<rect x="492" y="62" width="110" height="28" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="547" y="81" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">model-X oracle</text>
+<circle cx="525" cy="40" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="525" y="44.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">4</text>
+<polyline points="610,76 646,76" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="650" y="56" width="60" height="40" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="680" y="83" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">P̂</tspan></text>
+<circle cx="680" cy="40" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="680" y="44.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">5</text>
+<polyline points="710,76 736,76" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="740" y="56" width="140" height="40" rx="10" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="810" y="82" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">P̂</tspan><tspan dx="4.5" dy="0" font-size="15.0">=</tspan><tspan dx="4.5" dy="0" font-size="15.0">P</tspan><tspan dx="0.0" dy="-7" font-size="10.5">∗</tspan><tspan dx="4.5" dy="7" font-size="15.0">?</tspan></text>
+<text x="810" y="114" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">yes: 𝒜 wins</text>
+<text x="40" y="150" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="15.0">Adv</tspan><tspan dx="0.0" dy="-7" font-size="10.5">PR-X</tspan><tspan dx="4.5" dy="7" font-size="15.0">(</tspan><tspan dx="0.0" dy="0" font-size="15.0">𝒜</tspan><tspan dx="0.0" dy="0" font-size="15.0">,</tspan><tspan dx="4.5" dy="0" font-size="15.0">q</tspan><tspan dx="0.0" dy="0" font-size="15.0">) = Pr[</tspan><tspan dx="0.0" dy="0" font-size="15.0">𝒜</tspan><tspan dx="4.5" dy="0" font-size="15.0">wins]</tspan></text>
+<text x="330" y="146" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">guessing: 2⁻⁸ᵇ ·  Theorem 2 (Model A): exactly 1 ·  Theorem 3 (Model B): 1 − ε</text>
+<circle cx="22" cy="199" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="22" y="203.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">3</text>
+<text x="40" y="204" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Step 3: the target block P* and its ciphertext block in each session</text>
+<rect x="396" y="230" width="113" height="84" rx="8" fill="none" stroke="#87A878" stroke-width="1.2" stroke-dasharray="4 4"/>
+<rect x="190" y="238" width="430" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<rect x="620" y="238" width="131" height="34" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="685.5" y="261" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">T</tspan></text>
+<rect x="751" y="238" width="69" height="34" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="785.5" y="259" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">pad</text>
+<rect x="400" y="238" width="105" height="34" fill="#87A878" fill-opacity="0.35" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="452.5" y="262" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">P</tspan><tspan dx="0.0" dy="-7" font-size="11.2">∗</tspan></text>
+<text x="242.5" y="261" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">R</tspan><tspan dx="0.0" dy="-7" font-size="10.5">∗</tspan></text>
+<line x1="295" y1="234" x2="295" y2="276" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="400" y1="234" x2="400" y2="276" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="505" y1="234" x2="505" y2="276" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="610" y1="234" x2="610" y2="276" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="715" y1="234" x2="715" y2="276" stroke="#87A878" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="178" y="259" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">Encode</text>
+<text x="242.5" y="294" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">1</tspan></text>
+<text x="347.5" y="294" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">2</tspan></text>
+<text x="452.5" y="294" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">3</tspan></text>
+<text x="557.5" y="294" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">4</tspan></text>
+<text x="662.5" y="294" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">5</tspan></text>
+<text x="767.5" y="294" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">6</tspan></text>
+<text x="452.5" y="310" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">block m</text>
+<path d="M194,318 v6 H606 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="400.0" y="340" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">wholly inside R*: any of these may be block m</text>
+<text x="662.5" y="340" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">crosses into T</text>
+<rect x="396" y="356" width="113" height="140" rx="8" fill="none" stroke="#87A878" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="72" y="381" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">session 1</text>
+<rect x="85" y="362" width="105" height="28" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="138" y="382" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">0</tspan></text>
+<rect x="190" y="362" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="242.5" y="382" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">1</tspan></text>
+<rect x="295" y="362" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="347.5" y="382" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">2</tspan></text>
+<rect x="400" y="362" width="105" height="28" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="452.5" y="382" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">C</tspan><tspan dx="0.0" dy="-7" font-size="9.8">∗</tspan><tspan dx="0.0" dy="12" font-size="9.8">1</tspan></text>
+<rect x="505" y="362" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="557.5" y="382" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">4</tspan></text>
+<rect x="610" y="362" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="662.5" y="382" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">5</tspan></text>
+<rect x="715" y="362" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="767.5" y="382" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">6</tspan></text>
+<text x="72" y="421" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">session 2</text>
+<rect x="85" y="402" width="105" height="28" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="138" y="422" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">0</tspan></text>
+<rect x="190" y="402" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="242.5" y="422" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">1</tspan></text>
+<rect x="295" y="402" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="347.5" y="422" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">2</tspan></text>
+<rect x="400" y="402" width="105" height="28" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="452.5" y="422" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">C</tspan><tspan dx="0.0" dy="-7" font-size="9.8">∗</tspan><tspan dx="0.0" dy="12" font-size="9.8">2</tspan></text>
+<rect x="505" y="402" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="557.5" y="422" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">4</tspan></text>
+<rect x="610" y="402" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="662.5" y="422" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">5</tspan></text>
+<rect x="715" y="402" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="767.5" y="422" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">6</tspan></text>
+<text x="72" y="481" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">session q</text>
+<rect x="85" y="462" width="105" height="28" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="138" y="482" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">0</tspan></text>
+<rect x="190" y="462" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="242.5" y="482" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">1</tspan></text>
+<rect x="295" y="462" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="347.5" y="482" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">2</tspan></text>
+<rect x="400" y="462" width="105" height="28" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="452.5" y="482" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">C</tspan><tspan dx="0.0" dy="-7" font-size="9.8">∗</tspan><tspan dx="0.0" dy="12" font-size="9.8">q</tspan></text>
+<rect x="505" y="462" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="557.5" y="482" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">4</tspan></text>
+<rect x="610" y="462" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="662.5" y="482" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">5</tspan></text>
+<rect x="715" y="462" width="105" height="28" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="767.5" y="482" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">C</tspan><tspan dx="0.0" dy="5" font-size="9.1">6</tspan></text>
+<text x="138" y="452" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">⋮</tspan></text>
+<text x="452.5" y="452" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">⋮</tspan></text>
+<text x="662.5" y="452" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">⋮</tspan></text>
+<text x="85" y="520" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">The target blocks differ from session to session (fresh keys and IVs), yet each one decrypts to the same P*.</text>
+</svg>

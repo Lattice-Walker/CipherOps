@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 724" width="900" height="724" role="img" aria-label="Decision tree through Definition 4 for the attack record: the length test, the byte test and Hypothesis 5 route every mask to one of three values of lambda">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="24" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Lemma 1: every mask reaches step 5, and λ lands on one of three values</text>
+<rect x="285.0" y="38.0" width="330" height="36" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="450" y="61.0" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Cᵃᵗᵗ(Δ):  ℓP = 64,  n = 4 blocks</text>
+<rect x="230.0" y="106.0" width="440" height="40" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="450" y="122.5" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">step 1:  64 mod 16 = 0,  n ≥ 1,  64 ≥ t + 1 = 21</text>
+<text x="450" y="139.5" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">admitted — no path returns ⊥ before step 5</text>
+<rect x="300.0" y="179.0" width="300" height="34" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="450" y="201.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">step 3:  p ← the last byte of P4</text>
+<rect x="290.0" y="245.0" width="320" height="38" rx="10" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="450" y="260.5" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">step 4, length test:  p + 1 + t ≤ 64 ?</text>
+<text x="450" y="277.5" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">that is, p ≤ 43</text>
+<polyline points="450,74 450,104" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<polyline points="450,146 450,177" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<polyline points="450,213 450,243" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="150.0" y="331.0" width="300" height="38" rx="10" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="300" y="346.5" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">step 4, byte test:</text>
+<text x="300" y="363.5" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">are the last p + 1 bytes all equal to p ?</text>
+<polyline points="450,283 450,312 300,312 300,329" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="456" y="308" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">yes:  p ≤ 43</text>
+<rect x="170.0" y="417.0" width="260" height="34" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="300" y="439.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">well-formed:  r = 43 − p</text>
+<polyline points="300,369 300,415" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="306" y="396" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">yes</text>
+<rect x="205.0" y="485.0" width="190" height="34" rx="10" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="300" y="507.0" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">p = 0 ?</text>
+<polyline points="300,451 300,483" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="642.0" y="354.0" width="220" height="52" rx="3" fill="none" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="752" y="368.0" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Hypothesis 5:</text>
+<text x="752" y="385.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">take the else-branch of step 5,</text>
+<text x="752" y="402.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">nothing is stripped</text>
+<polyline points="610,264 752,264 752,352" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="620" y="258" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">no:  p ≥ 44</text>
+<rect x="50.0" y="562.0" width="220" height="56" rx="8" fill="none" stroke="#87A878" stroke-width="2"/>
+<text x="160" y="578.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Case 1</text>
+<text x="160" y="595.0" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">λ = 56</text>
+<text x="160" y="612.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">cost 5</text>
+<rect x="320.0" y="562.0" width="240" height="56" rx="8" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="440" y="578.0" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Case 2</text>
+<text x="440" y="595.0" fill="#B8A9C9" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">λ = 56 − p ≤ 55</text>
+<text x="440" y="612.0" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">cost 4</text>
+<rect x="642.0" y="562.0" width="220" height="56" rx="8" fill="none" stroke="#87A878" stroke-width="2"/>
+<text x="752" y="578.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Case 3</text>
+<text x="752" y="595.0" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">λ = 57</text>
+<text x="752" y="612.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">cost 5</text>
+<polyline points="205,502 160,502 160,559" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="166" y="498" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">yes</text>
+<polyline points="395,502 440,502 440,559" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="400" y="498" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">no:  p ≥ 1</text>
+<polyline points="752,406 752,559" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<polyline points="450,350 600,350 600,590 639,590" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="456" y="344" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">no</text>
+<text x="30" y="660" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">The byte test can only be reached when p ≤ 43, so the two ways of failing it, a wrong byte and an underflow, both land on Case 3.</text>
+<text x="30" y="682" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">A receiver that instead skips the MAC check on underflow falls outside Hypothesis 5. Reaching p ≥ 44 at all would need a self-describing</text>
+<text x="30" y="700" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">pattern of at least 45 bytes, 29 of them outside the block the adversary controls: under 2⁻²³¹ per query.</text>
+</svg>

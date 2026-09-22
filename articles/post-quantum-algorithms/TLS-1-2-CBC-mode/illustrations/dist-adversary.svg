@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 548" width="900" height="548" role="img" aria-label="The distinguishing adversary: two 288-byte messages, truncation of the challenge to 18 blocks, and the two parses that give HMAC costs 4 and 8">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="22" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">1   Submit two 288-byte messages</text>
+<text x="168" y="64.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="end"><tspan dx="0.0" dy="0" font-size="14.0">Encode(</tspan><tspan dx="0.0" dy="0" font-size="14.0">M</tspan><tspan dx="0.0" dy="5" font-size="9.8">0</tspan><tspan dx="0.0" dy="-5" font-size="14.0">)</tspan></text>
+<rect x="180" y="44" width="64" height="30" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="212" y="64" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">⟨</tspan><tspan dx="0.0" dy="0" font-size="13.0">a</tspan><tspan dx="0.0" dy="0" font-size="13.0">⟩</tspan><tspan dx="0.0" dy="-7" font-size="9.1">32</tspan></text>
+<rect x="244" y="44" width="512" height="30" rx="3" fill="#87A878" fill-opacity="0.35" stroke="#87A878" stroke-width="1.5"/>
+<text x="500" y="64" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">⟨0xFF⟩</tspan><tspan dx="0.0" dy="-7" font-size="9.1">256</tspan></text>
+<rect x="756" y="44" width="40" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="776" y="64" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">T</tspan></text>
+<rect x="796" y="44" width="24" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<line x1="212" y1="74" x2="212" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="244" y1="74" x2="244" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="276" y1="74" x2="276" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="308" y1="74" x2="308" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="340" y1="74" x2="340" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="372" y1="74" x2="372" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="404" y1="74" x2="404" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="436" y1="74" x2="436" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="468" y1="74" x2="468" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="500" y1="74" x2="500" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="532" y1="74" x2="532" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="564" y1="74" x2="564" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="596" y1="74" x2="596" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="628" y1="74" x2="628" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="660" y1="74" x2="660" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="692" y1="74" x2="692" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="724" y1="74" x2="724" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="756" y1="74" x2="756" y2="79" stroke="#87A878" stroke-width="1"/>
+<line x1="788" y1="74" x2="788" y2="79" stroke="#87A878" stroke-width="1"/>
+<text x="168" y="114.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="end"><tspan dx="0.0" dy="0" font-size="14.0">Encode(</tspan><tspan dx="0.0" dy="0" font-size="14.0">M</tspan><tspan dx="0.0" dy="5" font-size="9.8">1</tspan><tspan dx="0.0" dy="-5" font-size="14.0">)</tspan></text>
+<rect x="180" y="94" width="574" height="30" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="466" y="114" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">⟨</tspan><tspan dx="0.0" dy="0" font-size="13.0">a</tspan><tspan dx="0.0" dy="0" font-size="13.0">⟩</tspan><tspan dx="0.0" dy="-7" font-size="9.1">287</tspan></text>
+<rect x="754" y="94" width="2" height="30" rx="3" fill="#87A878" fill-opacity="0.35" stroke="#87A878" stroke-width="1.5"/>
+<rect x="756" y="94" width="40" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="776" y="114" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">T</tspan></text>
+<rect x="796" y="94" width="24" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<line x1="212" y1="124" x2="212" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="244" y1="124" x2="244" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="276" y1="124" x2="276" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="308" y1="124" x2="308" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="340" y1="124" x2="340" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="372" y1="124" x2="372" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="404" y1="124" x2="404" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="436" y1="124" x2="436" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="468" y1="124" x2="468" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="500" y1="124" x2="500" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="532" y1="124" x2="532" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="564" y1="124" x2="564" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="596" y1="124" x2="596" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="628" y1="124" x2="628" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="660" y1="124" x2="660" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="692" y1="124" x2="692" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="724" y1="124" x2="724" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="756" y1="124" x2="756" y2="129" stroke="#87A878" stroke-width="1"/>
+<line x1="788" y1="124" x2="788" y2="129" stroke="#87A878" stroke-width="1"/>
+<polyline points="714,86 751,96" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="710" y="86" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="normal">last byte 0x00</text>
+<path d="M180,134 v5 H756 v-5" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="468.0" y="152" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">message: 288 bytes = 18 blocks</text>
+<path d="M756,134 v5 H820 v-5" fill="none" stroke="#B8A9C9" stroke-width="1.2"/>
+<text x="788.0" y="152" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">T ‖ pad: 2 blocks</text>
+<text x="20" y="196" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">2   Keep the IV, cut the challenge to its first 18 blocks</text>
+<text x="128" y="234" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="14.0">C</tspan></text>
+<rect x="140" y="214" width="36" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="158" y="233" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">IV</text>
+<rect x="181" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="213" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="245" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="277" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="309" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="341" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="373" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="405" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="437" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="469" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="501" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="533" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="565" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="597" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="629" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="661" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="693" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="725" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="757" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="789" y="214" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="788" y="208" fill="#B8A9C9" font-size="16" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">✂</text>
+<line x1="756" y1="210" x2="756" y2="286" stroke="#B8A9C9" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="128" y="276" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="14.0">C′</tspan></text>
+<rect x="140" y="256" width="36" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="158" y="275" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">IV</text>
+<rect x="181" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="213" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="245" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="277" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="309" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="341" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="373" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="405" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="437" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="469" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="501" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="533" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="565" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="597" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="629" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="661" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="693" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="725" y="256" width="30" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<rect x="756" y="256" width="64" height="30" rx="3" fill="none" stroke="#B8A9C9" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="788" y="306" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">dropped: carried T ‖ pad</text>
+<text x="468" y="306" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">the one decryption query: C′ decrypts to exactly the 288 message bytes</text>
+<text x="20" y="346" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">3   The receiver reads the last message byte as padding, and it is valid either way</text>
+<text x="168" y="386.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="end"><tspan dx="0.0" dy="0" font-size="14.0">d</tspan><tspan dx="4.2" dy="0" font-size="14.0">= 0</tspan></text>
+<rect x="180" y="366" width="24" height="30" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<rect x="204" y="366" width="40" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="224" y="386" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">T′</tspan></text>
+<rect x="244" y="366" width="512" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="500" y="386" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">p</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 255: all 256 bytes are 0xFF</tspan></text>
+<path d="M180,400 v5 H204 v-5" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="192.0" y="418" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">R: 12</text>
+<text x="772" y="378" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">λ</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 13 + 12 = 25</tspan></text>
+<text x="772" y="396" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">cost 4 →</tspan><tspan dx="3.9" dy="0" font-size="13.0">d̂</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 0</tspan></text>
+<text x="168" y="450.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="end"><tspan dx="0.0" dy="0" font-size="14.0">d</tspan><tspan dx="4.2" dy="0" font-size="14.0">= 1</tspan></text>
+<rect x="180" y="430" width="534" height="30" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="446" y="450" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">R</tspan><tspan dx="0.0" dy="0" font-size="13.0">: 267 bytes</tspan></text>
+<rect x="714" y="430" width="40" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="734" y="450" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="13.0">T′</tspan></text>
+<rect x="754" y="430" width="2" height="30" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<polyline points="786,424 759,434" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="790" y="424" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">p = 0: one byte</text>
+<text x="772" y="450" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">λ</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 13 + 267 = 280</tspan></text>
+<text x="772" y="468" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">cost 8 →</tspan><tspan dx="3.9" dy="0" font-size="13.0">d̂</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 1</tspan></text>
+<text x="20" y="510" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">The verdict plays no part (T′ is just message bytes, so it is almost surely ⊥): the count alone decides, so 𝒜 is always right, advantage 1.</text>
+<text x="20" y="530" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Numbers for HMAC-SHA-1: t = 20, h = 13, b = 16; cost from Proposition 9.</text>
+</svg>

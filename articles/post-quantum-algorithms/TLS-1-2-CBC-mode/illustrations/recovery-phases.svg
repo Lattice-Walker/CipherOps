@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 758" width="900" height="758" role="img" aria-label="The recovery adversary: Probe returns one bit, Phase 1 finds the last two bytes, Phase 1b removes longer runs, and Phase 2 walks leftwards one byte at a time">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="24" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Probe(Δ): one fresh session, one query, one bit back</text>
+<rect x="40" y="42" width="150" height="40" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="115.0" y="67" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">fresh session</text>
+<rect x="210" y="42" width="150" height="40" rx="10" fill="none" stroke="#B8A9C9" stroke-width="2"/>
+<text x="285.0" y="67" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">assemble with Δ</text>
+<polyline points="190,62 206,62" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<rect x="380" y="42" width="150" height="40" rx="10" fill="none" stroke="#B8A9C9" stroke-width="2"/>
+<text x="455.0" y="67" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">one query</text>
+<polyline points="360,62 376,62" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<rect x="550" y="42" width="140" height="40" rx="10" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="620.0" y="67" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">count = 4 ?</text>
+<polyline points="530,62 546,62" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<polyline points="690,62 726,62" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="742" y="68" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">true</tspan></text>
+<text x="40" y="108" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">true  ⟺  P* ⊕ Δ ends in well-formed padding of length at least two  (cost 4, Case 2)</text>
+<text x="20" y="150" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Phase 1: the last two bytes</text>
+<text x="166.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0</text>
+<text x="198.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">1</text>
+<text x="230.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">2</text>
+<text x="262.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">3</text>
+<text x="294.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">4</text>
+<text x="326.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">5</text>
+<text x="358.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">6</text>
+<text x="390.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">7</text>
+<text x="422.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">8</text>
+<text x="454.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">9</text>
+<text x="486.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">10</text>
+<text x="518.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">11</text>
+<text x="550.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">12</text>
+<text x="582.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">13</text>
+<text x="614.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">14</text>
+<text x="646.0" y="170" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">15</text>
+<text x="138" y="196.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="13.0">Δ</tspan></text>
+<rect x="151" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="166.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="183" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="198.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="215" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="230.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="247" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="262.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="279" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="294.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="311" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="326.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="343" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="358.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="375" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="390.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="407" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="422.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="439" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="454.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="471" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="486.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="503" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="518.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="535" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="550.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="567" y="178" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="582.0" y="195.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">00</text>
+<rect x="599" y="178" width="30" height="26" rx="3" fill="none" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="614.0" y="195.0" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">?</text>
+<rect x="631" y="178" width="30" height="26" rx="3" fill="none" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="646.0" y="195.0" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">?</text>
+<text x="138" y="232.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="13.0">P</tspan><tspan dx="0.0" dy="5" font-size="9.1">4</tspan></text>
+<rect x="151" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="166.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="183" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="198.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="215" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="230.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="247" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="262.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="279" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="294.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="311" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="326.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="343" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="358.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="375" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="390.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="407" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="422.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="439" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="454.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="471" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="486.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="503" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="518.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="535" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="550.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="567" y="214" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="582.0" y="231.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="599" y="214" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="614.0" y="231.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">01</text>
+<rect x="631" y="214" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="646.0" y="231.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">01</text>
+<path d="M600,244 v5 H660 v-5" fill="none" stroke="#B8A9C9" stroke-width="1.2"/>
+<text x="630.0" y="262" fill="#B8A9C9" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">forced to 01 01 on the intended hit</text>
+<text x="672" y="195" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">enumerate 2¹⁶ pairs</text>
+<text x="672" y="231" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">P*[14], P*[15] follow</text>
+<text x="20" y="296" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Phase 1b: alter byte 13 and probe again</text>
+<line x1="582.0" y1="310" x2="582.0" y2="392" stroke="#B8A9C9" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="582.0" y="308" fill="#B8A9C9" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">byte 13</text>
+<text x="138" y="336.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="12.0">p</tspan><tspan dx="3.6" dy="0" font-size="12.0">= 1</tspan></text>
+<rect x="151" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="166.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="183" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="198.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="215" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="230.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="247" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="262.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="279" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="294.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="311" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="326.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="343" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="358.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="375" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="390.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="407" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="422.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="439" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="454.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="471" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="486.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="503" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="518.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="535" y="318" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="550.0" y="335.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="567" y="318" width="30" height="26" rx="3" fill="none" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="582.0" y="335.0" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">≠</text>
+<rect x="599" y="318" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="614.0" y="335.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">01</text>
+<rect x="631" y="318" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="646.0" y="335.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">01</text>
+<text x="672" y="336" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">still true</tspan></text>
+<text x="736" y="336" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">— the run stops at byte 14</text>
+<text x="138" y="370.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="12.0">p</tspan><tspan dx="3.6" dy="0" font-size="12.0">= 5</tspan></text>
+<rect x="151" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="166.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="183" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="198.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="215" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="230.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="247" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="262.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="279" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="294.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="311" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="326.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="343" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="358.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="375" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="390.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="407" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="422.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="439" y="352" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="454.0" y="369.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="471" y="352" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="486.0" y="369.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">05</text>
+<rect x="503" y="352" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="518.0" y="369.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">05</text>
+<rect x="535" y="352" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="550.0" y="369.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">05</text>
+<rect x="567" y="352" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="582.0" y="369.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">05</text>
+<rect x="599" y="352" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="614.0" y="369.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">05</text>
+<rect x="631" y="352" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="646.0" y="369.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">05</text>
+<rect x="567" y="352" width="30" height="26" rx="3" fill="none" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="582.0" y="369.0" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">≠</text>
+<text x="672" y="370" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">false</tspan></text>
+<text x="714" y="370" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">— a longer run covers byte 13</text>
+<text x="150" y="406" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">At most 43 extra probes, one per admissible p; Lemma 4 shows every longer run breaks, so the resolution is exact.</text>
+<text x="20" y="448" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Phase 2: one byte at a time, leftwards</text>
+<text x="166.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0</text>
+<text x="198.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">1</text>
+<text x="230.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">2</text>
+<text x="262.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">3</text>
+<text x="294.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">4</text>
+<text x="326.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">5</text>
+<text x="358.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">6</text>
+<text x="390.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">7</text>
+<text x="422.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">8</text>
+<text x="454.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">9</text>
+<text x="486.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">10</text>
+<text x="518.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">11</text>
+<text x="550.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">12</text>
+<text x="582.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">13</text>
+<text x="614.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">14</text>
+<text x="646.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">15</text>
+<text x="138" y="494.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="12.0">i</tspan><tspan dx="3.6" dy="0" font-size="12.0">= 2</tspan></text>
+<rect x="151" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="166.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="183" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="198.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="215" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="230.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="247" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="262.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="279" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="294.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="311" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="326.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="343" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="358.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="375" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="390.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="407" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="422.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="439" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="454.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="471" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="486.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="503" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="518.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="535" y="476" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="550.0" y="493.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="567" y="476" width="30" height="26" rx="3" fill="none" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="582.0" y="493.0" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">?</text>
+<rect x="599" y="476" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="614.0" y="493.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">02</text>
+<rect x="631" y="476" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="646.0" y="493.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">02</text>
+<text x="672" y="494" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="12.0">P</tspan><tspan dx="0.0" dy="-7" font-size="8.4">∗</tspan><tspan dx="0.0" dy="7" font-size="12.0">[15−</tspan><tspan dx="0.0" dy="0" font-size="12.0">i</tspan><tspan dx="0.0" dy="0" font-size="12.0">] = Δ[15−</tspan><tspan dx="0.0" dy="0" font-size="12.0">i</tspan><tspan dx="0.0" dy="0" font-size="12.0">] ⊕</tspan><tspan dx="3.6" dy="0" font-size="12.0">i</tspan></text>
+<text x="138" y="530.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="12.0">i</tspan><tspan dx="3.6" dy="0" font-size="12.0">= 3</tspan></text>
+<rect x="151" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="166.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="183" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="198.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="215" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="230.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="247" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="262.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="279" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="294.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="311" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="326.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="343" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="358.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="375" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="390.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="407" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="422.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="439" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="454.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="471" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="486.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="503" y="512" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="518.0" y="529.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<rect x="535" y="512" width="30" height="26" rx="3" fill="none" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="550.0" y="529.0" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">?</text>
+<rect x="567" y="512" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="582.0" y="529.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">03</text>
+<rect x="599" y="512" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="614.0" y="529.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">03</text>
+<rect x="631" y="512" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="646.0" y="529.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">03</text>
+<text x="672" y="530" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="12.0">P</tspan><tspan dx="0.0" dy="-7" font-size="8.4">∗</tspan><tspan dx="0.0" dy="7" font-size="12.0">[15−</tspan><tspan dx="0.0" dy="0" font-size="12.0">i</tspan><tspan dx="0.0" dy="0" font-size="12.0">] = Δ[15−</tspan><tspan dx="0.0" dy="0" font-size="12.0">i</tspan><tspan dx="0.0" dy="0" font-size="12.0">] ⊕</tspan><tspan dx="3.6" dy="0" font-size="12.0">i</tspan></text>
+<text x="138" y="594.0" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="12.0">i</tspan><tspan dx="3.6" dy="0" font-size="12.0">= 15</tspan></text>
+<rect x="151" y="576" width="30" height="26" rx="3" fill="none" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="166.0" y="593.0" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">?</text>
+<rect x="183" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="198.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="215" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="230.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="247" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="262.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="279" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="294.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="311" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="326.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="343" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="358.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="375" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="390.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="407" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="422.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="439" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="454.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="471" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="486.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="503" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="518.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="535" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="550.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="567" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="582.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="599" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="614.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<rect x="631" y="576" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="646.0" y="593.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0F</text>
+<text x="672" y="594" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="12.0">P</tspan><tspan dx="0.0" dy="-7" font-size="8.4">∗</tspan><tspan dx="0.0" dy="7" font-size="12.0">[15−</tspan><tspan dx="0.0" dy="0" font-size="12.0">i</tspan><tspan dx="0.0" dy="0" font-size="12.0">] = Δ[15−</tspan><tspan dx="0.0" dy="0" font-size="12.0">i</tspan><tspan dx="0.0" dy="0" font-size="12.0">] ⊕</tspan><tspan dx="3.6" dy="0" font-size="12.0">i</tspan></text>
+<text x="406" y="560" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="18.0">⋮</tspan></text>
+<text x="150" y="620" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Each position needs at most 2⁸ probes, and exactly one value completes the pattern ⟨i⟩ⁱ⁺¹.</text>
+<rect x="151" y="638" width="30" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<text x="166.0" y="655.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">·</text>
+<text x="188" y="655" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">not yet known</text>
+<rect x="279" y="638" width="30" height="26" rx="3" fill="none" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="294.0" y="655.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">?</text>
+<text x="316" y="655" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">being enumerated</text>
+<rect x="439" y="638" width="30" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="454.0" y="655.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0i</text>
+<text x="476" y="655" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">already recovered, forced to the padding value</text>
+<rect x="150" y="684" width="420" height="46" rx="10" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="360" y="714" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">q</tspan><tspan dx="4.5" dy="0" font-size="15.0">= 2</tspan><tspan dx="0.0" dy="-7" font-size="10.5">16</tspan><tspan dx="4.5" dy="7" font-size="15.0">+ 43 + 14 · 2</tspan><tspan dx="0.0" dy="-7" font-size="10.5">8</tspan><tspan dx="4.5" dy="7" font-size="15.0">sessions</tspan></text>
+<text x="590" y="704" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">one query each, then</text>
+<text x="590" y="724" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="14.0">P̂</tspan><tspan dx="4.2" dy="0" font-size="14.0">=</tspan><tspan dx="4.2" dy="0" font-size="14.0">P</tspan><tspan dx="0.0" dy="-7" font-size="9.8">∗</tspan></text>
+</svg>

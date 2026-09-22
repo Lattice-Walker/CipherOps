@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 558" width="860" height="558" role="img" aria-label="Distinguishing experiment: A submits equal-length M0, M1, receives an encryption of M_d, makes one decryption query other than the challenge, and outputs a guess for d">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="22" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Distinguishing experiment: one session, one decryption query</text>
+<rect x="140" y="44" width="120" height="50" rx="12" fill="none" stroke="#87A878" stroke-width="2"/>
+<text x="200" y="77" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="22.0">𝒜</tspan></text>
+<rect x="470" y="40" width="180" height="58" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="560" y="62" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">challenger, one session</text>
+<text x="560" y="86" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">Gen</tspan><tspan dx="0.0" dy="0" font-size="14.0">,</tspan><tspan dx="8.4" dy="0" font-size="14.0">d</tspan><tspan dx="4.2" dy="0" font-size="14.0">← {0, 1}</tspan></text>
+<line x1="200" y1="100" x2="200" y2="386" stroke="#87A878" stroke-width="1.2" stroke-dasharray="4 4"/>
+<line x1="560" y1="100" x2="560" y2="425" stroke="#B8A9C9" stroke-width="1.2" stroke-dasharray="4 4"/>
+<polyline points="200,140 556,140" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="380.0" y="131" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">(</tspan><tspan dx="0.0" dy="0" font-size="14.0">M</tspan><tspan dx="0.0" dy="5" font-size="9.8">0</tspan><tspan dx="0.0" dy="-5" font-size="14.0">,</tspan><tspan dx="4.2" dy="0" font-size="14.0">M</tspan><tspan dx="0.0" dy="5" font-size="9.8">1</tspan><tspan dx="0.0" dy="-5" font-size="14.0">)</tspan></text>
+<text x="380.0" y="160" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="12.0">|</tspan><tspan dx="0.0" dy="0" font-size="12.0">M</tspan><tspan dx="0.0" dy="5" font-size="8.4">0</tspan><tspan dx="0.0" dy="-5" font-size="12.0">| = |</tspan><tspan dx="0.0" dy="0" font-size="12.0">M</tspan><tspan dx="0.0" dy="5" font-size="8.4">1</tspan><tspan dx="0.0" dy="-5" font-size="12.0">|</tspan></text>
+<circle cx="60" cy="140" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="60" y="144.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">1</text>
+<text x="580" y="144" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">equal lengths, or |C*| would reveal d</text>
+<polyline points="560,212 204,212" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="380.0" y="203" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">C</tspan><tspan dx="0.0" dy="-7" font-size="9.8">∗</tspan><tspan dx="4.2" dy="7" font-size="14.0">← Enc</tspan><tspan dx="0.0" dy="5" font-size="9.8">K</tspan><tspan dx="0.0" dy="-5" font-size="14.0">(</tspan><tspan dx="0.0" dy="0" font-size="14.0">M</tspan><tspan dx="0.0" dy="5" font-size="9.8">d</tspan><tspan dx="0.0" dy="-5" font-size="14.0">)</tspan></text>
+<circle cx="60" cy="212" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="60" y="216.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">2</text>
+<text x="580" y="216" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">d is uniform and hidden from 𝒜</text>
+<polyline points="200,284 556,284" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="380.0" y="275" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">C′</tspan><tspan dx="4.2" dy="0" font-size="14.0">≠</tspan><tspan dx="4.2" dy="0" font-size="14.0">C</tspan><tspan dx="0.0" dy="-7" font-size="9.8">∗</tspan></text>
+<text x="380.0" y="304" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="12.0">at most one query</tspan></text>
+<circle cx="60" cy="284" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="60" y="288.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">3</text>
+<text x="580" y="288" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">any failure is fatal (Definition 11)</text>
+<polyline points="560,350 204,350" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="380.0" y="341" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">verdict and model-X leakage</tspan></text>
+<circle cx="60" cy="350" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="60" y="354.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">4</text>
+<text x="580" y="354" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Model A: the count · Model B: τ</text>
+<rect x="150" y="386" width="100" height="34" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="200" y="409" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">output</tspan><tspan dx="4.2" dy="0" font-size="14.0">d̂</tspan></text>
+<circle cx="60" cy="403" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="60" y="407.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">5</text>
+<text x="40" y="470" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="15.0">Adv</tspan><tspan dx="0.0" dy="-7" font-size="10.5">IND-X</tspan><tspan dx="4.5" dy="7" font-size="15.0">(</tspan><tspan dx="0.0" dy="0" font-size="15.0">𝒜</tspan><tspan dx="0.0" dy="0" font-size="15.0">) = |2 Pr[</tspan><tspan dx="0.0" dy="0" font-size="15.0">d̂</tspan><tspan dx="4.5" dy="0" font-size="15.0">=</tspan><tspan dx="4.5" dy="0" font-size="15.0">d</tspan><tspan dx="0.0" dy="0" font-size="15.0">] − 1|</tspan></text>
+<line x1="200" y1="514" x2="700" y2="514" stroke="#87A878" stroke-width="2"/>
+<line x1="200" y1="508" x2="200" y2="520" stroke="#87A878" stroke-width="2"/>
+<text x="200" y="502" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">0</text>
+<text x="200" y="538" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">no better than a coin flip</text>
+<line x1="700" y1="508" x2="700" y2="520" stroke="#87A878" stroke-width="2"/>
+<text x="700" y="502" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">1</text>
+<text x="700" y="538" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">d̂ always right, or always wrong</text>
+</svg>

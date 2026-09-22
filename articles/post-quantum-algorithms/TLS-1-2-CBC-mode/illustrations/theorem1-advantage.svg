@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 642" width="900" height="642" role="img" aria-label="Theorem 1: both values of the hidden bit lead to a correct output, so the probability of a correct guess is one and the advantage is one">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="26" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Theorem 1: both branches end in the right answer, so the advantage is exactly 1</text>
+<rect x="270.0" y="53.0" width="360" height="38" rx="8" fill="none" stroke="#87A878" stroke-width="2.5"/>
+<text x="450" y="77.0" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">d ← {0, 1},  uniform and hidden</text>
+<polyline points="450,91 450,114 250,114 250,126" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="350.0" y="104" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">d = 0   with probability ½</text>
+<polyline points="450,91 450,114 650,114 650,126" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="550.0" y="104" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">d = 1   with probability ½</text>
+<rect x="90.0" y="128.0" width="320" height="44" rx="8" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="250" y="147.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">M0 truncated: the 0xFF run is read as padding</text>
+<text x="250" y="163.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">p = 255,  43 bytes left,  λ = 25</text>
+<rect x="490.0" y="128.0" width="320" height="44" rx="8" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="650" y="147.0" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">M1 truncated: the final 0x00 is read as padding</text>
+<text x="650" y="163.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">p = 0,  267 bytes left,  λ = 280</text>
+<polyline points="250,172 250,192" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<polyline points="650,172 650,192" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="90.0" y="194.0" width="320" height="44" rx="8" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="250" y="221.0" fill="#B8A9C9" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">the count is 4</text>
+<rect x="490.0" y="194.0" width="320" height="44" rx="8" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="650" y="221.0" fill="#B8A9C9" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">the count is 8</text>
+<polyline points="250,238 250,258" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<polyline points="650,238 650,258" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="90.0" y="260.0" width="320" height="44" rx="8" fill="none" stroke="#87A878" stroke-width="2.5"/>
+<text x="250" y="287.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">so it outputs d̂ = 0,  which is right</text>
+<rect x="490.0" y="260.0" width="320" height="44" rx="8" fill="none" stroke="#87A878" stroke-width="2.5"/>
+<text x="650" y="287.0" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">so it outputs d̂ = 1,  which is right</text>
+<text x="40" y="344" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="15.0">Pr[</tspan><tspan dx="0.0" dy="0" font-size="15.0">d̂</tspan><tspan dx="4.5" dy="0" font-size="15.0">=</tspan><tspan dx="4.5" dy="0" font-size="15.0">d</tspan><tspan dx="0.0" dy="0" font-size="15.0">] = ½ · 1 + ½ · 1 = 1</tspan></text>
+<text x="40" y="374" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="15.0">Adv</tspan><tspan dx="0.0" dy="-7" font-size="10.5">IND-A</tspan><tspan dx="4.5" dy="7" font-size="15.0">= |2 · 1 − 1| =</tspan></text>
+<text x="268" y="374" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="19.0">1</tspan></text>
+<text x="40" y="398" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Neither branch can go wrong, so there is no error term to bound —</text>
+<text x="40" y="414" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">and no assumption on the cipher or the MAC is used to get there.</text>
+<line x1="530" y1="360" x2="840" y2="360" stroke="#87A878" stroke-width="2"/>
+<line x1="530" y1="353" x2="530" y2="367" stroke="#87A878" stroke-width="2"/>
+<text x="530" y="346" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">0</text>
+<text x="530" y="386" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">a coin flip</text>
+<line x1="840" y1="353" x2="840" y2="367" stroke="#B8A9C9" stroke-width="2"/>
+<text x="840" y="346" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">1</text>
+<text x="840" y="386" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">always right</text>
+<circle cx="840" cy="360" r="8" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="589.0" y="418" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="14.0">𝒜</tspan><tspan dx="0.0" dy="5" font-size="9.8">dist</tspan></text>
+<text x="613.0" y="414" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">sits at the far end of the scale</text>
+<text x="20" y="470" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">And it is not a close call</text>
+<line x1="120" y1="510" x2="120" y2="518" stroke="#87A878" stroke-width="1.2"/>
+<text x="120" y="534" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">3</text>
+<line x1="212" y1="510" x2="212" y2="518" stroke="#87A878" stroke-width="1.2"/>
+<text x="212" y="534" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">4</text>
+<line x1="304" y1="510" x2="304" y2="518" stroke="#87A878" stroke-width="1.2"/>
+<text x="304" y="534" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">5</text>
+<line x1="396" y1="510" x2="396" y2="518" stroke="#87A878" stroke-width="1.2"/>
+<text x="396" y="534" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">6</text>
+<line x1="488" y1="510" x2="488" y2="518" stroke="#87A878" stroke-width="1.2"/>
+<text x="488" y="534" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">7</text>
+<line x1="580" y1="510" x2="580" y2="518" stroke="#87A878" stroke-width="1.2"/>
+<text x="580" y="534" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">8</text>
+<line x1="672" y1="510" x2="672" y2="518" stroke="#87A878" stroke-width="1.2"/>
+<text x="672" y="534" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">9</text>
+<line x1="100" y1="510" x2="692" y2="510" stroke="#87A878" stroke-width="1.2"/>
+<text x="702" y="514" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">count</text>
+<circle cx="212" cy="510" r="7" fill="#B8A9C9" stroke="#B8A9C9" stroke-width="2"/>
+<text x="212" y="496" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">d = 0</text>
+<circle cx="580" cy="510" r="7" fill="#B8A9C9" stroke="#B8A9C9" stroke-width="2"/>
+<text x="580" y="496" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">d = 1</text>
+<path d="M212,482 v-8 H580 v8" fill="none" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="396.0" y="468" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">four compression calls apart</text>
+<text x="100" y="562" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">The recovery attack of §1.2 rides a single step, 4 against 5. This distinguisher has four steps of room, so it survives</text>
+<text x="100" y="578" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">far more timing noise than the recovery does — the same reason Model B needs fewer repetitions for it.</text>
+<text x="34" y="616" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">One session, one query, one bit: the verdict returned alongside the count is never even looked at.</text>
+</svg>
