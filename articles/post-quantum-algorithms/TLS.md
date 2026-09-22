@@ -8,7 +8,7 @@ A version of the protocol is a tuple $\Lambda_V = (\mathrm{Encode}, \Pi_V, \Phi_
 
 ## 1. Breaking TLS 1.2 CBC-mode
 
-{% include-markdown "Lattice-Walker/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode.md" %}
+{% include-markdown "Lattice-Walker/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/TLS-1-2-CBC-mode.md" %}
 
 ## 2. Breaking TLS 1.0 and TLS 1.1
 
