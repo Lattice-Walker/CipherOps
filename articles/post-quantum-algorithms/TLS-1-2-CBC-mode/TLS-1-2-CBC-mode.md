@@ -4,7 +4,7 @@ We formalise the TLS 1.2 Record Protocol in CBC mode as a stateful, length-hidin
 
 The main result is that in this leakage model MEE-TLS-CBC provides no confidentiality. An explicit adversary, a reconstruction of the [Lucky Thirteen attack of AlFardan and Paterson](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf), recovers any target plaintext block lying within a record with advantage exactly 1 and under no cryptographic assumption, from at most $2^{16} + 43 + 14\cdot 2^8$ decryption sessions of one query each. In a noisy variant of the model, the same recovery succeeds with $L = O\!\big((\sigma_{\!\eta}/c_0)^2 \log(M/\epsilon)\big)$ repetitions per query.
 
-**Definition i (Bytes)** 
+<span style="color:#87A878">Definition i (Bytes)</span> 
 - A *byte* is an element of $\mathbb{B} = \{0,1\}^8$, identified with an integer in $[0,255]$ where convenient. 
 - $\mathbb{B}^n$ is the set of $n$-byte strings and $\mathbb{B}^* = \bigcup_{n \ge 0} \mathbb{B}^n$. 
 - Let $|x|$ be the lenght in bytes of $x \in \mathbb{B}^*$
@@ -20,18 +20,18 @@ Three parameters are fixed throughout: the block size $b$, the MAC tag length $t
 
 ### 1.1. TLS 1.2 CBC mode
 
-**Definition ii (Encryption Schemes)**
+<span style="color:#87A878">Definition ii (Encryption Schemes)</span>
 - A stateful authenticated encryption scheme with associated data is a triple $\Pi = (\mathsf{Gen}, \mathsf{Enc}, \mathsf{Dec})$ of algorithms over a header space $\mathcal{H} = \mathbb{B}^5$ and a record space $\mathcal{R} = \mathbb{B}^*$.
     - $\mathsf{Gen}(1^\kappa)$, where $\kappa$ is the security parameter governing the key lengths, is randomised and outputs a key pair $K = (K_e, K_a)$ together with an initial state $\sigma_0$. A state is a pair $\sigma = (\mathit{sqn}_s, \mathit{sqn}_r)$ of integers in $[0, 2^{64})$, the sending and receiving sequence numbers, with $\sigma_0 = (0,0)$.
     - $\mathsf{Enc}_K(\mathrm{HDR}, R; \sigma)$ is randomised and outputs a ciphertext $C \in \mathbb{B}^*$ and an updated state. $\mathsf{Dec}_K(\mathrm{HDR}, C; \sigma)$ is deterministic and outputs either a record $R \in \mathcal{R}$ or the distinguished failure symbol $\bot$, together with an updated state. Correctness requires that for every key, every header and every record, encrypting and then decrypting under matched states returns the record.
 
 We adopt this syntax from [PRS11](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20), which is the framework in which MEE-TLS-CBC has been proved secure.
 
-**Definition iii (Adversary)** Let $E : \{0,1\}^{\kappa} \times \mathbb{B}^{b} \to \mathbb{B}^{b}$ be a block cipher with inverse $D$, so $D_{K_e}(E_{K_e}(x)) = x$ for all $x$. We assume $E$ is a secure pseudorandom permutation: for every efficient $\mathcal{B}$,
+<span style="color:#87A878">Definition iii (Adversary)</span> Let $E : \{0,1\}^{\kappa} \times \mathbb{B}^{b} \to \mathbb{B}^{b}$ be a block cipher with inverse $D$, so $D_{K_e}(E_{K_e}(x)) = x$ for all $x$. We assume $E$ is a secure pseudorandom permutation: for every efficient $\mathcal{B}$,
 
 $$\mathbf{Adv}^{\mathrm{prp}}_{E}(\mathcal{B}) = \left| \Pr\big[\mathcal{B}^{E_{K_e}(\cdot), E^{-1}_{K_e}(\cdot)} = 1\big] - \Pr\big[\mathcal{B}^{\pi(\cdot), \pi^{-1}(\cdot)} = 1\big] \right|$$ is small, the second probability being over a uniform permutation $\pi$ of $\mathbb{B}^b$.
 
-**Definition iv (MAC)** Let $\mathrm{MAC}_{K_a} : \mathbb{B}^* \to \mathbb{B}^{t}$ be $\mathrm{HMAC}\text{-}H$ for $H \in \{\mathrm{MD5}, \mathrm{SHA\text{-}1}, \mathrm{SHA\text{-}256}\}$, with corresponding tag lengths $t \in \{16, 20, 32\}$. 
+<span style="color:#87A878">Definition iv (MAC)</span> Let $\mathrm{MAC}_{K_a} : \mathbb{B}^* \to \mathbb{B}^{t}$ be $\mathrm{HMAC}\text{-}H$ for $H \in \{\mathrm{MD5}, \mathrm{SHA\text{-}1}, \mathrm{SHA\text{-}256}\}$, with corresponding tag lengths $t \in \{16, 20, 32\}$. 
 
 These are the three algorithms considered here and in [[LT]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf); TLS 1.2 additionally admits HMAC-SHA-384 through RFC 5289 and RFC 5487, which [[LT, §2.1 fn. 3]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) excludes from its analysis and which is likewise outside the scope of Proposition 9, since SHA-384 has a 128-byte block and a 16-byte length encoding. We assume the MAC is strongly unforgeable under chosen-message attack, and write $\mathbf{Adv}^{\mathrm{suf\text{-}cma}}_{\mathrm{MAC}}(\mathcal{C})$ for the corresponding advantage. The MAC key satisfies $|K_a| \le 64$, as it does for all three algorithms (keys of 16, 20 or 32 bytes); this bound is used in Proposition 9.
 
@@ -43,21 +43,21 @@ The encoding step is where MEE-TLS-CBC departs from a generic MAC-then-encrypt c
 ![Encode](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/encode.svg)
 
 
-**Definition 1 (encoding).** For a record $R$, a tag $T \in \mathbb{B}^t$ and an integer $j \ge 0$, set
+<span style="color:#87A878">Definition 1 (encoding).</span> For a record $R$, a tag $T \in \mathbb{B}^t$ and an integer $j \ge 0$, set
 
 $$p_{\min}(R) = b - 1 - \big((|R| + t) \bmod b\big), \qquad p = p_{\min}(R) + jb,$$
 
 and define $\mathsf{Encode}(R, T; j) = R \,\|\, T \,\|\, \langle p \rangle^{p+1}$, which is defined whenever $p \le 255$. The parameter $j$ is the number of additional whole blocks of padding beyond the minimum.
 
-**Proposition 2.** $p_{\min}(R) \in [0, b-1]$, and $|\mathsf{Encode}(R,T;j)| = |R| + t + p + 1$ is a positive multiple of $b$ for every $j \ge 0$ with $p \le 255$. Moreover every legal padding arises this way, since a total length divisible by $b$ forces $p$ to exceed $p_{\min}$ by a whole number of blocks.
+<span style="color:#87A878">Proposition 2.</span> $p_{\min}(R) \in [0, b-1]$, and $|\mathsf{Encode}(R,T;j)| = |R| + t + p + 1$ is a positive multiple of $b$ for every $j \ge 0$ with $p \le 255$. Moreover every legal padding arises this way, since a total length divisible by $b$ forces $p$ to exceed $p_{\min}$ by a whole number of blocks.
 
-*Proof.* $(|R|+t) \bmod b$ lies in $[0, b-1]$, so $p_{\min}$ does too. For $j = 0$ we get $|R| + t + p_{\min} + 1 = |R| + t + b - \big((|R|+t) \bmod b\big) \equiv 0 \pmod b$, and it is at least $b > 0$. Adding $jb$ to $p$ adds $jb$ to the total, preserving both properties. For the converse, if $R \,\|\, T \,\|\, \langle p \rangle^{p+1}$ has length divisible by $b$ then $p + 1 \equiv -(|R|+t) \pmod b$, which together with $p \ge 0$ forces $p \in \{p_{\min}, p_{\min}+b, \dots\}$. $\square$
+<span style="color:#808080">*Proof.*</span> $(|R|+t) \bmod b$ lies in $[0, b-1]$, so $p_{\min}$ does too. For $j = 0$ we get $|R| + t + p_{\min} + 1 = |R| + t + b - \big((|R|+t) \bmod b\big) \equiv 0 \pmod b$, and it is at least $b > 0$. Adding $jb$ to $p$ adds $jb$ to the total, preserving both properties. For the converse, if $R \,\|\, T \,\|\, \langle p \rangle^{p+1}$ has length divisible by $b$ then $p + 1 \equiv -(|R|+t) \pmod b$, which together with $p \ge 0$ forces $p \in \{p_{\min}, p_{\min}+b, \dots\}$. $\square$
 
 #### 1.1.2 Encryption
 
 ![Encryption](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/encrypt.svg)
 
-**Definition 3 (encryption).** $\mathsf{Enc}_K(\mathrm{HDR}, R; \sigma)$, with $j$ an implementation-chosen number of extra padding blocks:
+<span style="color:#87A878">Definition 3 (encryption).</span> $\mathsf{Enc}_K(\mathrm{HDR}, R; \sigma)$, with $j$ an implementation-chosen number of extra padding blocks:
 
 1. $T \leftarrow \mathrm{MAC}_{K_a}\big(\langle \mathit{sqn}_s \rangle_8 \,\|\, \mathrm{HDR} \,\|\, R\big)$.
 2. $P \leftarrow \mathsf{Encode}(R, T; j)$, parsed as $P_1 \,\|\, \cdots \,\|\, P_n$.
@@ -71,7 +71,7 @@ The sequence number is authenticated but not transmitted: the receiver supplies 
 
 ![Decryption](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/decrypt.svg)
 
-**Definition 4 (decryption).** $\mathsf{Dec}_K(\mathrm{HDR}, C; \sigma)$:
+<span style="color:#87A878">Definition 4 (decryption).</span> $\mathsf{Dec}_K(\mathrm{HDR}, C; \sigma)$:
 
 1. If $|C| \bmod b \ne 0$, or $n := |C|/b - 1 < 1$, or $nb < t + 1$, return $\bot$ without further processing.
 2. $P_i \leftarrow D_{K_e}(C_i) \oplus C_{i-1}$ for $i = 1, \dots, n$; set $P \leftarrow P_1 \,\|\, \cdots \,\|\, P_n$ and $\ell_P \leftarrow nb$.
@@ -90,11 +90,11 @@ Step 5 is the vulnerability, its purpose is to defeat the padding oracle of [[CH
 The else-branch of step 5 is the one prescribed by RFC 4346 and RFC 5246. Implementations that instead strip $\mathit{padlen}+1$ bytes and then read the tag (GnuTLS-style) induce a different case analysis and, per [[LT, §6.1]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf), a larger timing signal; that variant is not covered here.
 
 
-**Hypothesis 5 (compliant underflow handling).** We assume the receiver implements step 4's length test and, when it fails, proceeds to the else-branch of step 5. 
+<span style="color:#87A878">Hypothesis 5 (compliant underflow handling).</span> We assume the receiver implements step 4's length test and, when it fails, proceeds to the else-branch of step 5. 
 
 This is what [[LT, §7, p. 16–17]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) prescribes, so the hypothesis is one of RFC-compliance rather than a fresh assumption; but it is a genuine restriction, because [[LT, §6, p. 15]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) documents a real implementation that instead skips MAC verification entirely on underflow, and builds a distinguisher on that behaviour in which the branch is reached with probability 1. Against such a receiver the results of §1.3 do not apply. Against a receiver satisfying the hypothesis the branch is unreachable by construction. For a receiver that skips, reaching the branch through the attack ciphertext of Section 2 requires $\mathit{wf}$'s byte test to pass while its length test fails, which at $\ell_P = 64$ and $t = 20$ forces $p \in [44, 63]$ and hence a constant self-describing pattern of at least 45 bytes, at least 29 of which lie outside the block the adversary controls; summing $2^{-8(p-15)}$ over that range gives less than $2^{-231}$ per query. Both the bound and its derivation are specific to $\ell_P = 64$: at $\ell_P = 32$ the skip branch is instead reachable near-deterministically (for $p \in [12,31]$ the matching pattern fits inside the single controlled block, so the adversary forces it), which is a further reason the analysis fixes the four-block geometry $\ell_P = 64$. The hypothesis constrains the plaintext-recovery game of Definition 12, not the distinguishing game of Definition 13.
 
-**Hypothesis 6 (constant-time padding comparison).** We assume the receiver's padding-format check in step 4 runs in time independent of the plaintext. 
+<span style="color:#87A878">Hypothesis 6 (constant-time padding comparison).</span> We assume the receiver's padding-format check in step 4 runs in time independent of the plaintext. 
 
 This isolates the MAC as the only plaintext-dependent contribution to decryption time, which is what makes Model A's leakage $\mathsf{cost}(\lambda(P))$ alone. It is a genuine and separate assumption: a natural early-exit comparison costs $p+1$ byte-comparisons on a valid Case-2 run of length $p+1$ but exits at once on a Case-3 mismatch, so its cost is *sign-correlated* with the case (the fast bucket, Case 2, carries the larger scan), and it perturbs the very quantity Theorem 3 measures. [[LT, §3.1]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) observes this padding-removal channel directly, noting it runs opposite to the MAC signal and, per [[LT, §5]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf), is dominated by it. The assumption is therefore not needed for the attack to succeed, since an early-exit scan only adds leakage, and for the recovery masks (padding length 1 in Phase 1, at most 16 in Phase 2) the added bias is at most 16 byte-comparisons against a compression function of hundreds of cycles. It is needed, however, for the clean two-mean form of Theorem 3, whose exact means $4c_0$ and $5c_0$ are stated under it.
 
@@ -102,7 +102,7 @@ This isolates the MAC as the only plaintext-dependent contribution to decryption
 
 ![HMAC input length](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/hmac-lenght.svg)
 
-**Definition 7 (HMAC input length).** For a decrypted plaintext $P$, let $\lambda(P) = h + r$ with $r$ as computed in step 5 of Definition 4. Explicitly,
+<span style="color:#87A878">Definition 7 (HMAC input length).</span> For a decrypted plaintext $P$, let $\lambda(P) = h + r$ with $r$ as computed in step 5 of Definition 4. Explicitly,
 
 $$\lambda(P) = \begin{cases} h + \ell_P - t - 1 - p & \text{if the padding is well-formed,} \\ h + \ell_P - t & \text{otherwise.} \end{cases}$$
 
@@ -111,19 +111,19 @@ Since $r \ge 0$ on both branches (step 1 guarantees $\ell_P \ge t+1$, and step 4
 ![HMAC cost](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/hmac-cost.svg)
 
 
-**Definition 8 (cost).** For a hash function $H$ with a 64-byte block, an 8-byte length encoding and a digest of $d$ bytes, $\mathsf{cost}_{H}(\ell)$ is the number of compression-function evaluations of $H$ performed by one $\mathrm{HMAC}\text{-}H$ computation over an $\ell$-byte message, $\ell \ge 0$. The dependence on $H$ is suppressed where no ambiguity arises, but it is real: the count depends on $d$ as well as on $\ell$.
+<span style="color:#87A878">Definition 8 (cost).</span> For a hash function $H$ with a 64-byte block, an 8-byte length encoding and a digest of $d$ bytes, $\mathsf{cost}_{H}(\ell)$ is the number of compression-function evaluations of $H$ performed by one $\mathrm{HMAC}\text{-}H$ computation over an $\ell$-byte message, $\ell \ge 0$. The dependence on $H$ is suppressed where no ambiguity arises, but it is real: the count depends on $d$ as well as on $\ell$.
 
-**Proposition 9.** Let $H$ have a 64-byte block, an 8-byte length encoding and a digest length $d$ with $0 \le d \le 55$, and let the MAC key satisfy $|K_a| \le 64$. Then for every $\ell \ge 0$,
+<span style="color:#87A878">Proposition 9.</span> Let $H$ have a 64-byte block, an 8-byte length encoding and a digest length $d$ with $0 \le d \le 55$, and let the MAC key satisfy $|K_a| \le 64$. Then for every $\ell \ge 0$,
 
 $$\mathsf{cost}_{H}(\ell) = \left\lceil \frac{\ell - 55}{64} \right\rceil + 4 .$$
 
-*Proof.* $\mathrm{HMAC}_{K_a}(M) = H\big((K_a \oplus \mathit{opad}) \,\|\, H((K_a \oplus \mathit{ipad}) \,\|\, M)\big)$, where $K_a$ is zero-padded to 64 bytes (this is where $|K_a| \le 64$ is used, a longer key being hashed first), so each of the two invocations of $H$ is fed one full 64-byte block ahead of its payload [[LT, §2.1]]. Each $H$ processes its input in 64-byte chunks after Merkle–Damgård strengthening appends an $\texttt{0x80}$ byte, zero or more zero bytes, and an 8-byte length field, rounding up to a multiple of 64; the appended material is therefore at least 9 bytes. The inner invocation consumes $\big\lceil (64 + \ell + 9)/64 \big\rceil = 1 + \lceil (\ell+9)/64 \rceil$ blocks, and since $\lceil x + 1\rceil = \lceil x \rceil + 1$ for every real $x$, $\lceil (\ell+9)/64 \rceil = \lceil (\ell-55)/64 \rceil + 1$; so the inner count is $\lceil (\ell-55)/64 \rceil + 2$. The outer invocation consumes $\lceil (64 + d + 9)/64 \rceil$ blocks, which is exactly 2 whenever $0 \le d \le 55$. Summing gives the claim. $\square$
+<span style="color:#808080">*Proof.*</span> $\mathrm{HMAC}_{K_a}(M) = H\big((K_a \oplus \mathit{opad}) \,\|\, H((K_a \oplus \mathit{ipad}) \,\|\, M)\big)$, where $K_a$ is zero-padded to 64 bytes (this is where $|K_a| \le 64$ is used, a longer key being hashed first), so each of the two invocations of $H$ is fed one full 64-byte block ahead of its payload [[LT, §2.1]]. Each $H$ processes its input in 64-byte chunks after Merkle–Damgård strengthening appends an $\texttt{0x80}$ byte, zero or more zero bytes, and an 8-byte length field, rounding up to a multiple of 64; the appended material is therefore at least 9 bytes. The inner invocation consumes $\big\lceil (64 + \ell + 9)/64 \big\rceil = 1 + \lceil (\ell+9)/64 \rceil$ blocks, and since $\lceil x + 1\rceil = \lceil x \rceil + 1$ for every real $x$, $\lceil (\ell+9)/64 \rceil = \lceil (\ell-55)/64 \rceil + 1$; so the inner count is $\lceil (\ell-55)/64 \rceil + 2$. The outer invocation consumes $\lceil (64 + d + 9)/64 \rceil$ blocks, which is exactly 2 whenever $0 \le d \le 55$. Summing gives the claim. $\square$
 
 The hypothesis on $d$ is tight: for $d = 56$ the outer invocation consumes $\lceil (64+56+9)/64 \rceil = 3$ blocks, and the count exceeds the closed form by one for every $\ell$. The constant 55 is $64 - 8 - 1$, the largest payload that still fits beside the minimum strengthening in a single chunk. For untruncated HMAC $d = t$, so the hypothesis reads $t \le 55$ and holds for all three algorithms of Section 1; for the truncated tags of RFC 6066, which [[LT, §4.3]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) also considers, $d$ remains the full digest length and $t$ does not enter the count at all.
 
-**Corollary 10.** $$\mathsf{cost}(\ell)=\begin{cases}4&\forall\ell\in[0,55],\\5&\forall\ell=-\in\{56,119\},\\6&\forall\ell\in\{120,280\}.\end{cases}$$
+<span style="color:#87A878">Corollary 10.</span> $$\mathsf{cost}(\ell)=\begin{cases}4&\forall\ell\in[0,55],\\5&\forall\ell=-\in\{56,119\},\\6&\forall\ell\in\{120,280\}.\end{cases}$$
 
-The domain matters. Extended by its closed form to negative arguments, the function is *not* constant below 55: the largest interval of constancy containing 55 is $[-8, 55]$, and the closed form gives $\lceil(-9-55)/64\rceil + 4 = 3$. The corollary is therefore stated on the range Definition 8 actually covers. By Definition 7 nothing below $\ell = 13$ is ever reached, so the restriction costs nothing.
+The domain matters. Extended by its closed form to negative arguments, the function is not constant below 55: the largest interval of constancy containing 55 is $[-8, 55]$, and the closed form gives $\lceil(-9-55)/64\rceil + 4 = 3$. The corollary is therefore stated on the range Definition 8 actually covers. By Definition 7 nothing below $\ell = 13$ is ever reached, so the restriction costs nothing.
 
 The single step of $\mathsf{cost}$ between $\ell = 55$ and $\ell = 56$ is the entire basis of the attack. 
 
@@ -133,11 +133,11 @@ The results of §1.3 are stated in a model in which decryption returns a measure
 
 ![Noiseless Model](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/model-a.svg)
 
-**Model A (noiseless).** The decryption oracle returns the pair $\big(\mathsf{Dec}_K(\mathrm{HDR}, C; \sigma),\; \mathsf{cost}(\lambda(P))\big)$, and returns $\varnothing$ in the second component for a record rejected at step 1 of Definition 4. Two things are being idealised here and both are stated as hypotheses rather than left implicit. First, the second component is a *count*, not a time; Model B is what converts it. Second, the model presumes that all per-query work other than the MAC is equal across the queries being compared. Equal ciphertext length equalises the number $n$ of block-cipher inversions, but *not* the padding scan, whose cost depends on the padding value $p$ and varies at fixed length; Hypothesis 6 (constant-time comparison) is what removes that residual term, leaving the MAC as the sole plaintext-dependent cost. Results proved in Model A therefore hold for adversaries all of whose decryption queries have equal ciphertext length, against a receiver satisfying Hypothesis 6. The adversary of Section 2 meets the length restriction, every query being four non-IV blocks.
+<span style="color:#87A878">Model A (noiseless).</span> The decryption oracle returns the pair $\big(\mathsf{Dec}_K(\mathrm{HDR}, C; \sigma),\; \mathsf{cost}(\lambda(P))\big)$, and returns $\varnothing$ in the second component for a record rejected at step 1 of Definition 4. Two things are being idealised here and both are stated as hypotheses rather than left implicit. First, the second component is a *count*, not a time; Model B is what converts it. Second, the model presumes that all per-query work other than the MAC is equal across the queries being compared. Equal ciphertext length equalises the number $n$ of block-cipher inversions, but not the padding scan, whose cost depends on the padding value $p$ and varies at fixed length; Hypothesis 6 (constant-time comparison) is what removes that residual term, leaving the MAC as the sole plaintext-dependent cost. Results proved in Model A therefore hold for adversaries all of whose decryption queries have equal ciphertext length, against a receiver satisfying Hypothesis 6. The adversary of Section 2 meets the length restriction, every query being four non-IV blocks.
 
 ![Noisy Model](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/model-b.svg)
 
-**Model B (noisy).** The oracle returns $\big(\mathsf{Dec}_K(\mathrm{HDR}, C; \sigma),\; \tau\big)$ with $\tau = c_0 \cdot \mathsf{cost}(\lambda(P)) + \eta$, where $c_0 > 0$ is the cost of one compression-function evaluation and $\eta$ is drawn independently per query from a fixed, key-independent, mean-zero distribution assumed sub-Gaussian with parameter $\sigma_{\!\eta}$. The adversary is given $c_0$ and $\sigma_{\!\eta}$. Model B abstracts network jitter, and inherits Model A's equal-length restriction. Model A is its limit as $\sigma_{\!\eta}/c_0 \to 0$; Section 3 quantifies the passage between them, and should be compared against the sample-complexity analysis already present at [[LT, §7, pp. 15–16]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) as well as the measurements of [[LT, §5]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf).
+<span style="color:#87A878">Model B (noisy).</span> The oracle returns $\big(\mathsf{Dec}_K(\mathrm{HDR}, C; \sigma),\; \tau\big)$ with $\tau = c_0 \cdot \mathsf{cost}(\lambda(P)) + \eta$, where $c_0 > 0$ is the cost of one compression-function evaluation and $\eta$ is drawn independently per query from a fixed, key-independent, mean-zero distribution assumed sub-Gaussian with parameter $\sigma_{\!\eta}$. The adversary is given $c_0$ and $\sigma_{\!\eta}$. Model B abstracts network jitter, and inherits Model A's equal-length restriction. Model A is its limit as $\sigma_{\!\eta}/c_0 \to 0$; Section 3 quantifies the passage between them, and should be compared against the sample-complexity analysis already present at [[LT, §7, pp. 15–16]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) as well as the measurements of [[LT, §5]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf).
 
 #### 1.1.6 The session model
 
@@ -145,7 +145,7 @@ TLS treats every decryption failure as fatal: an alert is sent and the connectio
 
 ![Multi Session](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/multi-session.svg)
 
-**Definition 11 (multi-session experiment).** The adversary interacts with $q$ sessions. Each session $s \in [1,q]$ is initialised independently by $\mathsf{Gen}$, so keys, IVs and states are fresh and mutually independent. Each session uses the same padding parameter $j$ and encrypts the same challenge record $R^\ast$, of a length fixed by the record distribution, at the same record index $k \ge 1$; the adversary receives all $q$ resulting ciphertexts. The adversary may make at most one decryption query per session, and may not query the ciphertext it was given for that session.
+<span style="color:#87A878">Definition 11 (multi-session experiment).</span> The adversary interacts with $q$ sessions. Each session $s \in [1,q]$ is initialised independently by $\mathsf{Gen}$, so keys, IVs and states are fresh and mutually independent. Each session uses the same padding parameter $j$ and encrypts the same challenge record $R^\ast$, of a length fixed by the record distribution, at the same record index $k \ge 1$; the adversary receives all $q$ resulting ciphertexts. The adversary may make at most one decryption query per session, and may not query the ciphertext it was given for that session.
 
 Three of these conditions are more than bookkeeping. Fixing $j$ and $|R^\ast|$ is what makes "the same block index" pick out the same thing in every session. Requiring $k \ge 1$ and forbidding the challenge ciphertext is what keeps the experiment non-trivial: at $k = 0$ the receiver's counter still matches the sender's, so replaying the challenge into its own session's oracle would decrypt it and hand back $R^\ast$ in the clear.
 
@@ -155,7 +155,7 @@ The hypothesis that the same record recurs at the same position across sessions 
 
 ![Plaintext-recovery experiment](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/pr-experiment.svg)
 
-**Definition 12.** For a scheme $\Pi$, an adversary $\mathcal{A}$, a record distribution $\mathcal{M}$ of fixed length at least $b$ (so that a whole block can lie within a record) and a leakage model $X \in \{\mathrm{A}, \mathrm{B}\}$, the experiment $\mathbf{Exp}^{\mathrm{PR}\text{-}X}_{\Pi, \mathcal{A}, \mathcal{M}}(q)$ is:
+<span style="color:#87A878">Definition 12.</span> For a scheme $\Pi$, an adversary $\mathcal{A}$, a record distribution $\mathcal{M}$ of fixed length at least $b$ (so that a whole block can lie within a record) and a leakage model $X \in \{\mathrm{A}, \mathrm{B}\}$, the experiment $\mathbf{Exp}^{\mathrm{PR}\text{-}X}_{\Pi, \mathcal{A}, \mathcal{M}}(q)$ is:
 
 1. Sample $R^\ast \leftarrow \mathcal{M}$ and initialise $q$ independent sessions as in Definition 11.
 2. In each session encrypt $R^\ast$ at index $k$ and give $\mathcal{A}$ all $q$ ciphertexts.
@@ -171,7 +171,7 @@ Unlike an indistinguishability advantage this quantity is not normalised against
 
 ![Distinguishing experiment](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/ind-experiment.svg)
 
-**Definition 13.** The distinguishing experiment $\mathbf{Exp}^{\mathrm{IND}\text{-}X}_{\Pi, \mathcal{A}}$ runs in a single session. $\mathcal{A}$ submits $(M_0, M_1)$ with $|M_0| = |M_1|$, receives an encryption of $M_d$ for uniform $d$, may make one decryption query other than the challenge ciphertext, and outputs $\hat{d}$; its advantage is $\big|2\Pr[\hat d = d] - 1\big|$. The length restriction prevents a trivial win, and the single-query limit is the same consequence of fatal alerts as in Definition 11.
+<span style="color:#87A878">Definition 13.</span> The distinguishing experiment $\mathbf{Exp}^{\mathrm{IND}\text{-}X}_{\Pi, \mathcal{A}}$ runs in a single session. $\mathcal{A}$ submits $(M_0, M_1)$ with $|M_0| = |M_1|$, receives an encryption of $M_d$ for uniform $d$, may make one decryption query other than the challenge ciphertext, and outputs $\hat{d}$; its advantage is $\big|2\Pr[\hat d = d] - 1\big|$. The length restriction prevents a trivial win, and the single-query limit is the same consequence of fatal alerts as in Definition 11.
 
 
 ### 1.2. The cryptographic adversary
@@ -216,13 +216,13 @@ The range $p \in [1,43]$ in Case 2 is forced by the underflow test of step 4: at
 
 The adversary uses one primitive. $\mathsf{Probe}(\Delta)$ consumes one fresh session, assembles $C^{\mathrm{att}}(\Delta)$ from that session's target and predecessor blocks, makes the single permitted decryption query, and returns $\mathsf{true}$ iff the reported count is 4. This is precisely the test "$P^\ast \oplus \Delta$ ends in well-formed padding of length at least two", it realises this padding-checking oracle exactly.
 
-**Phase 1 (last two bytes).** With $\Delta[0 \mathinner{.\,.} 13] = \langle \texttt{0x00} \rangle^{14}$ fixed, enumerate $(\Delta[14], \Delta[15])$ over $\mathbb{B}^2$ until $\mathsf{Probe}(\Delta)$ returns $\mathsf{true}$. The intended success sets $P_4$ to end in $\texttt{0x01}\,\|\,\texttt{0x01}$, i.e. $\Delta[14] = P^\ast[14] \oplus \texttt{0x01}$ and $\Delta[15] = P^\ast[15] \oplus \texttt{0x01}$; at most $2^{16}$ probes are used.
+<span style="color:#87A878">Phase 1 (last two bytes).</span> With $\Delta[0 \mathinner{.\,.} 13] = \langle \texttt{0x00} \rangle^{14}$ fixed, enumerate $(\Delta[14], \Delta[15])$ over $\mathbb{B}^2$ until $\mathsf{Probe}(\Delta)$ returns $\mathsf{true}$. The intended success sets $P_4$ to end in $\texttt{0x01}\,\|\,\texttt{0x01}$, i.e. $\Delta[14] = P^\ast[14] \oplus \texttt{0x01}$ and $\Delta[15] = P^\ast[15] \oplus \texttt{0x01}$; at most $2^{16}$ probes are used.
 
-**Phase 1b (disambiguation).** A $\mathsf{true}$ in Phase 1 can also come from a well-formed pattern longer than two bytes. On each such $\mathsf{true}$, re-probe with $\Delta$ altered only in byte 13. A length-2 pattern is unaffected and still returns $\mathsf{true}$; any longer pattern is destroyed and returns $\mathsf{false}$. This distinguishes the intended event with at most 43 additional probes (one per admissible padding length $p \in [1,43]$); Section 3 (Lemma 4) shows the resolution is exact, so no residual error remains.
+<span style="color:#87A878">Phase 1b (disambiguation).</span> A $\mathsf{true}$ in Phase 1 can also come from a well-formed pattern longer than two bytes. On each such $\mathsf{true}$, re-probe with $\Delta$ altered only in byte 13. A length-2 pattern is unaffected and still returns $\mathsf{true}$; any longer pattern is destroyed and returns $\mathsf{false}$. This distinguishes the intended event with at most 43 additional probes (one per admissible padding length $p \in [1,43]$); Section 3 (Lemma 4) shows the resolution is exact, so no residual error remains.
 
-**Phase 2 (remaining bytes).** For $i = 2, 3, \dots, 15$, with $P^\ast[16-i \mathinner{.\,.} 15]$ already recovered, set $\Delta[j] = P^\ast[j] \oplus i$ for each $j \in [16-i, 15]$ (forcing those bytes of $P_4$ to $i$) and enumerate $\Delta[15-i]$ over $\mathbb{B}$. Exactly one value makes $P_4$ end in the well-formed pattern $\langle i \rangle^{i+1}$, returning $\mathsf{true}$, and then $P^\ast[15-i] = \Delta[15-i] \oplus i$. Each position costs at most $2^8$ probes, and this phase is the padding-oracle recovery of [[V02]](https://infoscience.epfl.ch/entities/publication/60268d2e-9c20-4d4f-9c85-6fff38c5454f/conferencedetails).
+<span style="color:#87A878">Phase 2 (remaining bytes).</span> For $i = 2, 3, \dots, 15$, with $P^\ast[16-i \mathinner{.\,.} 15]$ already recovered, set $\Delta[j] = P^\ast[j] \oplus i$ for each $j \in [16-i, 15]$ (forcing those bytes of $P_4$ to $i$) and enumerate $\Delta[15-i]$ over $\mathbb{B}$. Exactly one value makes $P_4$ end in the well-formed pattern $\langle i \rangle^{i+1}$, returning $\mathsf{true}$, and then $P^\ast[15-i] = \Delta[15-i] \oplus i$. Each position costs at most $2^8$ probes, and this phase is the padding-oracle recovery of [[V02]](https://infoscience.epfl.ch/entities/publication/60268d2e-9c20-4d4f-9c85-6fff38c5454f/conferencedetails).
 
-**Algorithm 1.** The adversary in full. Each call to $\mathsf{Probe}$ opens a fresh session $s$, whose target block $C^\ast_s$, predecessor block $C'_s$ and Model A decryption oracle $\mathcal{O}_s$ it uses once; $C_0, C_1, C_2$ are arbitrary blocks, and $e_{13} \in \mathbb{B}^b$ is the mask equal to $\texttt{0xFF}$ in byte 13 and zero elsewhere. The conjunction is evaluated left to right, so the Phase 1b probe is spent only on a Phase 1 hit.
+<span style="color:#87A878">Algorithm 1.</span> The adversary in full. Each call to $\mathsf{Probe}$ opens a fresh session $s$, whose target block $C^\ast_s$, predecessor block $C'_s$ and Model A decryption oracle $\mathcal{O}_s$ it uses once; $C_0, C_1, C_2$ are arbitrary blocks, and $e_{13} \in \mathbb{B}^b$ is the mask equal to $\texttt{0xFF}$ in byte 13 and zero elsewhere. The conjunction is evaluated left to right, so the Phase 1b probe is spent only on a Phase 1 hit.
 
 $$
 \begin{array}{l}
@@ -262,67 +262,67 @@ If one of the last two bytes of $P^\ast$ is known, Phase 1 collapses from $2^{16
 
 ![Lemma 1 as a decision tree](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/lemma1-tree.svg)
 
-**Lemma 1 (encoding length)** For every key and every mask $\Delta$, the decryption of $C^{\mathrm{att}}(\Delta)$ under Definition 4 reaches step 5 and computes an HMAC input length $\lambda$ equal to 56 if $P_4$ ends in $\texttt{0x00}$ (Case 1), at most 55 if $P_4$ ends in well-formed padding of length at least two (Case 2), and 57 otherwise (Case 3).
+<span style="color:#87A878">Lemma 1 (encoding length)</span> For every key and every mask $\Delta$, the decryption of $C^{\mathrm{att}}(\Delta)$ under Definition 4 reaches step 5 and computes an HMAC input length $\lambda$ equal to 56 if $P_4$ ends in $\texttt{0x00}$ (Case 1), at most 55 if $P_4$ ends in well-formed padding of length at least two (Case 2), and 57 otherwise (Case 3).
 - **Hypotheses.** The instantiation $b = 16$, $t = 20$, $h = 13$; the encoding and decryption of Definitions 1 and 4; Hypothesis 5 (so that the underflow branch is reached, not the skip branch).
 - **Uses.** Definition 4, Definition 7, the case ranges of Section 2.
 
 ![Leakage separation](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/lemma2-separation.svg)
 
-**Lemma 2 (leakage separation)** Under Model A, the count reported for $C^{\mathrm{att}}(\Delta)$ is 4 in Case 2 and 5 in Cases 1 and 3. Consequently the oracle yields exactly two distinguishable values, and Cases 1 and 3 are timing-identical; moreover no admissible ciphertext length separates Cases 1 and 3.
+<span style="color:#87A878">Lemma 2 (leakage separation)</span> Under Model A, the count reported for $C^{\mathrm{att}}(\Delta)$ is 4 in Case 2 and 5 in Cases 1 and 3. Consequently the oracle yields exactly two distinguishable values, and Cases 1 and 3 are timing-identical; moreover no admissible ciphertext length separates Cases 1 and 3.
 - **Hypotheses.** Lemma 1; the ceiling convention of the standing conventions; the hypotheses of Proposition 9 (so $H$ has a 64-byte block and $d \le 55$).
 - **Uses.** Lemma 1, Proposition 9, Corollary 10.
 
-**Remark (why $h = 13$).** Under the counterfactual $h = 12$, Case 1 would give $\lambda = 55$ and hence count 4, merging with Case 2; a single $\texttt{0x00}$ would then suffice and the recovery of Section 2 would cost $2^8$ rather than $2^{16}$ for the first two bytes. This is the sense in which the header length is "lucky"; it is proved as part of Lemma 2.
+<span style="color:#87A878">Remark (why $h = 13$).</span> Under the counterfactual $h = 12$, Case 1 would give $\lambda = 55$ and hence count 4, merging with Case 2; a single $\texttt{0x00}$ would then suffice and the recovery of Section 2 would cost $2^8$ rather than $2^{16}$ for the first two bytes. This is the sense in which the header length is "lucky"; it is proved as part of Lemma 2.
 
-**Remark (other tag lengths).** Lemmas 1 and 2 are specific to $t = 20$. In general Case 2 gives $\lambda = h + \ell_P - t - 1 - p$ and Cases 1 and 3 give $\lambda = h + \ell_P - t - 1$ and $h + \ell_P - t$. With $t = 16$ and $\ell_P = 64$, Cases 1 and 3 give $\lambda \in \{60, 61\}$ and count 5, but Case 2 reaches $\lambda \le 55$ only when $p \ge 5$: the fast case needs padding of length at least 6, and Phase 1 must enumerate six bytes, $2^{48}$ probes in the worst case. With $t = 32$ and $\ell_P = 64$, every case has $\lambda \le 45$ and count 4, so four blocks give no signal at all; at five blocks ($\ell_P = 80$) the values of $t = 16$ reappear, with the same threshold of length 6. For both tag lengths only the partially-known-plaintext variants of §1.2.3 remain practical [[LT, §4.3]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf).
+<span style="color:#87A878">Remark (other tag lengths).</span> Lemmas 1 and 2 are specific to $t = 20$. In general Case 2 gives $\lambda = h + \ell_P - t - 1 - p$ and Cases 1 and 3 give $\lambda = h + \ell_P - t - 1$ and $h + \ell_P - t$. With $t = 16$ and $\ell_P = 64$, Cases 1 and 3 give $\lambda \in \{60, 61\}$ and count 5, but Case 2 reaches $\lambda \le 55$ only when $p \ge 5$: the fast case needs padding of length at least 6, and Phase 1 must enumerate six bytes, $2^{48}$ probes in the worst case. With $t = 32$ and $\ell_P = 64$, every case has $\lambda \le 45$ and count 4, so four blocks give no signal at all; at five blocks ($\ell_P = 80$) the values of $t = 16$ reappear, with the same threshold of length 6. For both tag lengths only the partially-known-plaintext variants of §1.2.3 remain practical [[LT, §4.3]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf).
 
 ![Probe as a padding-checking oracle](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/lemma3-oracle.svg)
 
-**Lemma 3 (Probe is a perfect padding-checking oracle)** In Model A, for every session key and every mask $\Delta$, $\mathsf{Probe}(\Delta)$ returns $\mathsf{true}$ if and only if $P^\ast \oplus \Delta$ ends in well-formed padding of length at least two. The identity is exact and deterministic; no idealisation, and no computational assumption, is involved.
+<span style="color:#87A878">Lemma 3 (Probe is a perfect padding-checking oracle)</span> In Model A, for every session key and every mask $\Delta$, $\mathsf{Probe}(\Delta)$ returns $\mathsf{true}$ if and only if $P^\ast \oplus \Delta$ ends in well-formed padding of length at least two. The identity is exact and deterministic; no idealisation, and no computational assumption, is involved.
 - **Hypotheses.** Lemma 2 (the cost identity); the CBC relation $P_4 = P^\ast \oplus \Delta$ of Section 2; equal ciphertext length across queries (Model A, satisfied because every $C^{\mathrm{att}}(\Delta)$ has four non-IV blocks and so reaches step 5); Hypothesis 5.
 - **Uses.** Lemma 2.
 
-**Remark (verdict-independence).** The count $\mathsf{cost}(\lambda(P))$ is fixed at step 5/6 of Definition 4 and returned regardless of whether the MAC verifies at step 7, so it is independent of the MAC key. This is exactly why the attack defeats the RFC countermeasure of Section 1: that countermeasure makes the *verdict* uninformative by always checking a MAC, but the *time* of that check still leaks $\lambda$. In consequence the MAC's unforgeability plays no role in the recovery (in contrast to the verdict-based padding oracles of [[V02]](https://infoscience.epfl.ch/entities/publication/60268d2e-9c20-4d4f-9c85-6fff38c5454f/conferencedetails) and [[CHVV03]](https://www.scilit.com/publications/7a4b73573841857d9102de26df89dbd3), where it is essential) and re-enters only in the positive result of Section 3.
+<span style="color:#87A878">Remark (verdict-independence).</span> The count $\mathsf{cost}(\lambda(P))$ is fixed at step 5/6 of Definition 4 and returned regardless of whether the MAC verifies at step 7, so it is independent of the MAC key. This is exactly why the attack defeats the RFC countermeasure of Section 1: that countermeasure makes the verdict uninformative by always checking a MAC, but the time of that check still leaks $\lambda$. In consequence the MAC's unforgeability plays no role in the recovery (in contrast to the verdict-based padding oracles of [[V02]](https://infoscience.epfl.ch/entities/publication/60268d2e-9c20-4d4f-9c85-6fff38c5454f/conferencedetails) and [[CHVV03]](https://www.scilit.com/publications/7a4b73573841857d9102de26df89dbd3), where it is essential) and re-enters only in the positive result of Section 3.
 
 #### 1.3.1 Phase correctness and the recovery theorems
 
 ![Phase 1b disambiguation](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/lemma4-disambiguation.svg)
 
-**Lemma 4 (Phase 1 correctness, exact).** Phases 1 and 1b of Section 2 output $P^\ast[14]$ and $P^\ast[15]$ exactly, within $2^{16} + 43$ probes, with no probability of error.
-- *Hypotheses:* Lemma 3. 
-- *Uses:* Lemma 3.
+<span style="color:#87A878">Lemma 4 (Phase 1 correctness, exact).</span> Phases 1 and 1b of Section 2 output $P^\ast[14]$ and $P^\ast[15]$ exactly, within $2^{16} + 43$ probes, with no probability of error.
+- **Hypotheses:** Lemma 3. 
+- **Uses:** Lemma 3.
 
 The exactness rests on one structural fact. A well-formed run of length $\ell$ occupies the last $\ell$ bytes of the decrypted plaintext, so it covers byte 13 of $P_4$ if and only if $\ell \ge 3$. The unique length-2 run is therefore the only Case-2 configuration reachable in Phase 1 that does not involve byte 13. Phase 1b perturbs byte 13 and re-probes: a length-2 run is untouched and survives, while every longer run is destroyed, including a run extending into the uncontrolled block $P_3$, since such a run has $\ell > 16 \ge 3$ and so also covers byte 13. The length-2 mask $\Delta[14] = P^\ast[14] \oplus \texttt{0x01}$, $\Delta[15] = P^\ast[15] \oplus \texttt{0x01}$ always exists and always passes Phase 1b, and any earlier hit in enumeration order is a longer run and is rejected. No appeal to the distribution of $P_3$ is needed; the separation is deterministic.
 
 ![Phase 2 uniqueness](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/lemma5-uniqueness.svg)
 
-**Lemma 5 (Phase 2 correctness, exact).** Conditioned on correct recovery of $P^\ast[16-i \mathinner{.\,.} 15]$, iteration $i$ of Phase 2 outputs $P^\ast[15-i]$ exactly, within $2^8$ probes.
-- *Hypotheses:* Lemma 3. 
-- *Uses:* Lemma 3.
+<span style="color:#87A878">Lemma 5 (Phase 2 correctness, exact).</span> Conditioned on correct recovery of $P^\ast[16-i \mathinner{.\,.} 15]$, iteration $i$ of Phase 2 outputs $P^\ast[15-i]$ exactly, within $2^8$ probes.
+- **Hypotheses:** Lemma 3. 
+- **Uses:** Lemma 3.
 
 Fixing the last byte of $P_4$ to $i$ pins the padding length to $i+1 \le 16$, so the checked pattern $\langle i \rangle^{i+1}$ lies wholly within the controlled block $P_4$; exactly one value of $\Delta[15-i]$ completes it, and no block other than $P_4$ enters. Phase 2 therefore needs neither disambiguation nor any appeal to $P_3$.
 
 ![Theorem 1: advantage exactly 1](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/theorem1-advantage.svg)
 
-**Theorem 1 (distinguishing).** In Model A the adversary $\mathcal{A}_{\mathrm{dist}}$ of Section 2 satisfies $\mathbf{Adv}^{\mathrm{IND}\text{-}\mathrm{A}}_{\Pi}(\mathcal{A}_{\mathrm{dist}}) = 1$ with a single decryption query.
-- *Hypotheses:* Definition 13; the case arithmetic of Section 2 ($\lambda = 25$ against $280$, count 4 against 8). 
-- *Uses:*  Section 2. 
+<span style="color:#87A878">Theorem 1 (distinguishing).</span> In Model A the adversary $\mathcal{A}_{\mathrm{dist}}$ of Section 2 satisfies $\mathbf{Adv}^{\mathrm{IND}\text{-}\mathrm{A}}_{\Pi}(\mathcal{A}_{\mathrm{dist}}) = 1$ with a single decryption query.
+- **Hypotheses:** Definition 13; the case arithmetic of Section 2 ($\lambda = 25$ against $280$, count 4 against 8). 
+- **Uses:**  Section 2. 
 
 The query is a genuine truncation of the challenge ciphertext, so it decrypts deterministically and the observed count is a deterministic function of $d$; this is an equality, not a bound, and it uses neither Lemma 3 nor any computational assumption.
 
 ![Theorem 2: composition and accounting](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/TLS-1-2-CBC-mode/illustrations/theorem2-composition.svg)
 
-**Theorem 2 (plaintext recovery, main).** In Model A, under the multi-session interface of Section 1 with the target block $P^\ast$ lying wholly within $R^\ast$ and the challenge ciphertext excluded from queries, the adversary $\mathcal{A}_{\mathrm{PR}}$ recovers $P^\ast$ with
+<span style="color:#87A878">Theorem 2 (plaintext recovery, main).</span> In Model A, under the multi-session interface of Section 1 with the target block $P^\ast$ lying wholly within $R^\ast$ and the challenge ciphertext excluded from queries, the adversary $\mathcal{A}_{\mathrm{PR}}$ recovers $P^\ast$ with
 
 $$\mathbf{Adv}^{\mathrm{PR}\text{-}\mathrm{A}}_{\Pi, \mathcal{M}}(\mathcal{A}_{\mathrm{PR}}, q) = 1,$$
 
 consuming $q \le 2^{16} + 43 + 14\cdot 2^8$ sessions and one decryption query each.
-- *Hypotheses:* same record at the same index across sessions, with fixed $|R^\ast|$ ; $k \ge 1$, $|R^\ast| \ge b$, and challenge excluded ; Hypothesis 5. *
-- Uses:* Lemma 3, Lemma 4, Lemma 5.
+- **Hypotheses:** same record at the same index across sessions, with fixed $|R^\ast|$ ; $k \ge 1$, $|R^\ast| \ge b$, and challenge excluded ; Hypothesis 5. *
+- **Uses:** Lemma 3, Lemma 4, Lemma 5.
 
 The advantage is exactly 1, with no computational assumption: Lemma 3 turns the leakage into a perfect padding oracle, and Lemmas 4 and 5 recover the sixteen bytes deterministically from it.
 
-**Remark (where the assumptions went).** The PRP and SUF-CMA assumptions of Section 1 appear in neither Theorem 1 nor Theorem 2. The noiseless leakage oracle is information-theoretically perfect, so the recovery is unconditional. The assumptions are needed only for the converse, which shows that *without* the leakage the same scheme is secure. This is the precise content of the claim that the result is about the side channel and not about the cipher: the very assumptions under which MEE-TLS-CBC is provably secure are untouched by the attack, and the attack succeeds regardless.
+<span style="color:#87A878">Remark (where the assumptions went).</span> The PRP and SUF-CMA assumptions of Section 1 appear in neither Theorem 1 nor Theorem 2. The noiseless leakage oracle is information-theoretically perfect, so the recovery is unconditional. The assumptions are needed only for the converse, which shows that *without* the leakage the same scheme is secure. This is the precise content of the claim that the result is about the side channel and not about the cipher: the very assumptions under which MEE-TLS-CBC is provably secure are untouched by the attack, and the attack succeeds regardless.
 
 #### 1.3.2 Theorem 3 (the noisy model)
 
@@ -348,9 +348,9 @@ $L$ grows quadratically in $\sigma_{\!\eta}/c_0$ and only logarithmically in $1/
 - **Hypotheses.** Theorem 2 (the underlying deterministic signal); the noise model of Section 1 (per-query independence, mean zero, sub-Gaussian); equal ciphertext length across queries.
 - **Uses.** Theorem 2, a concentration bound for the mean of sub-Gaussian samples, a union bound over the at most $M = 2^{16} + 43 + 14\cdot 2^8$ masks.
 
-**Remark.** No computational assumption enters here either: the signal separating Case 2 (mean $4c_0$) from Cases 1 and 3 (mean $5c_0$) is deterministic, and $L$ must overcome only the noise, not the cipher. This is the sole result in §1.3 carrying a failure probability, and the only one [[LT]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) does not underwrite with a bound; the resulting $L$ should be compared against the measured $L = 2^7$ of [[LT, §5]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) and the sample-complexity discussion of [[LT, §7, pp. 15–16]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf).
+<span style="color:#87A878">Remark.</span> No computational assumption enters here either: the signal separating Case 2 (mean $4c_0$) from Cases 1 and 3 (mean $5c_0$) is deterministic, and $L$ must overcome only the noise, not the cipher. This is the sole result in §1.3 carrying a failure probability, and the only one [[LT]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) does not underwrite with a bound; the resulting $L$ should be compared against the measured $L = 2^7$ of [[LT, §5]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) and the sample-complexity discussion of [[LT, §7, pp. 15–16]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf).
 
-**Proposition 6 (the leakage model is necessary)** In  model, where the decryption oracle returns only its verdict in $\{R, \bot\}$ and no count, MEE-TLS-CBC with the components of Section 1 achieves Length-Hiding Authenticated Encryption, and consequently no efficient adversary attains non-negligible $\mathbf{Adv}^{\mathrm{PR}}$. Hence the leakage component of Model A is necessary: Theorem 2 fails against a leakage-free oracle.
+<span style="color:#87A878">Proposition 6 (the leakage model is necessary)</span> In  model, where the decryption oracle returns only its verdict in $\{R, \bot\}$ and no count, MEE-TLS-CBC with the components of Section 1 achieves Length-Hiding Authenticated Encryption, and consequently no efficient adversary attains non-negligible $\mathbf{Adv}^{\mathrm{PR}}$. Hence the leakage component of Model A is necessary: Theorem 2 fails against a leakage-free oracle.
 - **Hypotheses.** The positive result of [PRS11](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20) for MEE-TLS-CBC; the identification of its hypotheses with the PRP and SUF-CMA assumptions of Section 1 (this identification must be checked against [PRS11](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20) directly, as flagged in the ledger, since [[LT]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) states them only informally).
 - **Uses.** [PRS11](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20); the definitions of Section 1.
 
@@ -422,7 +422,7 @@ Conditioned on all tested masks being classified correctly, the run of $\mathcal
 
 #### Proof of Proposition 6 (necessity of the leakage)
 
-By [[PRS11]](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20), MEE-TLS-CBC with a PRP-secure block cipher and a SUF-CMA MAC achieves Length-Hiding Authenticated Encryption in the standard model, where the decryption oracle returns only its verdict in $\{R, \bot\}$. LH-AE security implies that no efficient adversary attains non-negligible advantage in the plaintext-recovery game of Definition 12 when that game is instantiated with the verdict-only oracle. Theorem 2 attains advantage $1$ against the Model A oracle, which augments the verdict with $\mathsf{cost}(\lambda(P))$. The two differ only in that added component, so it is the component the attack depends on: removing it restores the [[PRS11]](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20) hypotheses under which recovery is infeasible. Hence the leakage is necessary, and the attack is a statement about implementations that expose it rather than about the construction. $\square$ *(The identification of [[PRS11]](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20)'s hypotheses with PRP and SUF-CMA is to be checked against [[PRS11]](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20) directly, per the ledger.)*
+By [[PRS11]](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20), MEE-TLS-CBC with a PRP-secure block cipher and a SUF-CMA MAC achieves Length-Hiding Authenticated Encryption in the standard model, where the decryption oracle returns only its verdict in $\{R, \bot\}$. LH-AE security implies that no efficient adversary attains non-negligible advantage in the plaintext-recovery game of Definition 12 when that game is instantiated with the verdict-only oracle. Theorem 2 attains advantage $1$ against the Model A oracle, which augments the verdict with $\mathsf{cost}(\lambda(P))$. The two differ only in that added component, so it is the component the attack depends on: removing it restores the [[PRS11]](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20) hypotheses under which recovery is infeasible. Hence the leakage is necessary, and the attack is a statement about implementations that expose it rather than about the construction. $\square$ (The identification of [[PRS11]](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20)'s hypotheses with PRP and SUF-CMA is to be checked against [[PRS11]](https://link.springer.com/chapter/10.1007/978-3-642-25385-0_20) directly, per the ledger.)
 
 #### References
 
