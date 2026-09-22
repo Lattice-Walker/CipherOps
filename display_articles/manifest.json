@@ -3,7 +3,7 @@
     "category": "Cryptography",
     "articles": [
       {
-        "title": "Security, and post-quantum security assessment of TLS",
+        "title": "Breaking TLS 1.2 CBC mode, TLS 1.1, and TLS 1.0",
         "file": "articles/post-quantum-algorithms/TLS.md",
         "date": "September 16, 2026"
       }
