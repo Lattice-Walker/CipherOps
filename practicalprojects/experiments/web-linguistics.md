@@ -6,20 +6,20 @@ This experiment puts the ideas developed in [Pronunciation as Political Signalin
 
 The following analysis draws on Google Trends data for the search terms "Kiev" and "Kyiv".
 
-![Interest over time from 2004 on](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/2004on%20Interest%20over%20time.png)
+![Interest over time from 2004 on](https://lattice-walker.github.io/CipherOps/practicalprojects/experiments/pronounciation%20and%20propaganda%20images/2004on%20Interest%20over%20time.png)
 
-![Normalised deviation index from 2004 on](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/2004on%20Normalised%20deviation%20index.png)
+![Normalised deviation index from 2004 on](https://lattice-walker.github.io/CipherOps/practicalprojects/experiments/pronounciation%20and%20propaganda%20images/2004on%20Normalised%20deviation%20index.png)
 
 From 2004 to approximately 2020, searches for "Kyiv" remained consistently low relative to "Kiev". From 2020 onward, the relative share of "Kyiv" increased steadily, with a sharp spike in early 2022.
 
-![Interest over time from 2010 to 2016](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/20102016%20Interest%20over%20time.png)
+![Interest over time from 2010 to 2016](https://lattice-walker.github.io/CipherOps/practicalprojects/experiments/pronounciation%20and%20propaganda%20images/20102016%20Interest%20over%20time.png)
 
-![Normalised deviation index from 2010 to 2016](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/20102016%20Normalised%20deviation%20index.png)
+![Normalised deviation index from 2010 to 2016](https://lattice-walker.github.io/CipherOps/practicalprojects/experiments/pronounciation%20and%20propaganda%20images/20102016%20Normalised%20deviation%20index.png)
 
 Between 2010 and 2016, the ratio of "Kyiv" to "Kiev" searches remained low and stable, with no sustained upward movement, despite the escalation of the Russian-Ukrainian conflict during this period.
 
-![Interest over time from 2019 to 2022](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/20192022%20Interest%20over%20time.png)
-![Normalised deviation index from 2019 to 2022](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/20192022%20Normalised%20deviation%20index.png)
+![Interest over time from 2019 to 2022](https://lattice-walker.github.io/CipherOps/practicalprojects/experiments/pronounciation%20and%20propaganda%20images/20192022%20Interest%20over%20time.png)
+![Normalised deviation index from 2019 to 2022](https://lattice-walker.github.io/CipherOps/practicalprojects/experiments/pronounciation%20and%20propaganda%20images/20192022%20Normalised%20deviation%20index.png)
 
 A pronounced spike in "Kyiv" searches occurred in early 2022, followed by a lower but consistently rising baseline. Excluding the spike itself, the deviation index from this period fits a positive linear trend.
 
