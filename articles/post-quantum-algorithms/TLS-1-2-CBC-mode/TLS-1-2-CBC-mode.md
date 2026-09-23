@@ -307,7 +307,7 @@ The query is a genuine truncation of the challenge ciphertext, so it decrypts de
 $$\mathbf{Adv}^{\mathrm{PR}\text{-}\mathrm{A}}_{\Pi, \mathcal{M}}(\mathcal{A}_{\mathrm{PR}}, q) = 1,$$
 
 consuming $q \le 2^{16} + 43 + 14\cdot 2^8$ sessions and one decryption query each.
-- **Hypotheses:** same record at the same index across sessions, with fixed $|R^\ast|$ ; $k \ge 1$, $|R^\ast| \ge b$, and challenge excluded ; Hypothesis 1.9. *
+- **Hypotheses:** same record at the same index across sessions, with fixed $|R^\ast|$ ; $k \ge 1$, $|R^\ast| \ge b$, and challenge excluded ; Hypothesis 1.9. 
 - **Uses:** Lemma 1.21, Lemma 1.22, Lemma 1.23.
 
 The advantage is exactly 1, with no computational assumption: Lemma 1.21 turns the leakage into a perfect padding oracle, and Lemmas 1.22 and 1.23 recover the sixteen bytes deterministically from it.
