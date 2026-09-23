@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" role="img" aria-label="Lemma 3 as a chain of biconditionals from Probe returning true to the padding predicate on P star xor Delta, with the hypotheses it uses and the assumptions it does not">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" role="img" aria-label="Lemma 1.21 as a chain of biconditionals from Probe returning true to the padding predicate on P star xor Delta, with the hypotheses it uses and the assumptions it does not">
 <defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
-<text x="20" y="26" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Lemma 3: Probe is exactly a padding-checking oracle</text>
+<text x="20" y="26" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Lemma 1.21: Probe is exactly a padding-checking oracle</text>
 <rect x="35.0" y="53" width="430" height="46" rx="8" fill="none" stroke="#87A878" stroke-width="2.5"/>
 <text x="250" y="81.0" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Probe(Δ) returns true</text>
 <line x1="250" y1="99" x2="250" y2="143" stroke="#87A878" stroke-width="1.5"/>
@@ -11,13 +11,13 @@
 <text x="250" y="171.0" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">the reported count is 4</text>
 <line x1="250" y1="189" x2="250" y2="233" stroke="#87A878" stroke-width="1.5"/>
 <text x="236" y="217" fill="#87A878" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="normal">⟺</text>
-<text x="272" y="212" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Lemma 2</text>
+<text x="272" y="212" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Lemma 1.20</text>
 <text x="272" y="227" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">count 4 in Case 2, count 5 in Cases 1 and 3</text>
 <rect x="35.0" y="233" width="430" height="46" rx="8" fill="none" stroke="#87A878" stroke-width="1.5"/>
 <text x="250" y="261.0" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Case 2 holds:  λ ≤ 55</text>
 <line x1="250" y1="279" x2="250" y2="323" stroke="#87A878" stroke-width="1.5"/>
 <text x="236" y="307" fill="#87A878" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="normal">⟺</text>
-<text x="272" y="302" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Lemma 1</text>
+<text x="272" y="302" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Lemma 1.19</text>
 <text x="272" y="317" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">step 4 sorts every mask into exactly one case</text>
 <rect x="35.0" y="323" width="430" height="46" rx="8" fill="none" stroke="#87A878" stroke-width="1.5"/>
 <text x="250" y="343.0" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">P4 ends in well-formed padding</text>
@@ -32,14 +32,14 @@
 <rect x="510" y="54" width="370" height="196" rx="10" fill="none" stroke="#87A878" stroke-width="1.5"/>
 <text x="524" y="78" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">What the chain rests on</text>
 <text x="524" y="102" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">·</text>
-<text x="536" y="102" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Lemma 2, the cost identity</text>
+<text x="536" y="102" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Lemma 1.20, the cost identity</text>
 <text x="524" y="132" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">·</text>
 <text x="536" y="132" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">the CBC relation P4 = P* ⊕ Δ</text>
 <text x="524" y="162" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">·</text>
 <text x="536" y="162" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">equal ciphertext length: every record has</text>
 <text x="536" y="177" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">four non-IV blocks, so step 5 is reached</text>
 <text x="524" y="207" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">·</text>
-<text x="536" y="207" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Hypothesis 5, compliant underflow handling</text>
+<text x="536" y="207" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Hypothesis 1.9, compliant underflow handling</text>
 <rect x="510" y="274" width="370" height="176" rx="10" fill="none" stroke="#B8A9C9" stroke-width="1.5"/>
 <text x="524" y="298" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">What it does not rest on</text>
 <text x="524" y="322" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">·</text>

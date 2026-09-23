@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 642" width="900" height="642" role="img" aria-label="Theorem 1: both values of the hidden bit lead to a correct output, so the probability of a correct guess is one and the advantage is one">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 642" width="900" height="642" role="img" aria-label="Theorem 1.24: both values of the hidden bit lead to a correct output, so the probability of a correct guess is one and the advantage is one">
 <defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
-<text x="20" y="26" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Theorem 1: both branches end in the right answer, so the advantage is exactly 1</text>
+<text x="20" y="26" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Theorem 1.24: both branches end in the right answer, so the advantage is exactly 1</text>
 <rect x="270.0" y="53.0" width="360" height="38" rx="8" fill="none" stroke="#87A878" stroke-width="2.5"/>
 <text x="450" y="77.0" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">d ← {0, 1},  uniform and hidden</text>
 <polyline points="450,91 450,114 250,114 250,126" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>

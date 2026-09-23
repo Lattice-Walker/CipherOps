@@ -8,7 +8,7 @@
 <polyline points="180,76 216,76" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
 <rect x="220" y="54" width="140" height="44" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
 <text x="290" y="74" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">q</tspan><tspan dx="4.2" dy="0" font-size="14.0">sessions</tspan></text>
-<text x="290" y="91" fill="#B8A9C9" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Definition 11</text>
+<text x="290" y="91" fill="#B8A9C9" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Definition 1.15</text>
 <circle cx="290" cy="40" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
 <text x="290" y="44.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">2</text>
 <polyline points="360,76 436,76" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
@@ -29,7 +29,7 @@
 <text x="810" y="82" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">P̂</tspan><tspan dx="4.5" dy="0" font-size="15.0">=</tspan><tspan dx="4.5" dy="0" font-size="15.0">P</tspan><tspan dx="0.0" dy="-7" font-size="10.5">∗</tspan><tspan dx="4.5" dy="7" font-size="15.0">?</tspan></text>
 <text x="810" y="114" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">yes: 𝒜 wins</text>
 <text x="40" y="150" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="15.0">Adv</tspan><tspan dx="0.0" dy="-7" font-size="10.5">PR-X</tspan><tspan dx="4.5" dy="7" font-size="15.0">(</tspan><tspan dx="0.0" dy="0" font-size="15.0">𝒜</tspan><tspan dx="0.0" dy="0" font-size="15.0">,</tspan><tspan dx="4.5" dy="0" font-size="15.0">q</tspan><tspan dx="0.0" dy="0" font-size="15.0">) = Pr[</tspan><tspan dx="0.0" dy="0" font-size="15.0">𝒜</tspan><tspan dx="4.5" dy="0" font-size="15.0">wins]</tspan></text>
-<text x="330" y="146" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">guessing: 2⁻⁸ᵇ ·  Theorem 2 (Model A): exactly 1 ·  Theorem 3 (Model B): 1 − ε</text>
+<text x="330" y="146" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">guessing: 2⁻⁸ᵇ ·  Theorem 1.25 (Model A): exactly 1 ·  Theorem 1.26 (Model B): 1 − ε</text>
 <circle cx="22" cy="199" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
 <text x="22" y="203.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">3</text>
 <text x="40" y="204" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Step 3: the target block P* and its ciphertext block in each session</text>

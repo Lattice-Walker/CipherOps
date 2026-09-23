@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" role="img" aria-label="Proposition 10: encrypting a record and decrypting it under matched sequence numbers returns the record, because every step of decryption passes.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" role="img" aria-label="Proposition 2.10: encrypting a record and decrypting it under matched sequence numbers returns the record, because every step of decryption passes.">
 <defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
-<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Proposition 10: decryption undoes encryption under matched state</text>
+<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Proposition 2.10: decryption undoes encryption under matched state</text>
 <rect x="30" y="62" width="60" height="36" fill="#87A878" fill-opacity="0.3" stroke="#87A878" stroke-width="1.5" rx="4"/>
 <text x="60.0" y="84.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">R</text>
 <path d="M90,80 L128,80" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
@@ -27,7 +27,7 @@
 <line x1="250" y1="119" x2="650" y2="119" stroke="#B8A9C9" stroke-width="1.5" stroke-dasharray="5 4"/>
 <text x="450" y="142" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">matched state: sqn<tspan dy='4' font-size='75%'>r</tspan><tspan dy='-4'>​</tspan> = sqn<tspan dy='4' font-size='75%'>s</tspan><tspan dy='-4'>​</tspan></text>
 <rect x="20" y="162" width="860" height="284" fill="#87A878" fill-opacity="0.04" stroke="#87A878" stroke-width="1.2" rx="6"/>
-<text x="40" y="190" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Why every step of Definition 9 passes</text>
+<text x="40" y="190" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Why every step of Definition 2.9 passes</text>
 <circle cx="52" cy="225" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
 <text x="52" y="230" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">1</text>
 <text x="76" y="230" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">Length checks: |C| = b + |R| + t + p + 1 is a multiple of b, and |C| &lt; 2<tspan dy='-6' font-size='75%'>14</tspan><tspan dy='6'>​</tspan> + 2048.</text>

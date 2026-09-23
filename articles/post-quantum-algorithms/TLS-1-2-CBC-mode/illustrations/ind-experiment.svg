@@ -24,7 +24,7 @@
 <text x="380.0" y="304" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="12.0">at most one query</tspan></text>
 <circle cx="60" cy="284" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
 <text x="60" y="288.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">3</text>
-<text x="580" y="288" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">any failure is fatal (Definition 11)</text>
+<text x="580" y="288" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">any failure is fatal (Definition 1.15)</text>
 <polyline points="560,350 204,350" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
 <text x="380.0" y="341" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">verdict and model-X leakage</tspan></text>
 <circle cx="60" cy="350" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>

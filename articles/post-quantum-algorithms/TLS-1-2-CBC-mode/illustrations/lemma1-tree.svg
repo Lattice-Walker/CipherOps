@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 724" width="900" height="724" role="img" aria-label="Decision tree through Definition 4 for the attack record: the length test, the byte test and Hypothesis 5 route every mask to one of three values of lambda">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 724" width="900" height="724" role="img" aria-label="Decision tree through Definition 1.8 for the attack record: the length test, the byte test and Hypothesis 1.9 route every mask to one of three values of lambda">
 <defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
-<text x="20" y="24" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Lemma 1: every mask reaches step 5, and λ lands on one of three values</text>
+<text x="20" y="24" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Lemma 1.19: every mask reaches step 5, and λ lands on one of three values</text>
 <rect x="285.0" y="38.0" width="330" height="36" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
 <text x="450" y="61.0" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Cᵃᵗᵗ(Δ):  ℓP = 64,  n = 4 blocks</text>
 <rect x="230.0" y="106.0" width="440" height="40" rx="3" fill="none" stroke="#87A878" stroke-width="1.5"/>
@@ -27,7 +27,7 @@
 <text x="300" y="507.0" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">p = 0 ?</text>
 <polyline points="300,451 300,483" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
 <rect x="642.0" y="354.0" width="220" height="52" rx="3" fill="none" stroke="#B8A9C9" stroke-width="1.5"/>
-<text x="752" y="368.0" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Hypothesis 5:</text>
+<text x="752" y="368.0" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Hypothesis 1.9:</text>
 <text x="752" y="385.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">take the else-branch of step 5,</text>
 <text x="752" y="402.0" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">nothing is stripped</text>
 <polyline points="610,264 752,264 752,352" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
@@ -52,6 +52,6 @@
 <polyline points="450,350 600,350 600,590 639,590" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
 <text x="456" y="344" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">no</text>
 <text x="30" y="660" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">The byte test can only be reached when p ≤ 43, so the two ways of failing it, a wrong byte and an underflow, both land on Case 3.</text>
-<text x="30" y="682" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">A receiver that instead skips the MAC check on underflow falls outside Hypothesis 5. Reaching p ≥ 44 at all would need a self-describing</text>
+<text x="30" y="682" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">A receiver that instead skips the MAC check on underflow falls outside Hypothesis 1.9. Reaching p ≥ 44 at all would need a self-describing</text>
 <text x="30" y="700" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">pattern of at least 45 bytes, 29 of them outside the block the adversary controls: under 2⁻²³¹ per query.</text>
 </svg>

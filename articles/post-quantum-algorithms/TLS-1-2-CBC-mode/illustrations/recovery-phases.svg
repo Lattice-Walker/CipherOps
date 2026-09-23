@@ -177,7 +177,7 @@
 <text x="582.0" y="369.0" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">≠</text>
 <text x="672" y="370" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">false</tspan></text>
 <text x="714" y="370" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">— a longer run covers byte 13</text>
-<text x="150" y="406" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">At most 43 extra probes, one per admissible p; Lemma 4 shows every longer run breaks, so the resolution is exact.</text>
+<text x="150" y="406" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">At most 43 extra probes, one per admissible p; Lemma 1.22 shows every longer run breaks, so the resolution is exact.</text>
 <text x="20" y="448" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Phase 2: one byte at a time, leftwards</text>
 <text x="166.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0</text>
 <text x="198.0" y="468" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">1</text>

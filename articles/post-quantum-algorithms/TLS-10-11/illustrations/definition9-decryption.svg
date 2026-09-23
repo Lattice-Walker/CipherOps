@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 610" width="900" height="610" role="img" aria-label="Definition 9: TLS 1.1 decryption. Length checks on the ciphertext may reject early; otherwise CBC decryption recovers P, the padding predicate and stripping map give ok, R and T, the MAC is checked on both branches, the receive counter is incremented and R is returned only if both ok and the MAC check hold.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 610" width="900" height="610" role="img" aria-label="Definition 2.9: TLS 1.1 decryption. Length checks on the ciphertext may reject early; otherwise CBC decryption recovers P, the padding predicate and stripping map give ok, R and T, the MAC is checked on both branches, the receive counter is incremented and R is returned only if both ok and the MAC check hold.">
 <defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
-<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Definition 9: TLS 1.1 decryption Dec(HDR, C; σ)</text>
+<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Definition 2.9: TLS 1.1 decryption Dec(HDR, C; σ)</text>
 <circle cx="34" cy="76" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
 <text x="34" y="81" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">1</text>
 <rect x="60" y="54" width="560" height="50" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
@@ -67,7 +67,7 @@
 <text x="34" y="403" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">3</text>
 <rect x="60" y="376" width="560" height="48" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
 <text x="76" y="396" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start">ok ← Π<tspan dy='4' font-size='10'>strict</tspan><tspan dy='-4'>​</tspan>(P)</text>
-<text x="76" y="416" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start">(R, T) ← Φ₁.₁(P):  strip if ok,  strip₀ otherwise  (Definition 8)</text>
+<text x="76" y="416" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start">(R, T) ← Φ₁.₁(P):  strip if ok,  strip₀ otherwise  (Definition 2.8)</text>
 <text x="640" y="396" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">no early exit: both</text>
 <text x="640" y="411" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">branches continue</text>
 <path d="M340,424 L340,452" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>

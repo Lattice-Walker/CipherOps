@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 392" width="900" height="392" role="img" aria-label="Definition 46: an IV-oblivious adversary makes IV-independent queries of at least two non-IV blocks, never reads the IV block of a challenge, and decides from leakage and ciphertexts rather than verdicts.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 392" width="900" height="392" role="img" aria-label="Definition 2.46: an IV-oblivious adversary makes IV-independent queries of at least two non-IV blocks, never reads the IV block of a challenge, and decides from leakage and ciphertexts rather than verdicts.">
 <defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
-<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Definition 46: the three conditions of an IV-oblivious adversary</text>
+<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Definition 2.46: the three conditions of an IV-oblivious adversary</text>
 <rect x="20" y="46" width="860" height="104" fill="#87A878" fill-opacity="0.03" stroke="#87A878" stroke-width="1.2" rx="6"/>
 <circle cx="46" cy="72" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
 <text x="46" y="77" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">i</text>
-<text x="70" y="77" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">its queries have at least two non-IV blocks and are IV-independent (Definition 42)</text>
+<text x="70" y="77" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">its queries have at least two non-IV blocks and are IV-independent (Definition 2.42)</text>
 <rect x="20" y="160" width="860" height="104" fill="#87A878" fill-opacity="0.03" stroke="#87A878" stroke-width="1.2" rx="6"/>
 <circle cx="46" cy="186" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
 <text x="46" y="191" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">ii</text>

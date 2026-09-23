@@ -66,5 +66,5 @@
 <text x="640" y="474" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">cost = 5</tspan></text>
 <text x="640" y="494" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">Case 1 or Case 3</text>
 <text x="150" y="530" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">So one query answers exactly one question: does P4 end in well-formed padding of length at least two?</text>
-<text x="150" y="552" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">A run with p ≥ 16 spills out of P4 into the uncontrolled P3; Lemma 4 shows the disambiguation breaks every such run.</text>
+<text x="150" y="552" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">A run with p ≥ 16 spills out of P4 into the uncontrolled P3; Lemma 1.22 shows the disambiguation breaks every such run.</text>
 </svg>

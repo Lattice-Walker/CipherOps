@@ -58,7 +58,7 @@
 <path d="M200,390 v6 H440 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
 <text x="320" y="412" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">equal: same length, same n</text>
 <path d="M440,390 v6 H560 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
-<text x="500" y="412" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">equal by Hypothesis 6</text>
+<text x="500" y="412" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">equal by Hypothesis 1.10</text>
 <path d="M560,390 v6 H785 v-6" fill="none" stroke="#B8A9C9" stroke-width="1.2"/>
 <text x="672.5" y="412" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">differs: the only plaintext-dependent cost</text>
 <text x="30" y="470" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">The attack's queries: n = 4 blocks, so ℓP = 64, with t = 20 and h = 13</text>

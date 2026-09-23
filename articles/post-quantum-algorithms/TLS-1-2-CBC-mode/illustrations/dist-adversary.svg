@@ -132,5 +132,5 @@
 <text x="772" y="450" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">λ</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 13 + 267 = 280</tspan></text>
 <text x="772" y="468" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="13.0">cost 8 →</tspan><tspan dx="3.9" dy="0" font-size="13.0">d̂</tspan><tspan dx="3.9" dy="0" font-size="13.0">= 1</tspan></text>
 <text x="20" y="510" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">The verdict plays no part (T′ is just message bytes, so it is almost surely ⊥): the count alone decides, so 𝒜 is always right, advantage 1.</text>
-<text x="20" y="530" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Numbers for HMAC-SHA-1: t = 20, h = 13, b = 16; cost from Proposition 9.</text>
+<text x="20" y="530" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Numbers for HMAC-SHA-1: t = 20, h = 13, b = 16; cost from Proposition 1.13.</text>
 </svg>
