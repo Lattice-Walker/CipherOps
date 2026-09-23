@@ -24,7 +24,7 @@
     "articles": [
       {
         "title": "Deprecated TLS risk assessement and post-quantum risk assessment",
-        "file": "articles/governance/Deprecated TLS risk assessement and post-quantum risk assessment.md",
+        "file": "articles/governance/TLS-risk-assessment.md",
         "date": "September 23, 2026"
       }
     ]
