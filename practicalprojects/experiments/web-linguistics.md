@@ -2,10 +2,6 @@
 
 This experiment puts the ideas developed in [Pronunciation as Political Signaling: Micro-Markers of Macro-Divisions](https://lattice-walker.github.io/CipherOps/display_articles/articles.html#article=articles%2Flinguistics%2Fpronounciation%20and%20propaganda.md) to a practical test. Rather than examining pronunciation and terminology only as theoretical markers of political identity, it uses Google Trends data to measure how the competing forms **"Kiev"** and **"Kyiv"** evolved in public search behaviour over time.
 
-The objective is not to establish that a particular actor caused the linguistic shift, but to examine whether its temporal pattern is compatible with the mechanisms discussed in the article: institutional adoption, political events, media exposure, and broader changes in linguistic norms. The experiment therefore focuses on observable changes in search behaviour and their relationship to major events and institutional language choices.
-
-The results below provide a practical, data-driven case study of how a seemingly minor linguistic distinction can reflect—and potentially participate in—larger political and informational dynamics.
-
 ## Practical results
 
 The following analysis draws on Google Trends data for the search terms "Kiev" and "Kyiv".
