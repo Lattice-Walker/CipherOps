@@ -1,5 +1,20 @@
 [   
   {
+    "category": "Experiments",
+    "articles": [
+      {
+        "title": "TLS name me",
+        "file": "practicalprojects/experiments/tls-deployment.md",
+        "date": "to be published"
+      },
+      {
+        "title": "From Linguistic Signals to Measurable Influence: A Practical Study of \"Kyiv\" and \"Kiev\"",
+        "file": "practicalprojects/experiments/web-linguistics.md",
+        "date": "August 19, 2026"
+      }
+    ]
+  },
+  {
     "category": "Tools",
     "articles": [
       {
@@ -16,21 +31,6 @@
         "title": "Curve Clash",
         "file": "practicalprojects/Games/CurveClash.md",
         "date": "August 26, 2026"
-      }
-    ]
-  },
-  {
-    "category": "Experiments",
-    "articles": [
-      {
-        "title": "TLS name me",
-        "file": "practicalprojects/experiments/tls-deployment.md",
-        "date": "to be published"
-      },
-      {
-        "title": "From Linguistic Signals to Measurable Influence: A Practical Study of \"Kyiv\" and \"Kiev\"",
-        "file": "practicalprojects/experiments/web-linguistics.md",
-        "date": "August 19, 2026"
       }
     ]
   }
