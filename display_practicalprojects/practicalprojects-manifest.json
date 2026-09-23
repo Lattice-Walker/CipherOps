@@ -1,4 +1,14 @@
-[
+[   
+  {
+    "category": "Tools",
+    "articles": [
+      {
+        "title": "HNDL CVSS Calculator",
+        "file": "practicalprojects/Tools/HNDL-CVSS-calculator.md",
+        "date": "September 23, 2026"
+      }
+    ]
+  },
   {
     "category": "Games",
     "articles": [
