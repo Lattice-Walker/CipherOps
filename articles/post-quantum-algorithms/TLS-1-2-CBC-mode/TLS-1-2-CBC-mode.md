@@ -111,7 +111,7 @@ $$\mathsf{cost}_{H}(\ell) = \left\lceil \frac{\ell - 55}{64} \right\rceil + 4 .$
 
 The hypothesis on $d$ is tight: for $d = 56$ the outer invocation consumes $\lceil (64+56+9)/64 \rceil = 3$ blocks, and the count exceeds the closed form by one for every $\ell$. The constant 55 is $64 - 8 - 1$, the largest payload that still fits beside the minimum strengthening in a single chunk. For untruncated HMAC $d = t$, so the hypothesis reads $t \le 55$ and holds for all three algorithms of §1.1; for the truncated tags of RFC 6066, which [[LT, §4.3]](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf) also considers, $d$ remains the full digest length and $t$ does not enter the count at all.
 
-<span style="color:#87A878">Corollary 1.14.</span> $$\mathsf{cost}(\ell)=\begin{cases}4&\forall\ell\in[0,55],\\5&\forall\ell=-\in\{56,119\},\\6&\forall\ell\in\{120,280\}.\end{cases}$$
+<span style="color:#87A878">Corollary 1.14.</span> $$\mathsf{cost}(\ell)=\begin{cases}4&\forall\ell\in[0,55],\\5&\forall\ell\in[56,119],\\6&\forall\ell\in[120,280].\end{cases}$$
 
 The domain matters. Extended by its closed form to negative arguments, the function is not constant below 55: the largest interval of constancy containing 55 is $[-8, 55]$, and the closed form gives $\lceil(-9-55)/64\rceil + 4 = 3$. The corollary is therefore stated on the range Definition 1.12 actually covers. By Definition 1.11 nothing below $\ell = 13$ is ever reached, so the restriction costs nothing.
 
