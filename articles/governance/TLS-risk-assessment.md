@@ -2,9 +2,12 @@
 
 ## Deprecated/weak TLS in use : TLS 1.0, TLS 1.1, and TLS 1.2 with CBC ciphersuites
 
-**CVSS v4.0 vector:** `CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N`
+**[CVSS v4.0 vector:](https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N)** 
+```
+CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N
+```
 
-**CVSS v4.0 Score:** 6.3 / Medium
+**[CVSS v4.0 Score:](https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N)** 6.3 / Medium
 ```
 Macro vector: 012201
 Exploitability: High
@@ -27,9 +30,7 @@ Security requirements: Medium
 | Confidentiality  | Low | Partial plaintext recovery, not the whole session |
 | Integrity  | Low | Limited ciphertext manipulation possible |
 | Availability  | None | Service stays up |
-| Subsequent Confidentiality  | None | No impact beyond the TLS endpoint |
-| Subsequent Integrity  | None | No impact beyond the TLS endpoint |
-| Subsequent Availability  | None  | No impact beyond the TLS endpoint |
+| Subsequent Confidentiality / Integrity / Availability  | None | No impact beyond the TLS endpoint |
 
 **Supplemental Metrics**
 
@@ -39,38 +40,22 @@ Security requirements: Medium
 | Automatable  | Not Defined | Leave undefined; set to No only if your policy requires a value, since the MITM step is not automatable at scale |
 | Recovery | Not Defined | No availability impact to recover from |
 | Value Density | Not Defined | Depends on the specific asset |
-| Vulnerability Response Effort | Not Defined | Optional; remediation is a config change, so Low (L) is defensible |
+| Vulnerability Response Effort | Not Defined | Optional; remediation is a config change, so Low is defensible |
 | Provider Urgency | Not Defined | No vendor-supplied urgency rating |
 
-**Environmental (Modified Base Metrics)**
+**Environmental:** The following metrics are set as Not Defined, because there is no environment-specific override:
+- Attack Vector / Complexity / Requirements,
+- Privileges Required, User Interaction,
+- Confidentiality, Integrity, Availability,
+- Subsequent Confidentiality / Integrity / Availability.
 
-| Metric | Selected value | Rationale |
-|---|---|---|
-| Attack Vector | Not Defined  | No environment-specific override |
-| Attack Complexity  | Not Defined  | No environment-specific override |
-| Attack Requirements | Not Defined  | No environment-specific override |
-| Privileges Required  | Not Defined  | No environment-specific override |
-| User Interaction  | Not Defined  | No environment-specific override |
-| Confidentiality | Not Defined  | No environment-specific override |
-| Integrity  | Not Defined  | No environment-specific override |
-| Availability| Not Defined  | No environment-specific override |
-| Subsequent Confidentiality  | Not Defined  | No environment-specific override |
-| Subsequent Integrity  | Not Defined  | No environment-specific override |
-| Subsequent Availability | Not Defined  | No environment-specific override |
+**Environmental:** The following metrics are set as Not Defined:
+- Confidentiality Requirement ; Raise to High only if the endpoint carries regulated or sensitive data,
+- Integrity / Availability Requirement ; Raise only if tailoring to a specific asset
+Changing these metrics however, does not affect the overall score.
 
-**Environmental (Security Requirements)**
+**Threat Metrics:** The Exploit Maturity is set to Not Defined because public PoCs exist, so POC is defensible if your policy uses threat metrics; leaving it undefined keeps the CVSS-B score.
 
-| Metric | Selected value | Rationale |
-|---|---|---|
-| Confidentiality Requirement  | Not Defined  | Raise to High only if the endpoint carries regulated or sensitive data |
-| Integrity Requirement | Not Defined  | Raise only if tailoring to a specific asset |
-| Availability Requirement | Not Defined  | Raise only if tailoring to a specific asset |
-
-**Threat Metrics**
-
-| Metric | Selected value | Rationale |
-|---|---|---|
-| Exploit Maturity | Not Defined  | Public PoCs exist, so POC is defensible if your policy uses threat metrics; leaving it undefined keeps the CVSS-B score |
 
 ## TLS with non HNDL-safe encryption schemes
 
