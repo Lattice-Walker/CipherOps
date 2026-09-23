@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 505" width="900" height="505" role="img" aria-label="Theorem 24: world 1 runs the adversary against TLS 1.1, world 2 runs it through psi against TLS 1.2 CBC mode with HMAC composed with phi. On shared randomness every component matches, so the advantages are equal.">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Theorem 24: TLS 1.1 and TLS 1.2 CBC mode with HMAC-H ∘ φ are exactly equivalent under ψ</text>
+<rect x="20" y="46" width="860" height="52" fill="#B8A9C9" fill-opacity="0.1" stroke="#B8A9C9" stroke-width="1.2" rx="6"/>
+<text x="450" y="66" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">Shared randomness (Step 2 of the proof)</text>
+<text x="450" y="88" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">session keys · R<tspan dy='-6' font-size='75%'>*</tspan><tspan dy='6'>​</tspan> and d · each C<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan> and p · Model B noise η · coins of 𝒜 · records before index k</text>
+<text x="195" y="124" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">World 1</text>
+<text x="705" y="124" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">World 2</text>
+<rect x="110" y="146" width="170" height="40" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="195.0" y="171.6" fill="#87A878" font-size="16" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">𝒜</text>
+<rect x="560" y="134" width="290" height="64" fill="#B8A9C9" fill-opacity="0.12" stroke="#B8A9C9" stroke-width="1.5" rx="4"/>
+<text x="572" y="156" fill="#B8A9C9" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start">𝒜<tspan dy='-6' font-size='75%'>ψ</tspan><tspan dy='6'>​</tspan></text>
+<rect x="620" y="148" width="120" height="40" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="680.0" y="173.6" fill="#87A878" font-size="16" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">𝒜</text>
+<text x="750" y="164" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">ψ out</text>
+<text x="750" y="182" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">ψ<tspan dy='-6' font-size='75%'>−1</tspan><tspan dy='6'>​</tspan> in</text>
+<rect x="50" y="236" width="290" height="44" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="195.0" y="263.25" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">game G ∈ 𝒢</text>
+<rect x="560" y="236" width="290" height="44" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="705.0" y="263.25" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">game G ∈ 𝒢</text>
+<rect x="50" y="320" width="290" height="44" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="195.0" y="347.25" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.1</tspan><tspan dy='-4'>​</tspan>[E, H, π]</text>
+<rect x="560" y="320" width="290" height="44" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="705.0" y="347.25" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.2</tspan><tspan dy='-4'>​</tspan>[E, HMAC-H ∘ φ, π]</text>
+<path d="M195,188 L195,234" fill="none" stroke="#87A878" stroke-width="1.5" marker-start="url(#arr-s)" marker-end="url(#arr-s)"/>
+<text x="205" y="220" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">queries, answers</text>
+<path d="M195,282 L195,318" fill="none" stroke="#87A878" stroke-width="1.5" marker-start="url(#arr-s)" marker-end="url(#arr-s)"/>
+<path d="M705,200 L705,234" fill="none" stroke="#87A878" stroke-width="1.5" marker-start="url(#arr-s)" marker-end="url(#arr-s)"/>
+<text x="715" y="220" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">queries, answers</text>
+<path d="M705,282 L705,318" fill="none" stroke="#87A878" stroke-width="1.5" marker-start="url(#arr-s)" marker-end="url(#arr-s)"/>
+<text x="195" y="384" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">IV procedure ι replaced by 1 (Step 1, Proposition 7)</text>
+<line x1="282" y1="166" x2="558" y2="166" stroke="#B8A9C9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="450" y="158" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">same view</text>
+<line x1="342" y1="258" x2="558" y2="258" stroke="#B8A9C9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="450" y="250" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">Lemma 23</text>
+<line x1="342" y1="342" x2="558" y2="342" stroke="#B8A9C9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="450" y="334" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">Lemmas 20, 21, 22</text>
+<text x="450" y="360" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">Enc, Dec, leakage</text>
+<rect x="20" y="404" width="860" height="88" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="6"/>
+<text x="450" y="428" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">same coins ⇒ same view ⇒ same output ⇒ the winning events coincide (Step 3)</text>
+<text x="450" y="456" fill="#87A878" font-size="17" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Adv<tspan dy='-6' font-size='75%'>G</tspan><tspan dy='6'>​</tspan><tspan dy='4' font-size='75%'>Π1.1</tspan><tspan dy='-4'>​</tspan>(𝒜, q) = Adv<tspan dy='-6' font-size='75%'>G</tspan><tspan dy='6'>​</tspan><tspan dy='4' font-size='75%'>Π1.2</tspan><tspan dy='-4'>​</tspan>(𝒜<tspan dy='-6' font-size='75%'>ψ</tspan><tspan dy='6'>​</tspan>, q)</text>
+<text x="450" y="480" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">for every game G, adversary 𝒜 and q; the converse direction is the symmetry noted after Definition 16</text>
+</svg>

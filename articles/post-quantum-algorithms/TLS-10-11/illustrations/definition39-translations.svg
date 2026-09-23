@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" width="900" height="330" role="img" aria-label="Definition 39: psi zero changes the TLS 1.0 version byte 01 into the TLS 1.1 byte 02, and phi zero swaps the values 01 and 02 at byte 10 of a MAC input.">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Definition 39: translations from TLS 1.0 to TLS 1.1</text>
+<rect x="20" y="44" width="860" height="120" fill="#87A878" fill-opacity="0.03" stroke="#87A878" stroke-width="1.2" rx="6"/>
+<text x="140" y="84" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">TLS 1.0</text>
+<rect x="50" y="92" width="60" height="34" fill="#87A878" fill-opacity="0.12" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="80.0" y="113.55" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">type</text>
+<rect x="110" y="92" width="60" height="34" fill="#87A878" fill-opacity="0.12" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="140.0" y="113.55" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">0x03</text>
+<rect x="170" y="92" width="60" height="34" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="4"/>
+<text x="200.0" y="113.55" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">0x01</text>
+<text x="450" y="84" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">TLS 1.1</text>
+<rect x="360" y="92" width="60" height="34" fill="#87A878" fill-opacity="0.12" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="390.0" y="113.55" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">type</text>
+<rect x="420" y="92" width="60" height="34" fill="#87A878" fill-opacity="0.12" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="450.0" y="113.55" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">0x03</text>
+<rect x="480" y="92" width="60" height="34" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="4"/>
+<text x="510.0" y="113.55" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">0x02</text>
+<text x="760" y="84" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">TLS 1.2</text>
+<rect x="670" y="92" width="60" height="34" fill="#87A878" fill-opacity="0.12" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="700.0" y="113.55" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">type</text>
+<rect x="730" y="92" width="60" height="34" fill="#87A878" fill-opacity="0.12" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="760.0" y="113.55" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">0x03</text>
+<rect x="790" y="92" width="60" height="34" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="4"/>
+<text x="820.0" y="113.55" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">0x03</text>
+<path d="M232,109 L358,109" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="295" y="101" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">ψ<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan></text>
+<path d="M542,109 L668,109" fill="none" stroke="#B8A9C9" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-l)"/>
+<text x="605" y="101" fill="#B8A9C9" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">ψ</text>
+<text x="605" y="148" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">Definition 14</text>
+<text x="295" y="148" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">this definition</text>
+<rect x="20" y="176" width="860" height="144" fill="#87A878" fill-opacity="0.03" stroke="#87A878" stroke-width="1.2" rx="6"/>
+<text x="40" y="200" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">φ<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan>: at byte 10 of a MAC input, swap the values 0x01 and 0x02</text>
+<text x="236.0" y="224" fill="#87A878" font-size="12" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">⟨sqn⟩<tspan dy='4' font-size='75%'>8</tspan><tspan dy='-4'>​</tspan></text>
+<line x1="63" y1="230" x2="409" y2="230" stroke="#87A878" stroke-width="1"/>
+<text x="434.0" y="224" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">type</text>
+<line x1="415" y1="230" x2="453" y2="230" stroke="#87A878" stroke-width="1"/>
+<text x="500.0" y="224" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">version</text>
+<line x1="459" y1="230" x2="541" y2="230" stroke="#87A878" stroke-width="1"/>
+<text x="588.0" y="224" fill="#87A878" font-size="12" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">⟨|R|⟩<tspan dy='4' font-size='75%'>2</tspan><tspan dy='-4'>​</tspan></text>
+<line x1="547" y1="230" x2="629" y2="230" stroke="#87A878" stroke-width="1"/>
+<rect x="60" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="104" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="148" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="192" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="236" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="280" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="324" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="368" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="412" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<text x="434.0" y="258" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">type</text>
+<rect x="456" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<text x="478.0" y="258" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">03</text>
+<rect x="500" y="236" width="44" height="34" fill="#B8A9C9" fill-opacity="0.4" stroke="#B8A9C9" stroke-width="1.2" rx="2"/>
+<text x="522.0" y="258" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">τ<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="544" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="588" y="236" width="44" height="34" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.2" rx="2"/>
+<rect x="632" y="236" width="170" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="717.0" y="257.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">R ⋯</text>
+<text x="40" y="304" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">τ<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan> is the transposition of 0x01 and 0x02; every other byte, and every string with |x| ≤ 10, is left unchanged.</text>
+</svg>

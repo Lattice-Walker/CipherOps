@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" role="img" aria-label="Proposition 10: encrypting a record and decrypting it under matched sequence numbers returns the record, because every step of decryption passes.">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Proposition 10: decryption undoes encryption under matched state</text>
+<rect x="30" y="62" width="60" height="36" fill="#87A878" fill-opacity="0.3" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="60.0" y="84.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">R</text>
+<path d="M90,80 L128,80" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="130" y="62" width="180" height="36" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="220.0" y="84.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Enc<tspan dy='-6' font-size='75%'>ι</tspan><tspan dy='6'>​</tspan><tspan dy='4' font-size='75%'>K</tspan><tspan dy='-4'>​</tspan>(HDR, R; σ)</text>
+<path d="M310,80 L348,80" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="350" y="62" width="50" height="36" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="4"/>
+<text x="375.0" y="84.9" fill="#B8A9C9" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="400" y="62" width="50" height="36" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="425.0" y="84.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>1</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="450" y="62" width="40" height="36" fill="#87A878" fill-opacity="0.05" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="470.0" y="84.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">⋯</text>
+<rect x="490" y="62" width="50" height="36" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="515.0" y="84.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>n</tspan><tspan dy='-4'>​</tspan></text>
+<text x="445" y="54" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C</text>
+<path d="M540,80 L588,80" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="590" y="62" width="190" height="36" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="685.0" y="84.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Dec<tspan dy='4' font-size='75%'>K</tspan><tspan dy='-4'>​</tspan>(HDR, C; σ)</text>
+<path d="M780,80 L818,80" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="820" y="62" width="60" height="36" fill="#87A878" fill-opacity="0.3" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="850.0" y="84.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">R</text>
+<text x="220" y="124" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">sqn<tspan dy='4' font-size='75%'>s</tspan><tspan dy='-4'>​</tspan></text>
+<text x="685" y="124" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">sqn<tspan dy='4' font-size='75%'>r</tspan><tspan dy='-4'>​</tspan></text>
+<line x1="250" y1="119" x2="650" y2="119" stroke="#B8A9C9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="450" y="142" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">matched state: sqn<tspan dy='4' font-size='75%'>r</tspan><tspan dy='-4'>​</tspan> = sqn<tspan dy='4' font-size='75%'>s</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="20" y="162" width="860" height="284" fill="#87A878" fill-opacity="0.04" stroke="#87A878" stroke-width="1.2" rx="6"/>
+<text x="40" y="190" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Why every step of Definition 9 passes</text>
+<circle cx="52" cy="225" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="52" y="230" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+<text x="76" y="230" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">Length checks: |C| = b + |R| + t + p + 1 is a multiple of b, and |C| &lt; 2<tspan dy='-6' font-size='75%'>14</tspan><tspan dy='6'>​</tspan> + 2048.</text>
+<path d="M846,225 L850,230 L859,219" fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="52" cy="269" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="52" y="274" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">2</text>
+<text x="76" y="274" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">CBC decryption recovers P = R ‖ T ‖ ⟨p⟩<tspan dy='-6' font-size='75%'>p+1</tspan><tspan dy='6'>​</tspan>, since C<tspan dy='4' font-size='75%'>i</tspan><tspan dy='-4'>​</tspan> = E<tspan dy='4' font-size='75%'>Kₑ</tspan><tspan dy='-4'>​</tspan>(P<tspan dy='4' font-size='75%'>i</tspan><tspan dy='-4'>​</tspan> ⊕ C<tspan dy='4' font-size='75%'>i−1</tspan><tspan dy='-4'>​</tspan>) under every ι.</text>
+<path d="M846,269 L850,274 L859,263" fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="52" cy="313" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="52" y="318" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">3</text>
+<text x="76" y="318" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">Padding: the last p + 1 bytes equal p and ℓ<tspan dy='4' font-size='75%'>P</tspan><tspan dy='-4'>​</tspan> ≥ p + 1 + t, so ok holds and strip gives r = |R|.</text>
+<path d="M846,313 L850,318 L859,307" fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="52" cy="357" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="52" y="362" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">4</text>
+<text x="76" y="362" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">MAC: sqn<tspan dy='4' font-size='75%'>r</tspan><tspan dy='-4'>​</tspan> = sqn<tspan dy='4' font-size='75%'>s</tspan><tspan dy='-4'>​</tspan> and |R| is recovered exactly, so both sides MAC the same string: v holds.</text>
+<path d="M846,357 L850,362 L859,351" fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="52" cy="401" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="52" y="406" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">5</text>
+<text x="76" y="406" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">Output: ok ∧ v holds, so Dec returns R.</text>
+<path d="M846,401 L850,406 L859,395" fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

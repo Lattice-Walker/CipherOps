@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320" role="img" aria-label="Definition 34: under the hardened profile the leakage is the HMAC input length on both branches, as in TLS 1.1; under the RFC profile a failed padding check computes no MAC, and the alert already reveals it.">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Definition 34: what the timing channel reveals under each profile</text>
+<text x="390" y="66" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">hardened profile h</text>
+<text x="715" y="66" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">RFC profile r</text>
+<text x="120" y="110" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>strict</tspan><tspan dy='-4'>​</tspan>(P)</text>
+<text x="120" y="130" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">holds</text>
+<rect x="230" y="78" width="320" height="70" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="390.0" y="106" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">MAC on strip</text>
+<text x="390.0" y="130" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">λ = h + ℓ<tspan dy='4' font-size='75%'>P</tspan><tspan dy='-4'>​</tspan> − t − 1 − p</text>
+<rect x="560" y="78" width="310" height="70" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="715.0" y="106" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">MAC on strip</text>
+<text x="715.0" y="130" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">λ = h + ℓ<tspan dy='4' font-size='75%'>P</tspan><tspan dy='-4'>​</tspan> − t − 1 − p</text>
+<text x="120" y="190" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>strict</tspan><tspan dy='-4'>​</tspan>(P)</text>
+<text x="120" y="210" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">fails</text>
+<rect x="230" y="158" width="320" height="70" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="390.0" y="186" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">MAC on strip<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan></text>
+<text x="390.0" y="210" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">λ = h + ℓ<tspan dy='4' font-size='75%'>P</tspan><tspan dy='-4'>​</tspan> − t</text>
+<rect x="560" y="158" width="310" height="70" fill="#B8A9C9" fill-opacity="0.1" stroke="#B8A9C9" stroke-width="1.5" rx="4"/>
+<text x="715.0" y="186" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">no MAC: the count is ∅</text>
+<text x="715.0" y="210" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">the alert ⊥<tspan dy='4' font-size='75%'>pad</tspan><tspan dy='-4'>​</tspan> already says ok fails</text>
+<text x="20" y="268" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">Hardened: λ<tspan dy='4' font-size='75%'>1.0</tspan><tspan dy='-4'>​</tspan>(P) = h + r is λ<tspan dy='4' font-size='75%'>1.1</tspan><tspan dy='-4'>​</tspan> read on the TLS 1.0 plaintext; Models A and B apply with Dec of Definition 32.</text>
+<text x="20" y="292" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">RFC profile: the timing channel only repeats what the alert already reveals.</text>
+</svg>
