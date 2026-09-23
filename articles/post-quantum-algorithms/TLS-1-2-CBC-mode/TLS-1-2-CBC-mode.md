@@ -1,5 +1,3 @@
-# Plaintext recovery against TLS 1.2 CBC mode
-
 We formalise the TLS 1.2 Record Protocol in CBC mode as a stateful, length-hiding authenticated-encryption scheme, and study its confidentiality when decryption exposes a timing side channel.
 
 The main result is that in this leakage model MEE-TLS-CBC provides no confidentiality. An explicit adversary, a reconstruction of the [Lucky Thirteen attack of AlFardan and Paterson](https://www.hit.bme.hu/~buttyan/courses/BMEVIHIM132/abib/04-TLS/Lucky13.pdf), recovers any target plaintext block lying within a record with advantage exactly 1 and under no cryptographic assumption, from at most $2^{16} + 43 + 14\cdot 2^8$ decryption sessions of one query each. In a noisy variant of the model, the same recovery succeeds with $L = O\!\big((\sigma_{\!\eta}/c_0)^2 \log(M/\epsilon)\big)$ repetitions per query.
