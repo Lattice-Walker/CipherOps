@@ -18,5 +18,20 @@
         "date": "August 26, 2026"
       }
     ]
+  },
+  {
+    "category": "Experiments",
+    "articles": [
+      {
+        "title": "TLS name me",
+        "file": "practicalprojects/experiments/tls-deployment.md",
+        "date": "to be published"
+      },
+      {
+        "title": "Curve Clash",
+        "file": "practicalprojects/experiments/web-linguistics.md",
+        "date": "August 19, 2026"
+      }
+    ]
   }
 ]
