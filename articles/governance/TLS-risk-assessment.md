@@ -52,6 +52,7 @@ Security requirements: Medium
 **Environmental:** The following metrics are set as Not Defined:
 - Confidentiality Requirement ; Raise to High only if the endpoint carries regulated or sensitive data,
 - Integrity / Availability Requirement ; Raise only if tailoring to a specific asset
+
 Changing these metrics however, does not affect the overall score.
 
 **Threat Metrics:** The Exploit Maturity is set to Not Defined because public PoCs exist, so POC is defensible if your policy uses threat metrics; leaving it undefined keeps the CVSS-B score.
