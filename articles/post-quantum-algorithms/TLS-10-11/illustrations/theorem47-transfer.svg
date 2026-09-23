@@ -1,48 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" role="img" aria-label="Theorem 2.47: the wrapper runs the TLS 1.1 adversary, deletes the IV block from each query and translates headers; the TLS 1.0 receiver uses its chaining value in place of the IV, and the answers match, so the advantage is the same.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260" role="img" aria-label="The wrapper runs the TLS 1.1 adversary, deletes the IV block from each query and translates headers; the TLS 1.0 receiver uses its chaining value in place of the IV, and the answers match, so the advantage is the same.">
 <defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
-<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Theorem 2.47: an IV-oblivious TLS 1.1 adversary runs unchanged against TLS 1.0</text>
-<rect x="20" y="48" width="440" height="124" fill="#B8A9C9" fill-opacity="0.08" stroke="#B8A9C9" stroke-width="1.5" rx="4" stroke-dasharray="5 4"/>
-<text x="36" y="72" fill="#B8A9C9" font-size="16" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start">𝒜<tspan dy='-6' font-size='75%'>↓</tspan><tspan dy='6'>​</tspan></text>
-<rect x="40" y="96" width="80" height="36" fill="#87A878" fill-opacity="0.3" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="80.0" y="119.6" fill="#87A878" font-size="16" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">𝒜</text>
-<path d="M120,114 L148,114" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
-<rect x="150" y="97" width="40" height="34" fill="#B8A9C9" fill-opacity="0.1" stroke="#B8A9C9" stroke-width="1.5" rx="4" stroke-dasharray="4 3"/>
-<text x="170.0" y="118.55" fill="#B8A9C9" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan></text>
-<rect x="190" y="97" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="210.0" y="118.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>1</tspan><tspan dy='-4'>​</tspan></text>
-<rect x="230" y="97" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="250.0" y="118.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>2</tspan><tspan dy='-4'>​</tspan></text>
-<rect x="270" y="97" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="290.0" y="118.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>3</tspan><tspan dy='-4'>​</tspan></text>
-<rect x="310" y="97" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="330.0" y="118.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>4</tspan><tspan dy='-4'>​</tspan></text>
-<line x1="154" y1="100" x2="186" y2="128" stroke="#B8A9C9" stroke-width="1.5"/>
-<text x="250" y="90" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">𝒜's query</text>
-<path d="M352,114 L488,114" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
-<text x="406" y="106" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">delete C<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan></text>
-<text x="406" y="134" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">ψ<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan> on headers</text>
-<rect x="490" y="97" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="510.0" y="118.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>1</tspan><tspan dy='-4'>​</tspan></text>
-<rect x="530" y="97" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="550.0" y="118.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>2</tspan><tspan dy='-4'>​</tspan></text>
-<rect x="570" y="97" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="590.0" y="118.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>3</tspan><tspan dy='-4'>​</tspan></text>
-<rect x="610" y="97" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="630.0" y="118.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>4</tspan><tspan dy='-4'>​</tspan></text>
-<path d="M652,114 L688,114" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
-<rect x="690" y="96" width="180" height="36" fill="#87A878" fill-opacity="0.12" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="780.0" y="118.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Dec<tspan dy='-6' font-size='75%'>h</tspan><tspan dy='6'>​</tspan>, TLS 1.0</text>
-<text x="780" y="150" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">uses ν<tspan dy='4' font-size='75%'>r</tspan><tspan dy='-4'>​</tspan> in place of C<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan></text>
-<path d="M780,158 L780,176 L80,176 L80,134" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
-<text x="430" y="196" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">answer: count (and verdict), headers back through ψ<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan><tspan dy='-6' font-size='75%'>−1</tspan><tspan dy='6'>​</tspan></text>
-<path d="M28,235 L32,240 L41,229" fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="52" y="240" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">challenge: the non-IV blocks match (Lemmas 2.38, 2.40), the TLS 1.1 IV coupled with ν<tspan dy='4' font-size='75%'>s</tspan><tspan dy='-4'>​</tspan> (Hypothesis 2.36); 𝒜 never reads C<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan> (ii)</text>
-<path d="M28,265 L32,270 L41,259" fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="52" y="270" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">answers: the same (ok, r), hence the same count and the same noisy time (Lemmas 2.41, 2.44 and clause i)</text>
-<path d="M28,295 L32,300 L41,289" fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="52" y="300" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">verdicts may differ, but 𝒜 ignores them (clause iii); the game restrictions and the target P<tspan dy='-6' font-size='75%'>*</tspan><tspan dy='6'>​</tspan> match (Lemma 2.45)</text>
-<rect x="20" y="340" width="860" height="104" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="6"/>
-<text x="450" y="364" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">Under Hypotheses 2.29, 2.35 and 2.36, for every IV-oblivious 𝒜 and deterministic π:</text>
-<text x="450" y="396" fill="#87A878" font-size="17" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Adv<tspan dy='-6' font-size='75%'>G</tspan><tspan dy='6'>​</tspan><tspan dy='4' font-size='75%'>TLS 1.0, h</tspan><tspan dy='-4'>​</tspan>(𝒜<tspan dy='-6' font-size='75%'>↓</tspan><tspan dy='6'>​</tspan>, q) = Adv<tspan dy='-6' font-size='75%'>G</tspan><tspan dy='6'>​</tspan><tspan dy='4' font-size='75%'>TLS 1.1</tspan><tspan dy='-4'>​</tspan>(𝒜, q)</text>
-<text x="450" y="426" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">same number of sessions, one query each, each query one block shorter, one header relabelling per query</text>
+<rect x="20" y="16" width="440" height="124" fill="#B8A9C9" fill-opacity="0.08" stroke="#B8A9C9" stroke-width="1.5" rx="4" stroke-dasharray="5 4"/>
+<text x="36" y="40" fill="#B8A9C9" font-size="16" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start">𝒜<tspan dy='-6' font-size='75%'>↓</tspan><tspan dy='6'>​</tspan></text>
+<rect x="40" y="64" width="80" height="36" fill="#87A878" fill-opacity="0.3" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="80.0" y="87.6" fill="#87A878" font-size="16" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">𝒜</text>
+<path d="M120,82 L148,82" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="150" y="65" width="40" height="34" fill="#B8A9C9" fill-opacity="0.1" stroke="#B8A9C9" stroke-width="1.5" rx="4" stroke-dasharray="4 3"/>
+<text x="170.0" y="86.55" fill="#B8A9C9" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="190" y="65" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="210.0" y="86.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>1</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="230" y="65" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="250.0" y="86.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>2</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="270" y="65" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="290.0" y="86.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>3</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="310" y="65" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="330.0" y="86.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>4</tspan><tspan dy='-4'>​</tspan></text>
+<line x1="154" y1="68" x2="186" y2="96" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="250" y="58" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">𝒜's query</text>
+<path d="M352,82 L488,82" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="406" y="74" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">delete C<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan></text>
+<text x="406" y="102" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">ψ<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan> on headers</text>
+<rect x="490" y="65" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="510.0" y="86.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>1</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="530" y="65" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="550.0" y="86.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>2</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="570" y="65" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="590.0" y="86.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>3</tspan><tspan dy='-4'>​</tspan></text>
+<rect x="610" y="65" width="40" height="34" fill="#87A878" fill-opacity="0.25" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="630.0" y="86.55" fill="#87A878" font-size="13" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">C<tspan dy='4' font-size='75%'>4</tspan><tspan dy='-4'>​</tspan></text>
+<path d="M652,82 L688,82" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="690" y="64" width="180" height="36" fill="#87A878" fill-opacity="0.12" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="780.0" y="86.9" fill="#87A878" font-size="14" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Dec<tspan dy='-6' font-size='75%'>h</tspan><tspan dy='6'>​</tspan>, TLS 1.0</text>
+<path d="M780,102 L780,144 L80,144 L80,102" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="430" y="164" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">answer: count (and verdict), headers back through ψ<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan><tspan dy='-6' font-size='75%'>−1</tspan><tspan dy='6'>​</tspan></text>
+<rect x="20" y="190" width="860" height="54" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5" rx="6"/>
+<text x="450" y="223" fill="#87A878" font-size="17" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Adv<tspan dy='-6' font-size='75%'>G</tspan><tspan dy='6'>​</tspan><tspan dy='4' font-size='75%'>TLS 1.0, h</tspan><tspan dy='-4'>​</tspan>(𝒜<tspan dy='-6' font-size='75%'>↓</tspan><tspan dy='6'>​</tspan>, q) = Adv<tspan dy='-6' font-size='75%'>G</tspan><tspan dy='6'>​</tspan><tspan dy='4' font-size='75%'>TLS 1.1</tspan><tspan dy='-4'>​</tspan>(𝒜, q)</text>
 </svg>

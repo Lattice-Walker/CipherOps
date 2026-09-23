@@ -1,37 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540" role="img" aria-label="Corollary 2.26: the Lucky Thirteen adversary of §1 is carried in three transfers to TLS 1.1, keeping advantage exactly 1 in Model A and the same session count.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 388" width="900" height="388" role="img" aria-label="The Lucky Thirteen adversary of §1 is carried in three transfers to TLS 1.1, keeping advantage exactly 1 in Model A and the same session count.">
 <defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
-<text x="20" y="28" fill="#87A878" font-size="15" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Corollary 2.26: the Lucky Thirteen recovery carries over to TLS 1.1 unchanged</text>
-<text x="20" y="52" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">AES and HMAC-SHA-1 (b = 16, t = 20), deterministic π, receiver satisfying Hypothesis 2.12</text>
-<rect x="40" y="70" width="390" height="56" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="235" y="92" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">§1, Definitions 1.7–1.8 as written</text>
-<text x="235" y="115" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">𝒜<tspan dy='4' font-size='75%'>PR</tspan><tspan dy='-4'>​</tspan> from Theorems 1.25 and 1.26</text>
-<rect x="40" y="170" width="390" height="56" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="235" y="192" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">corrected scheme (Definition 2.13)</text>
-<text x="235" y="215" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.2</tspan><tspan dy='-4'>​</tspan>[E, MAC, π]</text>
-<rect x="40" y="270" width="390" height="56" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
-<text x="235" y="292" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">relabelled MAC</text>
-<text x="235" y="315" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.2</tspan><tspan dy='-4'>​</tspan>[E, HMAC-H ∘ φ, π]</text>
-<rect x="40" y="370" width="390" height="56" fill="#B8A9C9" fill-opacity="0.3" stroke="#B8A9C9" stroke-width="1.8" rx="4"/>
-<text x="235" y="392" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">TLS 1.1</text>
-<text x="235" y="415" fill="#B8A9C9" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.1</tspan><tspan dy='-4'>​</tspan>[E, H, π]</text>
-<path d="M235,128 L235,168" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
-<circle cx="235" cy="148" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
-<text x="235" y="153" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">1</text>
-<text x="470" y="132" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">C0, C2: its queries are four non-IV blocks, unaffected</text>
-<text x="470" y="152" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">C1: AD is again 13 bytes, so λ and cost(λ) are unchanged</text>
-<text x="470" y="172" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">C3: only verdicts change, and 𝒜<tspan dy='4' font-size='75%'>PR</tspan><tspan dy='-4'>​</tspan> decides on the count</text>
-<path d="M235,228 L235,268" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
-<circle cx="235" cy="248" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
-<text x="235" y="253" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">2</text>
-<text x="470" y="242" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">the proofs use only cost(λ(P)) and the padding structure,</text>
-<text x="470" y="262" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">never a tag value, and φ changes neither (Lemma 2.22)</text>
-<path d="M235,328 L235,368" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
-<circle cx="235" cy="348" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
-<text x="235" y="353" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">3</text>
-<text x="470" y="342" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">Theorem 2.24 in reverse (symmetry, Definition 2.16):</text>
-<text x="470" y="362" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">run 𝒜<tspan dy='4' font-size='75%'>PR</tspan><tspan dy='-4'>​</tspan> through ψ<tspan dy='-6' font-size='75%'>−1</tspan><tspan dy='6'>​</tspan>, one header relabelling per query</text>
-<rect x="20" y="446" width="860" height="84" fill="#B8A9C9" fill-opacity="0.12" stroke="#B8A9C9" stroke-width="1.5" rx="6"/>
-<text x="40" y="468" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">Against TLS 1.1</text>
-<text x="40" y="492" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">Model A: advantage exactly 1, no cryptographic assumption, at most M = 2<tspan dy='-6' font-size='75%'>16</tspan><tspan dy='6'>​</tspan> + 43 + 14·2<tspan dy='-6' font-size='75%'>8</tspan><tspan dy='6'>​</tspan> sessions of one query each</text>
-<text x="40" y="516" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">Model B: success probability ≥ 1 − δ with L ≥ (8σ<tspan dy='4' font-size='75%'>η</tspan><tspan dy='-4'>​</tspan><tspan dy='-6' font-size='75%'>2</tspan><tspan dy='6'>​</tspan>/c<tspan dy='4' font-size='75%'>0</tspan><tspan dy='-4'>​</tspan><tspan dy='-6' font-size='75%'>2</tspan><tspan dy='6'>​</tspan>) ln(2M/δ) repetitions per mask</text>
+<rect x="255" y="16" width="390" height="56" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="450" y="38" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">§1, Definitions 1.7–1.8 as written</text>
+<text x="450" y="61" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">𝒜<tspan dy='4' font-size='75%'>PR</tspan><tspan dy='-4'>​</tspan> from Theorems 1.25 and 1.26</text>
+<rect x="255" y="116" width="390" height="56" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="450" y="138" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">corrected scheme (Definition 2.13)</text>
+<text x="450" y="161" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.2</tspan><tspan dy='-4'>​</tspan>[E, MAC, π]</text>
+<rect x="255" y="216" width="390" height="56" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="450" y="238" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">relabelled MAC</text>
+<text x="450" y="261" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.2</tspan><tspan dy='-4'>​</tspan>[E, HMAC-H ∘ φ, π]</text>
+<rect x="255" y="316" width="390" height="56" fill="#B8A9C9" fill-opacity="0.3" stroke="#B8A9C9" stroke-width="1.8" rx="4"/>
+<text x="450" y="338" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">TLS 1.1</text>
+<text x="450" y="361" fill="#B8A9C9" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.1</tspan><tspan dy='-4'>​</tspan>[E, H, π]</text>
+<path d="M450,74 L450,114" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="450" cy="94" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="450" y="99" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+<path d="M450,174 L450,214" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="450" cy="194" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="450" y="199" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">2</text>
+<path d="M450,274 L450,314" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="450" cy="294" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="450" y="299" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">3</text>
 </svg>
