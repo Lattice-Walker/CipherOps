@@ -129,28 +129,11 @@ Pronunciation patterns can function as one signal among many in analyzing coordi
 
 Attribution gets complicated in hybrid cases where state actors amplify real grassroots movements. The spread of "Kyiv" as a replacement for "Kiev" in English-language usage involved both organic solidarity from non-Ukrainian speakers and coordinated advocacy by Ukrainian government actors, making it hard to attribute cleanly and showing the limits of analyzing pronunciation on its own.
 
-**4.1.1.1 Case Study: "Kiev" vs. "Kyiv"**
+#### 4.1.1.1 Case Study: "Kiev" vs. "Kyiv"
 
-The following analysis draws on Google Trends data for the search terms "Kiev" and "Kyiv".
+The [experiment](https://lattice-walker.github.io/CipherOps/display_practicalprojects/practicalprojects.html#article=practicalprojects%2Fexperiments%2Fweb-linguistics.md) studies this phenomenon practically, using Google Trends data to measure the evolution of public interest in the competing forms "Kiev" and "Kyiv". By examining changes over different time periods and constructing a normalised deviation index, it provides a quantitative view of the linguistic shift discussed above.
 
-![Interest over time from 2004 on](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/2004on%20Interest%20over%20time.png)
-
-![Normalised deviation index from 2004 on](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/2004on%20Normalised%20deviation%20index.png)
-
-From 2004 to approximately 2020, searches for "Kyiv" remained consistently low relative to "Kiev". From 2020 onward, the relative share of "Kyiv" increased steadily, with a sharp spike in early 2022.
-
-![Interest over time from 2010 to 2016](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/20102016%20Interest%20over%20time.png)
-
-![Normalised deviation index from 2010 to 2016](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/20102016%20Normalised%20deviation%20index.png)
-
-Between 2010 and 2016, the ratio of "Kyiv" to "Kiev" searches remained low and stable, with no sustained upward movement, despite the escalation of the Russian-Ukrainian conflict during this period.
-
-![Interest over time from 2019 to 2022](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/20192022%20Interest%20over%20time.png)
-![Normalised deviation index from 2019 to 2022](https://lattice-walker.github.io/CipherOps/articles/linguistics/pronounciation%20and%20propaganda%20images/20192022%20Normalised%20deviation%20index.png)
-
-A pronounced spike in "Kyiv" searches occurred in early 2022, followed by a lower but consistently rising baseline. Excluding the spike itself, the deviation index from this period fits a positive linear trend.
-
-This trajectory shows several features that are consistent with coordinated influence rather than purely organic diffusion. What's notable is the shift in the deviation index in 2022, which isn't gradual like organic linguistic change usually is. The Associated Press, the BBC, and the New York Times all started using "Kyiv" around the same time, and Google Trends data indicate that public search behaviour followed the institutional media, rather than the other way around. Institutional adoption followed by public uptake suggests a top-down norm change rather than a bottom-up grassroots shift. Genuine solidarity may still have played a role, though, and it's possible that both mechanisms were involved.
+The experiment does not, by itself, establish the presence of a coordinated influence operation or identify a causal mechanism. Rather, it demonstrates how changes in linguistic usage can be measured and compared with political events, institutional adoption, and media behaviour, providing a practical methodology for investigating linguistic signals of broader information dynamics.
 
 **4.1.1.2 Extending the Analysis to Social Media**
 
