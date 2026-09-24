@@ -24,6 +24,8 @@ The handshake authenticates the server as well as exchanging keys, and the certi
 
 ## 4. The Sector-by-Sector Survey 
 
+The following subsections present a survey of French domains in five sectors: banking, energy, defense, medical and governmental. Of the 1758 domains scanned, 1654 completed a handshake. For each sector, we report the protocol negotiated by default, the protocols the server accepts, and the domains that could not be measured.
+
 ### 4.1. The banking sector
 
 Of the 92 reachable banking domains, none uses a deprecated protocol by default. 63.0% use TLS 1.3, 18.5% use TLS 1.3 with ML-KEM, and 18.5% use TLS 1.2 in AEAD mode. Every ordinary visitor therefore receives a protocol that section ii shows to be cryptographically secure. For 81.5% of the domains, however, that protocol also carries an SHNDL score of 8.2 (High). The sector is in good shape against today's attacker and exposed against tomorrow's.
