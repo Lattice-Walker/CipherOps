@@ -50,26 +50,6 @@
     ]
   },
   {
-    "category": "Cybersecurity",
-    "articles": [
-      {
-        "title": "live class : Cybersecurity",
-        "file": "courses/cybersecurity/1. Cybersecurity.md",
-        "date": "Coming soon, stay tuned!"
-      }
-    ]
-  },
-  {
-    "category": "Services and Systems",
-    "articles": [
-      {
-        "title": "Cloud Systems and Apps",
-        "file": "courses/servicesSystems/1. Cloud Systems and Apps.md",
-        "date": "Coming soon, stay tuned!"
-      }
-    ]
-  },
-  {
     "category": "Systems",
     "articles": [
       {
