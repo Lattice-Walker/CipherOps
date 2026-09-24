@@ -3,7 +3,7 @@
     "category": "Experiments",
     "articles": [
       {
-        "title": "TLS name me",
+        "title": "TLS in Practice: A Sector-by-Sector Survey of Present and Post-Quantum Risk",
         "file": "practicalprojects/experiments/tls-deployment.md",
         "date": "Coming soon, stay tuned!"
       },
