@@ -93,3 +93,15 @@ This reversal is the central finding of the survey. Energy has the highest post-
 ![Governmental sector supported protocols](https://lattice-walker.github.io/CipherOps/practicalprojects/experiments/tls_deployment_images/Gouv_tls_supported_protocols.svg)
 
 Forty-three of the 1294 governmental domains scanned did not complete a handshake. That is 3.3%, by far the lowest rate in the survey. Forty-two of the forty-three were stopped by silent filtering of the ClientHello, which is consistent with a web application firewall. The low rate is informative in itself: governmental domains are much less likely than banking or energy domains to place bot-blocking defences in front of their public services. The selection effect from section 1 therefore affects this sector least, and on that count as well as on sample size its figures are the most representative in the survey.
+
+## iv. Recommendations
+
+We recommend one of two configurations: TLS 1.3 with a classical key exchange, or TLS 1.3 paired with ML-KEM. The choice depends on how long the data carried by the website must remain confidential. Both configurations require disabling TLS 1.0, TLS 1.1 and TLS 1.2 in CBC mode.
+
+The deciding factor is the arrival date of a Cryptographically Relevant Quantum Computer. No CRQC exists as of 2026. In its [2025 Quantum Threat Timeline Report](https://globalriskinstitute.org/publication/quantum-threat-timeline-report-2025b/), the Global Risk Institute reports that the surveyed experts put the probability of a CRQC at 28 to 49% within ten years and 51 to 70% within fifteen years. The NIST draft [IR 8547](https://nvlpubs.nist.gov/nistpubs/ir/2024/NIST.IR.8547.ipd.pdf) proposes to disallow quantum-vulnerable public-key algorithms after 2035. We use 2035 as the planning date. By Mosca's inequality, data is at risk when its remaining confidentiality lifetime plus the time needed to migrate exceeds the time before a CRQC becomes available.
+- TLS 1.3 with a classical key exchange suffices for showcase websites and for data that loses its sensitivity before 2035, such as one-time passcodes, session tokens with a fixed expiry, or embargoed announcements. A showcase site with a contact form or an account area collects personal data and falls under the next case.
+- TLS 1.3 paired with ML-KEM is recommended for data that is sensitive today and will still be sensitive after 2035. Examples are health and genomic records, identity and biometric data, legal and financial records, trade secrets, infrastructure plans, and state or defense communications. Each surveyed sector handles data of this kind, yet even in energy, the sector with the highest post-quantum share at 43.0%, 57.0% of domains negotiate a classical key exchange by default.
+
+A host that serves both kinds of data should follow the ML-KEM recommendation. These recommendations concern the key exchange only. As section iii explains, the classical certificate chain does not affect the confidentiality of completed sessions.
+
+
