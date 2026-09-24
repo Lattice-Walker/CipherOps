@@ -1,0 +1,5 @@
+# Copy to .dev.vars for local `wrangler dev`. .dev.vars is gitignored —
+# never commit real values.
+TO_EMAIL="you@example.com"
+RESEND_API_KEY="re_xxxxxxxxxxxx"
+TURNSTILE_SECRET="0x4xxxxxxxxxxxxxxxxxxxxx"

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CipherOps – Contact</title>
+  <meta name="description" content="Send a message to CipherOps." />
+  <link rel="stylesheet" href="../style.css?v=8" />
+  <link rel="icon" href="../logos/logo-icon.ico" />
+  <!-- Rendu explicite : le thème du widget doit suivre celui du site,
+       pas celui du système. -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileReady&render=explicit" async defer></script>
+</head>
+<body>
+
+  <!-- Bouton thème : position:relative indispensable pour le toggle-thumb absolu -->
+  <button id="theme-toggle" aria-label="Toggle theme" data-active="light">
+    <span class="toggle-icon dark-icon">☽</span>
+    <span class="toggle-thumb"></span>
+    <span class="toggle-icon light-icon">☀</span>
+  </button>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main id="main-content" class="contact-page">
+
+    <div id="contact-landing">
+      <div id="contact-logo">
+        <a href="../index.html" aria-label="CipherOps">
+          <img id="logo-light-img" src="../logos/logo-light.png" alt="CipherOps" />
+          <img id="logo-dark-img"  src="../logos/logo-dark.png"  alt="CipherOps" />
+        </a>
+      </div>
+
+      <h1 class="articles-page-title">Contact</h1>
+      <p class="articles-page-description-it">
+        No address to harvest, no tracking cookies.
+      </p>
+      <p class="articles-page-description">
+        Send a message and it reaches me directly.
+      </p>
+
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" maxlength="100" required autocomplete="name" />
+
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" maxlength="200" required autocomplete="email" />
+        <span class="hint">So I can reply. It is passed straight through and never stored.</span>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="7" maxlength="5000" required></textarea>
+
+        <!-- Honeypot : invisible pour les humains, irrésistible pour les bots naïfs. -->
+        <div class="hp" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <!-- Widget Turnstile. La sitekey est publique par conception ; la clé
+             secrète, elle, ne quitte jamais le Worker. -->
+        <div id="turnstile-widget" class="cf-turnstile"></div>
+
+        <button type="submit" id="submit-btn">Send message</button>
+        <p id="contact-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <footer id="contact-section">
+      <span class="contact-item">GitHub: <a href="https://github.com/Lattice-Walker/" target="_blank" rel="noopener">Lattice-Walker</a></span>
+    </footer>
+  </main>
+
+  <script data-goatcounter="https://latticewalker.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    // ── Thème ────────────────────────────────────────────────────
+    const toggle = document.getElementById('theme-toggle');
+    const saved  = localStorage.getItem('theme') || 'light';
+    if (saved === 'dark') document.body.classList.add('dark');
+    toggle.dataset.active = saved;
+
+    // ── Turnstile ────────────────────────────────────────────────
+    const SITEKEY = "0x4AAAAAAFCLtvaZZgvxzksu";
+    let widgetId = null;
+    let turnstileToken = "";
+
+    function renderTurnstile() {
+      if (!window.turnstile) return;
+      if (widgetId !== null) window.turnstile.remove(widgetId);
+      turnstileToken = "";
+      widgetId = window.turnstile.render('#turnstile-widget', {
+        sitekey: SITEKEY,
+        theme: document.body.classList.contains('dark') ? 'dark' : 'light',
+        callback: (token) => { turnstileToken = token; },
+        'expired-callback': () => { turnstileToken = ""; },
+      });
+    }
+
+    window.onTurnstileReady = renderTurnstile;
+
+    // Le widget est redessiné au changement de thème : son apparence ne peut
+    // pas être modifiée après coup, et le jeton est de toute façon jetable.
+    toggle.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark');
+      const next   = isDark ? 'dark' : 'light';
+      toggle.dataset.active = next;
+      localStorage.setItem('theme', next);
+      renderTurnstile();
+    });
+
+    // ── Envoi du formulaire ──────────────────────────────────────
+    const ENDPOINT = "https://contact-form.contact-form-worker.workers.dev";
+
+    const form   = document.getElementById("contact-form");
+    const btn    = document.getElementById("submit-btn");
+    const status = document.getElementById("contact-status");
+
+    function setStatus(text, kind) {
+      status.textContent = text;
+      status.className = kind || "";
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        setStatus("Please fill in every field with a valid value.", "error");
+        form.reportValidity();
+        return;
+      }
+      if (!turnstileToken) {
+        setStatus("Please wait for the verification check to finish, then try again.", "error");
+        return;
+      }
+
+      btn.disabled = true;
+      setStatus("Sending…");
+
+      try {
+        const response = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value,
+            company: form.company.value,
+            token: turnstileToken,
+          }),
+        });
+        const result = await response.json().catch(() => ({}));
+
+        if (response.ok) {
+          form.reset();
+          setStatus("Message sent. Thank you, I'll get back to you.", "success");
+          btn.remove();
+        } else {
+          setStatus(result.error || "Something went wrong. Please try again.", "error");
+          btn.disabled = false;
+        }
+      } catch {
+        setStatus("Could not reach the server. Please check your connection and try again.", "error");
+        btn.disabled = false;
+      }
+
+      // Un jeton Turnstile est à usage unique : on en redemande toujours un neuf.
+      turnstileToken = "";
+      if (window.turnstile && widgetId !== null) window.turnstile.reset(widgetId);
+    });
+  </script>
+</body>
+</html>

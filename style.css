@@ -1141,3 +1141,181 @@ body.dark .landing-courses-btn {
   font-style: italic;
   color: var(--accent-alt)
 }
+
+/* ── Page de contact ──────────────────────────────────────────────── */
+/* Le formulaire reprend la carte lavande de la page d'accueil et le
+   bouton pilule des actions du landing : aucun style propre au
+   formulaire, uniquement les variables du blog. */
+
+#main-content.contact-page {
+  margin-left: 0;
+  padding: 2rem 1rem 0;
+}
+
+#contact-landing {
+  width: 100%;
+  max-width: 720px;
+  /* Comme #articles-landing : les marges auto centrent le bloc dans
+     l'espace laissé au-dessus du footer. */
+  margin: auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+#contact-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
+#contact-logo img {
+  width: 190px;
+  max-width: 60%;
+  height: auto;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 2.5rem;
+  padding: 2rem 1.75rem;
+  text-align: left;
+  background: var(--panel-bg);
+  border: 1px solid rgba(184, 169, 201, 0.75);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
+}
+
+body.dark #contact-form {
+  border-color: rgba(184, 169, 201, 0.6);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+#contact-form label {
+  margin-top: 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 0.65rem 0.8rem;
+  transition: border-color 0.3s ease;
+}
+
+#contact-form input:hover,
+#contact-form textarea:hover {
+  border-color: var(--accent-alt);
+}
+
+#contact-form input:focus-visible,
+#contact-form textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+#contact-form textarea {
+  resize: vertical;
+  min-height: 9rem;
+  line-height: 1.6;
+}
+
+#contact-form .hint {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Honeypot : hors écran plutôt que display:none, que certains bots détectent. */
+#contact-form .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* La hauteur réservée évite que le bouton ne saute quand le widget arrive. */
+#contact-form .cf-turnstile {
+  margin: 1.5rem 0 0.25rem;
+  min-height: 65px;
+}
+
+#submit-btn {
+  align-self: flex-start;
+  margin-top: 1.25rem;
+  padding: 0.85rem 2.5rem;
+  background: #87A878;
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 18px rgba(135, 168, 120, 0.35);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#submit-btn:hover:not(:disabled),
+#submit-btn:focus-visible:not(:disabled) {
+  background: #B8A9C9;
+  transform: translateY(-2px);
+}
+
+body.dark #submit-btn {
+  color: #000000;
+}
+
+#submit-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+#contact-status {
+  margin: 1.1rem 0 0;
+  min-height: 1.5em;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+#contact-status.error {
+  color: #9B2C2C;
+}
+
+body.dark #contact-status.error {
+  color: #E88B8B;
+}
+
+#contact-status.success {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  #main-content.contact-page {
+    padding: 4.5rem 0.5rem 0;
+  }
+
+  #contact-landing {
+    padding: 0 0.25rem;
+  }
+
+  #contact-form {
+    padding: 1.5rem 1.1rem;
+  }
+
+  #submit-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
