@@ -1,12 +1,12 @@
 # TLS in Practice: A Sector-by-Sector Survey of Present and Post-Quantum Risk
 
-## i. The deprecated TLS protocols
+## 1. The deprecated TLS protocols
 
 We have shown in [Breaking TLS 1.2 CBC mode, TLS 1.1, and TLS 1.0](https://lattice-walker.github.io/CipherOps/display_articles/articles.html#article=articles%2Fpost-quantum-algorithms%2FTLS-12CBC-11-10.md) that TLS 1.2 CBC mode, TLS 1.1, and TLS 1.0 are deprecated. The failures are structural. CBC mode in TLS inherits a MAC-then-encrypt construction whose padding check leaks through timing, and TLS 1.0 and 1.1 additionally depend on hash and PRF constructions that no longer meet any current standard. None of these weaknesses can be repaired within the protocol version that exhibits them, so the only remedy is migration to a later version.
 
 We have also shown in [Deprecated TLS risk assessment and post-quantum risk assessment](https://lattice-walker.github.io/CipherOps/display_articles/articles.html#article=articles%2Fgovernance%2FTLS-risk-assessment.md) that these protocols carry a CVSS v4.0 score of 6.3 (Medium). Deprecation applies to a protocol specification and says nothing about the state of a fleet. A server remains reachable over TLS 1.0 until an administrator changes its configuration, whatever the specification says. The present study measures this gap, which reduces to two questions that are easy to conflate. The first is what a server negotiates by default, which describes the protection a normal visitor receives. The second is what a server accepts, which describes the protection available to an attacker who may propose anything the server tolerates. A host that defaults to TLS 1.3 but still accepts TLS 1.0 gives its users the first answer and its adversaries the second, and only the second bounds the risk. We therefore report both throughout.
 
-## ii. TLS 1.2 AEAD mode and TLS 1.3
+## 2. TLS 1.2 AEAD mode and TLS 1.3
 
 We have shown in [The Security of TLS 1.2 AEAD mode and TLS 1.3](https://lattice-walker.github.io/CipherOps/display_articles/articles.html#article=articles%2Fpost-quantum-algorithms%2FTLS-12AEAD-13.md) that TLS 1.2 AEAD mode and TLS 1.3 are cryptographically secure. Against any adversary bounded by classical computation, the guarantees hold. Authenticated encryption closes the padding-oracle class of attacks, and ephemeral key exchange provides forward secrecy, so compromising a server's long-term key tomorrow does not open the sessions it completed today. A host in this configuration is secure against the adversary the protocols were designed for.
 
@@ -16,13 +16,15 @@ The CVSS v4.0 score of 6.3 and the SHNDL score of 8.2 belong to different scales
 
 The measurements that follow therefore treat TLS 1.2 AEAD mode and TLS 1.3 separately from TLS 1.3 paired with a post-quantum key exchange, and do not group them as "modern TLS". The distinction depends on the hard problem that the session key ultimately rests on, and only this distinction determines whether traffic captured today remains confidential.
 
-## iii. TLS 1.3 paired with ML-KEM
+## 3. TLS 1.3 paired with ML-KEM
 
 We have shown in [The post quantum security of TLS 1.3 ML KEM](https://lattice-walker.github.io/CipherOps/display_articles/articles.html#article=articles%2Fpost-quantum-algorithms%2FHNDL-TLS-12-13.md) that TLS 1.3 paired with ML-KEM is HNDL safe. The deployed form is a hybrid group (X25519MLKEM768) in which the client offers a single key share carrying both an X25519 public key and an ML-KEM-768 encapsulation key, and the session secret is derived from both results together. The derived key remains secure as long as either component is secure. A cryptanalytic break of ML-KEM leaves the classical X25519 exchange intact, and a quantum adversary who solves the discrete logarithm still faces the lattice problem.
 
 The handshake authenticates the server as well as exchanging keys, and the certificate chain in these connections remains classical RSA or ECDSA. Authentication is a claim about the present: the signature proves the server's identity at the moment of the handshake. An adversary who acquires the ability to forge that signature in ten years can impersonate the server in ten years but cannot decrypt a session that has already completed. Confidentiality, by contrast, can be attacked retroactively, and the key exchange determines it. Post-quantum authentication is a separate problem. It does not belong to the harvest-now-decrypt-later problem, and this survey does not measure it.
 
-## 1. The banking sector
+## 4. The Sector-by-Sector Survey 
+
+### 4.1. The banking sector
 
 Of the 92 reachable banking domains, none uses a deprecated protocol by default. 63.0% use TLS 1.3, 18.5% use TLS 1.3 with ML-KEM, and 18.5% use TLS 1.2 in AEAD mode. Every ordinary visitor therefore receives a protocol that section ii shows to be cryptographically secure. For 81.5% of the domains, however, that protocol also carries an SHNDL score of 8.2 (High). The sector is in good shape against today's attacker and exposed against tomorrow's.
 
@@ -36,7 +38,7 @@ The accepted-protocol results are weaker for banking. No host prefers a deprecat
 
 Eleven of the 103 banking domains scanned did not complete a handshake. All eleven were stopped by bot-blocking defences: six connections were dropped silently after the ClientHello, and five were reset immediately after it. Both patterns are consistent with a web application firewall or an anti-bot system. These are security measures, and they affect how the figures should be read. A domain that refuses automated probes is likely better maintained than one that answers any request, so the excluded hosts are not a random sample. Every figure in this survey describes the domains that allowed measurement, which may be slightly weaker than the sector as a whole. The effect is largest in banking, the only sector in which every exclusion came from such a defence.
 
-## 2. The energy sector
+### 4.2. The energy sector
 
 The energy sector has the best post-quantum result in the survey and one of the worst legacy results, both within the same population. Of 107 reachable domains, 43.0% use TLS 1.3 with ML-KEM by default, 41.1% use TLS 1.3 with a classical group, and 15.9% use TLS 1.2 in AEAD mode. Almost half of all connections to this sector are HNDL safe as defined in section iii, against 14.9% in the government sector. The other 57.0% carry the 8.2 (High) exposure.
 
@@ -50,7 +52,7 @@ This supports the argument in section ii. The two risks move independently, and 
 
 Twenty-two of the 129 energy domains scanned did not complete a handshake. That is 17.1%, the highest rate of the five sectors. Eighteen of them were stopped by bot-blocking defences, twelve by a silent drop after the ClientHello and six by an immediate reset. The other four failed for unrelated reasons. The selection effect described in section 1 applies here more than in any other sector except banking.
 
-## 3. The defense sector
+### 4.3. The defense sector
 
 Of 85 reachable defense domains, 64.7% use TLS 1.3 by default, 20.0% use TLS 1.3 with ML-KEM, and 15.3% use TLS 1.2 in AEAD mode. No host prefers a deprecated protocol. The post-quantum share of 20.0% places the sector in the middle of the survey, below energy at 43.0% and medical at 31.9%, and above government at 14.9%. Four connections in five remain in the 8.2 (High) band.
 
@@ -64,7 +66,7 @@ The following point comes from reasoning and not from the scan. Harvest-now-decr
 
 Fifteen of the 100 defense domains scanned did not complete a handshake. Thirteen were stopped by bot-blocking defences, twelve by a silent drop after the ClientHello and one by an immediate reset, and two returned a TLS alert. The exclusion is not random, for the reason given in section 1.
 
-## 4. The medical sector
+### 4.4. The medical sector
 
 The medical sector has the highest modern-protocol support in the survey and a strong post-quantum share. Of 119 reachable domains, 59.7% use TLS 1.3 by default, 31.9% use TLS 1.3 with ML-KEM, 7.6% use TLS 1.2 in AEAD mode, and 0.8%, a single host, uses TLS 1.2 in CBC mode. Support for TLS 1.2 in AEAD mode reaches 99.2% and for TLS 1.3 reaches 91.6%, both the highest recorded. The post-quantum share of 31.9% is second only to energy.
 
@@ -78,7 +80,7 @@ The accepted-protocol results weaken the sector's otherwise strong position. TLS
 
 Thirteen of the 132 medical domains scanned did not complete a handshake. Eleven were stopped by bot-blocking defences and two failed for reasons that could not be determined. The selection effect from section 1 applies, so the figures reported here may slightly understate the sector's true position.
 
-## 5. The governmental sector
+### 4.5. The governmental sector
 
 The governmental sector is the largest sample in the survey, with 1251 reachable domains. That is roughly three times the other four sectors combined, so its figures are the most stable. 71.1% use TLS 1.3 by default, 14.9% use TLS 1.3 with ML-KEM, 13.8% use TLS 1.2 in AEAD mode, and 0.2%, two hosts, use TLS 1.2 in CBC mode.
 
@@ -94,7 +96,7 @@ This reversal is the central finding of the survey. Energy has the highest post-
 
 Forty-three of the 1294 governmental domains scanned did not complete a handshake. That is 3.3%, by far the lowest rate in the survey. Forty-two of the forty-three were stopped by silent filtering of the ClientHello, which is consistent with a web application firewall. The low rate is informative in itself: governmental domains are much less likely than banking or energy domains to place bot-blocking defences in front of their public services. The selection effect from section 1 therefore affects this sector least, and on that count as well as on sample size its figures are the most representative in the survey.
 
-## iv. Recommendations
+## 5. Recommendations
 
 We recommend one of two configurations: TLS 1.3 with a classical key exchange, or TLS 1.3 paired with ML-KEM. The choice depends on how long the data carried by the website must remain confidential. Both configurations require disabling TLS 1.0, TLS 1.1 and TLS 1.2 in CBC mode.
 
