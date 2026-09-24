@@ -1143,58 +1143,119 @@ body.dark .landing-courses-btn {
 }
 
 /* ── Page de contact ──────────────────────────────────────────────── */
-/* Le formulaire reprend la carte lavande de la page d'accueil et le
-   bouton pilule des actions du landing : aucun style propre au
-   formulaire, uniquement les variables du blog. */
+/* La page reprend l'ossature du landing : #landing porte le canvas animé,
+   .landing-overlay centre le panneau, #contact-section se cale en bas.
+   Tout est dimensionné pour tenir dans la fenêtre sans défilement, d'où
+   le formulaire sur deux colonnes et le widget Turnstile posé à côté du
+   bouton plutôt qu'au-dessus. */
 
-#main-content.contact-page {
-  margin-left: 0;
-  padding: 2rem 1rem 0;
+#landing.contact-view {
+  height: 100dvh;
+  min-height: 0;
 }
 
-#contact-landing {
-  width: 100%;
-  max-width: 720px;
-  /* Comme #articles-landing : les marges auto centrent le bloc dans
-     l'espace laissé au-dessus du footer. */
-  margin: auto;
-  padding: 0 1.5rem;
-  text-align: center;
+/* Le padding bas réserve la place du footer absolu : le panneau se centre
+   dans l'espace restant au lieu de passer dessous. */
+.contact-view .landing-overlay {
+  padding: 1rem 1rem 4.5rem;
+  align-content: center;
 }
 
-#contact-logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.75rem;
-}
-
-#contact-logo img {
-  width: 190px;
-  max-width: 60%;
-  height: auto;
-}
-
-#contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  margin-top: 2.5rem;
-  padding: 2rem 1.75rem;
+#contact-panel {
+  position: relative;
+  z-index: 2;
+  width: min(94vw, 700px);
+  max-height: 100%;
+  padding: 1.75rem;
   text-align: left;
-  background: var(--panel-bg);
+  background: var(--bg);
   border: 1px solid rgba(184, 169, 201, 0.75);
   border-radius: 22px;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
 }
 
-body.dark #contact-form {
+body.dark #contact-panel {
   border-color: rgba(184, 169, 201, 0.6);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
 }
 
+/* ── En-tête : logo à gauche, texte à droite ─────────────────────── */
+/* align-items:stretch donne au logo la hauteur exacte du bloc de texte,
+   et le logo étant carré, sa largeur suit. */
+.contact-header {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Le logo est sorti du flux (position:absolute) pour que sa hauteur propre
+   ne gonfle pas la ligne : c'est le bloc de texte qui fixe la hauteur et le
+   logo s'y étire. La largeur ne peut pas se déduire d'aspect-ratio en
+   flexbox (la taille principale est calculée avant l'étirement), donc le
+   script la recopie depuis la hauteur du texte. Cette valeur sert de repli
+   si le script ne tourne pas. */
+.contact-logo {
+  position: relative;
+  flex: 0 0 auto;
+  align-self: stretch;
+  width: var(--contact-logo-size, 7.4rem);
+}
+
+.contact-logo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-intro {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.contact-intro .articles-page-title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+}
+
+.contact-intro .articles-page-description,
+.contact-intro .articles-page-description-it {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-intro .articles-page-description {
+  margin-bottom: 0;
+}
+
+/* ── Formulaire ───────────────────────────────────────────────────── */
+/* Nom et courriel se partagent la première ligne ; le message et la ligne
+   d'actions occupent toute la largeur. */
+#contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem 1rem;
+  align-items: start;
+}
+
+#contact-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+#contact-form .field-wide,
+#contact-form .form-actions,
+#contact-status {
+  grid-column: 1 / -1;
+}
+
 #contact-form label {
-  margin-top: 1.1rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--fg);
 }
@@ -1204,10 +1265,10 @@ body.dark #contact-form {
   width: 100%;
   font: inherit;
   color: var(--fg);
-  background: var(--bg);
+  background: var(--panel-bg);
   border: 1px solid var(--panel-border);
   border-radius: 12px;
-  padding: 0.65rem 0.8rem;
+  padding: 0.55rem 0.7rem;
   transition: border-color 0.3s ease;
 }
 
@@ -1225,13 +1286,14 @@ body.dark #contact-form {
 
 #contact-form textarea {
   resize: vertical;
-  min-height: 9rem;
-  line-height: 1.6;
+  height: clamp(4.5rem, 16vh, 8rem);
+  line-height: 1.5;
 }
 
 #contact-form .hint {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-style: italic;
+  line-height: 1.35;
   color: var(--muted);
 }
 
@@ -1244,20 +1306,26 @@ body.dark #contact-form {
   overflow: hidden;
 }
 
-/* La hauteur réservée évite que le bouton ne saute quand le widget arrive. */
-#contact-form .cf-turnstile {
-  margin: 1.5rem 0 0.25rem;
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* La hauteur réservée évite que la ligne ne saute quand le widget arrive. */
+.form-actions .cf-turnstile {
   min-height: 65px;
 }
 
 #submit-btn {
-  align-self: flex-start;
-  margin-top: 1.25rem;
-  padding: 0.85rem 2.5rem;
+  padding: 0.7rem 2rem;
   background: #87A878;
   color: #FFFFFF;
   border-radius: 999px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   box-shadow: 0 4px 18px rgba(135, 168, 120, 0.35);
@@ -1282,9 +1350,9 @@ body.dark #submit-btn {
 }
 
 #contact-status {
-  margin: 1.1rem 0 0;
-  min-height: 1.5em;
-  font-size: 0.95rem;
+  margin: 0.2rem 0 0;
+  min-height: 1.4em;
+  font-size: 0.9rem;
   color: var(--muted);
 }
 
@@ -1301,21 +1369,54 @@ body.dark #contact-status.error {
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  #main-content.contact-page {
-    padding: 4.5rem 0.5rem 0;
+/* Sous une certaine hauteur, ou sur téléphone, le contenu ne peut plus
+   tenir dans la fenêtre : on rend alors le défilement à la page plutôt
+   que de rogner le formulaire. */
+@media (max-height: 660px), (max-width: 768px) {
+  #landing.contact-view {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
   }
 
-  #contact-landing {
-    padding: 0 0.25rem;
+  .contact-view .landing-overlay {
+    position: relative;
+    inset: auto;
+    padding: 4.5rem 1rem 2rem;
+  }
+
+  .contact-view #contact-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact-panel {
+    padding: 1.25rem;
+  }
+
+  .contact-header {
+    gap: 1rem;
+  }
+
+  .contact-logo {
+    max-width: 110px;
+  }
+
+  .contact-intro .articles-page-description,
+  .contact-intro .articles-page-description-it {
+    font-size: 0.95rem;
   }
 
   #contact-form {
-    padding: 1.5rem 1.1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    justify-content: center;
   }
 
   #submit-btn {
-    align-self: stretch;
-    text-align: center;
+    width: 100%;
   }
 }

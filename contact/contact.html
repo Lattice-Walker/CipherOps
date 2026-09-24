@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CipherOps – Contact</title>
   <meta name="description" content="Send a message to CipherOps." />
-  <link rel="stylesheet" href="../style.css?v=8" />
+  <link rel="stylesheet" href="../style.css?v=9" />
   <link rel="icon" href="../logos/logo-icon.ico" />
+
+  <!-- Le callback onload doit exister avant l'arrivée d'api.js, qui est async :
+       on l'installe ici, et le module du bas branche le rendu réel. -->
+  <script>
+    window.__turnstileReady = false;
+    window.onTurnstileReady = function () {
+      window.__turnstileReady = true;
+      if (window.__renderTurnstile) window.__renderTurnstile();
+    };
+  </script>
   <!-- Rendu explicite : le thème du widget doit suivre celui du site,
        pas celui du système. -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileReady&render=explicit" async defer></script>
@@ -20,65 +30,104 @@
     <span class="toggle-icon light-icon">☀</span>
   </button>
 
-  <!-- CONTENU PRINCIPAL -->
-  <main id="main-content" class="contact-page">
+  <!-- Même ossature que la page d'accueil : le canvas anime le fond, l'overlay
+       centre le contenu, le footer se cale en bas. -->
+  <div id="landing" class="contact-view">
+    <canvas id="bg-canvas"></canvas>
 
-    <div id="contact-landing">
-      <div id="contact-logo">
-        <a href="../index.html" aria-label="CipherOps">
-          <img id="logo-light-img" src="../logos/logo-light.png" alt="CipherOps" />
-          <img id="logo-dark-img"  src="../logos/logo-dark.png"  alt="CipherOps" />
-        </a>
-      </div>
+    <div class="landing-overlay">
+      <div id="contact-panel">
 
-      <h1 class="articles-page-title">Contact</h1>
-      <p class="articles-page-description-it">
-        No address to harvest, no tracking cookies.
-      </p>
-      <p class="articles-page-description">
-        Send a message and it reaches me directly.
-      </p>
-
-      <form id="contact-form" novalidate>
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" maxlength="100" required autocomplete="name" />
-
-        <label for="email">Your email</label>
-        <input id="email" name="email" type="email" maxlength="200" required autocomplete="email" />
-        <span class="hint">So I can reply. It is passed straight through and never stored.</span>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="7" maxlength="5000" required></textarea>
-
-        <!-- Honeypot : invisible pour les humains, irrésistible pour les bots naïfs. -->
-        <div class="hp" aria-hidden="true">
-          <label for="company">Company</label>
-          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+        <div class="contact-header">
+          <a class="contact-logo" href="../index.html" aria-label="CipherOps">
+            <img id="logo-light-img" src="../logos/logo-light.png" alt="CipherOps" />
+            <img id="logo-dark-img"  src="../logos/logo-dark.png"  alt="CipherOps" />
+          </a>
+          <div class="contact-intro">
+            <h1 class="articles-page-title">Contact</h1>
+            <p class="articles-page-description-it">
+              No address to harvest, no tracking cookies.
+            </p>
+            <p class="articles-page-description">
+              Send a message and it reaches me directly.
+            </p>
+          </div>
         </div>
 
-        <!-- Widget Turnstile. La sitekey est publique par conception ; la clé
-             secrète, elle, ne quitte jamais le Worker. -->
-        <div id="turnstile-widget" class="cf-turnstile"></div>
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" maxlength="100" required autocomplete="name" />
+          </div>
 
-        <button type="submit" id="submit-btn">Send message</button>
-        <p id="contact-status" role="status" aria-live="polite"></p>
-      </form>
+          <div class="field">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" maxlength="200" required autocomplete="email" />
+            <span class="hint">Never stored, only passed through so I can reply.</span>
+          </div>
+
+          <div class="field field-wide">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" maxlength="5000" required></textarea>
+          </div>
+
+          <!-- Honeypot : invisible pour les humains, irrésistible pour les bots naïfs. -->
+          <div class="hp" aria-hidden="true">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <!-- Widget Turnstile et bouton sur une même ligne : c'est ce qui permet
+               à la page entière de tenir dans la fenêtre. La sitekey est publique
+               par conception ; la clé secrète ne quitte jamais le Worker. -->
+          <div class="form-actions">
+            <div id="turnstile-widget" class="cf-turnstile"></div>
+            <button type="submit" id="submit-btn">Send message</button>
+          </div>
+
+          <p id="contact-status" role="status" aria-live="polite"></p>
+        </form>
+
+      </div>
     </div>
 
     <footer id="contact-section">
       <span class="contact-item">GitHub: <a href="https://github.com/Lattice-Walker/" target="_blank" rel="noopener">Lattice-Walker</a></span>
     </footer>
-  </main>
+  </div>
 
   <script data-goatcounter="https://latticewalker.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-  <script>
+  <script type="module">
     // ── Thème ────────────────────────────────────────────────────
     const toggle = document.getElementById('theme-toggle');
     const saved  = localStorage.getItem('theme') || 'light';
     if (saved === 'dark') document.body.classList.add('dark');
     toggle.dataset.active = saved;
+
+    // ── Fond animé (identique à la page d'accueil) ───────────────
+    import('../animation.js?v=9').then(({ startAnimation }) => startAnimation());
+
+    // ── Logo : carré, exactement de la hauteur du bloc de texte ──
+    // Le logo s'étire déjà en hauteur sur la ligne flex ; il ne manque que
+    // la largeur, qu'on recopie depuis la hauteur mesurée du texte. Le seuil
+    // d'un pixel empêche toute boucle si l'ajustement fait refluer le texte.
+    const intro = document.querySelector('.contact-intro');
+    const logo  = document.querySelector('.contact-logo');
+    if (intro && logo && window.ResizeObserver) {
+      const syncLogo = () => {
+        const size = Math.round(intro.getBoundingClientRect().height);
+        const current = parseFloat(logo.style.getPropertyValue('--contact-logo-size')) || 0;
+        if (size > 0 && Math.abs(size - current) > 1) {
+          logo.style.setProperty('--contact-logo-size', `${size}px`);
+        }
+      };
+      new ResizeObserver(syncLogo).observe(intro);
+      syncLogo();
+      // Les polices chargées après coup changent la hauteur du texte.
+      if (document.fonts) document.fonts.ready.then(syncLogo);
+    }
 
     // ── Turnstile ────────────────────────────────────────────────
     const SITEKEY = "0x4AAAAAAFCLtvaZZgvxzksu";
@@ -97,7 +146,9 @@
       });
     }
 
-    window.onTurnstileReady = renderTurnstile;
+    // api.js peut arriver avant ou après ce module : on couvre les deux cas.
+    window.__renderTurnstile = renderTurnstile;
+    if (window.__turnstileReady) renderTurnstile();
 
     // Le widget est redessiné au changement de thème : son apparence ne peut
     // pas être modifiée après coup, et le jeton est de toute façon jetable.
