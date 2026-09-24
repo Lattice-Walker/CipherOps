@@ -1,39 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="580" height="430" viewBox="0 0 580 430" font-family="Inter, Helvetica Neue, Arial, sans-serif">
-<line x1="50" y1="326.0" x2="564" y2="326.0" stroke="#B8A9C9" stroke-opacity="0.45" stroke-width="1"/>
-<text x="40" y="330.0" font-size="11" fill="#B8A9C9" text-anchor="end">0%</text>
-<line x1="50" y1="251.5" x2="564" y2="251.5" stroke="#B8A9C9" stroke-opacity="0.45" stroke-width="1"/>
-<text x="40" y="255.5" font-size="11" fill="#B8A9C9" text-anchor="end">25%</text>
-<line x1="50" y1="177.0" x2="564" y2="177.0" stroke="#B8A9C9" stroke-opacity="0.45" stroke-width="1"/>
-<text x="40" y="181.0" font-size="11" fill="#B8A9C9" text-anchor="end">50%</text>
-<line x1="50" y1="102.5" x2="564" y2="102.5" stroke="#B8A9C9" stroke-opacity="0.45" stroke-width="1"/>
-<text x="40" y="106.5" font-size="11" fill="#B8A9C9" text-anchor="end">75%</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="440" viewBox="0 0 580 440" font-family="Inter, Helvetica Neue, Arial, sans-serif">
+<line x1="50" y1="328.0" x2="564" y2="328.0" stroke="#B8A9C9" stroke-opacity="0.45" stroke-width="1"/>
+<text x="40" y="332.0" font-size="11" fill="#B8A9C9" text-anchor="end">0%</text>
+<line x1="50" y1="253.0" x2="564" y2="253.0" stroke="#B8A9C9" stroke-opacity="0.45" stroke-width="1"/>
+<text x="40" y="257.0" font-size="11" fill="#B8A9C9" text-anchor="end">25%</text>
+<line x1="50" y1="178.0" x2="564" y2="178.0" stroke="#B8A9C9" stroke-opacity="0.45" stroke-width="1"/>
+<text x="40" y="182.0" font-size="11" fill="#B8A9C9" text-anchor="end">50%</text>
+<line x1="50" y1="103.0" x2="564" y2="103.0" stroke="#B8A9C9" stroke-opacity="0.45" stroke-width="1"/>
+<text x="40" y="107.0" font-size="11" fill="#B8A9C9" text-anchor="end">75%</text>
 <line x1="50" y1="28.0" x2="564" y2="28.0" stroke="#B8A9C9" stroke-opacity="0.45" stroke-width="1"/>
 <text x="40" y="32.0" font-size="11" fill="#B8A9C9" text-anchor="end">100%</text>
-<path d="M80.83333333333334,326.00 v-26.64 a4,4 0 0 1 4,-4 h16 a4,4 0 0 1 4,4 v26.64 Z" fill="#C0603C"/>
-<text x="92.8" y="287.4" font-size="11.5" fill="#C0603C" text-anchor="middle">10.3%</text>
-<text x="92.8" y="346.0" font-size="11.5" fill="#C0603C" text-anchor="middle">TLS 1.0</text>
-<path d="M166.50000000000003,326.00 v-26.64 a4,4 0 0 1 4,-4 h16 a4,4 0 0 1 4,4 v26.64 Z" fill="#C0603C"/>
-<text x="178.5" y="287.4" font-size="11.5" fill="#C0603C" text-anchor="middle">10.3%</text>
-<text x="178.5" y="346.0" font-size="11.5" fill="#C0603C" text-anchor="middle">TLS 1.1</text>
-<path d="M252.16666666666669,326.00 v-174.24 a4,4 0 0 1 4,-4 h16 a4,4 0 0 1 4,4 v174.24 Z" fill="#C0603C"/>
-<text x="264.2" y="139.8" font-size="11.5" fill="#C0603C" text-anchor="middle">59.8%</text>
-<text x="264.2" y="346.0" font-size="11.5" fill="#C0603C" text-anchor="middle">TLS 1.2</text>
-<text x="264.2" y="360.0" font-size="11.5" fill="#C0603C" text-anchor="middle">CBC</text>
-<path d="M337.8333333333333,326.00 v-280.07 a4,4 0 0 1 4,-4 h16 a4,4 0 0 1 4,4 v280.07 Z" fill="#87A878"/>
-<text x="349.8" y="33.9" font-size="11.5" fill="#87A878" text-anchor="middle">95.3%</text>
-<text x="349.8" y="346.0" font-size="11.5" fill="#87A878" text-anchor="middle">TLS 1.2</text>
-<text x="349.8" y="360.0" font-size="11.5" fill="#87A878" text-anchor="middle">AEAD</text>
-<path d="M423.5,326.00 v-246.65 a4,4 0 0 1 4,-4 h16 a4,4 0 0 1 4,4 v246.65 Z" fill="#87A878"/>
-<text x="435.5" y="67.3" font-size="11.5" fill="#87A878" text-anchor="middle">84.1%</text>
-<text x="435.5" y="346.0" font-size="11.5" fill="#87A878" text-anchor="middle">TLS 1.3</text>
-<path d="M509.16666666666674,326.00 v-124.11 a4,4 0 0 1 4,-4 h16 a4,4 0 0 1 4,4 v124.11 Z" fill="#B8A9C9"/>
-<text x="521.2" y="189.9" font-size="11.5" fill="#B8A9C9" text-anchor="middle">43.0%</text>
-<text x="521.2" y="346.0" font-size="11.5" fill="#B8A9C9" text-anchor="middle">TLS 1.3</text>
-<text x="521.2" y="360.0" font-size="11.5" fill="#B8A9C9" text-anchor="middle">PQ</text>
-<rect x="50" y="399" width="11" height="11" rx="2.5" fill="#C0603C"/>
-<text x="68" y="408" font-size="12" fill="#C0603C">Deprecated</text>
-<rect x="160" y="399" width="11" height="11" rx="2.5" fill="#87A878"/>
-<text x="178" y="408" font-size="12" fill="#87A878">Classical key exchange</text>
-<rect x="360" y="399" width="11" height="11" rx="2.5" fill="#B8A9C9"/>
-<text x="378" y="408" font-size="12" fill="#B8A9C9">Post-quantum (hybrid ML-KEM)</text>
+<path d="M77.83333333333334,328.00 v-26.84 a4,4 0 0 1 4,-4 h22 a4,4 0 0 1 4,4 v26.84 Z" fill="#C0603C"/>
+<text x="92.8" y="289.2" font-size="11.5" fill="#C0603C" text-anchor="middle">10.3%</text>
+<text x="92.8" y="348.0" font-size="11.5" fill="#C0603C" text-anchor="middle">TLS 1.0</text>
+<path d="M163.50000000000003,328.00 v-26.84 a4,4 0 0 1 4,-4 h22 a4,4 0 0 1 4,4 v26.84 Z" fill="#C0603C"/>
+<text x="178.5" y="289.2" font-size="11.5" fill="#C0603C" text-anchor="middle">10.3%</text>
+<text x="178.5" y="348.0" font-size="11.5" fill="#C0603C" text-anchor="middle">TLS 1.1</text>
+<path d="M249.16666666666669,328.00 v-175.44 a4,4 0 0 1 4,-4 h22 a4,4 0 0 1 4,4 v175.44 Z" fill="#C0603C"/>
+<text x="264.2" y="140.6" font-size="11.5" fill="#C0603C" text-anchor="middle">59.8%</text>
+<text x="264.2" y="348.0" font-size="11.5" fill="#C0603C" text-anchor="middle">TLS 1.2</text>
+<text x="264.2" y="362.0" font-size="11.5" fill="#C0603C" text-anchor="middle">CBC</text>
+<path d="M334.8333333333333,89.68 h30 v238.32 h-30 Z" fill="#87A878"/>
+<path d="M335.5833333333333,89.68 v-43.66 a4,4 0 0 1 4,-4 h20.5 a4,4 0 0 1 4,4 v43.66 Z" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="349.8" y="34.0" font-size="11.5" fill="#87A878" text-anchor="middle">95.3%</text>
+<text x="349.8" y="69.4" font-size="9" fill="#87A878" text-anchor="middle">15.9%</text>
+<text x="349.8" y="348.0" font-size="11.5" fill="#87A878" text-anchor="middle">TLS 1.2</text>
+<text x="349.8" y="362.0" font-size="11.5" fill="#87A878" text-anchor="middle">AEAD</text>
+<path d="M420.5,199.03 h30 v128.97 h-30 Z" fill="#87A878"/>
+<path d="M421.25,199.03 v-119.36 a4,4 0 0 1 4,-4 h20.5 a4,4 0 0 1 4,4 v119.36 Z" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="435.5" y="67.7" font-size="11.5" fill="#87A878" text-anchor="middle">84.1%</text>
+<text x="435.5" y="140.8" font-size="9" fill="#87A878" text-anchor="middle">41.1%</text>
+<text x="435.5" y="348.0" font-size="11.5" fill="#87A878" text-anchor="middle">TLS 1.3</text>
+<path d="M506.91666666666674,328.00 v-124.97 a4,4 0 0 1 4,-4 h20.5 a4,4 0 0 1 4,4 v124.97 Z" fill="none" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="521.2" y="191.0" font-size="11.5" fill="#B8A9C9" text-anchor="middle">43.0%</text>
+<text x="521.2" y="267.0" font-size="9" fill="#B8A9C9" text-anchor="middle">43.0%</text>
+<text x="521.2" y="348.0" font-size="11.5" fill="#B8A9C9" text-anchor="middle">TLS 1.3</text>
+<text x="521.2" y="362.0" font-size="11.5" fill="#B8A9C9" text-anchor="middle">PQ</text>
+<rect x="50" y="385" width="11" height="11" rx="2.5" fill="#C0603C"/>
+<text x="68" y="394" font-size="12" fill="#C0603C">Deprecated</text>
+<rect x="160" y="385" width="11" height="11" rx="2.5" fill="#87A878"/>
+<text x="178" y="394" font-size="12" fill="#87A878">Classical key exchange</text>
+<rect x="360" y="385" width="11" height="11" rx="2.5" fill="#B8A9C9"/>
+<text x="378" y="394" font-size="12" fill="#B8A9C9">Post-quantum (hybrid ML-KEM)</text>
+<rect x="50.75" y="408.75" width="9.5" height="9.5" rx="2" fill="none" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="68" y="418" font-size="12" fill="#B8A9C9">Unfilled: the part that uses it as its default protocol</text>
 </svg>
