@@ -1,0 +1,47 @@
+[   
+  {
+    "category": "Experiments",
+    "articles": [
+      {
+        "title": "TLS in Practice: A Sector-by-Sector Survey of Present and Post-Quantum Risk",
+        "file": "practicalprojects/experiments/tls-deployment.md",
+        "date": "September 24, 2026"
+      },
+      {
+        "title": "From Linguistic Signals to Measurable Influence: A Practical Study of \"Kyiv\" and \"Kiev\"",
+        "file": "practicalprojects/experiments/web-linguistics.md",
+        "date": "August 19, 2026"
+      }
+    ]
+  },
+  {
+    "category": "Tools",
+    "articles": [
+      {
+        "title": "HNDL CVSS Calculator",
+        "file": "practicalprojects/Tools/HNDL-CVSS-calculator.md",
+        "date": "September 23, 2026"
+      }
+    ]
+  },
+  {
+    "category": "Games",
+    "articles": [
+      {
+        "title": "Curve Clash",
+        "file": "practicalprojects/Games/CurveClash.md",
+        "date": "August 26, 2026"
+      },      
+      {
+        "title": "Foghorn",
+        "file": "practicalprojects/Games/Foghorn.md",
+        "date": "September 25, 2026"
+      },      
+      {
+        "title": "À la pêche aux phish",
+        "file": "practicalprojects/Games/Phishing.md",
+        "date": "September 28, 2026"
+      }
+    ]
+  }
+]

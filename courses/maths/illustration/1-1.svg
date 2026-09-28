@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="250" viewBox="55 35 350 250" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0.6 L10,5 L0,9.4 Z" fill="#B8A9C9"/></marker>
+ <marker id="b" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ .lbl{font-family:'Latin Modern Roman','Georgia',serif;font-style:italic;font-weight:600;fill:#B8A9C9}
+ .lblu{font-family:'Latin Modern Roman','Georgia',serif;font-weight:700;fill:#B8A9C9}
+ .w{font-family:'Latin Modern Roman','Georgia',serif;font-size:17px;fill:#B8A9C9;fill-opacity:.95}
+</style>
+<circle cx="110" cy="90" r="34" fill="none" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="110" y="99" text-anchor="middle" font-size="26">A</text>
+<circle cx="350" cy="90" r="34" fill="none" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="350" y="99" text-anchor="middle" font-size="26">B</text>
+<circle cx="110" cy="230" r="34" fill="none" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="110" y="239" text-anchor="middle" font-size="26">D</text>
+<circle cx="350" cy="230" r="34" fill="none" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="350" y="239" text-anchor="middle" font-size="26">C</text>
+</svg>

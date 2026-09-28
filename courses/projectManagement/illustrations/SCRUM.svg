@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1129" height="445" viewBox="77 15 1129 445" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerUnits="userSpaceOnUse" markerWidth="30" markerHeight="30" refX="27" refY="15" orient="auto"><path d="M0,1 L30,15 L0,29 Z" fill="#87A878"/></marker>
+ <marker id="al" markerUnits="userSpaceOnUse" markerWidth="30" markerHeight="30" refX="27" refY="15" orient="auto"><path d="M0,1 L30,15 L0,29 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .note{font-size:12.5px;fill:#B8A9C9;fill-opacity:.85}
+</style>
+<text x="140" y="259" text-anchor="middle" font-size="17" font-weight="700" fill="#B8A9C9">Product</text>
+<text x="140" y="283" text-anchor="middle" font-size="17" font-weight="700" fill="#B8A9C9">backlog</text>
+<line x1="228" y1="272" x2="286" y2="272" stroke="#B8A9C9" stroke-width="10" marker-end="url(#al)"/>
+<text x="392" y="260" text-anchor="middle" font-size="17" font-weight="700" fill="#B8A9C9">Sprint</text>
+<text x="392" y="284" text-anchor="middle" font-size="17" font-weight="700" fill="#B8A9C9">backlog</text>
+<line x1="484" y1="272" x2="542" y2="272" stroke="#87A878" stroke-width="10" marker-end="url(#as)"/>
+<path d="M644.2 348.8 A104 104 0 1 1 743.3 403.7" fill="none" stroke="#87A878" stroke-width="13" stroke-linecap="butt" marker-end="url(#as)"/>
+<text x="736" y="286" text-anchor="middle" font-size="30" font-weight="700" fill="#87A878">2–4</text>
+<text x="736" y="314" text-anchor="middle" font-size="19" font-weight="600" fill="#87A878">weeks</text>
+<path d="M675.4 144.9 A62 62 0 1 1 768.9 184.6" fill="none" stroke="#B8A9C9" stroke-width="11" stroke-linecap="butt" marker-end="url(#al)"/>
+<text x="736" y="121" text-anchor="middle" font-size="24" font-weight="700" fill="#B8A9C9">24</text>
+<text x="736" y="143" text-anchor="middle" font-size="15" font-weight="600" fill="#B8A9C9">hours</text>
+<line x1="852" y1="288" x2="972" y2="288" stroke="#87A878" stroke-width="10" marker-end="url(#as)"/>
+<text x="1092" y="259" text-anchor="middle" font-size="16" font-weight="700" fill="#B8A9C9">Potentially shippable</text>
+<text x="1092" y="283" text-anchor="middle" font-size="16" font-weight="700" fill="#B8A9C9">product increment</text>
+</svg>
+

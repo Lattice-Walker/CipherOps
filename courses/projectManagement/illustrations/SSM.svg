@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="759" height="480" viewBox="0 40 759 480" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .qn{font-size:17px;font-weight:600}
+ .qd{font-size:11.5px;fill-opacity:.9}
+ .ax{font-size:13px;font-weight:600}
+ .ae{font-size:11.5px;fill-opacity:.85}
+ .rh{font-size:14px;font-weight:600}
+ .rn{font-size:13px;font-weight:600}
+ .rd{font-size:11.5px;fill-opacity:.9}
+ .cp{font-size:12px;fill-opacity:.9}
+ .sg{fill:#87A878}.lv{fill:#B8A9C9}
+</style>
+
+<g stroke-width="1.6">
+  <rect x="110" y="70"  width="180" height="180" fill="#87A878" fill-opacity=".16" stroke="#87A878"/>
+  <rect x="290" y="70"  width="180" height="180" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9"/>
+  <rect x="110" y="250" width="180" height="180" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9"/>
+  <rect x="290" y="250" width="180" height="180" fill="#87A878" fill-opacity=".16" stroke="#87A878"/>
+</g>
+
+<text class="qn sg" x="200" y="146" text-anchor="middle">Driver</text>
+<text class="qd sg" x="200" y="170" text-anchor="middle">decides fast,</text>
+<text class="qd sg" x="200" y="188" text-anchor="middle">task before relationship</text>
+
+<text class="qn lv" x="380" y="146" text-anchor="middle">Expressive</text>
+<text class="qd lv" x="380" y="170" text-anchor="middle">decides fast,</text>
+<text class="qd lv" x="380" y="188" text-anchor="middle">relationship before detail</text>
+
+<text class="qn lv" x="200" y="326" text-anchor="middle">Analytical</text>
+<text class="qd lv" x="200" y="350" text-anchor="middle">decides slowly,</text>
+<text class="qd lv" x="200" y="368" text-anchor="middle">wants the evidence</text>
+
+<text class="qn sg" x="380" y="326" text-anchor="middle">Amiable</text>
+<text class="qd sg" x="380" y="350" text-anchor="middle">decides slowly,</text>
+<text class="qd sg" x="380" y="368" text-anchor="middle">wants agreement</text>
+
+<line x1="110" y1="442" x2="470" y2="442" stroke="#87A878" stroke-width="1.6" marker-end="url(#as)"/>
+<text class="ae sg" x="110" y="462">controls emotion</text>
+<text class="ae sg" x="470" y="462" text-anchor="end">shows emotion</text>
+<text class="ax sg" x="290" y="486" text-anchor="middle">Responsiveness</text>
+
+<line x1="94" y1="430" x2="94" y2="70" stroke="#87A878" stroke-width="1.6" marker-end="url(#as)"/>
+<text class="ae sg" x="84" y="84" text-anchor="end">tells</text>
+<text class="ae sg" x="84" y="424" text-anchor="end">asks</text>
+<text class="ax sg" x="42" y="250" text-anchor="middle" transform="rotate(-90 42 250)">Assertiveness</text>
+
+<text class="rh sg" x="520" y="86">Adapting the message</text>
+<g>
+  <text class="rn sg" x="520" y="118">Driver</text>
+  <text class="rd sg" x="520" y="140">Be brief, lead with the outcome,</text>
+  <text class="rd sg" x="520" y="158">offer a decision to make.</text>
+
+  <text class="rn lv" x="520" y="198">Expressive</text>
+  <text class="rd lv" x="520" y="220">Give the wider picture, leave room</text>
+  <text class="rd lv" x="520" y="238">for discussion, avoid dense detail.</text>
+
+  <text class="rn lv" x="520" y="278">Analytical</text>
+  <text class="rd lv" x="520" y="300">Supply the figures and the method,</text>
+  <text class="rd lv" x="520" y="318">and allow time to review them.</text>
+
+  <text class="rn sg" x="520" y="358">Amiable</text>
+  <text class="rd sg" x="520" y="380">Reassure, explain the effect on people,</text>
+  <text class="rd sg" x="520" y="398">and confirm the agreement.</text>
+</g>
+
+</svg>

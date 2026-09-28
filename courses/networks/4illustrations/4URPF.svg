@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="821" height="394" viewBox="-21 15 821 394" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .st{font-size:13.5px}
+ .hd{font-size:15px;font-weight:600}
+ .mn{font-size:13px;font-family:ui-monospace,'DejaVu Sans Mono',Consolas,monospace}
+ .lb{font-size:12px;font-weight:600}
+ .nt{font-size:12px;fill-opacity:.92}
+ .sg{fill:#87A878}.lv{fill:#B8A9C9}
+</style>
+
+<rect x="55" y="36" width="325" height="52" rx="10" fill="#87A878" fill-opacity=".12" stroke="#87A878" stroke-width="2"/>
+<text class="st sg" x="217" y="59" text-anchor="middle">A packet arrives on interface eth0</text>
+<text class="mn sg" x="217" y="78" text-anchor="middle">source 10.0.0.5</text>
+<line x1="217" y1="88" x2="217" y2="118" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+
+<rect x="55" y="124" width="325" height="46" rx="10" fill="#87A878" fill-opacity=".12" stroke="#87A878" stroke-width="2"/>
+<text class="st sg" x="217" y="153" text-anchor="middle">Look the source address up in the routing table</text>
+<line x1="217" y1="170" x2="217" y2="196" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+
+<path d="M217 200 L363 250 L217 300 L71 250 Z" fill="#B8A9C9" fill-opacity=".14" stroke="#B8A9C9" stroke-width="2"/>
+<text class="st lv" x="217" y="245" text-anchor="middle">Does the route back to</text>
+<text class="st lv" x="217" y="263" text-anchor="middle">10.0.0.5 leave via eth0?</text>
+
+<path d="M71 250 L40 250 L40 336" fill="none" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<text class="lb sg" x="46" y="242">yes</text>
+<rect x="0" y="342" width="150" height="46" rx="10" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="75" y="371" text-anchor="middle">Forward</text>
+
+<path d="M363 250 L394 250 L394 336" fill="none" stroke="#B8A9C9" stroke-width="2" marker-end="url(#al)"/>
+<text class="lb lv" x="368" y="242">no</text>
+<rect x="319" y="342" width="150" height="46" rx="10" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<text class="hd lv" x="394" y="371" text-anchor="middle">Drop</text>
+
+
+<text class="hd sg" x="530" y="52">Routing table</text>
+<g>
+  <rect x="530" y="66" width="250" height="102" rx="8" fill="#87A878" fill-opacity=".10" stroke="#87A878" stroke-width="1.6"/>
+  <line x1="530" y1="100" x2="780" y2="100" stroke="#87A878" stroke-width="1" stroke-opacity=".45"/>
+  <line x1="530" y1="134" x2="780" y2="134" stroke="#87A878" stroke-width="1" stroke-opacity=".45"/>
+  <text class="mn sg" x="544" y="88">10.0.0.0/8</text>       <text class="mn sg" x="700" y="88">eth1</text>
+  <text class="mn sg" x="544" y="122">192.0.2.0/24</text>     <text class="mn sg" x="700" y="122">eth1</text>
+  <text class="mn sg" x="544" y="156">0.0.0.0/0</text>        <text class="mn sg" x="700" y="156">eth2</text>
+</g>
+
+
+<text class="nt lv" x="544" y="250">The packet arrived on eth0, but the</text>
+<text class="nt lv" x="544" y="270">only route back to 10.0.0.5 points at</text>
+<text class="nt lv" x="544" y="290">eth1. The claimed source is therefore</text>
+<text class="nt lv" x="544" y="310">inconsistent with the routing table,</text>
+<text class="nt lv" x="544" y="330">and the packet is discarded.</text>
+
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="530" viewBox="0 0 1260 530" role="img" aria-labelledby="t d">
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .ttl{font-size:17px;font-weight:600;fill:#87A878}
+ .ax{font-size:12px;fill:#B8A9C9;fill-opacity:.85}
+ .axn{font-size:13px;font-weight:600;fill:#B8A9C9}
+ .lg{font-size:12.5px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9;fill-opacity:.85}
+</style>
+<text class="ttl" x="20" y="30">Gantt chart</text>
+<defs><pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="0" y2="7" stroke="#B8A9C9" stroke-width="3"/></pattern></defs>
+<rect x="20" y="82" width="1200" height="36" rx="6" fill="#B8A9C9" fill-opacity="0.05"/>
+<text x="26" y="105" font-size="13" font-weight="600" fill="#87A878">A</text>
+<text x="52" y="105" font-size="13.5" fill="#B8A9C9">Define technical requirements</text>
+<rect x="340" y="88" width="90" height="24" rx="4" fill="#87A878" fill-opacity=".30" stroke="#87A878" stroke-width="2"/>
+<text x="385" y="82" text-anchor="middle" font-size="11.5" fill="#87A878">3d</text>
+<rect x="20" y="128" width="1200" height="36" rx="6" fill="#B8A9C9" fill-opacity="0"/>
+<text x="26" y="151" font-size="13" font-weight="600" fill="#87A878">B</text>
+<text x="52" y="151" font-size="13.5" fill="#B8A9C9">Design system architecture</text>
+<rect x="430" y="134" width="120" height="24" rx="4" fill="#87A878" fill-opacity=".30" stroke="#87A878" stroke-width="2"/>
+<text x="490" y="128" text-anchor="middle" font-size="11.5" fill="#87A878">4d</text>
+<path d="M562 146 l10 -10 l10 10 l-10 10 Z" fill="#B8A9C9" fill-opacity=".5" stroke="#B8A9C9" stroke-width="1.8"/>
+<text x="590" y="150" font-size="11.5" fill="#B8A9C9">Design complete</text>
+<rect x="20" y="174" width="1200" height="36" rx="6" fill="#B8A9C9" fill-opacity="0.05"/>
+<text x="26" y="197" font-size="13" font-weight="600" fill="#87A878">C</text>
+<text x="52" y="197" font-size="13.5" fill="#B8A9C9">Develop backend components</text>
+<rect x="550" y="180" width="240" height="24" rx="4" fill="#87A878" fill-opacity=".30" stroke="#87A878" stroke-width="2"/>
+<text x="670" y="174" text-anchor="middle" font-size="11.5" fill="#87A878">8d</text>
+<rect x="20" y="220" width="1200" height="36" rx="6" fill="#B8A9C9" fill-opacity="0"/>
+<text x="26" y="243" font-size="13" font-weight="600" fill="#B8A9C9">D</text>
+<text x="52" y="243" font-size="13.5" fill="#B8A9C9">Develop frontend components</text>
+<rect x="550" y="226" width="180" height="24" rx="4" fill="url(#hatch)" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="640" y="220" text-anchor="middle" font-size="11.5" fill="#B8A9C9">6d</text>
+<rect x="20" y="266" width="1200" height="36" rx="6" fill="#B8A9C9" fill-opacity="0.05"/>
+<text x="26" y="289" font-size="13" font-weight="600" fill="#87A878">E</text>
+<text x="52" y="289" font-size="13.5" fill="#B8A9C9">Conduct code review</text>
+<rect x="790" y="272" width="60" height="24" rx="4" fill="#87A878" fill-opacity=".30" stroke="#87A878" stroke-width="2"/>
+<text x="820" y="266" text-anchor="middle" font-size="11.5" fill="#87A878">2d</text>
+<rect x="20" y="312" width="1200" height="36" rx="6" fill="#B8A9C9" fill-opacity="0"/>
+<text x="26" y="335" font-size="13" font-weight="600" fill="#87A878">F</text>
+<text x="52" y="335" font-size="13.5" fill="#B8A9C9">Perform quality testing</text>
+<rect x="850" y="318" width="150" height="24" rx="4" fill="#87A878" fill-opacity=".30" stroke="#87A878" stroke-width="2"/>
+<text x="925" y="312" text-anchor="middle" font-size="11.5" fill="#87A878">5d</text>
+<rect x="20" y="358" width="1200" height="36" rx="6" fill="#B8A9C9" fill-opacity="0.05"/>
+<text x="26" y="381" font-size="13" font-weight="600" fill="#B8A9C9">G</text>
+<text x="52" y="381" font-size="13.5" fill="#B8A9C9">Prepare release documentation</text>
+<rect x="880" y="364" width="90" height="24" rx="4" fill="url(#hatch)" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="925" y="358" text-anchor="middle" font-size="11.5" fill="#B8A9C9">3d</text>
+<rect x="20" y="404" width="1200" height="36" rx="6" fill="#B8A9C9" fill-opacity="0"/>
+<text x="26" y="427" font-size="13" font-weight="600" fill="#87A878">H</text>
+<text x="52" y="427" font-size="13.5" fill="#B8A9C9">Deploy to production</text>
+<rect x="1000" y="410" width="30" height="24" rx="4" fill="#87A878" fill-opacity=".30" stroke="#87A878" stroke-width="2"/>
+<text x="1015" y="404" text-anchor="middle" font-size="11.5" fill="#87A878">1d</text>
+<path d="M1042 422 l10 -10 l10 10 l-10 10 Z" fill="#B8A9C9" fill-opacity=".5" stroke="#B8A9C9" stroke-width="1.8"/>
+<text x="1070" y="426" font-size="11.5" fill="#B8A9C9">Production deployment</text>
+<line x1="340" y1="80" x2="340" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="340" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">0</text>
+<line x1="400" y1="80" x2="400" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="400" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">2</text>
+<line x1="460" y1="80" x2="460" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="460" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">4</text>
+<line x1="520" y1="80" x2="520" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="520" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">6</text>
+<line x1="580" y1="80" x2="580" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="580" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">8</text>
+<line x1="640" y1="80" x2="640" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="640" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">10</text>
+<line x1="700" y1="80" x2="700" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="700" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">12</text>
+<line x1="760" y1="80" x2="760" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="760" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">14</text>
+<line x1="820" y1="80" x2="820" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="820" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">16</text>
+<line x1="880" y1="80" x2="880" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="880" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">18</text>
+<line x1="940" y1="80" x2="940" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="940" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">20</text>
+<line x1="1000" y1="80" x2="1000" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="1000" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">22</text>
+<line x1="1060" y1="80" x2="1060" y2="440" stroke="#B8A9C9" stroke-width="1" stroke-opacity=".16"/>
+<text x="1060" y="460" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".85">24</text>
+<text x="700" y="482" text-anchor="middle" font-size="13" font-weight="600" fill="#B8A9C9">Working days</text>
+<rect x="340" y="46" width="16" height="14" rx="3" fill="#87A878" fill-opacity=".30" stroke="#87A878" stroke-width="1.8"/>
+<text class="lg" x="364" y="58" fill="#87A878">Critical path, no slack</text>
+<rect x="560" y="46" width="16" height="14" rx="3" fill="url(#hatch)" fill-opacity=".30" stroke="#B8A9C9" stroke-width="1.8" stroke-dasharray="4 3"/>
+<text class="lg" x="584" y="58">Float, may slip without moving the end date</text>
+</svg>

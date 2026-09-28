@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="564" height="254" viewBox="23 33 564 254" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0.6 L10,5 L0,9.4 Z" fill="#B8A9C9"/></marker>
+ <marker id="b" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ .lbl{font-family:'Latin Modern Roman','Georgia',serif;font-style:italic;font-weight:600;fill:#B8A9C9}
+ .lblu{font-family:'Latin Modern Roman','Georgia',serif;font-weight:700;fill:#B8A9C9}
+ .w{font-family:'Latin Modern Roman','Georgia',serif;font-size:17px;fill:#B8A9C9;fill-opacity:.95}
+</style>
+<line x1="90" y1="173" x2="176" y2="100" stroke="#B8A9C9" stroke-width="2.2"/>
+<line x1="200" y1="106" x2="200" y2="209" stroke="#B8A9C9" stroke-width="2.2"/>
+<line x1="426" y1="150" x2="509" y2="150" stroke="#B8A9C9" stroke-width="2.2"/>
+<circle cx="70" cy="190" r="26" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lblu" x="70" y="197" text-anchor="middle" font-size="20">1</text>
+<circle cx="200" cy="80" r="26" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lblu" x="200" y="87" text-anchor="middle" font-size="20">2</text>
+<circle cx="200" cy="240" r="26" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lblu" x="200" y="247" text-anchor="middle" font-size="20">3</text>
+<circle cx="400" cy="150" r="26" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lblu" x="400" y="157" text-anchor="middle" font-size="20">4</text>
+<circle cx="540" cy="150" r="26" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lblu" x="540" y="157" text-anchor="middle" font-size="20">5</text>
+</svg>

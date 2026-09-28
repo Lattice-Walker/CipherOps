@@ -1,0 +1,137 @@
+[
+  {
+    "category": "Networks",
+    "articles": [
+      {
+        "title": "Introduction",
+        "file": "courses/networks/1. Introduction.md",
+        "date": "July 21, 2026"
+      },
+      {
+        "title": "Network Models, Layers and Protocols",
+        "file": "courses/networks/2. Network Models.md",
+        "date": "July 23, 2026"
+      },
+      {
+        "title": "Network Analysis Tools",
+        "file": "courses/networks/3. Network Analysis Tools.md",
+        "date": "July 26, 2026"
+      },
+      {
+        "title": "Defence in Depth",
+        "file": "courses/networks/4. Defence in Depth.md",
+        "date": "July 29, 2026"
+      },
+      {
+        "title": "Network Virtualisation",
+        "file": "courses/networks/5. Network Virtualisation.md",
+        "date": "July 26, 2026"
+      },
+      {
+        "title": "Quality of Service and Congestion Management",
+        "file": "courses/networks/6. Quality of Service and Congestion Management.md",
+        "date": "July 31, 2026"
+      },
+      {
+        "title": "IPv6 and Transition",
+        "file": "courses/networks/7. IPv6 and Transition.md",
+        "date": "August 3, 2026"
+      },
+      {
+        "title": "Limits of TCPIP",
+        "file": "courses/networks/8. Limits of TCPIP.md",
+        "date": "August 4, 2026"
+      },
+      {
+        "title": "Quantum Telecommunications",
+        "file": "courses/networks/9. Quantum Telecommunications.md",
+        "date": "August 6, 2026"
+      }
+    ]
+  },
+  {
+    "category": "Systems",
+    "articles": [
+      {
+        "title": "Programming Paradigms",
+        "file": "courses/systems/1. Programming Paradigms.md",
+        "date": "July 17, 2026"
+      },
+      {
+        "title": "Computing Systems History",
+        "file": "courses/systems/2. Computing Systems History.md",
+        "date": "July 17, 2026"
+      },
+      {
+        "title": "Process Management and Virtual Memory",
+        "file": "courses/systems/3. Process Management and Virtual Memory.md",
+        "date": "July 17, 2026"
+      },
+      {
+        "title": "Resource Management and Process Scheduling",
+        "file": "courses/systems/4. Resource Management and Process Scheduling.md",
+        "date": "July 17, 2026"
+      }
+    ]
+  },
+  {
+    "category": "Mathematics",
+    "articles": [
+      {
+        "title": "Logic",
+        "file": "courses/maths/1. Logic.md",
+        "date": "July 20, 2026"
+      },
+      {
+        "title": "Proof Techniques",
+        "file": "courses/maths/2. Proof Techniques.md",
+        "date": "July 20, 2026"
+      },
+      {
+        "title": "Arithmetic",
+        "file": "courses/maths/3. Arithmetic.md",
+        "date": "July 20, 2026"
+      },
+      {
+        "title": "Matrices",
+        "file": "courses/maths/4. Matrices.md",
+        "date": "July 20, 2026"
+      },
+      {
+        "title": "Graphs",
+        "file": "courses/maths/5. Graphs.md",
+        "date": "July 20, 2026"
+      },
+      {
+        "title": "Optimisation Methods",
+        "file": "courses/maths/6. Optimisation Methods.md",
+        "date": "July 20, 2026"
+      },
+      {
+        "title": "Queuing Theory and Dependability",
+        "file": "courses/maths/7. Queuing Theory and Dependability.md",
+        "date": "July 20, 2026"
+      }
+    ]
+  },
+  {
+    "category": "Project Management",
+    "articles": [
+      {
+        "title": "IT Project Management",
+        "file": "courses/projectManagement/1. IT Project Management.md",
+        "date": "July 19, 2026"
+      },
+      {
+        "title": "Information Systems and Databases",
+        "file": "courses/projectManagement/2. Information Systems and Databases.md",
+        "date": "July 19, 2026"
+      },
+      {
+        "title": "Team Management and Communication",
+        "file": "courses/projectManagement/3. Team Management and Communication.md",
+        "date": "July 19, 2026"
+      }
+    ]
+  }
+]

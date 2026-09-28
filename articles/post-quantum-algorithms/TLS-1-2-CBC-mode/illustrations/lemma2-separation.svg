@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 622" width="900" height="622" role="img" aria-label="Leakage separation: Case 2 gives count 4 while Cases 1 and 3 both give 5, and no block count separates them because lambda for Case 1 is always 8 mod 16 while every cost step is 7 mod 16">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="20" y="24" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">Zoom on the one step that matters: λ = 55 → 56</text>
+<line x1="120" y1="186" x2="750" y2="186" stroke="#87A878" stroke-width="0.6" stroke-opacity="0.4"/>
+<line x1="120" y1="116" x2="750" y2="116" stroke="#87A878" stroke-width="0.6" stroke-opacity="0.4"/>
+<text x="114" y="190" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">cost 4</text>
+<text x="114" y="120" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">cost 5</text>
+<polyline points="130.0,186 388.0769230769231,186 388.0769230769231,116 740.0,116" fill="none" stroke="#87A878" stroke-width="2.5"/>
+<line x1="130.0" y1="204" x2="130.0" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="130.0" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">50</text>
+<line x1="176.9230769230769" y1="204" x2="176.9230769230769" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="176.9230769230769" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">51</text>
+<line x1="223.84615384615384" y1="204" x2="223.84615384615384" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="223.84615384615384" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">52</text>
+<line x1="270.7692307692308" y1="204" x2="270.7692307692308" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="270.7692307692308" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">53</text>
+<line x1="317.6923076923077" y1="204" x2="317.6923076923077" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="317.6923076923077" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">54</text>
+<line x1="364.61538461538464" y1="204" x2="364.61538461538464" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="364.61538461538464" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">55</text>
+<line x1="411.53846153846155" y1="204" x2="411.53846153846155" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="411.53846153846155" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">56</text>
+<line x1="458.46153846153845" y1="204" x2="458.46153846153845" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="458.46153846153845" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">57</text>
+<line x1="505.38461538461536" y1="204" x2="505.38461538461536" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="505.38461538461536" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">58</text>
+<line x1="552.3076923076924" y1="204" x2="552.3076923076924" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="552.3076923076924" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">59</text>
+<line x1="599.2307692307693" y1="204" x2="599.2307692307693" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="599.2307692307693" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">60</text>
+<line x1="646.1538461538462" y1="204" x2="646.1538461538462" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="646.1538461538462" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">61</text>
+<line x1="693.0769230769231" y1="204" x2="693.0769230769231" y2="210" stroke="#87A878" stroke-width="1.2"/>
+<text x="693.0769230769231" y="224" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">62</text>
+<line x1="120.0" y1="204" x2="703.0769230769231" y2="204" stroke="#87A878" stroke-width="1.2"/>
+<text x="709.0769230769231" y="209" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start"><tspan dx="0.0" dy="0" font-size="15.0">λ</tspan></text>
+<circle cx="364.61538461538464" cy="186" r="5" fill="#B8A9C9" stroke="#B8A9C9" stroke-width="2"/>
+<text x="252.00000000000006" y="156" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="12.0">Case 2</tspan></text>
+<text x="252.00000000000006" y="172" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">λ ≤ 55, the last value on this tread</text>
+<polyline points="298.923076923077,176 355.23076923076906,182" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<circle cx="411.53846153846155" cy="116" r="5" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+<circle cx="458.46153846153845" cy="116" r="5" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+<text x="435.0" y="82" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="12.0">Cases 1 and 3</tspan></text>
+<text x="435.0" y="98" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">λ = 56 and λ = 57</text>
+<text x="505.38461538461536" y="136" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">both on this tread, so timing-identical</text>
+<text x="20" y="272" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">And no admissible ciphertext length pulls them apart</text>
+<text x="30" y="300" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="start"><tspan dx="0.0" dy="0" font-size="14.0">λ</tspan><tspan dx="0.0" dy="5" font-size="9.8">1</tspan><tspan dx="4.2" dy="-5" font-size="14.0">=</tspan><tspan dx="4.2" dy="0" font-size="14.0">ℓ</tspan><tspan dx="0.0" dy="5" font-size="9.8">P</tspan><tspan dx="4.2" dy="-5" font-size="14.0">− 8</tspan><tspan dx="33.6" dy="0" font-size="14.0"></tspan><tspan dx="33.6" dy="0" font-size="14.0">λ</tspan><tspan dx="0.0" dy="5" font-size="9.8">3</tspan><tspan dx="4.2" dy="-5" font-size="14.0">=</tspan><tspan dx="4.2" dy="0" font-size="14.0">ℓ</tspan><tspan dx="0.0" dy="5" font-size="9.8">P</tspan><tspan dx="4.2" dy="-5" font-size="14.0">− 7</tspan><tspan dx="33.6" dy="0" font-size="14.0">always one apart</tspan></text>
+<text x="40" y="332" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">n</text>
+<text x="130" y="332" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">ℓP</text>
+<text x="230" y="332" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">λ₁ (Case 1)</text>
+<text x="330" y="332" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">λ₃ (Case 3)</text>
+<text x="440" y="332" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">cost of both</text>
+<line x1="36" y1="340" x2="530" y2="340" stroke="#87A878" stroke-width="1"/>
+<text x="40" y="360" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">2</text>
+<text x="130" y="360" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">32</text>
+<text x="230" y="360" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">24</text>
+<text x="330" y="360" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">25</text>
+<text x="440" y="360" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">4</text>
+<text x="40" y="380" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">3</text>
+<text x="130" y="380" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">48</text>
+<text x="230" y="380" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">40</text>
+<text x="330" y="380" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">41</text>
+<text x="440" y="380" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">4</text>
+<text x="40" y="400" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">4</text>
+<text x="130" y="400" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">64</text>
+<text x="230" y="400" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">56</text>
+<text x="330" y="400" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">57</text>
+<text x="440" y="400" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">5</text>
+<text x="40" y="420" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">5</text>
+<text x="130" y="420" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">80</text>
+<text x="230" y="420" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">72</text>
+<text x="330" y="420" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">73</text>
+<text x="440" y="420" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">5</text>
+<text x="40" y="440" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">8</text>
+<text x="130" y="440" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">128</text>
+<text x="230" y="440" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">120</text>
+<text x="330" y="440" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">121</text>
+<text x="440" y="440" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">6</text>
+<text x="40" y="466" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">⋮   and so on for every n</text>
+<text x="580" y="306" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">why, in one line: residues mod 16</text>
+<rect x="580" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="588.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">0</text>
+<rect x="599" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="607.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">1</text>
+<rect x="618" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="626.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">2</text>
+<rect x="637" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="645.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">3</text>
+<rect x="656" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="664.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">4</text>
+<rect x="675" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="683.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">5</text>
+<rect x="694" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="702.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">6</text>
+<rect x="713" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="721.5" y="338" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">7</text>
+<rect x="732" y="320" width="17" height="26" rx="3" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2"/>
+<text x="740.5" y="338" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">8</text>
+<rect x="751" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="759.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">9</text>
+<rect x="770" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="778.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">10</text>
+<rect x="789" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="797.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">11</text>
+<rect x="808" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="816.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">12</text>
+<rect x="827" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="835.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">13</text>
+<rect x="846" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="854.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">14</text>
+<rect x="865" y="320" width="17" height="26" rx="3" fill="none" stroke="#87A878" stroke-width="1" stroke-opacity="0.5"/>
+<text x="873.5" y="338" fill="#87A878" font-size="10" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">15</text>
+<text x="580" y="364" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">λ₁ always lands on 8, because ℓP is a multiple of b = 16.</text>
+<text x="580" y="382" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">Every cost step sits at λ ≡ 55 (mod 64), and all of those are 7.</text>
+<text x="580" y="400" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">8 is never 7, so λ₁ is never the last value of a tread:</text>
+<text x="580" y="418" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">λ₁ and λ₃ = λ₁ + 1 share a tread for every n.</text>
+<text x="20" y="500" fill="#87A878" font-size="14" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="bold">So the oracle has exactly two values</text>
+<rect x="40" y="518" width="330" height="54" rx="10" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="2.5"/>
+<text x="205" y="542" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">count = 4</tspan></text>
+<text x="205" y="562" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Case 2 only: well-formed, length ≥ 2</text>
+<rect x="400" y="518" width="330" height="54" rx="10" fill="none" stroke="#87A878" stroke-width="2"/>
+<text x="565" y="542" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">count = 5</tspan></text>
+<text x="565" y="562" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">Cases 1 and 3, which nothing can tell apart</text>
+<text x="40" y="598" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">One bit per query, and it is exactly the bit Probe needs.</text>
+</svg>

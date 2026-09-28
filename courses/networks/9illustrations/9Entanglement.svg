@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="802" height="258" viewBox="19 15 802 258" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+ <marker id="asr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .hd{font-size:15px;font-weight:600}
+ .sb{font-size:12px;fill-opacity:.9}
+ .res{font-size:20px;font-weight:600}
+ .lb{font-size:12.5px;font-weight:600}
+ .cp{font-size:12.5px;fill-opacity:.9}
+ .sg{fill:#87A878}.lv{fill:#B8A9C9}
+</style>
+
+<path d="M120 150 C240 62 600 62 720 150" fill="none" stroke="#B8A9C9" stroke-width="2.4" stroke-dasharray="9 6"/>
+<text class="hd lv" x="420" y="60" text-anchor="middle">One joint state, not two independent ones</text>
+<text class="sb lv" x="420" y="80" text-anchor="middle">measuring either particle fixes the description of both, at any separation</text>
+
+<rect x="40" y="150" width="160" height="102" rx="11" fill="#87A878" fill-opacity=".14" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="120" y="180" text-anchor="middle">Alice</text>
+<text class="sb sg" x="120" y="200" text-anchor="middle">measures</text>
+
+<rect x="640" y="150" width="160" height="102" rx="11" fill="#87A878" fill-opacity=".14" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="720" y="180" text-anchor="middle">Bob</text>
+<text class="sb sg" x="720" y="200" text-anchor="middle">measures</text>
+
+<rect x="352" y="166" width="136" height="70" rx="11" fill="#B8A9C9" fill-opacity=".20" stroke="#B8A9C9" stroke-width="2"/>
+<text class="hd lv" x="420" y="196" text-anchor="middle">Pair source</text>
+<text class="sb lv" x="420" y="216" text-anchor="middle">entangled photons</text>
+
+<line x1="346" y1="201" x2="208" y2="201" stroke="#B8A9C9" stroke-width="2" marker-end="url(#al)"/>
+<line x1="494" y1="201" x2="632" y2="201" stroke="#B8A9C9" stroke-width="2" marker-end="url(#al)"/>
+<g fill="#B8A9C9" fill-opacity=".7">
+  <circle cx="300" cy="201" r="4"/><circle cx="262" cy="201" r="4"/>
+  <circle cx="540" cy="201" r="4"/><circle cx="578" cy="201" r="4"/>
+</g>
+
+</svg>

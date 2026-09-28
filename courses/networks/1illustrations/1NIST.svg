@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="448" height="494" viewBox="136 23 448 494" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<g fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2.5">
+  <circle cx="360" cy="100" r="56"/>
+  <circle cx="507" cy="185" r="56"/>
+  <circle cx="507" cy="355" r="56"/>
+  <circle cx="360" cy="440" r="56"/>
+  <circle cx="213" cy="355" r="56"/>
+  <circle cx="213" cy="185" r="56"/>
+</g>
+<g class="nd" font-size="15" text-anchor="middle">
+  <text x="360" y="106">Govern</text><text x="507" y="191">Identify</text><text x="507" y="361">Protect</text>
+  <text x="360" y="446">Detect</text><text x="213" y="361">Respond</text><text x="213" y="191">Recover</text>
+</g>
+<g stroke="#B8A9C9" stroke-width="2.4" fill="none" marker-end="url(#al)">
+  <path d="M418 110 A170 170 0 0 1 465 136"/>
+  <path d="M527 241 A170 170 0 0 1 528 294"/>
+  <path d="M469 400 A170 170 0 0 1 424 428"/>
+  <path d="M302 430 A170 170 0 0 1 255 404"/>
+  <path d="M193 299 A170 170 0 0 1 192 246"/>
+  <path d="M251 140 A170 170 0 0 1 296 112"/>
+</g>
+</svg>

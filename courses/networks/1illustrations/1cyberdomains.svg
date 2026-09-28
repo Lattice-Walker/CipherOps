@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="678" height="529" viewBox="31 31 678 529" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#ffffff}
+ .nh{font-size:16px;font-weight:600;fill:#ffffff}
+ .el{font-size:12px;fill:#ffffff}
+ .elh{font-size:12px;fill:#ffffff}
+ .note{font-size:12.5px;fill:#ffffff}
+ .nt{font-size:13px;font-weight:600;fill:#ffffff}
+</style>
+<g stroke="#87A878" stroke-width="1.6" stroke-opacity=".45">
+  <line x1="370" y1="280" x2="370" y2="118"/>
+  <line x1="370" y1="280" x2="510" y2="199"/>
+  <line x1="370" y1="280" x2="510" y2="361"/>
+  <line x1="370" y1="280" x2="370" y2="442"/>
+  <line x1="370" y1="280" x2="230" y2="361"/>
+  <line x1="370" y1="280" x2="230" y2="199"/>
+</g>
+<circle cx="370" cy="280" r="86" fill="#B8A9C9" stroke="#B8A9C9" stroke-width="2.5"/>
+<text class="nh" x="370" y="274" text-anchor="middle" font-size="17">Cybersecurity</text>
+<text class="nh" x="370" y="296" text-anchor="middle" font-size="17">domains</text>
+
+<g fill="#87A878" stroke="#87A878" stroke-width="2.5">
+  <circle cx="370" cy="118" r="66"/><circle cx="510" cy="199" r="66"/><circle cx="510" cy="361" r="66"/>
+  <circle cx="370" cy="442" r="66"/><circle cx="230" cy="361" r="66"/><circle cx="230" cy="199" r="66"/>
+</g>
+<g class="nd" font-size="14" text-anchor="middle">
+  <text x="370" y="113">Network</text><text x="370" y="131">security</text>
+  <text x="510" y="194">Application</text><text x="510" y="212">security</text>
+  <text x="510" y="356">Endpoint</text><text x="510" y="374">security</text>
+  <text x="370" y="437">Cloud</text><text x="370" y="455">security</text>
+  <text x="230" y="367">Operational</text><text x="230" y="385">security</text>
+<text x="230" y="176">Disaster</text>
+<text x="230" y="194">recovery</text>
+<text x="230" y="212">and business</text>
+<text x="230" y="230">continuity</text>
+
+</g>
+<text class="note" x="370" y="528" text-anchor="middle" fill-opacity=".85">The divisions are conventional rather than exact, and real controls routinely span several of them at once.</text>
+</svg>

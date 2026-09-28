@@ -1,0 +1,9 @@
+# HNDL CVSS Calculator
+
+[I built a small calculator for scoring TLS endpoints against harvest-now-decrypt-later](https://lattice-walker.github.io/hndl-cvss-calculator/) attacks. The article [Deprecated TLS risk assessment and post-quantum risk assessment](https://lattice-walker.github.io/CipherOps/display_articles/articles.html#article=articles%2Fgovernance%2FTLS-risk-assessment.md) mentions it when rating the severity of TLS 1.2 in AEAD mode and TLS 1.3 without post-quantum key exchange.
+
+The idea is that each endpoint gets scored twice with ordinary CVSS v4.0 vectors. The first vector covers the present-day attack on a deprecated configuration. It defaults to `AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L`, which scores 6.3. The second covers passive collection followed by decryption years later. It defaults to `AV:N/AC:L/AT:P/PR:N/UI:N/VC:H` with a High confidentiality requirement, which scores 8.2. Both are scored with FIRST's official v4.0 code, so the numbers match the FIRST calculator exactly. Exploit Maturity is locked to Not Defined on the harvest vector. Nobody has a quantum computer that can break the key exchange today, but that is the premise of the threat, and letting it lower the score would get the logic backwards.
+
+The harvest score is then scaled by a time factor built from Mosca's inequality. You enter how long the data has to stay secret, how long migration will take, and how many years you assume until a capable quantum computer exists. The gap is $G = DL + MT − QT$. If $G\leq0$, then $T=0$ and there is no exposure. Otherwise $T = min(1, G / QT)$. The final score is $max(S_dep, T\times S_harv)$, banded on the usual CVSS ranges. I used max instead of a sum on purpose, because both scores describe the same endpoint and no single attacker gets both.
+
+Because QT is a guess that people disagree about by a decade or more, the page also recomputes the result at $QT = 10$, $15$ and $20$ and marks the worst of the three. 

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1281" height="324" viewBox="1 19 1281 324" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<rect class="dev" x="100" y="52" width="210" height="62" rx="9" fill-opacity=".16"/>
+<text class="nd" x="205" y="76" text-anchor="middle" font-size="14">Access link</text>
+<text class="el" x="205" y="98" text-anchor="middle">one VLAN · untagged</text>
+<line x1="205" y1="114" x2="205" y2="214" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+
+<rect class="host" x="500" y="40" width="270" height="86" rx="9"/>
+<text class="nh" x="635" y="66" text-anchor="middle" font-size="14">Trunk link</text>
+<text class="elh" x="635" y="88" text-anchor="middle">several VLANs · tagged</text>
+<text class="elh" x="635" y="108" text-anchor="middle">native VLAN left untagged</text>
+<line x1="635" y1="126" x2="635" y2="216" stroke="#B8A9C9" stroke-width="2" marker-end="url(#al)"/>
+
+<rect class="dev" x="960" y="52" width="210" height="62" rx="9" fill-opacity=".16"/>
+<text class="nd" x="1065" y="76" text-anchor="middle" font-size="14">Access link</text>
+<text class="el" x="1065" y="98" text-anchor="middle">one VLAN · untagged</text>
+<line x1="1065" y1="114" x2="1065" y2="214" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+
+<g fill="none" stroke="#B8A9C9" stroke-width="2.2">
+  <rect x="34" y="222" width="72" height="44" rx="4"/>
+  <path d="M22 278 L34 266 L106 266 L118 278 Z"/>
+</g>
+<text class="nh" x="70" y="308" text-anchor="middle" font-size="13">End device</text>
+
+<g fill="none" stroke="#B8A9C9" stroke-width="2.2">
+  <rect x="1174" y="218" width="72" height="50" rx="4"/>
+  <line x1="1210" y1="268" x2="1210" y2="280"/><line x1="1186" y1="280" x2="1234" y2="280"/>
+</g>
+<text class="nh" x="1210" y="308" text-anchor="middle" font-size="13">End device</text>
+
+<g>
+  <rect class="dev" x="150" y="222" width="110" height="40" rx="8"/>
+  <rect class="dev" x="1010" y="222" width="110" height="40" rx="8"/>
+  <rect class="host" x="460" y="222" width="110" height="40" rx="8"/>
+  <rect class="host" x="700" y="222" width="110" height="40" rx="8"/>
+</g>
+<g font-size="12.5" text-anchor="middle">
+  <text class="nd" x="205" y="247">Access port</text><text class="nd" x="1065" y="247">Access port</text>
+  <text class="nh" x="515" y="247">Trunk port</text><text class="nh" x="755" y="247">Trunk port</text>
+</g>
+
+<g>
+  <rect class="dev" x="300" y="212" width="120" height="60" rx="8"/>
+  <rect class="dev" x="850" y="212" width="120" height="60" rx="8"/>
+</g>
+<g fill="none" stroke="#87A878" stroke-width="2" stroke-linecap="round">
+  <path d="M330 232 L390 232 M378 226 L390 232 L378 238"/>
+  <path d="M390 252 L330 252 M342 246 L330 252 L342 258"/>
+  <path d="M880 232 L940 232 M928 226 L940 232 L928 238"/>
+  <path d="M940 252 L880 252 M892 246 L880 252 L892 258"/>
+</g>
+<text class="nd" x="360" y="296" text-anchor="middle" font-size="13">Switch 1</text>
+<text class="nd" x="910" y="296" text-anchor="middle" font-size="13">Switch 2</text>
+
+<g stroke="#87A878" stroke-width="2.2">
+  <line x1="118" y1="242" x2="150" y2="242"/><line x1="260" y1="242" x2="300" y2="242"/>
+  <line x1="420" y1="242" x2="460" y2="242"/><line x1="810" y1="242" x2="850" y2="242"/>
+  <line x1="970" y1="242" x2="1010" y2="242"/><line x1="1120" y1="242" x2="1174" y2="242"/>
+</g>
+<rect x="570" y="230" width="130" height="24" rx="4" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<g stroke="#B8A9C9" stroke-width="2.4">
+  <line x1="586" y1="230" x2="586" y2="254"/><line x1="606" y1="230" x2="606" y2="254"/>
+  <line x1="626" y1="230" x2="626" y2="254"/><line x1="646" y1="230" x2="646" y2="254"/>
+  <line x1="666" y1="230" x2="666" y2="254"/><line x1="686" y1="230" x2="686" y2="254"/>
+</g>
+
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="791" height="323" viewBox="14 61 791 323" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .hd{font-size:14px;font-weight:600}
+ .st{font-size:17px;font-weight:600}
+ .val{font-size:26px;font-weight:600}
+ .pr{font-size:13px}
+ .cp{font-size:12.5px;fill-opacity:.9}
+ .sg{fill:#87A878}.lv{fill:#B8A9C9}
+</style>
+
+<text class="hd lv" x="145" y="122" text-anchor="middle">Before measurement</text>
+<rect x="35" y="140" width="220" height="106" rx="12" fill="#B8A9C9" fill-opacity=".14" stroke="#B8A9C9" stroke-width="2"/>
+<text class="st lv" x="145" y="184" text-anchor="middle">α|0⟩ + β|1⟩</text>
+<text class="cp lv" x="145" y="212" text-anchor="middle">both outcomes present</text>
+<text class="cp lv" x="145" y="230" text-anchor="middle">in one description</text>
+
+<line x1="259" y1="193" x2="322" y2="193" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+
+<rect x="328" y="140" width="150" height="106" rx="12" fill="#87A878" fill-opacity=".16" stroke="#87A878" stroke-width="2"/>
+<g stroke="#87A878" stroke-width="2" fill="none" stroke-linecap="round">
+  <path d="M373 200 A30 30 0 0 1 433 200"/>
+  <line x1="403" y1="200" x2="422" y2="180"/>
+</g>
+<text class="hd sg" x="403" y="228" text-anchor="middle">Measurement</text>
+
+<path d="M482 175 C530 175 540 128 578 118" fill="none" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<path d="M482 211 C530 211 540 258 578 268" fill="none" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+
+<rect x="584" y="82" width="200" height="76" rx="12" fill="#87A878" fill-opacity=".24" stroke="#87A878" stroke-width="2"/>
+<text class="val sg" x="628" y="132" text-anchor="middle">0</text>
+<text class="pr sg" x="712" y="120" text-anchor="middle">with probability</text>
+<text class="pr sg" x="712" y="140" text-anchor="middle">|α|²</text>
+
+<rect x="584" y="230" width="200" height="76" rx="12" fill="#B8A9C9" fill-opacity=".24" stroke="#B8A9C9" stroke-width="2"/>
+<text class="val lv" x="628" y="280" text-anchor="middle">1</text>
+<text class="pr lv" x="712" y="268" text-anchor="middle">with probability</text>
+<text class="pr lv" x="712" y="288" text-anchor="middle">|β|²</text>
+
+<path d="M684 320 C684 356 300 356 145 352" fill="none" stroke="#B8A9C9" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#al)"/>
+<g stroke="#B8A9C9" stroke-width="2.6" stroke-linecap="round">
+  <line x1="405" y1="342" x2="425" y2="362"/><line x1="425" y1="342" x2="405" y2="362"/>
+</g>
+<text class="cp lv" x="415" y="332" text-anchor="middle">no route back</text>
+
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" viewBox="0 0 560 380" role="img" aria-labelledby="t d">
+<g opacity="0">
+    <line x1="100" y1="210" x2="460" y2="210" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="136" y1="210" x2="136" y2="152" stroke="#B8A9C9" stroke-width="2"/>
+    <circle cx="136" cy="150" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <line x1="208" y1="210" x2="208" y2="152" stroke="#B8A9C9" stroke-width="2"/>
+    <circle cx="208" cy="150" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <line x1="280" y1="210" x2="280" y2="152" stroke="#B8A9C9" stroke-width="2"/>
+    <circle cx="280" cy="150" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <line x1="352" y1="210" x2="352" y2="152" stroke="#B8A9C9" stroke-width="2"/>
+    <circle cx="352" cy="150" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <line x1="424" y1="210" x2="424" y2="152" stroke="#B8A9C9" stroke-width="2"/>
+    <circle cx="424" cy="150" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <text x="280" y="340" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="27" fill="#87A878">Bus</text>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+             keyTimes="0;0.025;0.17;0.195;1" values="0;1;1;0;0" calcMode="linear"/>
+  </g>
+  <g opacity="0">
+    <line x1="280" y1="180" x2="225" y2="85" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="180" x2="335" y2="85" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="180" x2="390" y2="180" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="180" x2="335" y2="275" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="180" x2="225" y2="275" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="180" x2="170" y2="180" stroke="#B8A9C9" stroke-width="2"/>
+    <circle cx="225" cy="85" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="335" cy="85" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="390" cy="180" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="335" cy="275" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="225" cy="275" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="170" cy="180" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="280" cy="180" r="10" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <text x="280" y="340" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="27" fill="#87A878">Star</text>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+             keyTimes="0;0.2;0.225;0.37;0.395;1" values="0;0;1;1;0;0" calcMode="linear"/>
+  </g>
+  <g opacity="0">
+    <line x1="228" y1="89" x2="332" y2="89" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="332" y1="89" x2="385" y2="180" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="385" y1="180" x2="332" y2="271" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="332" y1="271" x2="228" y2="271" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="228" y1="271" x2="175" y2="180" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="175" y1="180" x2="228" y2="89" stroke="#B8A9C9" stroke-width="2"/>
+    <circle cx="228" cy="89" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="332" cy="89" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="385" cy="180" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="332" cy="271" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="228" cy="271" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="175" cy="180" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <text x="280" y="340" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="27" fill="#87A878">Ring</text>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+             keyTimes="0;0.4;0.425;0.57;0.595;1" values="0;0;1;1;0;0" calcMode="linear"/>
+  </g>
+  <g opacity="0">
+    <line x1="195" y1="105" x2="365" y2="105" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="365" y1="105" x2="365" y2="255" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="365" y1="255" x2="195" y2="255" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="195" y1="255" x2="195" y2="105" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="180" x2="195" y2="105" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="180" x2="365" y2="105" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="180" x2="365" y2="255" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="180" x2="195" y2="255" stroke="#B8A9C9" stroke-width="2"/>
+    <circle cx="195" cy="105" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="365" cy="105" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="365" cy="255" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="195" cy="255" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="280" cy="180" r="10" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <text x="280" y="340" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="27" fill="#87A878">Mesh</text>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+             keyTimes="0;0.6;0.625;0.77;0.795;1" values="0;0;1;1;0;0" calcMode="linear"/>
+  </g>
+  <g opacity="0">
+    <line x1="280" y1="92" x2="200" y2="182" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="280" y1="92" x2="360" y2="182" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="200" y1="182" x2="158" y2="272" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="200" y1="182" x2="242" y2="272" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="360" y1="182" x2="318" y2="272" stroke="#B8A9C9" stroke-width="2"/>
+    <line x1="360" y1="182" x2="402" y2="272" stroke="#B8A9C9" stroke-width="2"/>
+    <circle cx="280" cy="92" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="200" cy="182" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="360" cy="182" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="158" cy="272" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="242" cy="272" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="318" cy="272" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <circle cx="402" cy="272" r="9" fill="#87A878" stroke="#87A878" stroke-width="2"/>
+    <text x="280" y="340" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="700" font-size="27" fill="#87A878">Tree</text>
+    <animate attributeName="opacity" dur="10s" repeatCount="indefinite"
+             keyTimes="0;0.8;0.825;0.97;0.995;1" values="0;0;1;1;0;0" calcMode="linear"/>
+  </g>
+</svg>

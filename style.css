@@ -1,0 +1,1422 @@
+/* CipherOps static blog stylesheet */
+
+:root {
+  color-scheme: light;
+  --bg: #FFFFFF;
+  --fg: #000000;
+  --panel-bg: #FFFFFF;
+  --panel-border: rgba(0, 0, 0, 0.08);
+  --accent: #87A878;
+  --accent-alt: #B8A9C9;
+  --muted: rgba(0, 0, 0, 0.65);
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  --scroll-track: rgba(0, 0, 0, 0.06);
+  --scroll-thumb: #87A878;
+}
+
+body.dark {
+  color-scheme: dark;
+  --bg: #000000;
+  --fg: #FFFFFF;
+  --panel-bg: #000000;
+  --panel-border: rgba(255, 255, 255, 0.1);
+  --muted: rgba(255, 255, 255, 0.72);
+  --scroll-track: rgba(255, 255, 255, 0.08);
+  --scroll-thumb: #B8A9C9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Computer Modern", Georgia, serif;
+  font-size: 16px;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+html {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+main#main-content {
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+#article-container .article-date {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+  font-style: italic;
+}
+
+#article-container table,
+#main-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border: 3px solid var(--accent-alt);
+}
+
+#article-container th,
+#article-container td,
+#main-content th,
+#main-content td {
+  border: 1px solid var(--accent-alt);
+  padding: 0.65rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+#article-container tr:first-child > *,
+#main-content tr:first-child > * {
+  border-top-width: 3px;
+}
+
+#article-container th:first-child,
+#article-container td:first-child,
+#main-content th:first-child,
+#main-content td:first-child {
+  border-left-width: 3px;
+}
+
+#article-container th:last-child,
+#article-container td:last-child,
+#main-content th:last-child,
+#main-content td:last-child {
+  border-right-width: 3px;
+}
+
+#article-container tr:last-child > *,
+#main-content tr:last-child > * {
+  border-bottom-width: 3px;
+}
+
+/* Conteneur défilable ajouté autour de chaque tableau par render.js :
+   un tableau trop large défile sur lui-même au lieu de faire déborder
+   la page, donc la marge à droite reste identique à celle de gauche. */
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+}
+
+#article-container .table-wrap > table,
+#main-content .table-wrap > table {
+  margin: 0; /* la marge verticale est portée par le conteneur */
+}
+
+#toggle-toc {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 30;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: none;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--fg);
+  box-shadow: var(--shadow);
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-size: 1.5rem;
+}
+
+body.dark #toggle-toc {
+  background: rgba(0, 0, 0, 0.82);
+}
+
+#theme-toggle {
+  /* Toute la géométrie du switch découle de ces variables :
+     il suffit de les redéfinir dans les media queries. */
+  --toggle-w: 52px;
+  --toggle-h: 26px;
+  --thumb-size: 20px;
+  --thumb-inset: 3px;
+  --icon-size: 14px;
+
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 30;
+  width: var(--toggle-w);
+  height: var(--toggle-h);
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(120, 120, 120, 0.35);
+  cursor: pointer;
+  display: block; /* thumb et icônes sont positionnés en absolu */
+  box-shadow: var(--shadow);
+  transition: background 0.3s ease;
+}
+
+body.dark #theme-toggle {
+  background: rgba(80, 80, 80, 0.5);
+}
+
+/* ── Icônes : centrées sur les deux positions de repos du thumb ─── */
+.toggle-icon {
+  position: absolute;
+  top: 50%;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  font-size: calc(var(--icon-size) * 0.8);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  opacity: 1;
+  pointer-events: none;
+  color: #000000; /* les deux icônes en noir par défaut (light mode) */
+  z-index: 1;     /* au-dessus du thumb */
+  transition: color 0.3s ease;
+}
+
+/* Décalage = bord du thumb + (thumb − icône) / 2,
+   donc l'icône partage exactement le centre du thumb à l'arrêt. */
+.dark-icon {
+  left: calc(var(--thumb-inset) + (var(--thumb-size) - var(--icon-size)) / 2);
+}
+
+.light-icon {
+  right: calc(var(--thumb-inset) + (var(--thumb-size) - var(--icon-size)) / 2);
+}
+
+/* Dark mode : le soleil passe en blanc, la lune reste noire */
+body.dark #theme-toggle .light-icon {
+  color: #FFFFFF;
+}
+
+#theme-toggle[data-active='light'] .light-icon {
+  color: #000000;
+}
+
+/* ── Thumb : sous les icônes ─────────────────────────────────────── */
+.toggle-thumb {
+  position: absolute;
+  top: 50%;
+  left: var(--thumb-inset);
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+  z-index: 0; /* derrière les icônes */
+}
+
+body.dark .toggle-thumb {
+  background: rgba(200, 200, 200, 0.95);
+}
+
+/* Light mode → thumb à DROITE (côté soleil) */
+#theme-toggle[data-active='light'] .toggle-thumb {
+  transform: translateY(-50%)
+    translateX(calc(var(--toggle-w) - var(--thumb-size) - 2 * var(--thumb-inset)));
+}
+
+/* Dark mode → thumb à GAUCHE (côté lune) */
+#theme-toggle[data-active='dark'] .toggle-thumb {
+  transform: translateY(-50%) translateX(0px);
+}
+
+#toggle-toc {
+  left: 1rem;
+  top: 1rem;
+  display: none;
+}
+
+#toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  min-width: 240px;
+  height: 100vh;
+  background: var(--panel-bg);
+  border-right: 1px solid var(--panel-border);
+  overflow-y: auto;
+  padding: 0rem 1.5rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 20;
+}
+
+#toc.toc-open {
+  transform: translateX(0);
+}
+
+#main-content {
+  margin-left: 20vw;
+  padding: 2rem 0rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  #toc {
+    width: 100%;
+    min-width: auto;
+    transform: translateX(-100%);
+  }
+
+  #toc.toc-open {
+    transform: translateX(0);
+  }
+
+  #main-content {
+    margin-left: 0;
+    padding: 1.5rem 1rem;
+  }
+
+  #toggle-toc {
+    display: grid;
+  }
+}
+
+#toc-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+#toc-panel::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+
+#toc-panel::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 999px;
+}
+
+#toc-panel::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-alt);
+}
+
+.toc-header {
+  margin: 0 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toc-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.toc-category {
+  margin-bottom: 1.25rem;
+}
+
+.toc-category-header {
+  width: 100%;
+  text-align: left;
+  padding: 0rem 0;
+  font-weight: 700;
+  color: var(--fg);
+  display: block;
+}
+
+.toc-category-header:hover,
+.toc-category-header:focus-visible {
+  color: var(--accent);
+}
+
+/* Flèche : vrai élément (et non ::after), les pseudo-éléments de
+   <button> ne se laissent pas transformer de façon fiable sur mobile. */
+.toc-category-arrow {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1;
+  text-align: center;
+  transform-origin: 50% 50%;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.toc-category[aria-expanded="false"] .toc-category-arrow,
+.toc-category.collapsed .toc-category-arrow {
+  transform: rotate(-90deg);
+}
+
+.toc-article-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.75rem;
+  max-height: 999px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.toc-category[aria-expanded="false"] .toc-article-list {
+  max-height: 0;
+}
+
+.toc-article-item {
+  margin-bottom: 0.85rem;
+}
+
+.toc-article-list .toc-article-item:last-child {
+  margin-bottom: 0;
+}
+
+.toc-article {
+  display: block;
+  padding: 0.5rem 0.35rem;
+  border-radius: 0.65rem;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toc-article:hover,
+.toc-article:focus-visible {
+  background: rgba(184, 169, 201, 0.12);
+  color: var(--accent-alt);
+}
+
+/* Article actuellement affiché : lavande franche + barre latérale,
+   nettement plus marqué que le simple survol. */
+.toc-article.active,
+.toc-article.active:hover,
+.toc-article.active:focus-visible {
+  background: rgba(184, 169, 201, 0.28);
+  color: var(--accent-alt);
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 var(--accent-alt);
+}
+
+.article-meta {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+#landing {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#bg-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#landing-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(184, 169, 201, 0.16), transparent 32%),
+    radial-gradient(circle at top left, rgba(135, 168, 120, 0.15), transparent 28%);
+}
+
+#landing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: min(90%, 720px);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.landing-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.landing-title,
+.landing-author,
+.landing-description {
+  position: relative;
+  z-index: 2;
+}
+
+.landing-title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(4rem, 6vw, 6rem);
+  letter-spacing: -0.04em;
+  color: #87A878;
+}
+
+body.dark .landing-title {
+  color: #87A878;
+}
+
+.landing-author {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #B8A9C9;
+}
+
+body.dark .landing-author {
+  color: #B8A9C9;
+}
+
+.landing-description {
+  position: relative;
+  margin: 0 auto;
+  max-width: 620px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #000000;
+  z-index: 2;
+}
+
+body.dark .landing-description {
+  color: #FFFFFF;
+}
+
+/* ── Carte du texte d'accueil ─────────────────────────────────────── */
+/* Le texte repose sur un panneau opaque bordé de lavande plutôt que sur
+   trois halos flous. La largeur suit le texte (fit-content, plafonné par
+   le max-width de .landing-description), donc la carte tient sur un
+   téléphone sans défilement horizontal. Les trois boutons restent en
+   dehors : l'animation passe librement derrière eux. */
+.landing-text {
+  width: fit-content;
+  margin-inline: auto;
+  padding: 2.25rem 1.5rem;
+  border-radius: 22px;
+  background: var(--bg);
+  border: 1px solid rgba(184, 169, 201, 0.75);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .landing-text {
+  border-color: rgba(184, 169, 201, 0.6);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* ── Footer inside #landing only ────────────────────────────────── */
+#landing #contact-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 1rem 0;
+  max-width: 100%;
+  background: var(--bg);
+  border-top: 1px solid var(--panel-border);
+}
+
+/* ── Footer everywhere else ──────────────────────────────────────── */
+#contact-section {
+  position: static;
+  margin: 2rem auto 0;
+  padding: 1.5rem 0;
+  max-width: 720px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--muted);
+  background: var(--bg);
+}
+
+#contact-section a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact-section a:hover,
+#contact-section a:focus-visible {
+  color: var(--accent-alt);
+}
+
+/* Sur téléphone, le contact et le GitHub passent sur deux lignes
+   plutôt que d'être séparés par un point médian. */
+@media (max-width: 768px) {
+  #contact-section .contact-item {
+    display: block;
+  }
+
+  #contact-section .contact-sep {
+    display: none;
+  }
+}
+
+#article-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 0 0;
+  background: transparent;
+  color: var(--fg);
+  width: 100%;
+  min-height: 60vh;
+  display: none;
+  opacity: 1;
+  position: relative;
+  overflow: visible;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease !important;
+}
+
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#article-container h4,
+#article-container h5,
+#article-container h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+#article-container h1 {
+  color: var(--accent);
+}
+
+#article-container h2,
+#article-container h3,
+#article-container h4,
+#article-container h5,
+#article-container h6 {
+  color: var(--accent-alt);
+}
+
+#article-container h1 {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+#article-container h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+#article-container p {
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+#article-container img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+}
+
+/* ── Animated figures: discreet play/pause control ─────────────────── */
+
+#article-container figure.anim-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 1.5rem 0;
+}
+
+#article-container figure.anim-figure img {
+  margin: 0;
+}
+
+#article-container .anim-toggle {
+  align-self: flex-end;
+  margin-top: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  font: inherit;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 0.4rem;
+  opacity: 0.45;
+  cursor: pointer;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+#article-container figure.anim-figure:hover .anim-toggle,
+#article-container .anim-toggle:hover,
+#article-container .anim-toggle:focus-visible {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* Readers who ask for reduced motion get the control at full strength, since
+   for them it is the way back to the animation rather than a way out of it. */
+@media (prefers-reduced-motion: reduce) {
+  #article-container .anim-toggle { opacity: 1; }
+}
+
+#article-container a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.16em;
+}
+
+#article-container a:hover,
+#article-container a:focus-visible {
+  color: var(--accent-alt);
+}
+
+#article-container code {
+  color: inherit;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: 'Courier New', monospace;
+}
+
+#article-container pre {
+  background: transparent;
+  border: 1px solid var(--accent-alt);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+#article-container pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+#article-container ul,
+#article-container ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+#article-container li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+.article-shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  background: transparent;
+  color: var(--fg);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  opacity: 1;
+}
+
+.article-shell.hidden {
+  opacity: 0;
+}
+
+.article-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.article-date {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.article-body {
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--panel-border);
+  margin: 2rem 0;
+}
+
+#article-container h1,
+#article-container h2,
+#article-container p,
+#article-container table {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #toc-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    transform: translateX(-100%);
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.3);
+    z-index: 40;
+  }
+
+  #toc-panel.open {
+    transform: translateX(0);
+  }
+
+  #content-panel {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  #toggle-toc {
+    display: grid;
+  }
+
+  /* Tableaux : sur un écran étroit, cellules resserrées, formules un peu
+     réduites et coupure des mots autorisée (césure d'abord, coupure brute
+     en dernier recours) pour que le tableau tienne dans la largeur de la
+     page au lieu de déborder. */
+  #article-container th,
+  #article-container td,
+  #main-content th,
+  #main-content td {
+    padding: 0.3rem 0.35rem;
+    font-size: 0.8rem;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: anywhere;
+  }
+
+  /* MathJax pose un font-size en style inline : !important est nécessaire. */
+  #article-container th mjx-container,
+  #article-container td mjx-container,
+  #main-content th mjx-container,
+  #main-content td mjx-container {
+    font-size: 85% !important;
+  }
+
+  /* Retrait de citation divisé par deux (défaut navigateur : 40px) et
+     aucun retrait à droite : la citation s'aligne sur le texte courant. */
+  #article-container blockquote,
+  #main-content blockquote {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  /* Seules les variables changent : le centrage lune/soleil suit. */
+  #theme-toggle {
+    --toggle-w: 32px;
+    --toggle-h: 16px;
+    --thumb-size: 12px;
+    --thumb-inset: 2px;
+    --icon-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #toggle-toc {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Écrans très étroits : les formules d'un tableau ne pouvant pas être
+     coupées, on les réduit un peu plus pour que le tableau tienne encore. */
+  #article-container th mjx-container,
+  #article-container td mjx-container,
+  #main-content th mjx-container,
+  #main-content td mjx-container {
+    font-size: 78% !important;
+  }
+
+  #theme-toggle {
+    --toggle-w: 30px;
+    --toggle-h: 15px;
+    --thumb-size: 11px;
+    --thumb-inset: 2px;
+    --icon-size: 9px;
+  }
+
+  .landing-title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+}
+
+/* ── Article hex decorations ─────────────────────────────────────── */
+
+@keyframes hexFloat {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes hexFloatAlt {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-7px); }
+  100% { transform: translateY(0px); }
+}
+
+.article-hex {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+body.dark .article-hex {
+  opacity: 0.7;
+}
+
+.article-hex-tl-1 {
+  top: -18px;
+  left: -88px;
+  animation: hexFloat 6s ease-in-out infinite;
+}
+.article-hex-tl-2 {
+  top: 42px;
+  left: -44px;
+  animation: hexFloatAlt 7.5s ease-in-out infinite 0.8s;
+}
+
+.article-hex-tr-1 {
+  top: -18px;
+  right: -88px;
+  animation: hexFloat 6.8s ease-in-out infinite 0.4s;
+}
+.article-hex-tr-2 {
+  top: 42px;
+  right: -44px;
+  animation: hexFloatAlt 7s ease-in-out infinite 1.2s;
+}
+
+@media (max-width: 960px) {
+  .article-hex {
+    display: none;
+  }
+}
+
+/* ── Article layout wrapper ──────────────────────────────────────── */
+
+#article-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+#article-container {
+  flex: 1;
+  margin: auto;
+  min-width: 0;
+}
+
+/* ── Right in-article TOC ────────────────────────────────────────── */
+
+#article-toc {
+  display: none;
+  flex-shrink: 0;
+  width: clamp(160px, 16vw, 220px);
+  position: sticky;
+  top: 4rem;
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  padding: 0.75rem 0 0.75rem 1rem;
+  border-left: 2px solid var(--panel-border);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) transparent;
+  margin: 0;
+}
+
+#article-toc::-webkit-scrollbar { width: 4px; }
+#article-toc::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 999px;
+}
+
+.article-toc-title {
+  margin: 0 0 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.article-toc-h2 {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 0.35rem;
+  padding: 0.2rem 0.4rem;
+  color: var(--fg);
+  text-decoration: none;
+  border-radius: 0.3rem;
+  border-left: 2px solid transparent;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.article-toc-h3 {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.45;
+  margin-bottom: 0.3rem;
+  padding: 0.15rem 0.4rem 0.15rem 1.1rem;
+  color: var(--fg);
+  text-decoration: none;
+  border-radius: 0.3rem;
+  border-left: 2px solid transparent;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.article-toc-h2:hover {
+  color: var(--accent);
+  background: rgba(135, 168, 120, 0.08);
+}
+
+.article-toc-h3:hover {
+  color: var(--accent-alt);
+  background: rgba(184, 169, 201, 0.08);
+}
+
+.article-toc-h2.toc-active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  background: rgba(135, 168, 120, 0.1);
+}
+
+.article-toc-h3.toc-active {
+  color: var(--accent-alt);
+  border-left-color: var(--accent-alt);
+  background: rgba(184, 169, 201, 0.08);
+}
+
+@media (max-width: 1100px) {
+  #article-toc {
+    display: none !important;
+  }
+
+  #article-layout {
+    padding-right: 0;
+  }
+}
+
+/* ── Sidebar logo ─────────────────────────────────────────────────── */
+
+#sidebar-logo {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+#sidebar-logo img {
+  width: 75%;
+  height: auto;
+}
+
+#logo-dark-img  { display: none; }
+#logo-light-img { display: block; }
+
+body.dark #logo-dark-img  { display: block; }
+body.dark #logo-light-img { display: none; }
+
+/* ── 21/07/2026 11:00 ─────────────────────────────────────────────── */
+
+.landing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.landing-articles-btn,
+.landing-courses-btn {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  background: #87A878;
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 18px rgba(135, 168, 120, 0.35);
+}
+
+.landing-articles-btn:hover,
+.landing-articles-btn:focus-visible,
+.landing-courses-btn:hover,
+.landing-courses-btn:focus-visible {
+  background: #B8A9C9;
+  transform: translateY(-2px);
+}
+
+body.dark .landing-articles-btn,
+body.dark .landing-courses-btn {
+  color: #000000;
+}
+
+#articles-landing {
+  max-width: 720px;
+  width: 100%;
+  /* Auto margins on all sides centre the block vertically in the space
+     left above the footer, and horizontally within #main-content. */
+  margin: auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.articles-page-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.articles-page-description,
+.articles-page-description-it {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* Accroche en italique, placée au-dessus de la description. */
+.articles-page-description-it {
+  font-style: italic;
+  color: var(--accent-alt)
+}
+
+/* ── Page de contact ──────────────────────────────────────────────── */
+/* La page reprend l'ossature du landing : #landing porte le canvas animé,
+   .landing-overlay centre le panneau, #contact-section se cale en bas.
+   Tout est dimensionné pour tenir dans la fenêtre sans défilement, d'où
+   le formulaire sur deux colonnes et le widget Turnstile posé à côté du
+   bouton plutôt qu'au-dessus. */
+
+#landing.contact-view {
+  height: 100dvh;
+  min-height: 0;
+}
+
+/* Le padding bas réserve la place du footer absolu : le panneau se centre
+   dans l'espace restant au lieu de passer dessous. */
+.contact-view .landing-overlay {
+  padding: 1rem 1rem 4.5rem;
+  align-content: center;
+}
+
+#contact-panel {
+  position: relative;
+  z-index: 2;
+  width: min(94vw, 700px);
+  max-height: 100%;
+  padding: 1.75rem;
+  text-align: left;
+  background: var(--bg);
+  border: 1px solid rgba(184, 169, 201, 0.75);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.1);
+}
+
+body.dark #contact-panel {
+  border-color: rgba(184, 169, 201, 0.6);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* ── En-tête : logo à gauche, texte à droite ─────────────────────── */
+/* align-items:stretch donne au logo la hauteur exacte du bloc de texte,
+   et le logo étant carré, sa largeur suit. */
+.contact-header {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Le logo est sorti du flux (position:absolute) pour que sa hauteur propre
+   ne gonfle pas la ligne : c'est le bloc de texte qui fixe la hauteur et le
+   logo s'y étire. La largeur ne peut pas se déduire d'aspect-ratio en
+   flexbox (la taille principale est calculée avant l'étirement), donc le
+   script la recopie depuis la hauteur du texte. Cette valeur sert de repli
+   si le script ne tourne pas. */
+.contact-logo {
+  position: relative;
+  flex: 0 0 auto;
+  align-self: stretch;
+  width: var(--contact-logo-size, 7.4rem);
+}
+
+.contact-logo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-intro {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.contact-intro .articles-page-title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+}
+
+.contact-intro .articles-page-description,
+.contact-intro .articles-page-description-it {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-intro .articles-page-description {
+  margin-bottom: 0;
+}
+
+/* ── Formulaire ───────────────────────────────────────────────────── */
+/* Nom et courriel se partagent la première ligne ; le message et la ligne
+   d'actions occupent toute la largeur. */
+#contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem 1rem;
+  align-items: start;
+}
+
+#contact-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+#contact-form .field-wide,
+#contact-form .form-actions,
+#contact-status {
+  grid-column: 1 / -1;
+}
+
+#contact-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--fg);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 0.55rem 0.7rem;
+  transition: border-color 0.3s ease;
+}
+
+#contact-form input:hover,
+#contact-form textarea:hover {
+  border-color: var(--accent-alt);
+}
+
+#contact-form input:focus-visible,
+#contact-form textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+#contact-form textarea {
+  resize: vertical;
+  height: clamp(4.5rem, 16vh, 8rem);
+  line-height: 1.5;
+}
+
+#contact-form .hint {
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+/* Honeypot : hors écran plutôt que display:none, que certains bots détectent. */
+#contact-form .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* La hauteur réservée évite que la ligne ne saute quand le widget arrive. */
+.form-actions .cf-turnstile {
+  min-height: 65px;
+}
+
+#submit-btn {
+  padding: 0.7rem 2rem;
+  background: #87A878;
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 18px rgba(135, 168, 120, 0.35);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#submit-btn:hover:not(:disabled),
+#submit-btn:focus-visible:not(:disabled) {
+  background: #B8A9C9;
+  transform: translateY(-2px);
+}
+
+body.dark #submit-btn {
+  color: #000000;
+}
+
+#submit-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+#contact-status {
+  margin: 0.2rem 0 0;
+  min-height: 1.4em;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+#contact-status.error {
+  color: #9B2C2C;
+}
+
+body.dark #contact-status.error {
+  color: #E88B8B;
+}
+
+#contact-status.success {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Sous une certaine hauteur, ou sur téléphone, le contenu ne peut plus
+   tenir dans la fenêtre : on rend alors le défilement à la page plutôt
+   que de rogner le formulaire. */
+@media (max-height: 660px), (max-width: 768px) {
+  #landing.contact-view {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .contact-view .landing-overlay {
+    position: relative;
+    inset: auto;
+    padding: 4.5rem 1rem 2rem;
+  }
+
+  .contact-view #contact-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact-panel {
+    padding: 1.25rem;
+  }
+
+  .contact-header {
+    gap: 1rem;
+  }
+
+  .contact-logo {
+    max-width: 110px;
+  }
+
+  .contact-intro .articles-page-description,
+  .contact-intro .articles-page-description-it {
+    font-size: 0.95rem;
+  }
+
+  #contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    justify-content: center;
+  }
+
+  #submit-btn {
+    width: 100%;
+  }
+}

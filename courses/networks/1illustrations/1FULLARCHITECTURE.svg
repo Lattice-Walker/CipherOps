@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="873" height="358" viewBox="0 9 873 358" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<rect class="host" x="540" y="30" width="120" height="46" rx="7"/>
+<text class="nh" x="600" y="59" text-anchor="middle" font-size="15">Laptop</text>
+<rect class="host" x="540" y="108" width="120" height="46" rx="7"/>
+<text class="nh" x="600" y="137" text-anchor="middle" font-size="15">Phone</text>
+
+<rect class="dev" x="720" y="90" width="132" height="50" rx="8"/>
+<text class="nd" x="786" y="121" text-anchor="middle" font-size="15">Access point</text>
+<path d="M720 106 C696 90 680 66 666 54" fill="none" stroke="#B8A9C9" stroke-width="2" marker-end="url(#al)"/>
+<path d="M720 126 C696 130 680 130 666 131" fill="none" stroke="#B8A9C9" stroke-width="2" marker-end="url(#al)"/>
+<text class="elh" x="700" y="76" text-anchor="middle" font-size="11">Wi-Fi</text>
+<text class="elh" x="700" y="152" text-anchor="middle" font-size="11">Wi-Fi</text>
+
+<line x1="786" y1="190" x2="786" y2="146" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<text class="el" x="798" y="172" font-size="11">wired</text>
+
+<rect class="ext" x="10" y="190" width="96" height="50" rx="8"/>
+<text class="nh" x="58" y="221" text-anchor="middle" font-size="14">Internet</text>
+<rect class="dev" x="192" y="190" width="96" height="50" rx="8"/>
+<text class="nd" x="240" y="221" text-anchor="middle" font-size="14">Modem</text>
+<rect class="dev" x="374" y="190" width="96" height="50" rx="8"/>
+<text class="nd" x="422" y="221" text-anchor="middle" font-size="14">Firewall</text>
+<rect class="dev" x="556" y="190" width="96" height="50" rx="8"/>
+<text class="nd" x="604" y="221" text-anchor="middle" font-size="14">Router</text>
+<rect class="dev" x="738" y="190" width="96" height="50" rx="8"/>
+<text class="nd" x="786" y="221" text-anchor="middle" font-size="14">Switch</text>
+
+<g stroke="#87A878" stroke-width="2" marker-end="url(#as)">
+  <line x1="106" y1="215" x2="186" y2="215"/>
+  <line x1="288" y1="215" x2="368" y2="215"/>
+  <line x1="470" y1="215" x2="550" y2="215"/>
+  <line x1="652" y1="215" x2="732" y2="215"/>
+</g>
+<g class="el" font-size="11" text-anchor="middle">
+  <text x="146" y="207">line signal</text>
+  <text x="328" y="207">digital signal</text>
+  <text x="510" y="193">filtered</text>
+  <text x="510" y="207">traffic</text>
+  <text x="692" y="193">layer 3</text>
+  <text x="692" y="207">routing</text>
+</g>
+
+
+<line x1="786" y1="240" x2="786" y2="296" stroke="#B8A9C9" stroke-width="2" marker-end="url(#al)"/>
+<path d="M746 240 C700 276 660 290 624 296" fill="none" stroke="#B8A9C9" stroke-width="2" marker-end="url(#al)"/>
+<text class="elh" x="640" y="266" text-anchor="end" font-size="11">layer 2 forwarding</text>
+<rect class="host" x="738" y="300" width="96" height="46" rx="7"/>
+<text class="nh" x="786" y="329" text-anchor="middle" font-size="15">PC1</text>
+<rect class="host" x="514" y="300" width="96" height="46" rx="7"/>
+<text class="nh" x="562" y="329" text-anchor="middle" font-size="15">PC2</text>
+
+</svg>

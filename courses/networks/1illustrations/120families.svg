@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1281" height="552" viewBox="0 4 1281 552" role="img" aria-labelledby="t d">
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .nd{font-weight:600;fill:#87A878}
+ .nh{font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .note{font-size:12.5px;fill:#B8A9C9}
+</style>
+<polygon points="10,110 60.0,25 160.0,25 210,110 160.0,195 60.0,195" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="110" y="70" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">AC</text>
+<text x="110" y="94" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Access Control</text>
+<polygon points="10,280 60.0,195 160.0,195 210,280 160.0,365 60.0,365" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="110" y="240" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">AT</text>
+<text x="110" y="264" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Awareness and Training</text>
+<polygon points="10,450 60.0,365 160.0,365 210,450 160.0,535 60.0,535" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="110" y="410" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">AU</text>
+<text x="110" y="434" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Audit and</text>
+<text x="110" y="450" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Accountability</text>
+<polygon points="160,195 210.0,110 310.0,110 360,195 310.0,280 210.0,280" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<text x="260" y="155" text-anchor="middle" font-size="17" font-weight="600" fill="#B8A9C9">CA</text>
+<text x="260" y="179" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Assessment,</text>
+<text x="260" y="195" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Authorization and</text>
+<text x="260" y="211" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Monitoring</text>
+<polygon points="160,365 210.0,280 310.0,280 360,365 310.0,450 210.0,450" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<text x="260" y="325" text-anchor="middle" font-size="17" font-weight="600" fill="#B8A9C9">CM</text>
+<text x="260" y="349" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Configuration</text>
+<text x="260" y="365" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Management</text>
+<polygon points="310,110 360.0,25 460.0,25 510,110 460.0,195 360.0,195" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="410" y="70" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">CP</text>
+<text x="410" y="94" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Contingency Planning</text>
+<polygon points="310,280 360.0,195 460.0,195 510,280 460.0,365 360.0,365" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="410" y="240" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">IA</text>
+<text x="410" y="264" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Identification and</text>
+<text x="410" y="280" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Authentication</text>
+<polygon points="310,450 360.0,365 460.0,365 510,450 460.0,535 360.0,535" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="410" y="410" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">IR</text>
+<text x="410" y="434" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Incident Response</text>
+<polygon points="460,195 510.0,110 610.0,110 660,195 610.0,280 510.0,280" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<text x="560" y="155" text-anchor="middle" font-size="17" font-weight="600" fill="#B8A9C9">MA</text>
+<text x="560" y="179" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Maintenance</text>
+<polygon points="460,365 510.0,280 610.0,280 660,365 610.0,450 510.0,450" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<text x="560" y="325" text-anchor="middle" font-size="17" font-weight="600" fill="#B8A9C9">MP</text>
+<text x="560" y="349" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Media Protection</text>
+<polygon points="610,110 660.0,25 760.0,25 810,110 760.0,195 660.0,195" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="710" y="70" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">PE</text>
+<text x="710" y="94" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Physical and</text>
+<text x="710" y="110" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Environmental</text>
+<text x="710" y="126" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Protection</text>
+<polygon points="610,280 660.0,195 760.0,195 810,280 760.0,365 660.0,365" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="710" y="240" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">PL</text>
+<text x="710" y="264" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Planning</text>
+<polygon points="610,450 660.0,365 760.0,365 810,450 760.0,535 660.0,535" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="710" y="410" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">PM</text>
+<text x="710" y="434" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Program Management</text>
+<polygon points="760,195 810.0,110 910.0,110 960,195 910.0,280 810.0,280" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<text x="860" y="155" text-anchor="middle" font-size="17" font-weight="600" fill="#B8A9C9">PS</text>
+<text x="860" y="179" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Personnel Security</text>
+<polygon points="760,365 810.0,280 910.0,280 960,365 910.0,450 810.0,450" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<text x="860" y="325" text-anchor="middle" font-size="17" font-weight="600" fill="#B8A9C9">PT</text>
+<text x="860" y="349" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">PII Processing and</text>
+<text x="860" y="365" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Transparency</text>
+<polygon points="910,110 960.0,25 1060.0,25 1110,110 1060.0,195 960.0,195" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="1010" y="70" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">RA</text>
+<text x="1010" y="94" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Risk Assessment</text>
+<polygon points="910,280 960.0,195 1060.0,195 1110,280 1060.0,365 960.0,365" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="1010" y="240" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">SA</text>
+<text x="1010" y="264" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">System and Services</text>
+<text x="1010" y="280" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Acquisition</text>
+<polygon points="910,450 960.0,365 1060.0,365 1110,450 1060.0,535 960.0,535" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text x="1010" y="410" text-anchor="middle" font-size="17" font-weight="600" fill="#87A878">SC</text>
+<text x="1010" y="434" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">System and</text>
+<text x="1010" y="450" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Communications</text>
+<text x="1010" y="466" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".95">Protection</text>
+<polygon points="1060,195 1110.0,110 1210.0,110 1260,195 1210.0,280 1110.0,280" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<text x="1160" y="155" text-anchor="middle" font-size="17" font-weight="600" fill="#B8A9C9">SI</text>
+<text x="1160" y="179" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">System and Information</text>
+<text x="1160" y="195" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Integrity</text>
+<polygon points="1060,365 1110.0,280 1210.0,280 1260,365 1210.0,450 1110.0,450" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2"/>
+<text x="1160" y="325" text-anchor="middle" font-size="17" font-weight="600" fill="#B8A9C9">SR</text>
+<text x="1160" y="349" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Supply Chain Risk</text>
+<text x="1160" y="365" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".95">Management</text>
+</svg>

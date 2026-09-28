@@ -1,0 +1,17 @@
+name = "contact-form"
+main = "src/index.js"
+compatibility_date = "2026-09-24"
+
+[vars]
+# The exact origin of your GitHub Pages site, with no trailing slash.
+ALLOWED_ORIGIN = "https://lattice-walker.github.io"
+
+# Without a verified domain, Resend only sends from this shared address, and
+# only to your own account email — which is exactly what a contact form needs.
+# Once you verify a domain, change this to something like "form@yourdomain.com".
+FROM_EMAIL = "onboarding@resend.dev"
+
+# Secrets are NOT set here. Set them with `wrangler secret put`:
+#   TO_EMAIL          your destination address
+#   RESEND_API_KEY    from resend.com/api-keys
+#   TURNSTILE_SECRET  from the Turnstile dashboard

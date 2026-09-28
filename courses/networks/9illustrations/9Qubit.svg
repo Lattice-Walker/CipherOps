@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="688" height="428" viewBox="69 12 688 428" role="img" aria-labelledby="t d">
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .pt{font-size:17px;font-weight:600}
+ .val{font-size:30px;font-weight:600}
+ .cp{font-size:12.5px;fill-opacity:.9}
+ .ket{font-size:16px;font-weight:600}
+ .eq{font-size:15px}
+ .sg{fill:#87A878}.lv{fill:#B8A9C9}
+</style>
+
+<text class="pt sg" x="200" y="58" text-anchor="middle">Classical bit</text>
+
+<rect x="90" y="190" width="86" height="72" rx="10" fill="#87A878" fill-opacity=".28" stroke="#87A878" stroke-width="2.2"/>
+<text class="val sg" x="133" y="238" text-anchor="middle">0</text>
+<rect x="224" y="190" width="86" height="72" rx="10" fill="none" stroke="#87A878" stroke-width="2.2" stroke-dasharray="6 5"/>
+<text class="val sg" x="267" y="238" text-anchor="middle" fill-opacity=".45">1</text>
+
+
+<text class="cp sg" x="200" y="134" text-anchor="middle">one or the other, never both</text>
+
+<text class="cp sg" x="200" y="300" text-anchor="middle">A bit is in exactly one of two states</text>
+<text class="cp sg" x="200" y="320" text-anchor="middle">at every moment, and reading it</text>
+<text class="cp sg" x="200" y="340" text-anchor="middle">leaves that state untouched.</text>
+
+
+<text class="pt lv" x="600" y="58" text-anchor="middle">Qubit</text>
+
+<circle cx="600" cy="215" r="102" fill="#B8A9C9" fill-opacity=".09" stroke="#B8A9C9" stroke-width="2"/>
+<ellipse cx="600" cy="215" rx="102" ry="32" fill="none" stroke="#B8A9C9" stroke-width="1.6" stroke-dasharray="6 5"/>
+<line x1="600" y1="98" x2="600" y2="332" stroke="#87A878" stroke-width="1.4" stroke-opacity=".55"/>
+<line x1="486" y1="215" x2="714" y2="215" stroke="#87A878" stroke-width="1.4" stroke-opacity=".4" stroke-dasharray="5 5"/>
+
+<text class="ket lv" x="600" y="90" text-anchor="middle">|0⟩</text>
+<text class="ket lv" x="600" y="356" text-anchor="middle">|1⟩</text>
+
+<line x1="600" y1="215" x2="670" y2="146" stroke="#87A878" stroke-width="3" stroke-linecap="round"/>
+<circle cx="670" cy="146" r="6.5" fill="#87A878"/>
+<path d="M600 175 A40 40 0 0 1 628 187" fill="none" stroke="#87A878" stroke-width="1.6"/>
+<text class="cp sg" x="625" y="172">θ</text>
+<text class="ket sg" x="684" y="140">|ψ⟩</text>
+
+<text class="eq lv" x="600" y="384" text-anchor="middle">|ψ⟩ = α|0⟩ + β|1⟩</text>
+<text class="cp lv" x="600" y="406" text-anchor="middle">any point on the surface, with |α|² + |β|² = 1</text>
+</svg>

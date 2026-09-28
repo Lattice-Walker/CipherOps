@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="474" height="287" viewBox="43 23 474 287" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0.6 L10,5 L0,9.4 Z" fill="#B8A9C9"/></marker>
+ <marker id="b" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ .lbl{font-family:'Latin Modern Roman','Georgia',serif;font-style:italic;font-weight:600;fill:#B8A9C9}
+ .lblu{font-family:'Latin Modern Roman','Georgia',serif;font-weight:700;fill:#B8A9C9}
+ .w{font-family:'Latin Modern Roman','Georgia',serif;font-size:17px;fill:#B8A9C9;fill-opacity:.95}
+</style>
+<line x1="116" y1="70" x2="439" y2="70" stroke="#B8A9C9" stroke-width="2.2" marker-end="url(#a)"/>
+<text class="w" x="280" y="58" text-anchor="middle">4</text>
+<line x1="90" y1="96" x2="90" y2="219" stroke="#B8A9C9" stroke-width="2.2" marker-end="url(#a)"/>
+<text class="w" x="72" y="164" text-anchor="middle">2</text>
+<line x1="113" y1="239" x2="442" y2="83" stroke="#B8A9C9" stroke-width="2.2" marker-end="url(#a)"/>
+<text class="w" x="294" y="152" text-anchor="middle">1</text>
+<line x1="470" y1="96" x2="470" y2="219" stroke="#B8A9C9" stroke-width="2.2" marker-end="url(#a)"/>
+<text class="w" x="488" y="164" text-anchor="middle">5</text>
+<line x1="116" y1="250" x2="439" y2="250" stroke="#B8A9C9" stroke-width="2.2" marker-end="url(#a)"/>
+<text class="w" x="280" y="276" text-anchor="middle">3</text>
+<circle cx="90" cy="70" r="26" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="90" y="78" text-anchor="middle" font-size="22">A</text>
+<circle cx="470" cy="70" r="26" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="470" y="78" text-anchor="middle" font-size="22">B</text>
+<circle cx="90" cy="250" r="26" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="90" y="258" text-anchor="middle" font-size="22">D</text>
+<circle cx="470" cy="250" r="26" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="470" y="258" text-anchor="middle" font-size="22">C</text>
+</svg>

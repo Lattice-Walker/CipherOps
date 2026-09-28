@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="816" height="369" viewBox="4 0 816 369" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<rect class="dim" x="600" y="16" width="206" height="118" rx="9"/>
+<text class="nt" x="703" y="42" text-anchor="middle">MAC address table</text>
+<text class="note" x="703" y="66" text-anchor="middle">Fa0/1 → PC1</text>
+<text class="note" x="703" y="88" text-anchor="middle">Fa0/2 → PC2</text>
+<text class="note" x="703" y="110" text-anchor="middle">Fa0/3 → PC3</text>
+
+<rect class="host" x="225" y="20" width="150" height="48" rx="7"/>
+<text class="nh" x="300" y="50" text-anchor="middle">PC1</text>
+<line x1="300" y1="68" x2="300" y2="146" stroke="#B8A9C9" stroke-width="2" marker-end="url(#al)"/>
+<text class="elh" x="312" y="102">Fa0 → Fa0/1</text>
+<text class="elh" x="312" y="118">frame in</text>
+
+<rect class="dev" x="235" y="150" width="130" height="52" rx="7"/>
+<text class="nd" x="300" y="182" text-anchor="middle">Switch</text>
+
+<line x1="268" y1="202" x2="104" y2="294" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<line x1="300" y1="202" x2="300" y2="294" stroke="#87A878" stroke-width="2" stroke-opacity=".35"/>
+<line x1="332" y1="202" x2="496" y2="294" stroke="#87A878" stroke-width="2" stroke-opacity=".35"/>
+
+<text class="el" x="170" y="232" text-anchor="end">Fa0/2 → Fa0</text>
+<text class="el" x="170" y="248" text-anchor="end">forwarded</text>
+<text class="el" x="310" y="240" fill-opacity=".55">Fa0/3 → Fa0</text>
+<text class="el" x="310" y="256" fill-opacity=".55">inactive</text>
+<text class="el" x="572" y="240" text-anchor="end" fill-opacity=".55">Fa0/4 → Fa0</text>
+<text class="el" x="572" y="256" text-anchor="end" fill-opacity=".55">inactive</text>
+
+<rect class="host" x="25" y="300" width="150" height="48" rx="7"/>
+<text class="nh" x="100" y="330" text-anchor="middle">PC2</text>
+<rect class="dim" x="225" y="300" width="150" height="48" rx="7"/>
+<text class="nh" x="300" y="330" text-anchor="middle" fill-opacity=".55">PC3</text>
+<rect class="dim" x="425" y="300" width="150" height="48" rx="7"/>
+<text class="nh" x="500" y="330" text-anchor="middle" fill-opacity=".55">PC4</text>
+
+</svg>

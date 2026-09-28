@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1343" height="217" viewBox="0 73 1343 217" role="img" aria-labelledby="t d">
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .nd{font-weight:600;fill:#87A878}
+ .note{font-size:12.5px;fill:#B8A9C9}
+</style>
+<path d="M122 94 L284 94 L332 150 L284 206 L122 206 Z" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9" stroke-width="2"/>
+<circle cx="64" cy="150" r="54" fill="#87A878" fill-opacity=".22" stroke="#87A878" stroke-width="2.5"/>
+<text class="nd" x="64" y="146" text-anchor="middle" font-size="16">Incident</text>
+<text class="nd" x="64" y="166" text-anchor="middle" font-size="16">detected</text>
+<text x="201" y="146" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".7">the clock starts</text>
+<text x="201" y="162" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity=".7">at detection</text>
+<path d="M452 94 L614 94 L662 150 L614 206 L452 206 Z" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9" stroke-width="2"/>
+<circle cx="394" cy="150" r="54" fill="#87A878" fill-opacity=".22" stroke="#87A878" stroke-width="2.5"/>
+<text class="nd" x="394" y="146" text-anchor="middle" font-size="16">24</text>
+<text class="nd" x="394" y="166" text-anchor="middle" font-size="16">hours</text>
+<text x="531" y="128" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">Early warning: notify the</text>
+<text x="531" y="146" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">relevant national authority</text>
+<text x="531" y="162" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">or CSIRT that an incident</text>
+<text x="531" y="180" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">has occurred.</text>
+<path d="M782 94 L944 94 L992 150 L944 206 L782 206 Z" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9" stroke-width="2"/>
+<circle cx="724" cy="150" r="54" fill="#87A878" fill-opacity=".22" stroke="#87A878" stroke-width="2.5"/>
+<text class="nd" x="724" y="146" text-anchor="middle" font-size="16">72</text>
+<text class="nd" x="724" y="166" text-anchor="middle" font-size="16">hours</text>
+<text x="861" y="137" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">Incident notification:</text>
+<text x="861" y="154" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">the nature of the incident</text>
+<text x="861" y="171" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">and its likely impact.</text>
+<path d="M1112 94 L1274 94 L1322 150 L1274 206 L1112 206 Z" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9" stroke-width="2"/>
+<circle cx="1054" cy="150" r="54" fill="#87A878" fill-opacity=".22" stroke="#87A878" stroke-width="2.5"/>
+<text class="nd" x="1054" y="146" text-anchor="middle" font-size="16">1</text>
+<text class="nd" x="1054" y="166" text-anchor="middle" font-size="16">month</text>
+<text x="1191" y="137" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">Final report: root cause,</text>
+<text x="1191" y="154" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">measures taken and any</text>
+<text x="1191" y="171" text-anchor="middle" font-size="11.5" fill="#B8A9C9" fill-opacity="1">cross-border impact.</text>
+<text class="note" x="680" y="256" text-anchor="middle" fill-opacity=".85">The clock starts at detection, not at the moment of compromise, and each deadline layers more detail onto the last rather than replacing it.</text>
+</svg>

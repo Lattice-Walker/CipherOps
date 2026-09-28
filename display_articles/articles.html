@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CipherOps – Articles</title>
+  <link rel="stylesheet" href="../style.css?v=7" />
+  <link rel="icon" href="../logos/logo-icon.ico" />
+</head>
+<body>
+
+  <button id="toggle-toc" aria-label="Toggle table of contents">☰</button>
+
+  <!-- Bouton thème : position:relative indispensable pour le toggle-thumb absolu -->
+  <button id="theme-toggle" aria-label="Toggle theme" data-active="light">
+    <span class="toggle-icon dark-icon">☽</span>
+    <span class="toggle-thumb"></span>
+    <span class="toggle-icon light-icon">☀</span>
+  </button>
+
+  <!-- SIDEBAR GAUCHE -->
+  <nav id="toc" role="navigation" aria-label="Articles">
+    <div id="sidebar-logo">
+      <a href="../index.html">
+        <img id="logo-light-img" src="../logos/logo-light.png" alt="CipherOps" />
+        <img id="logo-dark-img"  src="../logos/logo-dark.png"  alt="CipherOps" />
+      </a>
+    </div>
+    <!-- Rempli par toc.js -->
+  </nav>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main id="main-content">
+
+    <!-- Vue "liste des articles" (par défaut) -->
+    <div id="articles-landing">
+      <h1 class="articles-page-title">Articles</h1>
+      <p class="articles-page-description-it">
+        Prepare now. Be safe later.
+      </p>
+      <p class="articles-page-description">        
+        Independent research on post-quantum cryptography, mathematics, linguistics, and the evolving security landscape.
+      </p>
+    </div>
+
+    <!-- Vue "article ouvert" (masquée par défaut) -->
+    <div id="article-layout" style="display:none;">
+      <div id="article-container"></div>
+      <nav id="article-toc" aria-label="On this page"></nav>
+    </div>
+
+    <footer id="contact-section">
+      <span class="contact-item"><a href="../contact/contact.html">Contact</a></span><span class="contact-sep"> · </span><span class="contact-item"><a href="https://github.com/Lattice-Walker/" target="_blank" rel="noopener">GitHub</a></span>
+    </footer>
+  </main>
+
+  <script data-goatcounter="https://latticewalker.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  <!-- Dépendances -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js/build/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist/build/pdf.min.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$','$']],
+        displayMath: [['$$','$$'], ['\\[','\\]']]
+      },
+      startup: { typeset: false }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <script type="module">
+    import { buildTOC }            from './toc.js?v=7';
+    import { loadArticle, showLanding } from '../render.js?v=7';
+
+    // ── Thème ────────────────────────────────────────────────────
+    const toggle = document.getElementById('theme-toggle');
+    const saved  = localStorage.getItem('theme') || 'light';
+    if (saved === 'dark') document.body.classList.add('dark');
+    toggle.dataset.active = saved;
+    toggle.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark');
+      const next   = isDark ? 'dark' : 'light';
+      toggle.dataset.active = next;
+      localStorage.setItem('theme', next);
+    });
+
+    // ── TOC mobile ───────────────────────────────────────────────
+    document.getElementById('toggle-toc').addEventListener('click', () => {
+      document.getElementById('toc').classList.toggle('toc-open');
+    });
+
+    // ── Sidebar (appelé UNE seule fois ici) ──────────────────────
+    buildTOC();
+
+    // ── Routing par hash ─────────────────────────────────────────
+    const route = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith('#article=')) {
+        const filePath = decodeURIComponent(hash.slice('#article='.length));
+        loadArticle(filePath);
+      } else {
+        showLanding();
+      }
+    };
+
+    window.addEventListener('hashchange', route);
+    route(); // appel initial
+  </script>
+</body>
+</html>

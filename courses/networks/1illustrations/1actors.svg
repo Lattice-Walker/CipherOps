@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1110" height="340" viewBox="0 15 1110 340" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .note{font-size:12.5px;fill:#B8A9C9}
+</style>
+<path d="M300 34 L300 34 L352 96 L248 96 Z" fill="#87A878" fill-opacity="0.10" stroke="#87A878" stroke-width="1.6"/>
+<text class="nd" x="300" y="82" text-anchor="middle" font-size="14">Nation-state actors</text>
+<rect class="dim" x="620" y="38" width="470" height="54" rx="8"/>
+<text class="note" x="640" y="60" fill-opacity=".92" font-size="11.5">Government-backed, pursuing espionage, intellectual property theft and</text>
+<text class="note" x="640" y="78" fill-opacity=".92" font-size="11.5">infrastructure sabotage with deep technical and financial resources.</text>
+<path d="M248 96 L352 96 L403 158 L197 158 Z" fill="#87A878" fill-opacity="0.15" stroke="#87A878" stroke-width="1.6"/>
+<text class="nd" x="300" y="132" text-anchor="middle" font-size="14">Cybercriminals</text>
+<rect class="dim" x="620" y="100" width="470" height="54" rx="8"/>
+<text class="note" x="640" y="122" fill-opacity=".92" font-size="11.5">Financially motivated, operating ransomware, fraud and stolen-data markets.</text>
+<text class="note" x="640" y="140" fill-opacity=".92" font-size="11.5">Often organised and well funded.</text>
+<path d="M197 158 L403 158 L455 220 L145 220 Z" fill="#87A878" fill-opacity="0.19" stroke="#87A878" stroke-width="1.6"/>
+<text class="nd" x="300" y="194" text-anchor="middle" font-size="14">Hacktivists</text>
+<rect class="dim" x="620" y="162" width="470" height="54" rx="8"/>
+<text class="note" x="640" y="184" fill-opacity=".92" font-size="11.5">Ideologically motivated, using defacement, data leaks and denial of service</text>
+<text class="note" x="640" y="202" fill-opacity=".92" font-size="11.5">to make a point rather than a profit.</text>
+<path d="M145 220 L455 220 L506 282 L94 282 Z" fill="#87A878" fill-opacity="0.24" stroke="#87A878" stroke-width="1.6"/>
+<text class="nd" x="300" y="256" text-anchor="middle" font-size="14">Script kiddies</text>
+<rect class="dim" x="620" y="224" width="470" height="54" rx="8"/>
+<text class="note" x="640" y="246" fill-opacity=".92" font-size="11.5">Low-skill attackers running pre-built tools, motivated by notoriety or curiosity</text>
+<text class="note" x="640" y="264" fill-opacity=".92" font-size="11.5">rather than by any specific target.</text>
+<path d="M94 282 L506 282 L558 344 L42 344 Z" fill="#87A878" fill-opacity="0.28" stroke="#87A878" stroke-width="1.6"/>
+<text class="nd" x="300" y="318" text-anchor="middle" font-size="14">Insiders</text>
+<rect class="dim" x="620" y="286" width="470" height="54" rx="8"/>
+<text class="note" x="640" y="308" fill-opacity=".92" font-size="11.5">Employees or contractors causing harm through misuse of the access they</text>
+<text class="note" x="640" y="326" fill-opacity=".92" font-size="11.5">already hold, or through negligence. No special skill needed.</text>
+<line x1="36" y1="336" x2="36" y2="70" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<text class="el" x="18" y="203" text-anchor="middle" transform="rotate(-90 18 203)">increasing capability and resources</text>
+</svg>
+

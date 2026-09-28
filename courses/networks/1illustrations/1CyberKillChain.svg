@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1264" height="272" viewBox="1 25 1264 272" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .note{font-size:12.5px;fill:#B8A9C9}
+</style>
+<text x="90" y="76" text-anchor="middle" font-size="20" font-weight="600" fill="#87A878" fill-opacity=".75">01</text>
+<circle cx="90" cy="140" r="44" fill="#87A878" fill-opacity=".16" stroke="#87A878" stroke-width="2.5"/>
+<g fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="71" y="126" width="14" height="16" rx="3"/><rect x="95" y="126" width="14" height="16" rx="3"/><circle cx="78" cy="149" r="9"/><circle cx="102" cy="149" r="9"/><line x1="87" y1="146" x2="93" y2="146"/></g>
+<text x="90" y="206" text-anchor="middle" font-size="13.5" font-weight="600" fill="#87A878">Reconnaissance</text>
+<text x="90" y="231" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".85">Selecting and studying</text>
+<text x="90" y="247" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".85">the target.</text>
+<path d="M140 140 L214 140" stroke="#87A878" stroke-width="2" fill="none" marker-end="url(#as)"/>
+<text x="270" y="76" text-anchor="middle" font-size="20" font-weight="600" fill="#B8A9C9" fill-opacity=".75">02</text>
+<circle cx="270" cy="140" r="44" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9" stroke-width="2.5"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="250" y="127" width="40" height="27" rx="3"/><path d="M250 130 L270 144 L290 130"/></g>
+<text x="270" y="206" text-anchor="middle" font-size="13.5" font-weight="600" fill="#B8A9C9">Weaponization</text>
+<text x="270" y="231" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".85">Pairing an exploit with</text>
+<text x="270" y="247" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".85">a deliverable payload.</text>
+<path d="M320 140 L394 140" stroke="#87A878" stroke-width="2" fill="none" marker-end="url(#as)"/>
+<text x="450" y="76" text-anchor="middle" font-size="20" font-weight="600" fill="#87A878" fill-opacity=".75">03</text>
+<circle cx="450" cy="140" r="44" fill="#87A878" fill-opacity=".16" stroke="#87A878" stroke-width="2.5"/>
+<g fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M430 142 L470 127 L454 155 L449 143 Z"/></g>
+<text x="450" y="206" text-anchor="middle" font-size="13.5" font-weight="600" fill="#87A878">Delivery</text>
+<text x="450" y="231" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".85">Getting the payload to</text>
+<text x="450" y="247" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".85">the victim.</text>
+<path d="M500 140 L574 140" stroke="#87A878" stroke-width="2" fill="none" marker-end="url(#as)"/>
+<text x="630" y="76" text-anchor="middle" font-size="20" font-weight="600" fill="#B8A9C9" fill-opacity=".75">04</text>
+<circle cx="630" cy="140" r="44" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9" stroke-width="2.5"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M635 123 L621 142 L631 142 L626 157 L641 137 L631 137 Z"/></g>
+<text x="630" y="206" text-anchor="middle" font-size="13.5" font-weight="600" fill="#B8A9C9">Exploitation</text>
+<text x="630" y="231" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".85">Triggering the flaw to</text>
+<text x="630" y="247" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".85">run attacker code.</text>
+<path d="M680 140 L754 140" stroke="#87A878" stroke-width="2" fill="none" marker-end="url(#as)"/>
+<text x="810" y="76" text-anchor="middle" font-size="20" font-weight="600" fill="#87A878" fill-opacity=".75">05</text>
+<circle cx="810" cy="140" r="44" fill="#87A878" fill-opacity=".16" stroke="#87A878" stroke-width="2.5"/>
+<g fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="810" y1="123" x2="810" y2="142"/><path d="M803 135 L810 143 L817 135"/><path d="M794 148 L794 155 L826 155 L826 148"/></g>
+<text x="810" y="206" text-anchor="middle" font-size="13.5" font-weight="600" fill="#87A878">Installation</text>
+<text x="810" y="231" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".85">Establishing a lasting</text>
+<text x="810" y="247" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".85">foothold on the host.</text>
+<path d="M860 140 L934 140" stroke="#87A878" stroke-width="2" fill="none" marker-end="url(#as)"/>
+<text x="990" y="76" text-anchor="middle" font-size="20" font-weight="600" fill="#B8A9C9" fill-opacity=".75">06</text>
+<circle cx="990" cy="140" r="44" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9" stroke-width="2.5"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="990" cy="150" r="3.5" fill="#B8A9C9"/><path d="M981 142 A12 12 0 0 1 999 142"/><path d="M974 134 A22 22 0 0 1 1006 134"/></g>
+<text x="990" y="206" text-anchor="middle" font-size="13.5" font-weight="600" fill="#B8A9C9">Command and</text>
+<text x="990" y="223" text-anchor="middle" font-size="13.5" font-weight="600" fill="#B8A9C9">control</text>
+<text x="990" y="248" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".85">Opening a channel back</text>
+<text x="990" y="264" text-anchor="middle" font-size="11" fill="#B8A9C9" fill-opacity=".85">to the operator.</text>
+<path d="M1040 140 L1114 140" stroke="#87A878" stroke-width="2" fill="none" marker-end="url(#as)"/>
+<text x="1170" y="76" text-anchor="middle" font-size="20" font-weight="600" fill="#87A878" fill-opacity=".75">07</text>
+<circle cx="1170" cy="140" r="44" fill="#87A878" fill-opacity=".16" stroke="#87A878" stroke-width="2.5"/>
+<g fill="none" stroke="#87A878" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="1170" cy="140" r="17"/><circle cx="1170" cy="140" r="8"/><circle cx="1170" cy="140" r="2.5" fill="#87A878"/></g>
+<text x="1170" y="206" text-anchor="middle" font-size="13.5" font-weight="600" fill="#87A878">Actions on</text>
+<text x="1170" y="223" text-anchor="middle" font-size="13.5" font-weight="600" fill="#87A878">objectives</text>
+<text x="1170" y="248" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".85">Stealing, altering or</text>
+<text x="1170" y="264" text-anchor="middle" font-size="11" fill="#87A878" fill-opacity=".85">destroying what matters.</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 388" width="900" height="388" role="img" aria-label="The Lucky Thirteen adversary of §1 is carried in three transfers to TLS 1.1, keeping advantage exactly 1 in Model A and the same session count.">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<rect x="255" y="16" width="390" height="56" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="450" y="38" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">§1, Definitions 1.7–1.8 as written</text>
+<text x="450" y="61" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">𝒜<tspan dy='4' font-size='75%'>PR</tspan><tspan dy='-4'>​</tspan> from Theorems 1.25 and 1.26</text>
+<rect x="255" y="116" width="390" height="56" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="450" y="138" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">corrected scheme (Definition 2.13)</text>
+<text x="450" y="161" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.2</tspan><tspan dy='-4'>​</tspan>[E, MAC, π]</text>
+<rect x="255" y="216" width="390" height="56" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="450" y="238" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">relabelled MAC</text>
+<text x="450" y="261" fill="#87A878" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.2</tspan><tspan dy='-4'>​</tspan>[E, HMAC-H ∘ φ, π]</text>
+<rect x="255" y="316" width="390" height="56" fill="#B8A9C9" fill-opacity="0.3" stroke="#B8A9C9" stroke-width="1.8" rx="4"/>
+<text x="450" y="338" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle">TLS 1.1</text>
+<text x="450" y="361" fill="#B8A9C9" font-size="15" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle">Π<tspan dy='4' font-size='75%'>1.1</tspan><tspan dy='-4'>​</tspan>[E, H, π]</text>
+<path d="M450,74 L450,114" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="450" cy="94" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="450" y="99" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">1</text>
+<path d="M450,174 L450,214" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="450" cy="194" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="450" y="199" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">2</text>
+<path d="M450,274 L450,314" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="450" cy="294" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="450" y="299" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">3</text>
+</svg>

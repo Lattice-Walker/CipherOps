@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="419" viewBox="0 0 940 419" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<rect class="dev" x="370" y="16" width="200" height="60" rx="8"/>
+<text class="nd" x="470" y="42" text-anchor="middle" font-size="16">192.168.1.0/24</text>
+<text class="el" x="470" y="62" text-anchor="middle">256 addresses</text>
+
+<g stroke="#87A878" stroke-width="2" fill="none" marker-end="url(#as)">
+  <path d="M430 76 C430 100 125 100 125 124"/>
+  <path d="M450 76 C450 100 355 100 355 124"/>
+  <path d="M490 76 C490 100 585 100 585 124"/>
+  <path d="M510 76 C510 100 815 100 815 124"/>
+</g>
+
+<g>
+  <rect class="host" x="20" y="128" width="210" height="104" rx="8"/>
+  <rect class="host" x="250" y="128" width="210" height="104" rx="8"/>
+  <rect class="host" x="480" y="128" width="210" height="104" rx="8"/>
+  <rect class="host" x="710" y="128" width="210" height="104" rx="8"/>
+</g>
+<g text-anchor="middle">
+  <text class="nh" x="125" y="152" font-size="14">Subnet 1</text>
+  <text class="note" x="125" y="174">192.168.1.0/26</text><text class="note" x="125" y="194">hosts .1 – .62</text><text class="note" x="125" y="214">broadcast .63</text>
+  <text class="nh" x="355" y="152" font-size="14">Subnet 2</text>
+  <text class="note" x="355" y="174">192.168.1.64/26</text><text class="note" x="355" y="194">hosts .65 – .126</text><text class="note" x="355" y="214">broadcast .127</text>
+  <text class="nh" x="585" y="152" font-size="14">Subnet 3</text>
+  <text class="note" x="585" y="174">192.168.1.128/26</text><text class="note" x="585" y="194">hosts .129 – .190</text><text class="note" x="585" y="214">broadcast .191</text>
+  <text class="nh" x="815" y="152" font-size="14">Subnet 4</text>
+  <text class="note" x="815" y="174">192.168.1.192/26</text><text class="note" x="815" y="194">hosts .193 – .254</text><text class="note" x="815" y="214">broadcast .255</text>
+</g>
+
+<g stroke="#87A878" stroke-width="2">
+  <line x1="125" y1="232" x2="125" y2="268"/><line x1="355" y1="232" x2="355" y2="268"/>
+  <line x1="585" y1="232" x2="585" y2="268"/><line x1="815" y1="232" x2="815" y2="268"/>
+</g>
+<g>
+  <rect class="dev" x="61" y="270" width="128" height="42" rx="7"/>
+  <rect class="dev" x="291" y="270" width="128" height="42" rx="7"/>
+  <rect class="dev" x="521" y="270" width="128" height="42" rx="7"/>
+  <rect class="dev" x="751" y="270" width="128" height="42" rx="7"/>
+</g>
+<g class="nd" font-size="14" text-anchor="middle">
+  <text x="125" y="296">Switch A</text><text x="355" y="296">Switch B</text><text x="585" y="296">Switch C</text><text x="815" y="296">Switch D</text>
+</g>
+
+<g stroke="#B8A9C9" stroke-width="2" fill="none">
+  <path d="M101 312 C101 336 61 336 61 358"/><path d="M149 312 C149 336 189 336 189 358"/>
+  <path d="M331 312 C331 336 291 336 291 358"/><path d="M379 312 C379 336 419 336 419 358"/>
+  <path d="M561 312 C561 336 521 336 521 358"/><path d="M609 312 C609 336 649 336 649 358"/>
+  <path d="M791 312 C791 336 751 336 751 358"/><path d="M839 312 C839 336 879 336 879 358"/>
+</g>
+<g>
+  <rect class="host" x="13" y="360" width="96" height="38" rx="6"/><rect class="host" x="141" y="360" width="96" height="38" rx="6"/>
+  <rect class="host" x="243" y="360" width="96" height="38" rx="6"/><rect class="host" x="371" y="360" width="96" height="38" rx="6"/>
+  <rect class="host" x="473" y="360" width="96" height="38" rx="6"/><rect class="host" x="601" y="360" width="96" height="38" rx="6"/>
+  <rect class="host" x="703" y="360" width="96" height="38" rx="6"/><rect class="host" x="831" y="360" width="96" height="38" rx="6"/>
+</g>
+<g class="nh" font-size="13" text-anchor="middle">
+  <text x="61" y="384">Host</text><text x="189" y="384">Host</text><text x="291" y="384">Host</text><text x="419" y="384">Host</text>
+  <text x="521" y="384">Host</text><text x="649" y="384">Host</text><text x="751" y="384">Host</text><text x="879" y="384">Host</text>
+</g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="230" viewBox="0 0 880 230" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<text class="nh" x="20" y="28">IPv4 : 32 bits, four 8-bit octets</text>
+<g>
+  <rect class="host" x="20" y="42" width="200" height="76" rx="7"/>
+  <rect class="host" x="230" y="42" width="200" height="76" rx="7"/>
+  <rect class="host" x="440" y="42" width="200" height="76" rx="7"/>
+  <rect class="host" x="650" y="42" width="200" height="76" rx="7"/>
+</g>
+<g text-anchor="middle">
+  <text class="note" x="120" y="63" fill-opacity=".75">Octet 1</text>
+  <text class="nh" x="120" y="86">192</text>
+  <text class="note" x="120" y="107" font-family="ui-monospace,'DejaVu Sans Mono',monospace">11000000</text>
+  <text class="note" x="330" y="63" fill-opacity=".75">Octet 2</text>
+  <text class="nh" x="330" y="86">168</text>
+  <text class="note" x="330" y="107" font-family="ui-monospace,'DejaVu Sans Mono',monospace">10101000</text>
+  <text class="note" x="550" y="63" fill-opacity=".75">Octet 3</text>
+  <text class="nh" x="550" y="86">1</text>
+  <text class="note" x="550" y="107" font-family="ui-monospace,'DejaVu Sans Mono',monospace">00000001</text>
+  <text class="note" x="760" y="63" fill-opacity=".75">Octet 4</text>
+  <text class="nh" x="760" y="86">1</text>
+  <text class="note" x="760" y="107" font-family="ui-monospace,'DejaVu Sans Mono',monospace">00000001</text>
+</g>
+<g stroke="#B8A9C9" stroke-width="2" stroke-opacity=".6">
+  <line x1="220" y1="80" x2="230" y2="80"/><line x1="430" y1="80" x2="440" y2="80"/><line x1="640" y1="80" x2="650" y2="80"/>
+</g>
+
+<text class="nd" x="20" y="160">IPv6 : 128 bits, eight 16-bit groups written in hexadecimal</text>
+<g>
+  <rect class="dev" x="20" y="174" width="97" height="42" rx="6"/>
+  <rect class="dev" x="126" y="174" width="97" height="42" rx="6"/>
+  <rect class="dev" x="232" y="174" width="97" height="42" rx="6"/>
+  <rect class="dev" x="338" y="174" width="97" height="42" rx="6"/>
+  <rect class="dev" x="444" y="174" width="97" height="42" rx="6"/>
+  <rect class="dev" x="550" y="174" width="97" height="42" rx="6"/>
+  <rect class="dev" x="656" y="174" width="97" height="42" rx="6"/>
+  <rect class="dev" x="762" y="174" width="97" height="42" rx="6"/>
+</g>
+<g class="nd" text-anchor="middle" font-family="ui-monospace,'DejaVu Sans Mono',monospace" font-size="15">
+  <text x="68" y="201">2001</text><text x="174" y="201">0db8</text><text x="280" y="201">85a3</text><text x="386" y="201">0000</text>
+  <text x="492" y="201">0000</text><text x="598" y="201">8a2e</text><text x="704" y="201">0370</text><text x="810" y="201">7334</text>
+</g>
+<g stroke="#87A878" stroke-width="2" stroke-opacity=".6">
+  <line x1="117" y1="195" x2="126" y2="195"/><line x1="223" y1="195" x2="232" y2="195"/><line x1="329" y1="195" x2="338" y2="195"/>
+  <line x1="435" y1="195" x2="444" y2="195"/><line x1="541" y1="195" x2="550" y2="195"/><line x1="647" y1="195" x2="656" y2="195"/>
+  <line x1="753" y1="195" x2="762" y2="195"/>
+</g>
+</svg>

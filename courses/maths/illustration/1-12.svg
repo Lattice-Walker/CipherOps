@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="318" height="118" viewBox="51 31 318 118" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0.6 L10,5 L0,9.4 Z" fill="#B8A9C9"/></marker>
+ <marker id="b" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto-start-reverse"><path d="M0,0.6 L10,5 L0,9.4 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ .lbl{font-family:'Latin Modern Roman','Georgia',serif;font-style:italic;font-weight:600;fill:#B8A9C9}
+ .lblu{font-family:'Latin Modern Roman','Georgia',serif;font-weight:700;fill:#B8A9C9}
+ .w{font-family:'Latin Modern Roman','Georgia',serif;font-size:17px;fill:#B8A9C9;fill-opacity:.95}
+</style>
+<line x1="148" y1="90" x2="267" y2="90" stroke="#B8A9C9" stroke-width="2.2" marker-end="url(#a)"/>
+<circle cx="110" cy="90" r="38" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="110" y="98" text-anchor="middle" font-size="24">C<tspan font-size="15" dy="5">1</tspan></text>
+<circle cx="310" cy="90" r="38" fill="#B8A9C9" fill-opacity=".30" stroke="#B8A9C9" stroke-width="2.2"/>
+<text class="lbl" x="310" y="98" text-anchor="middle" font-size="24">C<tspan font-size="15" dy="5">2</tspan></text>
+</svg>

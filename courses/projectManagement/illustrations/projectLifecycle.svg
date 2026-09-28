@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="982" height="364" viewBox="19 5 982 364" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .note{font-size:12.5px;fill:#B8A9C9;fill-opacity:.85}
+</style>
+<circle cx="135" cy="52" r="26" fill="#87A878" fill-opacity=".24" stroke="#87A878" stroke-width="2.2"/>
+<text x="135" y="60" text-anchor="middle" font-size="20" font-weight="700" fill="#87A878">1</text>
+<rect x="40" y="96" width="190" height="104" rx="12" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2.2"/>
+<text x="135" y="155" text-anchor="middle" font-size="20" font-weight="600" fill="#87A878">Initiation</text>
+<line x1="236" y1="148" x2="284" y2="148" stroke="#B8A9C9" stroke-width="2.4" marker-end="url(#al)"/>
+<circle cx="385" cy="52" r="26" fill="#B8A9C9" fill-opacity=".24" stroke="#B8A9C9" stroke-width="2.2"/>
+<text x="385" y="60" text-anchor="middle" font-size="20" font-weight="700" fill="#B8A9C9">2</text>
+<rect x="290" y="96" width="190" height="104" rx="12" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2.2"/>
+<text x="385" y="155" text-anchor="middle" font-size="20" font-weight="600" fill="#B8A9C9">Planning</text>
+<line x1="486" y1="148" x2="534" y2="148" stroke="#B8A9C9" stroke-width="2.4" marker-end="url(#al)"/>
+<circle cx="635" cy="52" r="26" fill="#87A878" fill-opacity=".24" stroke="#87A878" stroke-width="2.2"/>
+<text x="635" y="60" text-anchor="middle" font-size="20" font-weight="700" fill="#87A878">3</text>
+<rect x="540" y="96" width="190" height="104" rx="12" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2.2"/>
+<text x="635" y="155" text-anchor="middle" font-size="20" font-weight="600" fill="#87A878">Execution</text>
+<line x1="736" y1="148" x2="784" y2="148" stroke="#B8A9C9" stroke-width="2.4" marker-end="url(#al)"/>
+<circle cx="885" cy="52" r="26" fill="#B8A9C9" fill-opacity=".24" stroke="#B8A9C9" stroke-width="2.2"/>
+<text x="885" y="60" text-anchor="middle" font-size="20" font-weight="700" fill="#B8A9C9">4</text>
+<rect x="790" y="96" width="190" height="104" rx="12" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2.2"/>
+<text x="885" y="155" text-anchor="middle" font-size="20" font-weight="600" fill="#B8A9C9">Closure</text>
+<line x1="635" y1="200" x2="635" y2="268" stroke="#87A878" stroke-width="2.4" stroke-dasharray="8 6" marker-end="url(#as)"/>
+<text x="655" y="240" font-size="13.5" font-style="italic" fill="#87A878">runs alongside execution</text>
+<rect x="470" y="272" width="330" height="76" rx="12" fill="#B8A9C9" fill-opacity=".18" stroke="#B8A9C9" stroke-width="2.2"/>
+<text x="635" y="318" text-anchor="middle" font-size="19" font-weight="600" fill="#B8A9C9">Monitoring and control</text>
+</svg>

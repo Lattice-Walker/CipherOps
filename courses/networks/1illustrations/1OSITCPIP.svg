@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="445" viewBox="11 0 750 445" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<text class="nd" x="180" y="34" text-anchor="middle" font-size="16">OSI model</text>
+<text class="nh" x="620" y="34" text-anchor="middle" font-size="16">TCP/IP model</text>
+
+<g>
+  <rect class="dev" x="60" y="52" width="240" height="48" rx="7"/>
+  <rect class="dev" x="60" y="106" width="240" height="48" rx="7"/>
+  <rect class="dev" x="60" y="160" width="240" height="48" rx="7"/>
+  <rect class="dev" x="60" y="214" width="240" height="48" rx="7"/>
+  <rect class="dev" x="60" y="268" width="240" height="48" rx="7"/>
+  <rect class="dev" x="60" y="322" width="240" height="48" rx="7"/>
+  <rect class="dev" x="60" y="376" width="240" height="48" rx="7"/>
+</g>
+<g class="nd" font-size="15" text-anchor="middle">
+  <text x="180" y="82">Application</text><text x="180" y="136">Presentation</text><text x="180" y="190">Session</text>
+  <text x="180" y="244">Transport</text><text x="180" y="298">Network</text><text x="180" y="352">Data link</text><text x="180" y="406">Physical</text>
+</g>
+<g class="el" font-size="13" text-anchor="end" fill-opacity=".7">
+  <text x="48" y="82">7</text><text x="48" y="136">6</text><text x="48" y="190">5</text><text x="48" y="244">4</text>
+  <text x="48" y="298">3</text><text x="48" y="352">2</text><text x="48" y="406">1</text>
+</g>
+
+<g>
+  <rect class="host" x="500" y="52" width="240" height="156" rx="7"/>
+  <rect class="host" x="500" y="214" width="240" height="48" rx="7"/>
+  <rect class="host" x="500" y="268" width="240" height="48" rx="7"/>
+  <rect class="host" x="500" y="322" width="240" height="102" rx="7"/>
+</g>
+<g class="nh" font-size="15" text-anchor="middle">
+  <text x="620" y="136">Application</text><text x="620" y="244">Transport</text><text x="620" y="298">Internet</text><text x="620" y="379">Network access</text>
+</g>
+
+<g stroke="#B8A9C9" stroke-width="1.8" stroke-opacity=".65">
+  <path d="M300 76 L500 108" fill="none"/>
+  <path d="M300 130 L500 130" fill="none"/>
+  <path d="M300 184 L500 152" fill="none"/>
+  <path d="M300 238 L500 238" fill="none"/>
+  <path d="M300 292 L500 292" fill="none"/>
+  <path d="M300 346 L500 358" fill="none"/>
+  <path d="M300 400 L500 388" fill="none"/>
+</g>
+
+</svg>

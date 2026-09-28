@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="970" height="667" viewBox="0 0 970 667" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+</style>
+<text class="nd" x="20" y="32" font-size="16">Categories of threat</text>
+<rect class="dev" x="20" y="52" width="272" height="62" rx="8" fill-opacity=".14"/>
+<text class="nd" x="156" y="88" text-anchor="middle" font-size="14">Phishing and social engineering</text>
+<rect class="dim" x="304" y="52" width="646" height="62" rx="8"/>
+<text class="note" x="324" y="78" fill-opacity=".92">Attackers impersonate trusted parties by email, voice or SMS to extract</text>
+<text class="note" x="324" y="98" fill-opacity=".92">credentials or trigger a harmful action.</text>
+<rect class="host" x="20" y="128" width="272" height="62" rx="8" fill-opacity=".14"/>
+<text class="nh" x="156" y="164" text-anchor="middle" font-size="14">Denial of service</text>
+<rect class="dim" x="304" y="128" width="646" height="62" rx="8"/>
+<text class="note" x="324" y="154" fill-opacity=".92">Systems are flooded with traffic until they stop answering; distributed</text>
+<text class="note" x="324" y="174" fill-opacity=".92">variants drive the flood from networks of compromised machines.</text>
+<rect class="dev" x="20" y="204" width="272" height="62" rx="8" fill-opacity=".14"/>
+<text class="nd" x="156" y="240" text-anchor="middle" font-size="14">Man in the middle</text>
+<rect class="dim" x="304" y="204" width="646" height="62" rx="8"/>
+<text class="note" x="324" y="230" fill-opacity=".92">Traffic between two parties is intercepted, letting an attacker read or</text>
+<text class="note" x="324" y="250" fill-opacity=".92">alter data while it is in transit.</text>
+<rect class="host" x="20" y="280" width="272" height="62" rx="8" fill-opacity=".14"/>
+<text class="nh" x="156" y="316" text-anchor="middle" font-size="14">Web vulnerabilities</text>
+<rect class="dim" x="304" y="280" width="646" height="62" rx="8"/>
+<text class="note" x="324" y="306" fill-opacity=".92">Flaws such as SQL injection and cross-site scripting let an attacker reach</text>
+<text class="note" x="324" y="326" fill-opacity=".92">the database behind a site or inject code into its pages.</text>
+<rect class="dev" x="20" y="356" width="272" height="62" rx="8" fill-opacity=".14"/>
+<text class="nd" x="156" y="392" text-anchor="middle" font-size="14">Zero-day exploits</text>
+<rect class="dim" x="304" y="356" width="646" height="62" rx="8"/>
+<text class="note" x="324" y="382" fill-opacity=".92">Attacks against a vulnerability for which no patch yet exists, so no</text>
+<text class="note" x="324" y="402" fill-opacity=".92">amount of prompt patching would have prevented them.</text>
+<rect class="host" x="20" y="432" width="272" height="62" rx="8" fill-opacity=".14"/>
+<text class="nh" x="156" y="468" text-anchor="middle" font-size="14">Advanced persistent threats</text>
+<rect class="dim" x="304" y="432" width="646" height="62" rx="8"/>
+<text class="note" x="324" y="458" fill-opacity=".92">Long, quiet intrusions aimed at espionage or sabotage, typically run by</text>
+<text class="note" x="324" y="478" fill-opacity=".92">well-resourced state-backed groups.</text>
+<rect class="dev" x="20" y="508" width="272" height="62" rx="8" fill-opacity=".14"/>
+<text class="nd" x="156" y="544" text-anchor="middle" font-size="14">Insider threats</text>
+<rect class="dim" x="304" y="508" width="646" height="62" rx="8"/>
+<text class="note" x="324" y="534" fill-opacity=".92">Harm caused by people who already hold legitimate access, whether</text>
+<text class="note" x="324" y="554" fill-opacity=".92">through malice or through simple negligence.</text>
+<rect class="host" x="20" y="584" width="272" height="62" rx="8" fill-opacity=".14"/>
+<text class="nh" x="156" y="620" text-anchor="middle" font-size="14">Supply chain attacks</text>
+<rect class="dim" x="304" y="584" width="646" height="62" rx="8"/>
+<text class="note" x="324" y="610" fill-opacity=".92">Compromise of a trusted vendor or component in order to reach every</text>
+<text class="note" x="324" y="630" fill-opacity=".92">organisation downstream of it at once.</text>
+</svg>

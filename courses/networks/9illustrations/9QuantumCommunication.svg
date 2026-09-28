@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="370" viewBox="0 0 840 370" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .pt{font-size:15px;font-weight:600}
+ .hd{font-size:13.5px;font-weight:600}
+ .sb{font-size:11.5px;fill-opacity:.9}
+ .lb{font-size:12px}
+ .cp{font-size:12px;fill-opacity:.9}
+ .sg{fill:#87A878}.lv{fill:#B8A9C9}
+</style>
+
+<text class="pt sg" x="20" y="34">Classical channel </text>
+<rect x="20" y="52" width="126" height="70" rx="10" fill="#87A878" fill-opacity=".14" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="83" y="94" text-anchor="middle">Sender</text>
+<rect x="694" y="52" width="126" height="70" rx="10" fill="#87A878" fill-opacity=".14" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="757" y="94" text-anchor="middle">Receiver</text>
+
+<line x1="150" y1="87" x2="382" y2="87" stroke="#87A878" stroke-width="2"/>
+<line x1="478" y1="87" x2="690" y2="87" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<rect x="386" y="60" width="88" height="54" rx="8" fill="#B8A9C9" fill-opacity=".20" stroke="#B8A9C9" stroke-width="2"/>
+<text class="hd lv" x="430" y="92" text-anchor="middle">tap</text>
+<line x1="430" y1="114" x2="430" y2="146" stroke="#B8A9C9" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#al)"/>
+<text class="lb lv" x="446" y="166">a perfect copy, and the original arrives unchanged</text>
+<text class="lb sg" x="600" y="76" text-anchor="middle">delivered intact</text>
+
+
+<text class="pt lv" x="20" y="238">Quantum channel </text>
+<rect x="20" y="256" width="126" height="70" rx="10" fill="#B8A9C9" fill-opacity=".14" stroke="#B8A9C9" stroke-width="2"/>
+<text class="hd lv" x="83" y="298" text-anchor="middle">Sender</text>
+<rect x="694" y="256" width="126" height="70" rx="10" fill="#B8A9C9" fill-opacity=".14" stroke="#B8A9C9" stroke-width="2"/>
+<text class="hd lv" x="757" y="298" text-anchor="middle">Receiver</text>
+
+<line x1="150" y1="291" x2="382" y2="291" stroke="#B8A9C9" stroke-width="2"/>
+<g fill="#B8A9C9"><circle cx="210" cy="291" r="4.5"/><circle cx="272" cy="291" r="4.5"/><circle cx="334" cy="291" r="4.5"/></g>
+<rect x="386" y="264" width="88" height="54" rx="8" fill="#87A878" fill-opacity=".22" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="430" y="288" text-anchor="middle">must</text>
+<text class="hd sg" x="430" y="306" text-anchor="middle">measure</text>
+
+<path d="M478 291 l24 -12 l22 24 l22 -24 l22 24 l22 -24 l22 24 l22 -12 L690 291" fill="none" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<text class="lb sg" x="586" y="262" text-anchor="middle">state disturbed in passing</text>
+<text class="lb sg" x="586" y="336" text-anchor="middle">errors surface when the key is checked</text>
+
+</svg>

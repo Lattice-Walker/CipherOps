@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="400" viewBox="0 67 840 400" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .hd{font-size:14px;font-weight:600}
+ .sb{font-size:11.5px;fill-opacity:.9}
+ .tl{font-size:12.5px;font-weight:600}
+ .fx{font-size:12px}
+ .cap{font-size:12px;fill-opacity:.9}
+ .sg{fill:#87A878}.lv{fill:#B8A9C9}
+</style>
+
+<rect x="248" y="96" width="344" height="212" rx="26" fill="#B8A9C9" fill-opacity=".08" stroke="#B8A9C9" stroke-width="2" stroke-dasharray="9 6"/>
+<text class="hd lv" x="420" y="128" text-anchor="middle">Untrusted network</text>
+<text class="sb lv" x="420" y="147" text-anchor="middle">the public internet: readable, modifiable, unreliable</text>
+
+<rect x="18" y="88" width="184" height="94" rx="10" fill="#87A878" fill-opacity=".12" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="110" y="124" text-anchor="middle">Site A gateway</text>
+<text class="sb sg" x="110" y="145" text-anchor="middle">10.1.0.0/16</text>
+<text class="sb sg" x="110" y="163" text-anchor="middle">no client software needed</text>
+
+<rect x="638" y="88" width="184" height="94" rx="10" fill="#87A878" fill-opacity=".12" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="730" y="124" text-anchor="middle">Site B gateway</text>
+<text class="sb sg" x="730" y="145" text-anchor="middle">10.2.0.0/16</text>
+<text class="sb sg" x="730" y="163" text-anchor="middle">terminates both tunnels</text>
+
+<g fill="none" stroke="#87A878" stroke-width="2.4">
+  <line x1="202" y1="182" x2="638" y2="182"/>
+  <line x1="202" y1="212" x2="638" y2="212"/>
+</g>
+<rect x="202" y="182" width="436" height="30" fill="#87A878" fill-opacity=".14"/>
+<text class="tl sg" x="420" y="202" text-anchor="middle">IPsec tunnel, site to site</text>
+
+<rect x="18" y="262" width="184" height="94" rx="10" fill="#B8A9C9" fill-opacity=".12" stroke="#B8A9C9" stroke-width="2"/>
+<text class="hd lv" x="110" y="298" text-anchor="middle">Remote user</text>
+<text class="sb lv" x="110" y="319" text-anchor="middle">laptop running a VPN client</text>
+<text class="sb lv" x="110" y="337" text-anchor="middle">address assigned by site B</text>
+
+<path d="M202 302 L586 302 Q642 302 656 250 L668 190" fill="none" stroke="#B8A9C9" stroke-width="2.4" marker-end="url(#al)"/>
+<text class="tl lv" x="392" y="294" text-anchor="middle">encrypted tunnel : remote access</text>
+
+<text class="hd sg" x="20" y="392">IPsec tunnel mode: the original packet is encapsulated whole</text>
+<g stroke-width="1.8">
+  <rect x="20" y="404" width="150" height="42" rx="6" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9"/>
+  <rect x="176" y="404" width="130" height="42" rx="6" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9"/>
+  <rect x="312" y="404" width="380" height="42" rx="6" fill="#87A878" fill-opacity=".22" stroke="#87A878"/>
+  <rect x="698" y="404" width="122" height="42" rx="6" fill="#B8A9C9" fill-opacity=".16" stroke="#B8A9C9"/>
+</g>
+<text class="fx lv" x="95"  y="430" text-anchor="middle">New IP header</text>
+<text class="fx lv" x="241" y="430" text-anchor="middle">ESP header</text>
+<text class="fx sg" x="502" y="430" text-anchor="middle">Original IP packet, encrypted</text>
+<text class="fx lv" x="759" y="430" text-anchor="middle">ESP auth</text>
+</svg>

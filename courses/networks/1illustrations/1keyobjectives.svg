@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="827" height="255" viewBox="13 33 827 255" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<g fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2.5">
+  <circle cx="100" cy="120" r="66"/><circle cx="320" cy="120" r="66"/><circle cx="540" cy="120" r="66"/><circle cx="760" cy="120" r="66"/>
+</g>
+<g class="nd" font-size="15" text-anchor="middle">
+  <text x="100" y="126">Prevention</text><text x="320" y="126">Detection</text><text x="540" y="126">Response</text><text x="760" y="126">Recovery</text>
+</g>
+<g stroke="#87A878" stroke-width="2.4" marker-end="url(#as)" fill="none">
+  <line x1="170" y1="120" x2="248" y2="120"/>
+  <line x1="390" y1="120" x2="468" y2="120"/>
+  <line x1="610" y1="120" x2="688" y2="120"/>
+</g>
+<path d="M760 190 C760 244 690 258 430 258 C170 258 100 244 100 190" fill="none" stroke="#B8A9C9" stroke-width="2.4" stroke-dasharray="8 5" marker-end="url(#al)"/>
+<text class="elh" x="430" y="234" text-anchor="middle">what recovery teaches feeds the next round of prevention</text>
+
+</svg>

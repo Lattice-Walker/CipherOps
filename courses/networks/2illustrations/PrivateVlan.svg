@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1211" height="666" viewBox="89 5 1211 666" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .nd{font-weight:600;fill:#87A878} .nh{font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878} .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+</style>
+<rect x="570" y="26" width="140" height="56" rx="8" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/><g fill="none" stroke="#87A878" stroke-width="2" stroke-linecap="round"><path d="M594 46 L686 46 M674 40 L686 46 L674 52"/><path d="M686 64 L594 64 M606 58 L594 64 L606 70"/></g>
+<rect x="740" y="30" width="300" height="48" rx="9" fill="#87A878" fill-opacity=".10" stroke="#87A878" stroke-width="2"/>
+<text class="nd" x="890" y="50" text-anchor="middle" font-size="14">Router or firewall</text>
+<text class="el" x="890" y="68" text-anchor="middle">the promiscuous port</text>
+<line x1="710" y1="54" x2="736" y2="54" stroke="#87A878" stroke-width="2"/>
+<line x1="640" y1="82" x2="640" y2="146" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<rect x="110" y="128" width="1080" height="270" rx="14" fill="none" stroke="#87A878" stroke-width="2"/>
+<rect x="250" y="90" width="190" height="34" rx="8" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/>
+<text class="nd" x="345" y="113" text-anchor="middle" font-size="15">Private VLAN</text>
+<rect x="570" y="150" width="140" height="56" rx="8" fill="#87A878" fill-opacity=".18" stroke="#87A878" stroke-width="2"/><g fill="none" stroke="#87A878" stroke-width="2" stroke-linecap="round"><path d="M594 170 L686 170 M674 164 L686 170 L674 176"/><path d="M686 188 L594 188 M606 182 L594 188 L606 194"/></g>
+<rect x="160" y="230" width="300" height="120" rx="10" fill="#B8A9C9" fill-opacity=".10" stroke="#B8A9C9" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="220" y="360" width="180" height="30" rx="7" fill="#B8A9C9" fill-opacity=".20" stroke="#B8A9C9" stroke-width="1.8"/>
+<text x="310" y="381" text-anchor="middle" font-size="13" font-weight="600" fill="#B8A9C9">Isolated ports</text>
+<line x1="640" y1="206" x2="310" y2="216" stroke="#B8A9C9" stroke-width="2"/>
+<line x1="260" y1="216" x2="360" y2="216" stroke="#B8A9C9" stroke-width="2"/>
+<line x1="260" y1="216" x2="260" y2="262" stroke="#B8A9C9" stroke-width="2"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.2" stroke-linejoin="round"><rect x="238" y="274" width="44" height="32" rx="3"/><line x1="260" y1="306" x2="260" y2="314"/><line x1="246" y1="314" x2="274" y2="314"/></g>
+<line x1="360" y1="216" x2="360" y2="262" stroke="#B8A9C9" stroke-width="2"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.2" stroke-linejoin="round"><rect x="338" y="274" width="44" height="32" rx="3"/><line x1="360" y1="306" x2="360" y2="314"/><line x1="346" y1="314" x2="374" y2="314"/></g>
+<rect x="500" y="230" width="320" height="120" rx="10" fill="#87A878" fill-opacity=".10" stroke="#87A878" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="570" y="360" width="180" height="30" rx="7" fill="#87A878" fill-opacity=".20" stroke="#87A878" stroke-width="1.8"/>
+<text x="660" y="381" text-anchor="middle" font-size="13" font-weight="600" fill="#87A878">Community ports</text>
+<line x1="640" y1="206" x2="660" y2="216" stroke="#87A878" stroke-width="2"/>
+<line x1="580" y1="216" x2="740" y2="216" stroke="#87A878" stroke-width="2"/>
+<line x1="580" y1="216" x2="580" y2="262" stroke="#87A878" stroke-width="2"/>
+<g fill="none" stroke="#87A878" stroke-width="2.2" stroke-linejoin="round"><rect x="558" y="274" width="44" height="32" rx="3"/><line x1="580" y1="306" x2="580" y2="314"/><line x1="566" y1="314" x2="594" y2="314"/></g>
+<line x1="660" y1="216" x2="660" y2="262" stroke="#87A878" stroke-width="2"/>
+<g fill="none" stroke="#87A878" stroke-width="2.2" stroke-linejoin="round"><rect x="638" y="274" width="44" height="32" rx="3"/><line x1="660" y1="306" x2="660" y2="314"/><line x1="646" y1="314" x2="674" y2="314"/></g>
+<line x1="740" y1="216" x2="740" y2="262" stroke="#87A878" stroke-width="2"/>
+<g fill="none" stroke="#87A878" stroke-width="2.2" stroke-linejoin="round"><rect x="718" y="274" width="44" height="32" rx="3"/><line x1="740" y1="306" x2="740" y2="314"/><line x1="726" y1="314" x2="754" y2="314"/></g>
+<rect x="860" y="230" width="300" height="120" rx="10" fill="#B8A9C9" fill-opacity=".10" stroke="#B8A9C9" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="920" y="360" width="180" height="30" rx="7" fill="#B8A9C9" fill-opacity=".20" stroke="#B8A9C9" stroke-width="1.8"/>
+<text x="1010" y="381" text-anchor="middle" font-size="13" font-weight="600" fill="#B8A9C9">Isolated ports</text>
+<line x1="640" y1="206" x2="1010" y2="216" stroke="#B8A9C9" stroke-width="2"/>
+<line x1="960" y1="216" x2="1060" y2="216" stroke="#B8A9C9" stroke-width="2"/>
+<line x1="960" y1="216" x2="960" y2="262" stroke="#B8A9C9" stroke-width="2"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.2" stroke-linejoin="round"><rect x="938" y="274" width="44" height="32" rx="3"/><line x1="960" y1="306" x2="960" y2="314"/><line x1="946" y1="314" x2="974" y2="314"/></g>
+<line x1="1060" y1="216" x2="1060" y2="262" stroke="#B8A9C9" stroke-width="2"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.2" stroke-linejoin="round"><rect x="1038" y="274" width="44" height="32" rx="3"/><line x1="1060" y1="306" x2="1060" y2="314"/><line x1="1046" y1="314" x2="1074" y2="314"/></g>
+<rect x="430" y="424" width="150" height="40" rx="7" fill="#87A878" fill-opacity=".10" stroke="#87A878" stroke-width="1.6"/>
+<text class="nd" x="505" y="449" text-anchor="middle" font-size="12">Promiscuous</text>
+<rect x="588" y="424" width="150" height="40" rx="7" fill="#87A878" fill-opacity=".10" stroke="#87A878" stroke-width="1.6"/>
+<text class="nd" x="663" y="449" text-anchor="middle" font-size="12">Isolated</text>
+<rect x="746" y="424" width="150" height="40" rx="7" fill="#87A878" fill-opacity=".10" stroke="#87A878" stroke-width="1.6"/>
+<text class="nd" x="821" y="449" text-anchor="middle" font-size="12">Community (same)</text>
+<rect x="904" y="424" width="150" height="40" rx="7" fill="#87A878" fill-opacity=".10" stroke="#87A878" stroke-width="1.6"/>
+<text class="nd" x="979" y="449" text-anchor="middle" font-size="12">Community (other)</text>
+<rect x="120" y="478" width="290" height="52" rx="7" fill="#87A878" fill-opacity=".14" stroke="#87A878" stroke-width="1.8"/>
+<text x="265" y="509.0" text-anchor="middle" font-size="13.5" font-weight="600" fill="#87A878">Promiscuous port</text>
+<rect x="430" y="478" width="150" height="52" rx="7" fill="none" stroke="#87A878" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#87A878" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="505" cy="504" r="12" stroke-width="1.8"/><path d="M500 504 l4 5 l7 -9"/></g>
+<rect x="588" y="478" width="150" height="52" rx="7" fill="none" stroke="#87A878" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#87A878" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="663" cy="504" r="12" stroke-width="1.8"/><path d="M658 504 l4 5 l7 -9"/></g>
+<rect x="746" y="478" width="150" height="52" rx="7" fill="none" stroke="#87A878" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#87A878" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="821" cy="504" r="12" stroke-width="1.8"/><path d="M816 504 l4 5 l7 -9"/></g>
+<rect x="904" y="478" width="150" height="52" rx="7" fill="none" stroke="#87A878" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#87A878" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="979" cy="504" r="12" stroke-width="1.8"/><path d="M974 504 l4 5 l7 -9"/></g>
+<rect x="120" y="538" width="290" height="52" rx="7" fill="#B8A9C9" fill-opacity=".14" stroke="#B8A9C9" stroke-width="1.8"/>
+<text x="265" y="569.0" text-anchor="middle" font-size="13.5" font-weight="600" fill="#B8A9C9">Isolated port</text>
+<rect x="430" y="538" width="150" height="52" rx="7" fill="none" stroke="#87A878" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#87A878" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="505" cy="564" r="12" stroke-width="1.8"/><path d="M500 564 l4 5 l7 -9"/></g>
+<rect x="588" y="538" width="150" height="52" rx="7" fill="none" stroke="#B8A9C9" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.6" stroke-linecap="round"><circle cx="663" cy="564" r="12" stroke-width="1.8"/><line x1="658" y1="559" x2="668" y2="569"/><line x1="668" y1="559" x2="658" y2="569"/></g>
+<rect x="746" y="538" width="150" height="52" rx="7" fill="none" stroke="#B8A9C9" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.6" stroke-linecap="round"><circle cx="821" cy="564" r="12" stroke-width="1.8"/><line x1="816" y1="559" x2="826" y2="569"/><line x1="826" y1="559" x2="816" y2="569"/></g>
+<rect x="904" y="538" width="150" height="52" rx="7" fill="none" stroke="#B8A9C9" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.6" stroke-linecap="round"><circle cx="979" cy="564" r="12" stroke-width="1.8"/><line x1="974" y1="559" x2="984" y2="569"/><line x1="984" y1="559" x2="974" y2="569"/></g>
+<rect x="120" y="598" width="290" height="52" rx="7" fill="#87A878" fill-opacity=".14" stroke="#87A878" stroke-width="1.8"/>
+<text x="265" y="629.0" text-anchor="middle" font-size="13.5" font-weight="600" fill="#87A878">Community port</text>
+<rect x="430" y="598" width="150" height="52" rx="7" fill="none" stroke="#87A878" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#87A878" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="505" cy="624" r="12" stroke-width="1.8"/><path d="M500 624 l4 5 l7 -9"/></g>
+<rect x="588" y="598" width="150" height="52" rx="7" fill="none" stroke="#B8A9C9" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.6" stroke-linecap="round"><circle cx="663" cy="624" r="12" stroke-width="1.8"/><line x1="658" y1="619" x2="668" y2="629"/><line x1="668" y1="619" x2="658" y2="629"/></g>
+<rect x="746" y="598" width="150" height="52" rx="7" fill="none" stroke="#87A878" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#87A878" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="821" cy="624" r="12" stroke-width="1.8"/><path d="M816 624 l4 5 l7 -9"/></g>
+<rect x="904" y="598" width="150" height="52" rx="7" fill="none" stroke="#B8A9C9" stroke-width="1.4" stroke-opacity=".45"/>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.6" stroke-linecap="round"><circle cx="979" cy="624" r="12" stroke-width="1.8"/><line x1="974" y1="619" x2="984" y2="629"/><line x1="984" y1="619" x2="974" y2="629"/></g>
+<rect x="1090" y="478" width="200" height="112" rx="9" fill="none" stroke="#B8A9C9" stroke-width="1.6" stroke-dasharray="6 5"/>
+<g fill="none" stroke="#87A878" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="1122" cy="512" r="12" stroke-width="1.8"/><path d="M1117 512 l4 5 l7 -9"/></g>
+<text class="el" x="1146" y="517">can communicate</text>
+<g fill="none" stroke="#B8A9C9" stroke-width="2.6" stroke-linecap="round"><circle cx="1122" cy="556" r="12" stroke-width="1.8"/><line x1="1117" y1="551" x2="1127" y2="561"/><line x1="1127" y1="551" x2="1117" y2="561"/></g>
+<text class="elh" x="1146" y="561">cannot communicate</text>
+</svg>

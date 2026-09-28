@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 878" width="820" height="878" role="img" aria-label="Dec_K(HDR, C; sigma): length checks, CBC decryption, padding check, the two ways of splitting P into R and T, and the MAC check">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<circle cx="22" cy="38" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="22" y="42.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">1</text>
+<rect x="50" y="20" width="520" height="36" rx="10" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="310" y="43" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">|C| mod b = 0   and   n = |C|/b − 1 ≥ 1   and   nb ≥ t + 1 ?</text>
+<polyline points="570,38 636,38" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="603" y="31" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">no</text>
+<text x="652" y="44" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="18.0">⊥</tspan></text>
+<text x="668" y="43" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">no further processing</text>
+<polyline points="380,56 380,95" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<text x="388" y="80" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">yes</text>
+<path d="M45,104 v-6 H715 v6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<rect x="45" y="110" width="90" height="32" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="90" y="132" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">C</tspan><tspan dx="0.0" dy="5" font-size="11.2">0</tspan></text>
+<rect x="205" y="110" width="90" height="32" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="250" y="132" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">C</tspan><tspan dx="0.0" dy="5" font-size="11.2">1</tspan></text>
+<polyline points="250,142 250,179" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<circle cx="250" cy="162" r="3" fill="#B8A9C9"/>
+<rect x="195" y="182" width="110" height="40" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="250" y="208" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">D</tspan><tspan dx="0.0" dy="5" font-size="11.2">K</tspan><tspan dx="0.0" dy="3" font-size="8.8">e</tspan></text>
+<polyline points="250,222 250,248" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<circle cx="250" cy="262" r="12" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<path d="M238,262 H262 M250,250 V274" stroke="#87A878" stroke-width="1.5"/>
+<polyline points="250,274 250,297" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="205" y="300" width="90" height="32" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="250" y="322" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">P</tspan><tspan dx="0.0" dy="5" font-size="11.2">1</tspan></text>
+<rect x="365" y="110" width="90" height="32" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="410" y="132" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">C</tspan><tspan dx="0.0" dy="5" font-size="11.2">2</tspan></text>
+<polyline points="410,142 410,179" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<circle cx="410" cy="162" r="3" fill="#B8A9C9"/>
+<rect x="355" y="182" width="110" height="40" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="410" y="208" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">D</tspan><tspan dx="0.0" dy="5" font-size="11.2">K</tspan><tspan dx="0.0" dy="3" font-size="8.8">e</tspan></text>
+<polyline points="410,222 410,248" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<circle cx="410" cy="262" r="12" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<path d="M398,262 H422 M410,250 V274" stroke="#87A878" stroke-width="1.5"/>
+<polyline points="410,274 410,297" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="365" y="300" width="90" height="32" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="410" y="322" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">P</tspan><tspan dx="0.0" dy="5" font-size="11.2">2</tspan></text>
+<rect x="625" y="110" width="90" height="32" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="670" y="132" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">C</tspan><tspan dx="0.0" dy="5" font-size="11.2">n</tspan></text>
+<polyline points="670,142 670,179" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<circle cx="670" cy="162" r="3" fill="#B8A9C9"/>
+<rect x="615" y="182" width="110" height="40" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="670" y="208" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">D</tspan><tspan dx="0.0" dy="5" font-size="11.2">K</tspan><tspan dx="0.0" dy="3" font-size="8.8">e</tspan></text>
+<polyline points="670,222 670,248" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<circle cx="670" cy="262" r="12" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<path d="M658,262 H682 M670,250 V274" stroke="#87A878" stroke-width="1.5"/>
+<polyline points="670,274 670,297" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="625" y="300" width="90" height="32" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="670" y="322" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">P</tspan><tspan dx="0.0" dy="5" font-size="11.2">n</tspan></text>
+<polyline points="90,142 90,262 234,262" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<polyline points="250,162 340,162 340,262 394,262" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<polyline points="410,162 510,162" fill="none" stroke="#B8A9C9" stroke-width="1.5"/>
+<polyline points="570,162 600,162 600,262 654,262" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="540" y="132" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">⋯</tspan></text>
+<text x="540" y="208" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">⋯</tspan></text>
+<text x="540" y="167" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">⋯</tspan></text>
+<text x="540" y="322" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">⋯</tspan></text>
+<circle cx="22" cy="202" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="22" y="206.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">2</text>
+<path d="M205,340 v6 H715 v-6" fill="none" stroke="#87A878" stroke-width="1.2"/>
+<polyline points="460,346 460,380" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="22" cy="401" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="22" y="405.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">3</text>
+<rect x="130" y="384" width="494" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<rect x="624" y="384" width="26" height="34" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="637" y="407" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="15.0">p</tspan></text>
+<text x="377.0" y="407" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">P</tspan><tspan dx="4.8" dy="0" font-size="16.0">=</tspan><tspan dx="4.8" dy="0" font-size="16.0">P</tspan><tspan dx="0.0" dy="5" font-size="11.2">1</tspan><tspan dx="4.8" dy="-5" font-size="16.0">‖ ⋯ ‖</tspan><tspan dx="4.8" dy="0" font-size="16.0">P</tspan><tspan dx="0.0" dy="5" font-size="11.2">n</tspan></text>
+<text x="118" y="407" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="14.0">ℓ</tspan><tspan dx="0.0" dy="5" font-size="9.8">P</tspan><tspan dx="4.2" dy="-5" font-size="14.0">=</tspan><tspan dx="4.2" dy="0" font-size="14.0">nb</tspan></text>
+<polyline points="654,401 680,401" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="688" y="407" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start"><tspan dx="0.0" dy="0" font-size="16.0">p</tspan><tspan dx="4.8" dy="0" font-size="16.0">←</tspan><tspan dx="4.8" dy="0" font-size="16.0">P</tspan><tspan dx="0.0" dy="0" font-size="16.0">[</tspan><tspan dx="0.0" dy="0" font-size="16.0">ℓ</tspan><tspan dx="0.0" dy="5" font-size="11.2">P</tspan><tspan dx="4.8" dy="-5" font-size="16.0">− 1]</tspan></text>
+<circle cx="22" cy="470" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="22" y="474.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">4</text>
+<rect x="130" y="452" width="520" height="36" rx="10" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="390.0" y="475" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="normal">wf  ⟺  ℓP ≥ p + 1 + t   and then   last p + 1 bytes of P all equal p</text>
+<rect x="5" y="577.0" width="34" height="22" rx="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="22" y="592.5" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">5–6</text>
+<text x="118" y="552" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">wf true</text>
+<rect x="130" y="530" width="330" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="295.0" y="553" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">R</tspan></text>
+<rect x="460" y="530" width="130" height="34" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="525.0" y="553" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">T</tspan></text>
+<rect x="590" y="530" width="60" height="34" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="620.0" y="553" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">⟨</tspan><tspan dx="0.0" dy="0" font-size="14.0">p</tspan><tspan dx="0.0" dy="0" font-size="14.0">⟩</tspan><tspan dx="0.0" dy="-7" font-size="9.8">p+1</tspan></text>
+<path d="M460,528 v-10" stroke="#87A878" stroke-width="1.5"/>
+<text x="460" y="514" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">r</tspan></text>
+<text x="666" y="553" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start"><tspan dx="0.0" dy="0" font-size="15.0">r</tspan><tspan dx="4.5" dy="0" font-size="15.0">=</tspan><tspan dx="4.5" dy="0" font-size="15.0">ℓ</tspan><tspan dx="0.0" dy="5" font-size="10.5">P</tspan><tspan dx="4.5" dy="-5" font-size="15.0">−</tspan><tspan dx="4.5" dy="0" font-size="15.0">p</tspan><tspan dx="4.5" dy="0" font-size="15.0">− 1 −</tspan><tspan dx="4.5" dy="0" font-size="15.0">t</tspan></text>
+<text x="118" y="634" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end" font-weight="bold">wf false</text>
+<rect x="130" y="612" width="390" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="325.0" y="635" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">R</tspan></text>
+<rect x="520" y="612" width="130" height="34" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="585.0" y="635" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">T</tspan></text>
+<path d="M520,610 v-10" stroke="#87A878" stroke-width="1.5"/>
+<text x="520" y="596" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">r</tspan></text>
+<text x="666" y="635" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start"><tspan dx="0.0" dy="0" font-size="15.0">r</tspan><tspan dx="4.5" dy="0" font-size="15.0">=</tspan><tspan dx="4.5" dy="0" font-size="15.0">ℓ</tspan><tspan dx="0.0" dy="5" font-size="10.5">P</tspan><tspan dx="4.5" dy="-5" font-size="15.0">−</tspan><tspan dx="4.5" dy="0" font-size="15.0">t</tspan></text>
+<text x="130" y="666" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">No padding is removed, so R is p + 1 bytes longer than in the wf-true case.</text>
+<circle cx="22" cy="739" r="11" fill="none" stroke="#87A878" stroke-width="1.5"/>
+<text x="22" y="743.5" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" font-weight="bold">7</text>
+<rect x="50" y="722" width="100" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="100" y="745" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">⟨</tspan><tspan dx="0.0" dy="0" font-size="16.0">sqn</tspan><tspan dx="0.0" dy="5" font-size="11.2">r</tspan><tspan dx="0.0" dy="-5" font-size="16.0">⟩</tspan><tspan dx="0.0" dy="5" font-size="11.2">8</tspan></text>
+<rect x="150" y="722" width="60" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="180" y="745" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">HDR</tspan></text>
+<rect x="210" y="722" width="130" height="34" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="275" y="745" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">R</tspan></text>
+<polyline points="340,739 406,739" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<rect x="410" y="718" width="120" height="42" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="470" y="745" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">MAC</tspan><tspan dx="0.0" dy="5" font-size="11.2">K</tspan><tspan dx="0.0" dy="3" font-size="8.8">a</tspan></text>
+<polyline points="530,739 578,739" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<circle cx="596" cy="739" r="16" fill="none" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="596" y="745" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="14.0">=?</tspan></text>
+<rect x="556" y="784" width="80" height="30" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="596" y="804" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="middle"><tspan dx="0.0" dy="0" font-size="16.0">T</tspan></text>
+<polyline points="596,784 596,758" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<polyline points="612,739 646,739" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+<text x="654" y="734" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start"><tspan dx="0.0" dy="0" font-size="14.0">v</tspan></text>
+<text x="668" y="734" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">return R</text>
+<text x="654" y="754" fill="#B8A9C9" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="start"><tspan dx="0.0" dy="0" font-size="14.0">¬v</tspan></text>
+<text x="676" y="754" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">return ⊥</text>
+<text x="340" y="804" fill="#87A878" font-family="STIX Two Math, Latin Modern Math, Cambria Math, Times New Roman, serif" font-style="italic" text-anchor="end"><tspan dx="0.0" dy="0" font-size="15.0">sqn</tspan><tspan dx="0.0" dy="5" font-size="10.5">r</tspan><tspan dx="4.5" dy="-5" font-size="15.0">←</tspan><tspan dx="4.5" dy="0" font-size="15.0">sqn</tspan><tspan dx="0.0" dy="5" font-size="10.5">r</tspan><tspan dx="4.5" dy="-5" font-size="15.0">+ 1</tspan></text>
+<text x="344" y="804" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">  in both cases</text>
+<rect x="50" y="844" width="18" height="18" fill="none" stroke="#87A878" stroke-width="1.5" rx="3"/>
+<text x="76" y="858" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">plaintext side</text>
+<rect x="185" y="844" width="18" height="18" fill="none" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="211" y="858" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">added by Enc</text>
+<rect x="315" y="844" width="18" height="18" fill="#B8A9C9" fill-opacity="0.35" stroke="#B8A9C9" stroke-width="1.5" rx="3"/>
+<text x="341" y="858" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">padding / IV</text>
+<rect x="445" y="842" width="26" height="22" fill="none" stroke="#B8A9C9" stroke-width="2.5" rx="10"/>
+<text x="479" y="858" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">keyed primitive</text>
+<rect x="600" y="842" width="26" height="22" rx="10" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="634" y="858" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start" font-weight="normal">check</text>
+</svg>

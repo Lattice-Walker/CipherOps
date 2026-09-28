@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CipherOps</title>
+  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="icon" href="logos/logo-icon.ico" />
+  <script type="module" src="animation.js"></script>
+</head>
+<body>
+
+  <!-- Theme toggle -->
+  <button id="theme-toggle" aria-label="Toggle theme" data-active="light">
+    <span class="toggle-icon dark-icon">☽</span>
+    <span class="toggle-thumb"></span>
+    <span class="toggle-icon light-icon">☀</span>
+  </button>
+
+  <!-- LANDING PAGE -->
+  <div id="landing">
+    <canvas id="bg-canvas"></canvas>
+    <div class="landing-overlay">
+      <div class="landing-copy">
+        <!-- <img id="logo-light-img" src="logo-light.png" alt="CipherOps logo" style="width:160px;margin-bottom:1.5rem;" />-->
+        <!-- <img id="logo-dark-img"  src="logo-dark.png"  alt="CipherOps logo" style="width:160px;margin-bottom:1.5rem;display:none;" />-->
+        <div class="landing-text">
+          <h1 class="landing-title">CipherOps</h1>
+          <p class="landing-author">Lattice Walker</p>
+          <p class="landing-description">
+            My personal blog covering post-quantum cryptography, mathematics, 
+            and governance, alongside study notes from academic work in cyberdefense, 
+            and hands-on technical projects.
+          </p>
+        </div>
+        <div class="landing-actions">
+          <a href="display_articles/articles.html" class="landing-articles-btn">Articles</a>
+          <a href="display_courses/courses.html" class="landing-courses-btn">Courses</a>
+          <a href="display_practicalprojects/practicalprojects.html" class="landing-courses-btn">Practical projects</a>
+        </div>
+      </div>
+    </div>
+
+    <footer id="contact-section">
+      <span class="contact-item"><a href="contact/contact.html">Contact</a></span><span class="contact-sep"> · </span><span class="contact-item"><a href="https://github.com/Lattice-Walker/CipherOps" target="_blank" rel="noopener">GitHub</a></span>
+    </footer>
+  </div>
+
+  <script data-goatcounter="https://latticewalker.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+  <script>
+    // Theme toggle logic
+    const toggle = document.getElementById('theme-toggle');
+    const saved = localStorage.getItem('theme') || 'light';
+    if (saved === 'dark') document.body.classList.add('dark');
+    toggle.dataset.active = saved;
+    toggle.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark');
+      const next = isDark ? 'dark' : 'light';
+      toggle.dataset.active = next;
+      localStorage.setItem('theme', next);
+    });
+
+    import('./animation.js').then(({ startAnimation }) => startAnimation());
+  </script>
+</body>
+</html>
+

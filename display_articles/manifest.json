@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Cryptography",
+    "articles": [
+      {
+        "title": "Breaking TLS 1.2 CBC mode, TLS 1.1, and TLS 1.0",
+        "file": "articles/post-quantum-algorithms/TLS-12CBC-11-10.md",
+        "date": "September 22, 2026"
+      },
+      {
+        "title": "The Security of TLS 1.2 AEAD mode and TLS 1.3",
+        "file": "articles/post-quantum-algorithms/TLS-12AEAD-13.md",
+        "date": "Coming soon, stay tuned!"
+      },
+      {
+        "title": "The post quantum security of TLS 1.2 AEAD mode and TLS 1.3",
+        "file": "articles/post-quantum-algorithms/HNDL-TLS-12-13.md",
+        "date": "Coming soon, stay tuned!"
+      }
+    ]
+  },
+  {
+    "category": "Governance",
+    "articles": [
+      {
+        "title": "Deprecated TLS risk assessement and post-quantum risk assessment",
+        "file": "articles/governance/TLS-risk-assessment.md",
+        "date": "September 23, 2026"
+      }
+    ]
+  },
+  {
+    "category": "Linguistics",
+    "articles": [
+      {
+        "title": "Pronunciation as Political Signaling: Micro-Markers of Macro-Divisions",
+        "file": "articles/linguistics/pronounciation and propaganda.md",
+        "date": "August 19, 2026"
+      }
+    ]
+  }
+]

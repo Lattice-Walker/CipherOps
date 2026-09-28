@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1267" height="448" viewBox="15 35 1267 448" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<path d="M40 95 C12 95 4 72 22 60 C12 40 30 20 52 28 C60 8 96 4 110 22 C132 8 166 20 164 44 C190 48 194 80 168 92 C160 100 60 100 40 95 Z" transform="translate(20,120) scale(1.35)" fill="#87A878" fill-opacity=".12" stroke="#87A878" stroke-width="2"/>
+<path d="M40 95 C12 95 4 72 22 60 C12 40 30 20 52 28 C60 8 96 4 110 22 C132 8 166 20 164 44 C190 48 194 80 168 92 C160 100 60 100 40 95 Z" transform="translate(1010,120) scale(1.35)" fill="#87A878" fill-opacity=".12" stroke="#87A878" stroke-width="2"/>
+<path d="M40 95 C12 95 4 72 22 60 C12 40 30 20 52 28 C60 8 96 4 110 22 C132 8 166 20 164 44 C190 48 194 80 168 92 C160 100 60 100 40 95 Z" transform="translate(430,86) scale(2.4)" fill="#B8A9C9" fill-opacity=".10" stroke="#B8A9C9" stroke-width="2" stroke-dasharray="9 6"/>
+
+<text class="nd" x="152" y="112" text-anchor="middle" font-size="14">Customer site A</text>
+<text class="nd" x="1142" y="112" text-anchor="middle" font-size="14">Customer site B</text>
+<text class="nh" x="650" y="82" text-anchor="middle" font-size="15">Provider core</text>
+
+<g fill="none" stroke="#87A878" stroke-width="2.2" stroke-linejoin="round">
+  <rect x="96" y="206" width="42" height="30" rx="3"/><line x1="117" y1="236" x2="117" y2="244"/><line x1="103" y1="244" x2="131" y2="244"/>
+  <rect x="168" y="196" width="46" height="52" rx="4"/><line x1="178" y1="212" x2="204" y2="212"/><line x1="178" y1="228" x2="204" y2="228"/>
+  <rect x="1086" y="206" width="42" height="30" rx="3"/><line x1="1107" y1="236" x2="1107" y2="244"/><line x1="1093" y1="244" x2="1121" y2="244"/>
+  <rect x="1158" y="196" width="46" height="52" rx="4"/><line x1="1168" y1="212" x2="1194" y2="212"/><line x1="1168" y1="228" x2="1194" y2="228"/>
+</g>
+
+<g>
+  <ellipse cx="330" cy="222" rx="52" ry="30" fill="#87A878" fill-opacity=".20" stroke="#87A878" stroke-width="2"/>
+  <ellipse cx="970" cy="222" rx="52" ry="30" fill="#87A878" fill-opacity=".20" stroke="#87A878" stroke-width="2"/>
+  <ellipse cx="500" cy="222" rx="50" ry="30" fill="#B8A9C9" fill-opacity=".20" stroke="#B8A9C9" stroke-width="2"/>
+  <ellipse cx="650" cy="222" rx="50" ry="30" fill="#B8A9C9" fill-opacity=".20" stroke="#B8A9C9" stroke-width="2"/>
+  <ellipse cx="800" cy="222" rx="50" ry="30" fill="#B8A9C9" fill-opacity=".20" stroke="#B8A9C9" stroke-width="2"/>
+</g>
+<g fill="none" stroke-linecap="round" stroke-width="2">
+  <g stroke="#87A878">
+    <path d="M310 214 L350 214 M340 208 L350 214 L340 220"/><path d="M350 230 L310 230 M320 224 L310 230 L320 236"/>
+    <path d="M950 214 L990 214 M980 208 L990 214 L980 220"/><path d="M990 230 L950 230 M960 224 L950 230 L960 236"/>
+  </g>
+  <g stroke="#B8A9C9">
+    <path d="M482 214 L518 214 M509 208 L518 214 L509 220"/><path d="M518 230 L482 230 M491 224 L482 230 L491 236"/>
+    <path d="M632 214 L668 214 M659 208 L668 214 L659 220"/><path d="M668 230 L632 230 M641 224 L632 230 L641 236"/>
+    <path d="M782 214 L818 214 M809 208 L818 214 L809 220"/><path d="M818 230 L782 230 M791 224 L782 230 L791 236"/>
+  </g>
+</g>
+
+<g stroke-width="2.4">
+  <line x1="214" y1="222" x2="278" y2="222" stroke="#87A878"/>
+  <line x1="382" y1="222" x2="450" y2="222" stroke="#B8A9C9"/>
+  <line x1="550" y1="222" x2="600" y2="222" stroke="#B8A9C9"/>
+  <line x1="700" y1="222" x2="750" y2="222" stroke="#B8A9C9"/>
+  <line x1="850" y1="222" x2="918" y2="222" stroke="#B8A9C9"/>
+  <line x1="1022" y1="222" x2="1086" y2="222" stroke="#87A878"/>
+</g>
+
+<g stroke-dasharray="5 5" stroke-width="1.8">
+  <line x1="416" y1="230" x2="416" y2="366" stroke="#87A878"/>
+  <line x1="650" y1="252" x2="650" y2="356" stroke="#B8A9C9"/>
+  <line x1="884" y1="230" x2="884" y2="366" stroke="#87A878"/>
+</g>
+
+<g>
+  <rect class="dev" x="316" y="370" width="200" height="46" rx="9"/>
+  <rect class="host" x="550" y="360" width="200" height="46" rx="9"/>
+  <rect class="dev" x="550" y="416" width="200" height="46" rx="9"/>
+  <rect class="dev" x="784" y="370" width="200" height="46" rx="9"/>
+</g>
+<g text-anchor="middle">
+  <text class="nd" x="416" y="399" font-size="15">802.1Q</text>
+  <text class="nh" x="650" y="389" font-size="15">802.1ad outer tag</text>
+  <text class="nd" x="650" y="445" font-size="15">802.1Q inner tag</text>
+  <text class="nd" x="884" y="399" font-size="15">802.1Q</text>
+</g>
+
+</svg>

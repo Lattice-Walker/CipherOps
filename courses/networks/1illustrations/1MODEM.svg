@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="125" viewBox="0 42 860 125" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="al" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B8A9C9"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .dev{fill:#87A878;fill-opacity:.18;stroke:#87A878;stroke-width:2}
+ .host{fill:#B8A9C9;fill-opacity:.18;stroke:#B8A9C9;stroke-width:2}
+ .dim{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .ext{fill:#B8A9C9;fill-opacity:.07;stroke:#B8A9C9;stroke-width:2;stroke-dasharray:7 5}
+ .chip{fill:#87A878;fill-opacity:.12;stroke:none}
+ .chipl{fill:#B8A9C9;fill-opacity:.12;stroke:none}
+ .nd{font-size:16px;font-weight:600;fill:#87A878}
+ .nh{font-size:16px;font-weight:600;fill:#B8A9C9}
+ .el{font-size:12px;fill:#87A878}
+ .elh{font-size:12px;fill:#B8A9C9}
+ .note{font-size:12.5px;fill:#B8A9C9}
+ .nt{font-size:13px;font-weight:600;fill:#B8A9C9}
+</style>
+<rect class="ext" x="14" y="66" width="200" height="80" rx="9"/>
+<text class="nh" x="114" y="98" text-anchor="middle">ISP line</text>
+<text class="note" x="114" y="120" text-anchor="middle" fill-opacity=".8">analogue or optical</text>
+<text class="note" x="114" y="136" text-anchor="middle" fill-opacity=".8">signal</text>
+
+<line x1="214" y1="106" x2="386" y2="106" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<rect class="chip" x="240" y="62" width="128" height="34" rx="5"/>
+<text class="el" x="304" y="77" text-anchor="middle">modulated</text>
+<text class="el" x="304" y="91" text-anchor="middle">signal in</text>
+
+<rect class="dev" x="392" y="76" width="150" height="60" rx="8"/>
+<text class="nd" x="467" y="112" text-anchor="middle">Modem</text>
+
+<line x1="542" y1="106" x2="694" y2="106" stroke="#87A878" stroke-width="2" marker-end="url(#as)"/>
+<rect class="chip" x="554" y="62" width="128" height="34" rx="5"/>
+<text class="el" x="618" y="77" text-anchor="middle">digital</text>
+<text class="el" x="618" y="91" text-anchor="middle">signal out</text>
+
+<rect class="dev" x="700" y="76" width="146" height="60" rx="8"/>
+<text class="nd" x="773" y="112" text-anchor="middle">Router</text>
+
+</svg>

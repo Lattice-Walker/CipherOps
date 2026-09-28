@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 361" width="900" height="361" role="img" aria-label="TLS 1.2 CBC mode is the scheme of §1 with its MAC replaced by a keyed family F and four corrections C0 to C3 that align it with RFC 5246.">
+<defs><marker id="arr-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#87A878"/></marker><marker id="arr-l" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B8A9C9"/></marker></defs>
+<text x="263" y="25" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">as written in §1</text>
+<text x="695" y="25" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">RFC 5246 reading</text>
+<circle cx="46" cy="70" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="46" y="75" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">C0</text>
+<rect x="76" y="35" width="374" height="70" fill="#87A878" fill-opacity="0.05" stroke="#87A878" stroke-width="1.2" rx="4"/>
+<rect x="510" y="35" width="370" height="70" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="92" y="71" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">header space fixed at 𝔹<tspan dy='-6' font-size='75%'>5</tspan><tspan dy='6'>​</tspan>,</text>
+<text x="92" y="91" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">record space fixed at 𝔹<tspan dy='-6' font-size='75%'>*</tspan><tspan dy='6'>​</tspan></text>
+<text x="526" y="71" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">header space ℋ and record space ℛ ⊆ 𝔹<tspan dy='-6' font-size='75%'>*</tspan><tspan dy='6'>​</tspan></text>
+<text x="526" y="91" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">become parameters of the scheme</text>
+<text x="870" y="52" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end">bookkeeping</text>
+<path d="M452,70 L506,70" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="46" cy="150" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="46" y="155" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">C1</text>
+<rect x="76" y="115" width="374" height="70" fill="#87A878" fill-opacity="0.05" stroke="#87A878" stroke-width="1.2" rx="4"/>
+<rect x="510" y="115" width="370" height="70" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="92" y="151" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">MAC over ⟨sqn⟩<tspan dy='4' font-size='75%'>8</tspan><tspan dy='-4'>​</tspan> ‖ HDR ‖ R, with a 5-byte</text>
+<text x="92" y="171" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">header that must already hold |R|</text>
+<text x="526" y="151" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">ℋ<tspan dy='4' font-size='75%'>1.2</tspan><tspan dy='-4'>​</tspan> = 𝔹 × {0x0303}, ℛ = ℛ<tspan dy='4' font-size='75%'>1.1</tspan><tspan dy='-4'>​</tspan>,</text>
+<text x="526" y="171" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">MAC over AD ‖ R, ⟨r⟩<tspan dy='4' font-size='75%'>2</tspan><tspan dy='-4'>​</tspan> formed after depadding</text>
+<text x="870" y="132" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end">bookkeeping</text>
+<path d="M452,150 L506,150" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="46" cy="230" r="12" fill="#87A878" fill-opacity="0.2" stroke="#87A878" stroke-width="1.5"/>
+<text x="46" y="235" fill="#87A878" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">C2</text>
+<rect x="76" y="195" width="374" height="70" fill="#87A878" fill-opacity="0.05" stroke="#87A878" stroke-width="1.2" rx="4"/>
+<rect x="510" y="195" width="370" height="70" fill="#87A878" fill-opacity="0.08" stroke="#87A878" stroke-width="1.5" rx="4"/>
+<text x="92" y="231" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">step 1 rejects a bad block multiple,</text>
+<text x="92" y="251" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">n &lt; 1 or nb &lt; t + 1</text>
+<text x="526" y="231" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">step 1 also rejects</text>
+<text x="526" y="251" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">|C| &gt; 2<tspan dy='-6' font-size='75%'>14</tspan><tspan dy='6'>​</tspan> + 2048</text>
+<text x="870" y="212" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end">bookkeeping</text>
+<path d="M452,230 L506,230" fill="none" stroke="#87A878" stroke-width="1.5" marker-end="url(#arr-s)"/>
+<circle cx="46" cy="310" r="12" fill="#B8A9C9" fill-opacity="0.2" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="46" y="315" fill="#B8A9C9" font-size="12" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="middle">C3</text>
+<rect x="76" y="275" width="374" height="70" fill="#87A878" fill-opacity="0.05" stroke="#87A878" stroke-width="1.2" rx="4"/>
+<rect x="510" y="275" width="370" height="70" fill="#B8A9C9" fill-opacity="0.14" stroke="#B8A9C9" stroke-width="1.5" rx="4"/>
+<text x="92" y="311" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">step 7 returns R whenever the MAC verifies,</text>
+<text x="92" y="331" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">even if the padding check wf failed</text>
+<text x="526" y="311" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">step 7 returns R only if wf ∧ v,</text>
+<text x="526" y="331" fill="#B8A9C9" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">and ⊥ otherwise</text>
+<text x="870" y="292" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="end">substantive</text>
+<path d="M452,310 L506,310" fill="none" stroke="#B8A9C9" stroke-width="1.5" marker-end="url(#arr-l)"/>
+</svg>

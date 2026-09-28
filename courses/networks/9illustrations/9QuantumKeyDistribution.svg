@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="854" height="438" viewBox="3 21 854 438" role="img" aria-labelledby="t d">
+<defs>
+ <marker id="as" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+ <marker id="asr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#87A878"/></marker>
+</defs>
+<style>
+ text{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif}
+ .hd{font-size:15px;font-weight:600}
+ .sb{font-size:11.5px;fill-opacity:.9}
+ .rl{font-size:12px;font-weight:600}
+ .cell{font-size:14px;font-weight:600}
+ .lb{font-size:12px}
+ .key{font-size:17px;font-weight:600;font-family:ui-monospace,'DejaVu Sans Mono',Consolas,monospace}
+ .cp{font-size:12px;fill-opacity:.9}
+ .sg{fill:#87A878}.lv{fill:#B8A9C9}
+</style>
+
+<rect x="24" y="42" width="182" height="96" rx="11" fill="#87A878" fill-opacity=".14" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="115" y="72" text-anchor="middle">Alice</text>
+<text class="sb sg" x="115" y="94" text-anchor="middle">picks a random bit and</text>
+<text class="sb sg" x="115" y="112" text-anchor="middle">a random basis for each</text>
+<text class="sb sg" x="115" y="130" text-anchor="middle">photon she sends</text>
+
+<rect x="654" y="42" width="182" height="96" rx="11" fill="#87A878" fill-opacity=".14" stroke="#87A878" stroke-width="2"/>
+<text class="hd sg" x="745" y="72" text-anchor="middle">Bob</text>
+<text class="sb sg" x="745" y="94" text-anchor="middle">picks a random basis</text>
+<text class="sb sg" x="745" y="112" text-anchor="middle">for each arriving photon,</text>
+<text class="sb sg" x="745" y="130" text-anchor="middle">independently of Alice</text>
+
+<line x1="212" y1="90" x2="648" y2="90" stroke="#B8A9C9" stroke-width="2.2" marker-end="url(#as)"/>
+<g fill="#B8A9C9"><circle cx="280" cy="90" r="4.5"/><circle cx="360" cy="90" r="4.5"/><circle cx="440" cy="90" r="4.5"/><circle cx="520" cy="90" r="4.5"/><circle cx="590" cy="90" r="4.5"/></g>
+<text class="lb lv" x="430" y="76" text-anchor="middle">quantum channel: single polarised photons</text>
+
+<g stroke="#87A878" stroke-width="1.2" stroke-opacity=".45">
+  <line x1="110" y1="168" x2="782" y2="168"/>
+  <line x1="110" y1="204" x2="782" y2="204"/>
+  <line x1="110" y1="240" x2="782" y2="240"/>
+  <line x1="110" y1="276" x2="782" y2="276"/>
+  <line x1="110" y1="312" x2="782" y2="312"/>
+  <line x1="110" y1="168" x2="110" y2="312"/>
+  <line x1="194" y1="168" x2="194" y2="312"/><line x1="278" y1="168" x2="278" y2="312"/>
+  <line x1="362" y1="168" x2="362" y2="312"/><line x1="446" y1="168" x2="446" y2="312"/>
+  <line x1="530" y1="168" x2="530" y2="312"/><line x1="614" y1="168" x2="614" y2="312"/>
+  <line x1="698" y1="168" x2="698" y2="312"/><line x1="782" y1="168" x2="782" y2="312"/>
+</g>
+<rect x="278" y="168" width="84" height="144" fill="#B8A9C9" fill-opacity=".10"/>
+<rect x="530" y="168" width="84" height="144" fill="#B8A9C9" fill-opacity=".10"/>
+
+<g class="rl sg"><text x="24" y="192">Alice bit</text><text x="24" y="228">Alice basis</text><text x="24" y="264">Bob basis</text><text x="24" y="300">Kept?</text></g>
+
+<g class="cell sg" text-anchor="middle">
+  <text x="152" y="193">1</text><text x="236" y="193">0</text><text x="320" y="193">1</text><text x="404" y="193">1</text>
+  <text x="488" y="193">0</text><text x="572" y="193">0</text><text x="656" y="193">1</text><text x="740" y="193">0</text>
+</g>
+<g class="cell lv" text-anchor="middle">
+  <text x="152" y="229">+</text><text x="236" y="229">×</text><text x="320" y="229">+</text><text x="404" y="229">×</text>
+  <text x="488" y="229">×</text><text x="572" y="229">+</text><text x="656" y="229">×</text><text x="740" y="229">+</text>
+  <text x="152" y="265">+</text><text x="236" y="265">+</text><text x="320" y="265">+</text><text x="404" y="265">×</text>
+  <text x="488" y="265">×</text><text x="572" y="265">×</text><text x="656" y="265">×</text><text x="740" y="265">+</text>
+</g>
+<g stroke-width="2.6" stroke-linecap="round" fill="none">
+  <path d="M144 297 l6 7 l12 -15" stroke="#87A878"/>
+  <g stroke="#B8A9C9"><line x1="228" y1="294" x2="244" y2="310"/><line x1="244" y1="294" x2="228" y2="310"/></g>
+  <path d="M312 297 l6 7 l12 -15" stroke="#87A878"/>
+  <path d="M396 297 l6 7 l12 -15" stroke="#87A878"/>
+  <path d="M480 297 l6 7 l12 -15" stroke="#87A878"/>
+  <g stroke="#B8A9C9"><line x1="564" y1="294" x2="580" y2="310"/><line x1="580" y1="294" x2="564" y2="310"/></g>
+  <path d="M648 297 l6 7 l12 -15" stroke="#87A878"/>
+  <path d="M732 297 l6 7 l12 -15" stroke="#87A878"/>
+</g>
+<text class="cp lv" x="796" y="240">bases</text>
+<text class="cp lv" x="796" y="256">differ:</text>
+<text class="cp lv" x="796" y="272">discard</text>
+
+<line x1="115" y1="348" x2="745" y2="348" stroke="#87A878" stroke-width="2" marker-start="url(#asr)" marker-end="url(#as)"/>
+<text class="lb sg" x="430" y="340" text-anchor="middle">classical channel</text>
+<text class="cp sg" x="430" y="370" text-anchor="middle">bases compared (sifting) → error rate estimated → privacy amplification applied</text>
+
+<rect x="270" y="392" width="320" height="46" rx="23" fill="#87A878" fill-opacity=".20" stroke="#87A878" stroke-width="2"/>
+<text class="key sg" x="430" y="422" text-anchor="middle">shared key  1 1 1 0 1 0</text>
+
+</svg>
