@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 518" width="900" height="518" role="img" aria-label="The security of TLS 1.3 as nested boxes, each inner box the stronger statement that yields the one enclosing it. The key exchange core and the data limit are drawn as chains of their own because record protection and forward secrecy both end in them; where a chain ends in another chain, the box is dashed. One condition, freedom from secret-dependent timing, does not nest.">
+<rect x="10" y="10" width="880" height="498" rx="4" fill="none" stroke="#87A878" stroke-width="1.5"/><text x="24" y="34" fill="#87A878" font-size="13" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="bold" text-anchor="start">TLS 1.3 secure connection</text>
+<rect x="26" y="46" width="416" height="134" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="36" y="63" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">traffic key indistinguishable from uniform</text>
+<rect x="38" y="72" width="392" height="98" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="48" y="89" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">key schedule a PRF chain, labels separated</text>
+<rect x="50" y="98" width="368" height="62" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="60" y="115" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">dual-snPRF-ODH over the key shares</text>
+<rect x="62" y="124" width="344" height="26" rx="4" fill="#B8A9C9" fill-opacity="0.1" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="72" y="141" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">validated shares, uniform randomness</text>
+<rect x="26" y="200" width="416" height="194" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="36" y="217" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">application data confidential and intact</text>
+<rect x="38" y="226" width="392" height="158" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="48" y="243" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">indistinguishable from random, no forged, replayed or reordered record</text>
+<rect x="50" y="252" width="368" height="122" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="60" y="269" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">AEAD secure under the traffic key with a fresh nonce</text>
+<rect x="62" y="278" width="344" height="26" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="72" y="295" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">nonce from the sequence number</text>
+<rect x="62" y="308" width="344" height="26" rx="4" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="72" y="325" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">traffic key indistinguishable from uniform</text>
+<rect x="62" y="338" width="344" height="26" rx="4" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="72" y="355" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">usage stays within the AEAD bound</text>
+<rect x="458" y="46" width="416" height="62" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="468" y="63" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">usage stays within the AEAD bound</text>
+<rect x="470" y="72" width="392" height="26" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="480" y="89" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">key update before the limit</text>
+<rect x="458" y="128" width="416" height="170" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="468" y="145" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">the peer is the intended party</text>
+<rect x="470" y="154" width="392" height="134" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="480" y="171" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">an accepting session has a matching partner</text>
+<rect x="482" y="180" width="368" height="98" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="492" y="197" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">no forged signature on the transcript hash</text>
+<rect x="494" y="206" width="344" height="62" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="504" y="223" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">no transcript collision</text>
+<rect x="506" y="232" width="320" height="26" rx="4" fill="#B8A9C9" fill-opacity="0.1" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="516" y="249" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">certificate binds the key to the identity</text>
+<rect x="458" y="318" width="416" height="128" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="468" y="335" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">recorded traffic stays secret</text>
+<rect x="470" y="344" width="392" height="92" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="480" y="361" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">session key independent of the long-term key</text>
+<rect x="482" y="370" width="368" height="26" rx="4" fill="#87A878" fill-opacity="0.1" stroke="#87A878" stroke-width="1.5"/>
+<text x="492" y="387" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">ephemeral secret erased after use</text>
+<rect x="482" y="400" width="368" height="26" rx="4" fill="none" stroke="#87A878" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="492" y="417" fill="#87A878" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">traffic key indistinguishable from uniform</text>
+<rect x="26" y="466" width="848" height="26" rx="4" fill="#B8A9C9" fill-opacity="0.1" stroke="#B8A9C9" stroke-width="1.5"/>
+<text x="36" y="483" fill="#B8A9C9" font-size="11" font-family="system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="start">no secret-dependent timing or error behaviour</text>
+</svg>
