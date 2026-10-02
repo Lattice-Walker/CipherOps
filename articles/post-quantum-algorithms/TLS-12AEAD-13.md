@@ -11,8 +11,12 @@ In the case of TLS 1.2 AEAD, the conditions are :
 
 ![Security conditions](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/security-conditions-tls12-aead.svg)
 
+{% include-markdown "Lattice-Walker/CipherOps/articles/post-quantum-algorithms/TLS-1-2-AEAD/proof.md" %}
+
 ## 2. Safety of TLS 1.3
 
 In the case of TLS 1.3, the conditions are :
 
 ![Security conditions](https://lattice-walker.github.io/CipherOps/articles/post-quantum-algorithms/security-conditions-tls13.svg)
+
+{% include-markdown "Lattice-Walker/CipherOps/articles/post-quantum-algorithms/TLS-1-3/proof.md" %}
