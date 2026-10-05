@@ -2,7 +2,7 @@
 
 I built a small game called Curve Clash and wanted to share it [here](https://lattice-walker.github.io/CurveClash/). I made this mostly for my own amusement and figured others might enjoy trying it too. 
 
-It was inspired by [Graphwar](https://graphwar.com/), which I love. Firing at your opponents with math functions is a great idea, and it stuck with me. I wanted to see how it works under the hood, so I built my own version to experiment with the physics. Graphwar is the original, and Curve Clash is my take on it. The game's underlying systems are original, while the user interface was developed with the assistance of AI-based tools.
+It was inspired by [Graphwar](https://graphwar.com/), which I love. Firing at your opponents with math functions is a great idea, and it stuck with me. I wanted to see how it works under the hood, so I built my own version to experiment with the physics. Graphwar is the original, and Curve Clash is my take on it. The game's underlying systems are original, while the user interface was developed with the assistance of AI-based tools. 
 
 The core mechanic is that each player fires by typing the right-hand side of a function. The enters expressions such as $x^2 - 1$, $0.5 * x$, $2 * sin(x / 1.5)$, $2 * ln(x + 1)$, or $exp(x / 3) - 1$. Expressions must cross $y = 0$ somewhere in the playable range, so functions like $x^2 + 1$ are rejected, along with $min()$, $max()$, $abs()$, anything using $y$, and implicit equations like $x^2 + y^2 = 1$.
 
