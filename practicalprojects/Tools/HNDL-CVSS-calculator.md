@@ -7,3 +7,5 @@ The idea is that each endpoint gets scored twice with ordinary CVSS v4.0 vectors
 The harvest score is then scaled by a time factor built from Mosca's inequality. You enter how long the data has to stay secret, how long migration will take, and how many years you assume until a capable quantum computer exists. The gap is $G = DL + MT − QT$. If $G\leq0$, then $T=0$ and there is no exposure. Otherwise $T = min(1, G / QT)$. The final score is $max(S_dep, T\times S_harv)$, banded on the usual CVSS ranges. I used max instead of a sum on purpose, because both scores describe the same endpoint and no single attacker gets both.
 
 Because QT is a guess that people disagree about by a decade or more, the page also recomputes the result at $QT = 10$, $15$ and $20$ and marks the worst of the three. 
+
+The calculator's underlying systems and math are original, while the user interface was developed with the assistance of AI-based tools.
