@@ -1,6 +1,6 @@
 # Foghorn
 
-I built a small two-player game called Foghorn and wanted to share it [here](https://lattice-walker.github.io/Foghorn/). I made this mostly for my own amusement and figured others might enjoy trying it too. 
+I built a small two-player game called Foghorn and wanted to share it [here](https://lattice-walker.github.io/Foghorn/). I made this mostly for my own amusement and figured others might enjoy trying it too. The game's underlying systems and board generator are original, while the user interface was developed with the assistance of AI-based tools.
 
 ## 1. The sudoku generator
 
